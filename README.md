@@ -82,3 +82,16 @@ Após instalar o Git, abra o terminal e configure suas credenciais <sub>(Substit
 ```bash
 git config --global user.name "nomeDeUsuario"
 git config --global user.email email@codejr.com.br
+```
+## Tutorial Git
+
+### Primeira Configuração
+Após instalar o DockerDesktop, abra o terminal e execute o seguinte comando para baixar todas as dependências necessárias:
+```bash
+docker-compose up -d --build
+```
+### Após a primeira configuração
+Não é necessário executar o build após a primeira vez, sendo assim execute apenas o comando a seguir:
+```bash
+docker-compose up -d
+```
