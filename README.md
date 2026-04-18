@@ -1,6 +1,6 @@
 # **Trainee 2026.1**
 
-# **Nome do seu blog**
+# **Stitchify**
 
 ## **Projeto Trainee, Code Jr, 2026.1**
 
@@ -17,16 +17,16 @@
 ## Equipe
 
 #### Desenvolvedores:
-* [Trainee 1](coloque o link do github)
-* [Trainee 2](coloque o link do github)
-* [Trainee 3](coloque o link do github)
-* [Trainee 4](coloque o link do github)
+* [Hadassa](coloque o link do github)
+* [Gustavo](coloque o link do github)
+* [Maria Luiza](coloque o link do github)
+* [Murilo](coloque o link do github)
 
 #### Scrum Master:
-* [Nome do Scrum](coloque o link do github).
+* [Hanna Velten]([Link do github](https://github.com/hannabvelten)).
 
 #### Links Úteis:
-* [Trello do Projeto]()
+* [Trello do Projeto](https://trello.com/invite/b/69e0f72fd6c2406c46641676/ATTI5a56112fd8f315c0c4a3ce2a81bae44f21AF3853/261-trello-do-scrum-stitchify)
 
 ---
 
