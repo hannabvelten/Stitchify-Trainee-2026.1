@@ -1,66 +1,98 @@
 @font-face {
-    font-family: 'Noah';
+    font-family: 'Noah Regular';
     src: url(../assets/Fonts/noah-regular.otf);
 }
+@font-face {
+    font-family: 'Noah Bold';
+    src: url(../assets/Fonts/noah-bold.otf);
+}
 body{
-    font-family: 'Noah';
-    min-height: 100vh;
+    font-family: 'Noah Regular';
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 main{
-    background-image: url(../assets/imagem\ croche\ login.png);
+    height: 100vh;
     display: flex;
-    min-height: 100vh;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 }
-.boxlogin{
+
+.boxlogin1{
     display: flex;
+    width: 900px;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 20px;
+
+}
+.imagem-croche{
+    width: 40%;
+    background-image: url(../assets/imagem\ croche\ login.png);
+    background-size: cover;
+    background-position: center;
+}
+.boxlogin2 {
+    width: 60%;
+    padding: 60px;
+    display: flex;
+    background: #FEF3E2;
+    flex-direction: column;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    border-radius: 0 20px 20px 0;
+    gap: 10px;
+}
+.boxlogin2 input{
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 12px ;
+    border: none;
+    cursor: text;
+   
     
-    gap: 20px;
 }
-.boxlogin input{
-    width: 100%;
-    padding: 12px 15px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    font-family: 'Noah';
-    font-size: 16px;
-    background: white;
-    color: #7B6D6D;
-}
-.boxlogin button{
-    width: 100%;
+
+.boxlogin2 button{
+    width: 120px;
     padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    border: none;
+    max-width: 70px;
+    font-family: 'Noah Bold';
     color: #7B6D6D;
-    background: #ffffff;
+    background-color: #ffffff;
     
-    border-radius: 8px;
-    font-size: 16px;
-    cursor: pointer;
-
 }
+.login{
+    width: 100%;
+    max-width: 450px;
+    margin-top: 0;
 
-.boxlogin button:hover{
-    background-color: #45a049;
 }
 
 .inscricao{
-    text-align: center;
+    text-align: left;
     margin-top: 20px;
-    color: #333;
+    font-family: 'Noah Bold';
+    font-size: 14px;
+    color: black;
 }
-.inscricao a{
-    color: #4CAF50;
-    text-decoration: none;
-    margin-left: 5px;
+.imagem-logo{
+    margin-bottom: 40px;
+    width: auto;
+
 }
-.inscricao a:hover{
-    text-decoration: underline;
-}
-.imagem-login{
-    display: none;
+.imagem-logo img{
+    width: 250px;
+    max-width: 100%;
+   
+    
 }
