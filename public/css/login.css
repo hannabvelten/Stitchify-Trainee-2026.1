@@ -1,0 +1,66 @@
+@font-face {
+    font-family: 'Noah';
+    src: url(../assets/Fonts/noah-regular.otf);
+}
+body{
+    font-family: 'Noah';
+    min-height: 100vh;
+}
+
+main{
+    background-image: url(../assets/imagem\ croche\ login.png);
+    display: flex;
+    min-height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    align-items: center;
+    justify-content: center;
+}
+.boxlogin{
+    display: flex;
+    
+    gap: 20px;
+}
+.boxlogin input{
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: 'Noah';
+    font-size: 16px;
+    background: white;
+    color: #7B6D6D;
+}
+.boxlogin button{
+    width: 100%;
+    padding: 12px;
+    color: #7B6D6D;
+    background: #ffffff;
+    
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+
+}
+
+.boxlogin button:hover{
+    background-color: #45a049;
+}
+
+.inscricao{
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+}
+.inscricao a{
+    color: #4CAF50;
+    text-decoration: none;
+    margin-left: 5px;
+}
+.inscricao a:hover{
+    text-decoration: underline;
+}
+.imagem-login{
+    display: none;
+}
