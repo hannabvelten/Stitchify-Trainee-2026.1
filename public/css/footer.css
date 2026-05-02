@@ -1,49 +1,65 @@
-¨*{
+@font-face {
+    font-family: 'NoahBold';
+    src: url(../assets/Fonts/noah-bold.otf);
+}
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 
 }
+
 body{
-    background-color: #FAD2E1;
     color: #770523;
+    overflow-x: hidden;
+    flex-direction: column;
+    min-height: 100vh;
+    display: flex;
+    font-family: 'NoahBold';
+
 }
 footer{
-    align-items: center;
-    background-color: #FAD2E1;
+    width: 100%;
+    max-width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    background-color: #FAD2E1;
+    overflow: hidden;
+    margin-top: auto;
 }
 .imagem-logo{
-    padding: 30px;
 }
 .imagem-logo img{
-    width: 150px;
+    width: 200px;
+    max-width: 100%;
+    display: block;
 }
 h3{
     text-align: center;
-    margin: 20px 0;
+    margin: 0;
 }
 h3 a {
-    color: #333;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 14px;
+    color: #770523;
+    
 }
 .redes-sociais{
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
-.redes-sociais a{
-    font-size: 20px;
-    font-weight: bold;
-     margin: 0 10px;
-}
-.redes-sociais p{
-    margin-bottom: 15px;
-    font-size: 18px;
+
+.titulo-rede p{
+    font-size: 14px;
 }
 .logo-redesocial{
     display: flex;
+    gap: px;
+    
 
 }
 .redes-sociais img{
@@ -52,7 +68,6 @@ h3 a {
     height: 40px;
 }
 .sobre-nos{
-    font-size: 20px;
     font-weight: bold;
 }
 .linha{
