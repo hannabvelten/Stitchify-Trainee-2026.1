@@ -1,140 +1,97 @@
-# **Trainee 2025.1**
+# **Trainee 2026.1**
 
-# **Nome do seu blog**
+# **Stitchify**
 
-## **Projeto Trainee, Code Jr, 2025.1**
+## **Projeto Trainee, Code Jr, 2026.1**
 
 | **Sumário** |
 |-------------|
-| [Desenvolvedores](#Desenvolvedores) |
-| [Como executar o projeto inicial](#Descrição-do-Projeto) |
-| [Git](#Git-tutorial) |
-| [Informações do php](#Comandos-necessários-para-o-projeto-em-PHP) |
+| [Equipe](#Equipe) |
+| [Descrição do Projeto](#Descrição-do-Projeto) |
+| [Preparação do Ambiente (Instalações)](#Preparação-do-Ambiente) |
+| [Tutorial Git](#Tutorial-Git) |
+| [Executando o Projeto](#Executando-o-Projeto) |
+
+---
+
+## Equipe
 
 #### Desenvolvedores:
-
-* [Trainee 1](coloque o link do github)
-* [Trainee 2](coloque o link do github)
-* [Trainee 3](coloque o link do github)
-* [Trainee 4](coloque o link do github)
-
+* [Hadassa](coloque o link do github)
+* [Gustavo](coloque o link do github)
+* [Maria Luiza](coloque o link do github)
+* [Murilo](coloque o link do github)
 
 #### Scrum Master:
-
-* [Nome do Scrum](coloque o link do github).
+* [Hanna Velten]([Link do github](https://github.com/hannabvelten)).
 
 #### Links Úteis:
+* [Trello do Projeto](https://trello.com/invite/b/69e0f72fd6c2406c46641676/ATTI5a56112fd8f315c0c4a3ce2a81bae44f21AF3853/261-trello-do-scrum-stitchify)
 
-* [Trello]()
+---
 
+## Descrição do Projeto
 
-
-## Descrição do Projeto:
-
-* Blog / Sistema de treinamento e capacitação dos Trainees da [CodeJR](https://codejr.com.br/), na gestão 2025.1;
+* Blog / Sistema de treinamento e capacitação dos Trainees da [CodeJR](https://codejr.com.br/), na gestão 2026.1;
 * Possuirá Front-End em HTML, CSS, JavaScript, Bootstrap e Back-End em PHP (puro), com Banco de Dados MySQL;
 
+---
 
+## Preparação do Ambiente
 
+Para rodar este projeto, você precisará de algumas ferramentas. Você pode instalá-las rapidamente via terminal utilizando o **Winget** (Gerenciador de pacotes nativo do Windows) ou pelos links de download tradicionais.
 
+> **Não tem o Winget instalado?**
+> Verifique abrindo o terminal e digitando `winget -v`. Se der erro, abra o **PowerShell** como administrador e rode:
+> ```powershell
+> Invoke-WebRequest -Uri [https://aka.ms/getwinget](https://aka.ms/getwinget) -OutFile winget.msixbundle
+> Add-AppxPackage winget.msixbundle
+> ```
 
-## Git Tutorial
+### 1. Git
+Ferramenta de versionamento de código.
+* **Via Winget:** `winget install --id Git.Git -e --source winget`
+* **Download Manual:** [Página de Downloads do Git](https://git-scm.com/downloads)
 
-### Instalação
+### 2. Node.js
+Ambiente de execução JavaScript (necessário para alguns pacotes e ferramentas de front-end).
+* **Via Winget:** `winget install OpenJS.NodeJS`
+* **Download Manual:** [Site Oficial do Node.js](https://nodejs.org/)
 
-Pra instalar, basta acessar a página de [downloads](https://git-scm.com/downloads) e seguir as instruções\
-Pra se conectar, utilize os seguinte comandos: <sub>(Substitua o nome e o e-mail para o seu)<sub/>
-```
-git config --global user.name "nomeDeUsuario"
-```
-```
-git config --global user.email email@codejr.com.br
-```
+### 3. Docker Desktop
+Para rodar contêineres e facilitar a configuração do banco de dados e ambiente.
+* **Via Winget:** `winget install -e --id Docker.DockerDesktop`
+* **Download Manual:** [Site Oficial do Docker](https://www.docker.com/products/docker-desktop/)
 
+### 4. PHP (8.0+)
+A linguagem base do nosso Back-End.
+* **Via Winget:** `winget install php`
+* **Download Manual:** [Downloads PHP para Windows](https://windows.php.net/download/)
 
+### 5. Composer
+Gerenciador de dependências do PHP.
+* **Via Winget:** `winget install Composer.Composer`
+* **Download Manual:** [Site Oficial do Composer](https://getcomposer.org/download/)
+
+---
+
+## Tutorial Git
 
 ### Primeira Configuração
+Após instalar o Git, abra o terminal e configure suas credenciais <sub>(Substitua o nome e o e-mail para o seu)</sub>:
+```bash
+git config --global user.name "nomeDeUsuario"
+git config --global user.email email@codejr.com.br
+```
+## Tutorial Git
 
-* Pelo terminal entre na pasta onde irá guardar o projeto: cd /caminho/para/a/pasta, depois inicialize o git na pasta com o comando: `git init`
-
-* Outro jeito de fazer o citado acima: clique com o botão direito na pasta e selecione "Git Bash Here" para abrir o terminal do git
-
-* Crie um clone do repositório: `git clone https://github.com/link-do-repositorio`
-
-* Entre na pasta criada pelo comando clone: cd /caminho/para/a/pasta/nova
-
-* Crie sua branch usando como o padrão o nome da feature que você está a desenvolver: `git checkout -b nome_da_feature`
-
-* Após criada a branch você será redirecionado automaticamente a ela, neste espaço que você desenvolverá sua parte do projteto
-
-
-
-
-### Rotina
-
-* Adicione as alterações feitas: `git add .`
-
-* Cheque em qual branch você está e quais alterações foram adicionadas: `git status`
-
-* Dê um commit com uma mensagem especificando as alterações realizadas: `git commit -m "mensagem especificando o que foi feito"`
-
-* Envie o commit feito para sua branch: `git push origin suabranch`
-
-
-
-### Quando estiver tudo prontinho *(com autorização do SCRUM Master)*
-
-* Volte para a main: `git checkout main`
-
-* Atualize a main: `git pull`
-
-* Volte para a sua branch: `git checkout nomedabranch`
-
-* Mescle a main com a sua branch : `git merge main`
-
-* Corrija os possíveis conflitos
-
-* Confirme o merge (apenas quando solicitado pelo Scrum Master): `git push origin suabranch`
-
-* Espera a confirmação do seu SCRUM
-
-* Volte para a main: `git checkout main`
-
-* Mescle a main com as alterações enviadas para sua branch (apenas quando solicitado pelo Scrum Master): `git merge suabranch`
-
-* Confirme o merge (apenas quando solicitado pelo Scrum Master): `git push origin main`
-
-
-
-### Comandos Básicos
-
-* Para atualizar a main: `git pull`
-
-* Para atualizar alguma branch: `git pull origin branch`
-
-* Ver informações da branch: `git status`
-
-* Para trocar de branch: `git checkout branch_desejada`
-
-* Adicionar todas as alterações feitas: `git add .`
-
-* Adicionar alteração específica: `git add arquivo-especifico`
-
-* Para mesclar sua branch com a main (estando dentro da sua branch): `git merge main`
-
-* Para confirmar o merge: `git push origin suabranch`
-
-
-## Comandos necessários para o projeto em PHP
-
-### Como executar o projeto inicial
-\* É necessário ter o _PHP 8.0+_
-1. Abra o Terminal na Pasta do Projeto;
-
-2. Instale as dependências necessárias: `composer install`;
-
-3. Atualize as dependências: `composer update`;
-
-4. Rode o comando composer `dump-autoload`;
-
-5. Crie um banco de dados `sql` com o nome de `sua preferencia e coloque o nome dele dentro do arquivo start_application que está dentro do diretorio bootstrap`;
+### Primeira Configuração
+Após instalar o DockerDesktop, abra o terminal e execute o seguinte comando para baixar todas as dependências necessárias:
+```bash
+docker-compose up -d --build
+```
+### Após a primeira configuração
+Não é necessário executar o build após a primeira vez, sendo assim execute apenas o comando a seguir:
+```bash
+docker-compose up -d
+```
