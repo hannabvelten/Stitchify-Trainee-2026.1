@@ -16,62 +16,135 @@ body{
     min-height: 100vh;
     display: flex;
     font-family: 'NoahBold';
+    background-color: #ffffff
+    ;
 
 }
+
 footer{
-    width: 100%;
-    max-width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    flex-wrap: wrap;
     background-color: #FAD2E1;
-    overflow: hidden;
     margin-top: auto;
+    position: relative;
+    text-align: center;
+    padding-top: 90px;
+    padding-bottom: 40px;
 }
-.imagem-logo{
+.onda{
+    position: absolute;
+    top: -60px;    
+    left: 0;
+    width: 100%;
+    line-height: 0;
+    overflow: hidden;
 }
-.imagem-logo img{
-    width: 200px;
-    max-width: 100%;
+.onda svg{
+
+    width: 100%;
+    height: 80px;
     display: block;
 }
-h3{
-    text-align: center;
-    margin: 0;
-}
-h3 a {
-    text-decoration: none;
-    font-size: 14px;
-    color: #770523;
-    
-}
-.redes-sociais{
+.conteudo-footer{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 20px;
+}
+
+
+
+.redes-sociais{
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
 }
 
 .titulo-rede p{
-    font-size: 14px;
+    font-size: 16px;
 }
 .logo-redesocial{
     display: flex;
-    gap: px;
+    gap: 12px;
     
 
 }
 .redes-sociais img{
+    width: 35px;
+    height: 35px;
+}
+#sobre-nos{
+    order: 1;
+}
+#sobre-nos a{
+    text-decoration: none;
+    font-size: 18px;
+    color: #770523;
+}
+.imagem-logo{
+    order: 3;
+}
+.imagem-logo img{
+    width: 180px;
+    max-width: 100%;
+    display: block;
+    filter: drop-shadow(4px 4px 6px rgba(0,0,0,25));
+}
+.linha1{
+    display: none;
+    }
+.linha2{
+    display: none;
+}
 
-    width: 40px;
-    height: 40px;
-}
-.sobre-nos{
-    font-weight: bold;
-}
-.linha{
+@media (min-width: 768px) {
+    .onda svg{
+        height: 80px;
+    }
+    .conteudo-footer{
+        gap: 60px;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 30px;
+
+    }
+     .linha1, .linha2{
+    display: block;
     width: 1px;
-    height: 60px;
+    height: 40px;
     background-color: #770523;
+    opacity: 0.5;
+    margin: 0 10px;
+    align-self: center;
+    }
+    .titulo-rede p{
+        font-size: 18px;
+    }
+   .redes-sociais{
+    margin-left: 0;
+    order: 1;
+   }
+   .linha1{
+    order: 2;
+   }
+   #sobre-nos{
+    order: 3;
+   }
+    #sobre-nos a{
+        font-size: 18px;
+    }
+    .linha2{
+    order: 4;
+   }
+   
+    .imagem-logo{
+        order: 5;
+        width: 220px;
+        filter: drop-shadow(4px 4px 6px rgba(0,0,0,0.25));
+    }
+    
+    
+    
 }
