@@ -1,0 +1,425 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Noah";
+    src: url('./fonts/noah-regular.otf') format('truetype');
+}
+
+@font-face {
+    font-family: "Baloo";
+    src: url('./fonts/Baloo-Regular.ttf') format('truetype');
+}
+
+:root {
+    --branco: #FFFFFF;
+    --bege: #FEF3E2;
+    --rosa-claro: #FAD2E1;
+    --verde-claro: #D0D996;
+    --rosa: #D81A67;
+    --vinho: #770523;
+    --vinho-escuro: #1F0008;
+    --transition: transform 0.3s ease;
+    --transform-hover: scale(1.1);
+}
+
+body {
+    background-color: var(--bege);
+}
+
+p {
+    font-family: "Noah", sans-serif;
+}
+
+h2 {
+    font-family: "Baloo", sans-serif;
+
+}
+
+button {
+    border: none;
+    border-radius: 25px;
+    padding: 0.5% 3%;
+    font-family: "Noah", sans-serif;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+button:hover {
+    transform: var(--transform-hover);
+}
+
+.hero-section {
+    background-image: url(./assets/Hero\ Section.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px;
+    margin: 0px;
+
+}
+
+.content {
+    padding-left: 5%;
+    max-width: 50%;
+
+
+}
+
+.hero-section h1 {
+    text-align: left;
+    color: var(--bege);
+    font-size: 3vw;
+    font-family: "Baloo", sans-serif;
+    font-weight: 10px;
+    margin-bottom: 1.0vw;
+}
+
+.hero-section button {
+    background-color: var(--verde-claro);
+    border: none;
+    border-radius: 25px;
+    padding: 0.5% 3%;
+    color: var(--vinho);
+    font-family: "Noah", sans-serif;
+    font-size: 1.5vw;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.hero-section button:hover {
+    background-color: #c4cc8c;
+    transform: var(--transform-hover);
+}
+
+.o-que-somos {
+    background-color: var(--bege);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.o-que-somos h2 {
+    color: var(--vinho);
+    text-align: center;
+    font-family: "Baloo", sans-serif;
+    font-size: 1.7vw;
+}
+
+.cards {
+    display: grid;
+    margin: auto;
+    grid-template-columns: repeat(3, 18vw);
+    grid-template-rows: repeat(1, 300px);
+    column-gap: 100px;
+    justify-content: center;
+
+}
+
+.card {
+    background-color: var(--vinho);
+    border-radius: 25px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+.sobre {
+    background-color: #D0D996;
+    display: flex;
+    padding: 5px 0px;
+
+}
+
+.sobre .croche {
+    height: 90vh;
+}
+
+.sobre .content-sobre {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+}
+
+.texto {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 70%;
+}
+
+.sobre h2 {
+
+    color: var(--vinho);
+    font-size: 1.7vw;
+
+}
+
+.sobre .texto p {
+    font-size: 1.5vw;
+}
+
+.cards-mvv {
+    display: grid;
+    grid-template-columns: repeat(3, 18vw);
+    grid-template-rows: repeat(1, 240px);
+    max-width: 70%;
+    gap: 15px;
+}
+
+.card-mvv img {
+    width: 50px;
+}
+
+.card-mvv {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--branco);
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    gap: 20px;
+    border-radius: 30px;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.card-mvv:hover {
+    transform: var(--transform-hover);
+}
+
+.sobre h3 {
+    font-family: "Noah", sans-serif;
+    color: var(--vinho-escuro);
+
+}
+
+
+
+
+.blog h3 {
+    font-family: "Baloo", sans-serif;
+}
+
+
+
+@media only screen and (max-width: 767px) {
+    .hero-section {
+        background-image: url(./assets/Hero\ Section\ -\ Mobile.svg);
+        background-size: 100%;
+        min-height: 45vh;
+        align-items: flex-start;
+    }
+
+    .hero-section h1 {
+        font-size: 6vw;
+    }
+
+    .hero-section button {
+        font-size: 4vw;
+    }
+
+    .cards {
+        grid-template-columns: repeat(1, 50vw);
+        grid-template-rows: repeat(3, 200px);
+        row-gap: 10px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .o-que-somos {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .o-que-somos h2 {
+        font-size: 4.5vw;
+    }
+
+    .sobre {
+        background-color: #D0D996;
+        display: flex;
+        padding: 20px 0px;
+    }
+
+    .sobre .croche {
+        display: none;
+    }
+
+    .sobre .content-sobre {
+        padding-top: 20px;
+        padding-left: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        gap: 20px;
+    }
+
+    .texto {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        padding-right: 40px;
+        gap: 5px;
+        max-width: 100%;
+    }
+
+    .sobre h2 {
+        font-size: 7vw;
+    }
+
+    .sobre .texto p {
+        font-size: 4vw;
+    }
+
+    .cards-mvv {
+        display: grid;
+        grid-template-columns: repeat(1, 80vw);
+        grid-template-rows: repeat(3, 200px);
+        max-width: 100%;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .card-mvv {
+        gap: 10px;
+    }
+
+    .card-mvv h3 {
+        font-size: 17px;
+    }
+
+    .card-mvv p {
+        font-size: 14px;
+    }
+
+    .card-mvv img {
+        width: 50px;
+    }
+
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1200px) {
+    .hero-section {
+        min-height: 35vw;
+    }
+
+    .hero-section h1 {
+        font-size: 3.5vw;
+    }
+
+    .hero-section button {
+        font-size: 2.4vw;
+    }
+
+    .cards {
+        grid-template-columns: repeat(3, 30vw);
+        grid-template-rows: repeat(1, 220px);
+        column-gap: 20px;
+        justify-content: center;
+
+    }
+
+    .o-que-somos {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .o-que-somos h2 {
+        font-size: 2.5vw;
+    }
+
+    .sobre {
+        background-color: #D0D996;
+        display: flex;
+        padding: 20px 0px;
+
+    }
+
+    .sobre .croche {
+        height: 40vh;
+    }
+
+    .sobre .content-sobre {
+        padding-top: 20px;
+        padding-left: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        gap: 20px;
+    }
+
+    .texto {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        padding-right: 40px;
+        gap: 5px;
+        max-width: 100%;
+
+    }
+
+    .sobre h2 {
+        font-size: 2.5vw;
+    }
+
+    .sobre .texto p {
+        font-size: 2vw;
+    }
+
+    .cards-mvv {
+        display: grid;
+        grid-template-columns: repeat(3, 20vw);
+        grid-template-rows: repeat(1, 170px);
+        max-width: 100%;
+        gap: 1px;
+    }
+
+    .cards-mvv h3 {
+        font-size: 15px;
+    }
+
+    .cards-mvv p {
+        font-size: 10px;
+    }
+
+    .card-mvv{
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .card-mvv img {
+        width: 50px;
+    }
+
+
+
+}
