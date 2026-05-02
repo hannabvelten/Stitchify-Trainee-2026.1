@@ -146,7 +146,8 @@ footer{
    
     .imagem-logo{
         order: 5;
-        width: 220px;
+        width: 270px;
+        margin-top: 2px;
         filter: drop-shadow(4px 4px 6px rgba(0,0,0,0.25));
     }
     
