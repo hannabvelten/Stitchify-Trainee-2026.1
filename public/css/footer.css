@@ -7,15 +7,15 @@
 body{
     background-color: #FAD2E1;
     color: #770523;
-    justify-content: end;
 }
 footer{
-    margin-top: auto;
+    align-items: center;
+    background-color: #FAD2E1;
+    display: flex;
+    justify-content: space-between;
 }
 .imagem-logo{
-    text-align: right;
     padding: 30px;
-    background-color: #f0f0f0;
 }
 .imagem-logo img{
     width: 150px;
@@ -30,22 +30,33 @@ h3 a {
     font-size: 18px;
 }
 .redes-sociais{
-    text-align: left;
-    padding: 30px;
+    display: flex;
+    flex-direction: column;
 }
 .redes-sociais a{
-    margin-bottom: 15px;
-    font-size: 18px;
+    font-size: 20px;
+    font-weight: bold;
+     margin: 0 10px;
 }
 .redes-sociais p{
     margin-bottom: 15px;
     font-size: 18px;
 }
-.redes-sociais a{
-    margin: 0 10px;
+.logo-redesocial{
+    display: flex;
+
 }
 .redes-sociais img{
 
     width: 40px;
     height: 40px;
+}
+.sobre-nos{
+    font-size: 20px;
+    font-weight: bold;
+}
+.linha{
+    width: 1px;
+    height: 60px;
+    background-color: #770523;
 }
