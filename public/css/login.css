@@ -9,6 +9,7 @@
 html, body{
     height: 100%;
     font-family: 'Noah Regular';
+    overflow: hidden;
 
 }
 *{
@@ -117,13 +118,14 @@ main{
 }
 .icone .icon{
     position: absolute;
-    right: 15px;
+    right: 383px;
     top: 50%;
-    transform: translateY(-100%);
+    transform: translateY(-118%);
     color: #7B6D6D;
     font-size: 14px;
     pointer-events: none;
     margin-bottom: 600px;
+    opacity: 0.75;
 }
 @media(max-width: 768px){
     .boxlogin1{
@@ -186,5 +188,9 @@ main{
     text-align: center;
     margin: 20px 0;
     margin-left: 0;
+}
+.icone .icon{
+    right: 190px;
+     
 }
 }
