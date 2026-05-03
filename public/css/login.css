@@ -104,6 +104,27 @@ main{
     color: black;
     text-decoration: none;
 }
+.icone{
+    position: relative;
+    width: 100%;
+    margin-bottom: 18px;
+}
+.icone input{
+    width: 100%;
+    padding: 14px 40px 14px 14px;
+    border-radius: 12px;
+    border: none;
+}
+.icone .icon{
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-100%);
+    color: #7B6D6D;
+    font-size: 14px;
+    pointer-events: none;
+    margin-bottom: 600px;
+}
 @media(max-width: 768px){
     .boxlogin1{
         position: relative;
