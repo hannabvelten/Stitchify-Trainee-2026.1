@@ -93,7 +93,7 @@ main{
 }
 @media(max-width: 768px){
     .boxlogin1{
-        flex-direction: column;
+        flex-direction: col'umn;
     }
     .imagem-croche{
         position: absolute;
@@ -131,6 +131,7 @@ main{
     width: 300px;
 }
 .inscricao{
+    width: 100%;
     text-align: center;
-    margin-left: 30px;
+    margin: 20px 0;
 }
