@@ -46,18 +46,24 @@ main{
     justify-content: center;
     border-radius: 0 20px 20px 0;
 }
-.boxlogin2 input{
+.login{
+    width: 100%;
+    max-width: 450px;
+    margin-top: 0;
+    border: none;
+}
+
+.box-input input{
+    display: flex;
     width: 100%;
     margin-bottom: 15px;
     padding: 15px;
     border-radius: 12px ;
     border: none;
     cursor: text;
-   
-    
 }
-
-.boxlogin2 button{
+.box-input button{
+    
     width: 120px;
     padding: 12px;
     margin-bottom: 15px;
@@ -67,23 +73,14 @@ main{
     font-family: 'Noah Bold';
     color: #7B6D6D;
     background-color: #ffffff;
-    
 }
-.login{
-    width: 100%;
-    max-width: 450px;
-    margin-top: 0;
-    border: none;
-}
-
-
-
 .imagem-logo img{
     width: 500px;
     max-width: 100%; 
+    align-items: flex-start;
 }
 .inscricao{
-    text-align: left;
+    align-items: flex-start;
     margin-top: 20px;
     font-family: 'Noah Bold';
     font-size: 14px;
@@ -116,6 +113,14 @@ main{
         margin-bottom: ;
 
     }
+}
+.box-input{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.box-input button{
+    width: 120px;
 }
 .imagem-logo{
     text-align: center;
