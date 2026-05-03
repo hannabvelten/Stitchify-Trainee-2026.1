@@ -113,6 +113,18 @@ main{
         margin: auto;
         padding: 30px;
         border-radius: 20px;
+        margin-bottom: ;
 
     }
+}
+.imagem-logo{
+    text-align: center;
+    
+}
+.imagem-logo img{
+    width: 300px;
+}
+.inscricao{
+    text-align: center;
+    margin-left: 30px;
 }
