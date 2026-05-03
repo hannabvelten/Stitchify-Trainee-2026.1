@@ -120,7 +120,8 @@ main{
     align-items: center;
 }
 .box-input button{
-    width: 120px;
+    width: 100px;
+    max-width: none;
 }
 .imagem-logo{
     text-align: center;
