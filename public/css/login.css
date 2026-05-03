@@ -76,6 +76,12 @@ main{
     border: none;
 }
 
+
+
+.imagem-logo img{
+    width: 500px;
+    max-width: 100%; 
+}
 .inscricao{
     text-align: left;
     margin-top: 20px;
@@ -83,16 +89,10 @@ main{
     font-size: 14px;
     color: black;
 }
-.imagem-logo{
-
-    width: auto;
-
-}
-.imagem-logo img{
-    width: 500px;
-    max-width: 100%;
-   
+.inscricao a{
     
+    color: black;
+    text-decoration: none;
 }
 @media(max-width: 768px){
     .boxlogin1{
