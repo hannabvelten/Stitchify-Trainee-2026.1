@@ -17,7 +17,7 @@
 
 // function animarScroll() {
 //     const secaoRect = secao.getBoundingClientRect();
-//     const alturaTela = window.innerHeight;
+//const alturaTela = window.innerHeight;
 //     const alturaTotalSecao = secaoRect.height;
 
 //     const inicio = alturaTela - secaoRect.top;
