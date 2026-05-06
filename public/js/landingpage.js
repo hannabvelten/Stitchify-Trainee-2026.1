@@ -1,3 +1,4 @@
+// Passando elementos HTML para variavies JavaScript
 // const fioPath = document.querySelector('.container-fio path');
 // const itens = document.querySelectorAll('.item-fio');
 // const secao = document.querySelector('.container-fio');
