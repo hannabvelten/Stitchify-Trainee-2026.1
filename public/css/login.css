@@ -1,9 +1,9 @@
 @font-face {
-    font-family: 'Noah Regular';
+    font-family: 'Noah-Regular';
     src: url(../assets/Fonts/noah-regular.otf);
 }
 @font-face {
-    font-family: 'Noah Bold';
+    font-family: 'Noah-Bold';
     src: url(../assets/Fonts/noah-bold.otf);
 }
 @font-face {
@@ -11,7 +11,7 @@
     src: url(../assets/Fonts/Baloo-Regular.ttf);
 }
 body{
-    font-family: 'Noah Regular';
+    font-family: 'Noah-Regular';
 }
 *{
     margin: 0;
@@ -41,15 +41,14 @@ main{
     justify-content: center;
 }
 .saudacao h3{
-    font-family: 'Noah';
+    font-family: 'Noah-Regular';
 }
 .saudacao h2{
     font-family: 'Baloo';
 }
 .saudacao p{
-    font-family: 'Noah';
+    font-family: 'Noah-Regular';
 }
-
 .img-novelo {
     width: 8rem;
 
@@ -79,9 +78,19 @@ main{
 .inputs input{
     width: 400px;
     height: 40px;
+    border: none;  
     font-size: 'Noah';
     background-color: #F2E8D9;
     color: black;
     border-radius: 10px;
 
+}
+.inputs button{
+    width: 400px;
+    height: 40px;
+    font-size: 'Noah Bold';
+    color: white;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(to top, #770523,#AA0732, #AA0732, #BD103D, #BE0939)
 }
