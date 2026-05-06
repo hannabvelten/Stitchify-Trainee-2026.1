@@ -24,6 +24,10 @@ body{
 main{
 
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: scroll;
     
 }
 .onda-container{
@@ -48,8 +52,18 @@ main{
     width: 100px;
 }
 .img-croche {
-    width: 700px;
+    width: 600px;
     align-items: flex-end;
     justify-content: end;
 }
-
+.login-container{
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: top;
+}
+.imagem-logo{
+    width: 600px;
+}
