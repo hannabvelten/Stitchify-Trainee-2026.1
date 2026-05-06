@@ -18,19 +18,21 @@ body{
     padding: 0;
     box-sizing: border-box;
 }
-
+body{
+    z-index: 1;
+}
 main{
+
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    
 }
 .onda-container{
     width: 50%;
     height: 100vh;
     background-image: url("../assets/onda.svg");
-    background-repeat: no repeat;
+    
     background-size: cover;
+    z-index: 2;
 }
 .saudacao h3{
     font-family: 'Noah';
@@ -41,6 +43,13 @@ main{
 .saudacao p{
     font-family: 'Noah';
 }
-.imagem img{
+
+.img-novelo {
     width: 100px;
 }
+.img-croche {
+    width: 700px;
+    align-items: flex-end;
+    justify-content: end;
+}
+
