@@ -63,7 +63,7 @@ main{
     height: 100vh;
     display: flex;
     align-items: center;
-    align-items: top;
+    
     flex-direction: column;
 }
 .imagem-logo{
@@ -79,7 +79,7 @@ main{
     width: 400px;
     height: 40px;
     border: none;  
-    font-size: 'Noah';
+    font-family: 'Noah-Regular';
     background-color: #F2E8D9;
     color: black;
     border-radius: 10px;
@@ -88,9 +88,19 @@ main{
 .inputs button{
     width: 400px;
     height: 40px;
-    font-size: 'Noah Bold';
+    font-family: 'Noah-Bold';
     color: white;
     border: none;
     border-radius: 10px;
     background: linear-gradient(to top, #770523,#AA0732, #AA0732, #BD103D, #BE0939)
+}
+.inscricao{
+    font-family: 'Noah-Bold';
+}
+.inscricao p a{
+    display: inline;
+}
+.inscricao a{
+    text-decoration: none;
+    color:#770523;
 }
