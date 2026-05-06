@@ -6,6 +6,10 @@
     font-family: 'Noah Bold';
     src: url(../assets/Fonts/noah-bold.otf);
 }
+@font-face {
+    font-family: 'Baloo' ;
+    src: url(../assets/Fonts/Baloo-Regular.ttf);
+}
 body{
     font-family: 'Noah Regular';
 }
@@ -24,13 +28,15 @@ main{
 .onda-container{
     width: 45%;
     height: 100vh;
-    background-image: url(../assets/onda.svg);
+    background-image: url("../assets/onda.svg");
+    background-repeat: no repeat;
+    background-size: cover;
 }
 .saudacao h2{
     font-family: 'Noah';
 }
 .saudacao h3{
-    font-family: Baloo;
+    font-family: 'Baloo';
 }
 .saudacao p{
     font-family: 'Noah';
