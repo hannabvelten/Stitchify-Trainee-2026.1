@@ -10,8 +10,15 @@
     font-family: 'Baloo' ;
     src: url(../assets/Fonts/Baloo-Regular.ttf);
 }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .sidebar{
     width: 30%;
+    height: 100vh;
+    background-color: #FAD2E1;
 }
 .perfil-adm{
 
