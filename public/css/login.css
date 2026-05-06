@@ -10,22 +10,20 @@
     font-family: 'Baloo' ;
     src: url(../assets/Fonts/Baloo-Regular.ttf);
 }
-body{
-    font-family: 'Noah-Regular';
-}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 body{
-    z-index: 1;
+    font-family: 'Noah-Regular';
+    
 }
 main{
 
-    height: 100vh;
     display: flex;
-    overflow: scroll;
+    overflow: hidden;
     
 }
 .onda-container{
@@ -35,10 +33,11 @@ main{
     flex-direction: column;
     background-size: cover;
     z-index: 2;
+    position: relative;
+    
 }
 .saudacao{
     align-items: center;
-    justify-content: center;
 }
 .saudacao h3{
     font-family: 'Noah-Regular';
@@ -50,12 +49,17 @@ main{
     font-family: 'Noah-Regular';
 }
 .img-novelo {
-    width: 8rem;
-
+    width: 120px;
+    position: absolute;
+    right: 250px;
 }
 .img-croche {
-    justify-content: flex-start;
-    width: 600px;
+    
+    position: absolute;
+    bottom:-150px;
+    left: 0;
+    width: 610px;
+    max-height: none;
    
 }
 .login-container{
@@ -63,35 +67,44 @@ main{
     height: 100vh;
     display: flex;
     align-items: center;
-    
+    justify-content: center;
     flex-direction: column;
+    gap:60px;
 }
 .imagem-logo{
-    width: 400px;
+    width: 300px;
 }
 .inputs{
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
+    position: relative;
+    
+    
 
 }
 .inputs input{
     width: 400px;
-    height: 40px;
+    height: 50px;
     border: none;  
     font-family: 'Noah-Regular';
     background-color: #F2E8D9;
     color: black;
-    border-radius: 10px;
+    border-radius: 15px;
+    padding-left: 40px;
 
 }
+input::placeholder{
+    color:black;
+}
+
 .inputs button{
     width: 400px;
-    height: 40px;
+    height: 55px;
     font-family: 'Noah-Bold';
     color: white;
     border: none;
-    border-radius: 10px;
+    border-radius: 15px;
     background: linear-gradient(to top, #770523,#AA0732, #AA0732, #BD103D, #BE0939)
 }
 .inscricao{
