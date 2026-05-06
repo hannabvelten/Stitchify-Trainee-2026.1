@@ -338,26 +338,40 @@ button:hover {
     transform: var(--transform-hover);
 }
 
+#seta-esquerda {
+    left: 10px;
+}
+
+#seta-direita {
+    right: 10px;
+}
+
+.cards-blog{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
 .slider-conteudo{
+    overflow: hidden;
     display: flex;
     flex-direction: row;
     align-items: center;
     scroll-behavior: smooth;
-    justify-content: center;
-    gap: 40px;
+    gap: 20px;
     width: 100%;
     margin-bottom: 40px;
+    padding: 0 40px;
 }
 .card-blog {
     background-color: var(--vinho);
+    min-width: calc((100% - 40px) / 3);
+    flex-shrink: 0;
     padding: 20px;
-    min-width: 25%;
     display: flex;
     flex-direction: column;
-    transition: var(--transition);
     border-radius: 25px;
-
-
 }
 
 .card-blog h3 {
@@ -370,10 +384,6 @@ button:hover {
 .card-blog p {
     color: var(--bege);
     font-size: 1.2vw;
-}
-
-.card-blog:hover {
-    transform: var(--transform-hover);
 }
 
 .card-blog img {

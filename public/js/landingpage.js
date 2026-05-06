@@ -1,4 +1,77 @@
 // Passando elementos HTML para variavies JavaScript
+const slider = document.querySelector('.cards-blog');
+const sliderContent = document.querySelector('.slider-conteudo');
+const leftArrow = document.getElementById("seta-esquerda");
+const rightArrow = document.getElementById("seta-direita");
+
+// Declarar variáveis globais
+let currentPage = 0;
+let itensPerView = 1;
+let autoSlideInterval;
+
+// Criação/Organização do Carrossel
+
+function updateCarrossel(){
+    const sliderWidth = slider.offsetWidth;
+    const itemWidth = sliderContent.children[0].getBoundingClientRect().width;
+
+    itensPerView = (sliderWidth / itemWidth);
+    totalPages = Math.ceil((sliderContent.children.length / itensPerView) - 2* ((sliderWidth/itemWidth)/100));
+    
+}
+
+// MOVIMENTAÇÃO
+
+function scrollToPage(){
+    const cardWidth = sliderContent.children[0].getBoundingClientRect().width + 20;
+    const newPosition = cardWidth * 3 * currentPage;
+    sliderContent.scrollTo({left:newPosition, behavior: "smooth"});
+}
+
+function moveLeft(){
+    currentPage--;
+    if (currentPage < 0){
+        currentPage = totalPages-1;
+    }
+    scrollToPage();
+    resetAutoSlide();
+}
+
+function moveRight(){
+    currentPage++;
+    if (currentPage >= totalPages){
+        currentPage = 0;
+    }
+
+    scrollToPage();
+    resetAutoSlide();
+}
+
+//SLIDE AUTOMATICO
+
+function startAutoSlide(){
+    autoSlideInterval = setInterval( () => {
+        moveRight();
+    }, 10000)
+}
+
+function resetAutoSlide(){
+    clearInterval(autoSlideInterval);
+    startAutoSlide();
+}
+
+//EVENTOS
+
+leftArrow.addEventListener('click', moveLeft);
+rightArrow.addEventListener('click', moveRight);
+window.addEventListener('resize', updateCarrossel);
+
+//CHAMA ÍNICO DAS FUNÇÕES
+updateCarrossel();
+startAutoSlide();
+
+
+
 // const fioPath = document.querySelector('.container-fio path');
 // const itens = document.querySelectorAll('.item-fio');
 // const secao = document.querySelector('.container-fio');
