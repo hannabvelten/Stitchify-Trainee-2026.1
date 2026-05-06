@@ -21,78 +21,17 @@ main{
     justify-content: center;
     align-items: center;
 }
-
-.boxlogin1{
-    display: flex;
-    width: 900px;
-    height: 500px;
-    overflow: hidden;
-    border-radius: 20px;
-
+.onda-container{
+    width: 45%;
+    height: 100vh;
+    background-image: url(../assets/onda.svg);
 }
-.imagem-croche{
-    width: 40%;
-    background-image: url(../assets/imagem\ croche\ login.png);
-    background-size: cover;
-    background-position: center;
+.saudacao h2{
+    font-family: 'Noah';
 }
-.boxlogin2 {
-    width: 60%;
-    padding: 60px;
-    display: flex;
-    background: #FEF3E2;
-    flex-direction: column;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    border-radius: 0 20px 20px 0;
-    gap: 10px;
+.saudacao h3{
+    font-family: Baloo;
 }
-.boxlogin2 input{
-    width: 100%;
-    margin-bottom: 15px;
-    padding: 15px;
-    border-radius: 12px ;
-    border: none;
-    cursor: text;
-   
-    
-}
-
-.boxlogin2 button{
-    width: 120px;
-    padding: 12px;
-    margin-bottom: 15px;
-    border-radius: 12px;
-    border: none;
-    max-width: 70px;
-    font-family: 'Noah Bold';
-    color: #7B6D6D;
-    background-color: #ffffff;
-    
-}
-.login{
-    width: 100%;
-    max-width: 450px;
-    margin-top: 0;
-
-}
-
-.inscricao{
-    text-align: left;
-    margin-top: 20px;
-    font-family: 'Noah Bold';
-    font-size: 14px;
-    color: black;
-}
-.imagem-logo{
-    margin-bottom: 40px;
-    width: auto;
-
-}
-.imagem-logo img{
-    width: 250px;
-    max-width: 100%;
-   
-    
+.saudacao p{
+    font-family: 'Noah';
 }
