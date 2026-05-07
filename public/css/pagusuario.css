@@ -17,11 +17,21 @@
 }
 body{
 }
+main{
+    display: flex;
+    height: 100vh;
+
+}
 .sidebar{
     width: 20%;
-    height: 100vh;
     background-color: #FAD2E1;
-}
-.{
 
+}
+.paginausers{
+    width: 80%;
+    padding: 20px;
+}
+.box-perfiladmin{
+    align-items: flex-end;
+    
 }
