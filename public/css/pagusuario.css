@@ -115,6 +115,18 @@ input{
 .cabecalho{
     
 }
+.conteudo {
+    background-color: white;
+    
+}
+
+.acoesc button{
+    border: none;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    background-color: #FEF3E2;
+}
 .paginacao{
     justify-content: flex-end;
     display: flex;
