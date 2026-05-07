@@ -37,6 +37,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    background-color: #FBF6EF;
 }
 
 .topo {
@@ -83,5 +84,16 @@ main {
     background-color: #770523;
     color: white;
     font-size: 16px;
-
+}
+input{
+    width: 300px;
+    height: 25px;
+    border: 1px solid #D6C5C5;
+    font-family: 'Noah-Regular';
+    color: #67635E;
+    border-radius: 5px;
+}
+.box-users{
+    border-radius: 10px;
+    border: 1px solid #67635E;
 }
