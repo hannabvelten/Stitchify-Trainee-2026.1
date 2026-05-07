@@ -49,11 +49,14 @@ main{
 .saudacao h2{
     font-family: 'Baloo';
     font-size: 40px;
+    color: white;
 
 }
 .saudacao p{
     font-family: 'Noah-Regular';
-    
+}
+span{
+    color: #C1CA8B;
 }
 .img-novelo {
     width: 120px;
