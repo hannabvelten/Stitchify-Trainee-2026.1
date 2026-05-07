@@ -188,6 +188,7 @@ thead th{
 .paginacao{
     justify-content: flex-end;
     display: flex;
+    align-items: center;
     padding-right: 45px;   
     padding-bottom: 15px;
     gap: 10px;
@@ -196,12 +197,14 @@ thead th{
 }
 .paginacao button{
     font-family: 'Noah-Regular';
-    width: 20px;
+    width: 40px;
+    height: 40px;
     background-color: white;
     border: 0.5px solid #67635E;
     color: #67635E;
     border-radius: 5px;
-    font-size: 14px;
+    font-size: 16px;
+
     
 }
 .paginacao .pag1 {
@@ -210,3 +213,4 @@ thead th{
     color: white;
     
 }
+
