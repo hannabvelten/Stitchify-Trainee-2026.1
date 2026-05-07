@@ -41,19 +41,21 @@ main {
 }
 
 .topo {
-    display: flex;
+    display: flex;   
     justify-content: flex-end;
-    gap: 10px;
+    
     font-family: 'Noah-Regular';
     
 }
 
-.box-perfiladmin {
+.box-perfiladm{
     display: flex;
-    flex-direction: row;
-
-    gap: 10px;
+    align-items: center;
    
+}
+.textoadm{
+    display: flex;
+    flex-direction: column;
 }
 .linha{
     width: 100%;
