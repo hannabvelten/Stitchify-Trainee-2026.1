@@ -103,6 +103,7 @@ input{
     border: 1px solid #67635E;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 .usuarios{
 
@@ -110,13 +111,15 @@ input{
 .email {
     width: 300px ;
 }
+
 .cabecalho{
     
 }
 .paginacao{
     justify-content: flex-end;
     display: flex;
-    right:20px;
+    padding-right: 45px;   
+     
 }
 .paginacao button{
     font-family: 'Noah-Regular';
@@ -125,12 +128,13 @@ input{
     border: 0.5px solid #67635E;
     border-radius: 5px;
     font-size: 14px;
+    padding: 7px 14px;
 }
 .paginacao .pag1 {
     border: none;
     background-color: #770523;
     color: white;
-    padding: 1px 5px;
+    
 }
 .cabecalho{
     color: #770523;
