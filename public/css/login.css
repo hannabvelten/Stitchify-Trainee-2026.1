@@ -44,14 +44,16 @@ main{
 .saudacao h3{
     font-family: 'Noah-Regular';
     color: white;
-    
 
 }
 .saudacao h2{
     font-family: 'Baloo';
+    font-size: 40px;
+
 }
 .saudacao p{
     font-family: 'Noah-Regular';
+    
 }
 .img-novelo {
     width: 120px;
