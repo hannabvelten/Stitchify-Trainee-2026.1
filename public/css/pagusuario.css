@@ -30,8 +30,16 @@ main{
 .paginausers{
     width: 80%;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.topo{
+    display: flex;
+    justify-content: flex-end;
 }
 .box-perfiladmin{
-    align-items: flex-end;
-    
+   display: flex;
+   flex-direction: row;
+   gap: 10px;
 }
