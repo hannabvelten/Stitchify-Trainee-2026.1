@@ -37,9 +37,21 @@ main{
 .topo{
     display: flex;
     justify-content: flex-end;
+    gap: 10px;
 }
 .box-perfiladmin{
    display: flex;
-   flex-direction: row;
    gap: 10px;
+   white-space: nowrap;
+}
+.usuarios{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+.box-criauser{
+    display: flex;
+   gap: 10px;
+   justify-content: space-between;
 }
