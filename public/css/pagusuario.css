@@ -45,12 +45,14 @@ main {
     justify-content: flex-end;
     gap: 10px;
     font-family: 'Noah-Regular';
+    
 }
 
 .box-perfiladmin {
     display: flex;
     gap: 10px;
     white-space: nowrap;
+   
 }
 .linha{
     width: 100%;
@@ -98,34 +100,24 @@ input{
     color: #67635E;
     border-radius: 5px;
 }
-.box-users{
-    border-radius: 10px;
-    border: 1px solid #67635E;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-}
-.usuarios{
 
-}
-.email {
-    width: 300px ;
-}
-
-.cabecalho{
-    
-}
-.conteudo {
+table{
+    width: 100%;
+    font-family: 'Noah-Bold';
+    font-weight: 100;
+    border-collapse: collapse;
+    overflow: hidden;
     background-color: white;
     
 }
-
-.acoesc button{
-    border: none;
-    border-radius: 5px;
-    width: 30px;
-    height: 30px;
-    background-color: #FEF3E2;
+th, td{
+    padding: 15px;
+}
+th{
+    text-align: left;
+}
+thead th{
+    background-color: #F7EFE6;
 }
 .paginacao{
     justify-content: flex-end;
@@ -147,16 +139,4 @@ input{
     background-color: #770523;
     color: white;
     
-}
-.cabecalho{
-    color: #770523;
-    font-family: 'Noah-Bold';
-    background-color: #F7EFE6;
-}
-td{
-    font-family: 'Noah-Bold';
-    align-items: center;
-}
-td img{
-    width: 20px;
 }
