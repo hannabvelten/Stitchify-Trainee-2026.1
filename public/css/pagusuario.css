@@ -15,11 +15,13 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+}
 .sidebar{
-    width: 30%;
+    width: 20%;
     height: 100vh;
     background-color: #FAD2E1;
 }
 .perfil-adm{
-
+    
 }

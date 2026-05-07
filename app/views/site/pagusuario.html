@@ -1,64 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de usuários</title>
     <link rel="stylesheet" href="../../../public/css/pagusuario.css">
 </head>
+
 <body>
     <main>
         <div class="sidebar"></div>
-        <div class="perfil-adm">
-            <img src="../../../public/assets/PersonCircle.svg" alt="iconeperfil">
-            <p>Olá, Admin</p>
-            <p>Administrador</p>
-            <button class="moreadmin"><img src="../../../public/assets/Down Arrow.svg" alt="moreadmin"></button>
-            <hr class="linha">
-        </div>
-        <div class="criar usuário">
-            <img src="../../../public/assets/Vector.svg" alt="iconepessoas">
-            <p>Usuários</p>
-            <button class="criauser">+ Criar Usuário</button>
-        </div>
-        <div class="box-usuarios">
-            <div class="busca">
-                <input type="text" placeholder="Busca por nome ou email">
+        
+            <div class="box-users">
+                <table>
+                    <tr>
+                        <th>NOME</th>
+                        <th>EMAIL</th>
+                        <th>TIPO</th>
+                        <th>STATUS</th>
+                        <th>DATA DE CADASTROS</th>
+                        <th>AÇÕES</th>
+                    </tr>
+                    <tr>
+                        <td>Nome do usuário</td>
+                        <td>user.email@email.com</td>
+                        <td>admin</td>
+                        <td>ativo</td>
+                        <td>06/05/2025 14:38</td>
+                        <td>
+                            <div class="acoes">
+                                <button class="visualizar"><img src="../../../public/assets/Visualizar.svg"
+                                        alt="visualizar"></button>
+                                <button class="editar"><img src="../../../public/assets/Editar.svg"
+                                        alt="editar"></button>
+                                <button class="deletar"><img src="../../../public/assets/Deletar.svg"
+                                        alt="deletar"></button>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <div class="paginacao">
+                    <button class="voltar"><</button>
+                            <button class="pag1">1</button>
+                            <button class="pag2">2</button>
+                            <button class="pag3">3</button>
+                            <p>...</p>
+                            <button class="pag 5">5</button>
+                            <button class="proximo">></button>
+                </div>
             </div>
-        <table>
-            <tr>
-                <th>NOME</th>
-                <th>EMAIL</th>
-                <th>TIPO</th>
-                <th>STATUS</th>
-                <th>DATA DE CADASTROS</th>
-                <th>AÇÕES</th>
-            </tr>
-            <tr>
-                <td>Nome do usuário</td>
-                <td>user.email@email.com</td>
-                <td>admin</td>
-                <td>ativo</td>
-                <td>06/05/2025 14:38</td>
-                <td>
-                    <div class="acoes">
-                        <button class="visualizar"><img src="../../../public/assets/Visualizar.svg" alt="visualizar"></button>
-                        <button class="editar"><img src="../../../public/assets/Editar.svg" alt="editar"></button>
-                        <button class="deletar"><img src="../../../public/assets/Deletar.svg" alt="deletar"></button>
-                    </div>
-                </td>
-            </tr>
-        </table>
-        <div class="paginacao">
-            <button class="voltar"> <</button>
-            <button class="pag1">1</button>
-            <button class="pag2">2</button>
-            <button class="pag3">3</button>
-            <p>...</p>
-            <button class="pag 5">5</button>
-            <button class="proximo">></button>
-        </div>
-        </div>
+        
     </main>
 </body>
+
 </html>
