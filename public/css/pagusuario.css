@@ -2,62 +2,80 @@
     font-family: 'Noah-Regular';
     src: url(../assets/Fonts/noah-regular.otf);
 }
+
 @font-face {
     font-family: 'Noah-Bold';
     src: url(../assets/Fonts/noah-bold.otf);
 }
+
 @font-face {
-    font-family: 'Baloo' ;
+    font-family: 'Baloo';
     src: url(../assets/Fonts/Baloo-Regular.ttf);
 }
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
-}
-main{
+
+main {
     display: flex;
     height: 100vh;
 
 }
-.sidebar{
+
+.sidebar {
     width: 20%;
     background-color: #FAD2E1;
 
 }
-.paginausers{
+
+.paginausers {
     width: 80%;
     padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-.topo{
+
+.topo {
     display: flex;
     justify-content: flex-end;
     gap: 10px;
     font-family: 'Noah-Regular';
 }
-.box-perfiladmin{
-   display: flex;
-   gap: 10px;
-   white-space: nowrap;
+
+.box-perfiladmin {
+    display: flex;
+    gap: 10px;
+    white-space: nowrap;
 }
-.usuarios{
+
+.usuarios {
     display: flex;
     flex-direction: row;
     align-items: center;
     font-family: 'Baloo';
+    gap: 10px;
+}
+
+.box-criauser {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    font-size: 35px;
+    align-items: center;
+    color: #770523;
 
 }
-.box-criauser{
-    display: flex;
-   gap: 10px;
-   justify-content: space-between;
-   
+.box-criauser img{
+    color: #67635E;
 }
-.box-criauser button{
+
+.box-criauser button {
     font-family: 'Noah-Regular';
+    width: 100px;
+    height: 40px;
+
 }
