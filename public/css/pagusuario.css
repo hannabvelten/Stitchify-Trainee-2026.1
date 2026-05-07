@@ -51,6 +51,8 @@ main {
 .box-perfiladm{
     display: flex;
     align-items: center;
+    padding-right: 20px;
+    gap: 10px;
    
 }
 .textoadm{
@@ -77,11 +79,9 @@ main {
     font-size: 39px;
     align-items: center;
     color: #770523;
-
 }
 .box-criauser img{
     color: #67635E;
-
 }
 
 .box-criauser button {
@@ -104,6 +104,15 @@ input{
     border-radius: 5px;
 }
 
+.box-users{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border: 1px solid #67635E;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-top: 15px;
+}
 
 table{
     width: 100%;
@@ -111,18 +120,23 @@ table{
     font-weight: 100;
     border-collapse: collapse;
     overflow: hidden;
-    background-color: white;
-    
+    background-color: #FBF6EF;
+    border-collapse: separate;
+    border-spacing: 0 10px;
     
 }
+
 th, td{
     padding: 15px;
+    background-color: white;
+
 }
 th{
     text-align: left;
 }
 thead th{
     background-color: #F7EFE6;
+    color: #770523;
 }
 .acoesc img{
     display: block;
@@ -138,6 +152,9 @@ thead th{
     justify-content: flex-end;
     display: flex;
     padding-right: 45px;   
+    padding-bottom: 15px;
+    gap: 10px;
+    
      
 }
 .paginacao button{
