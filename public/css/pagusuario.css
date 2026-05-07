@@ -64,18 +64,24 @@ main {
     display: flex;
     gap: 10px;
     justify-content: space-between;
-    font-size: 35px;
+    font-size: 39px;
     align-items: center;
     color: #770523;
 
 }
 .box-criauser img{
     color: #67635E;
+
 }
 
 .box-criauser button {
     font-family: 'Noah-Regular';
-    width: 100px;
+    width: 160px;
     height: 40px;
+    border: none;
+    border-radius: 10px;
+    background-color: #770523;
+    color: white;
+    font-size: 16px;
 
 }
