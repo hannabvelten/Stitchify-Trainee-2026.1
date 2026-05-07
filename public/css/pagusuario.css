@@ -38,6 +38,7 @@ main{
     display: flex;
     justify-content: flex-end;
     gap: 10px;
+    font-family: 'Noah-Regular';
 }
 .box-perfiladmin{
    display: flex;
@@ -48,10 +49,15 @@ main{
     display: flex;
     flex-direction: row;
     align-items: center;
+    font-family: 'Baloo';
 
 }
 .box-criauser{
     display: flex;
    gap: 10px;
    justify-content: space-between;
+   
+}
+.box-criauser button{
+    font-family: 'Noah-Regular';
 }
