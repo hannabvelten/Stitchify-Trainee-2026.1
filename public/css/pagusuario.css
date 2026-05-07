@@ -52,7 +52,9 @@ main {
     gap: 10px;
     white-space: nowrap;
 }
+.linha{
 
+}
 .usuarios {
     display: flex;
     flex-direction: row;
@@ -96,4 +98,25 @@ input{
 .box-users{
     border-radius: 10px;
     border: 1px solid #67635E;
+    
+}
+.paginacao{
+    justify-content: flex-end;
+    display: flex;
+    right:20px;
+}
+.paginacao button{
+    font-family: 'Noah-Regular';
+    width: 20px;
+    background-color: white;
+    border: 0.5px solid #67635E;
+    border-radius: 5px;
+    font-size: 14px;
+}
+.paginacao .pag1 {
+    border: none;
+    background-color: #770523;
+    color: white;
+    padding: 1px 5px;
+    
 }
