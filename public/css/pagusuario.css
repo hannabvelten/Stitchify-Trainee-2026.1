@@ -148,11 +148,34 @@ thead th{
     height: 37px;
 }
 .tipoc span{
-    border: 1px solid #DBB8C1;
     padding: 5px 7px;
-    border-radius: 15px;
+    border-radius: 10px ;
+      
+}
+.admin{
     background-color: #DBB8C1;
     color: #770523;
+}
+.usuario{
+    background-color: #FEF3E2;
+    color: #8B7149;
+}
+.statusc span{
+    padding: 5px 7px;
+    border-radius: 10px;
+}
+.ativo{
+    background-color: #DFE7AD;
+    color: #478316;
+}
+
+.inativo{
+    background-color: #B1B2AB;
+    color: #333532;
+
+}
+.inativo img{
+    color: #333532;
 }
 .acoesc img{
     display: block;
