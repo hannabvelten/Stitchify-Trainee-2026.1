@@ -118,5 +118,15 @@ input{
     background-color: #770523;
     color: white;
     padding: 1px 5px;
-    
+}
+.cabecalho{
+    color: #770523;
+    font-family: 'Noah-Bold';
+}
+td{
+    font-family: 'Noah-Bold';
+    align-items: center;
+}
+td img{
+    width: 20px;
 }
