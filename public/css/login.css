@@ -18,7 +18,7 @@
 }
 body{
     font-family: 'Noah-Regular';
-    background-color: #F2E8D9;
+    background-color: #FEF3E2;
     
 }
 main{
@@ -44,29 +44,31 @@ main{
 .saudacao h3{
     font-family: 'Noah-Regular';
     color: white;
-    font-size: 30px;
+    font-size: 20px;
 
 }
 .saudacao h2{
     font-family: 'Baloo';
-    font-size: 60px;
+    font-size: 50px;
     color: white;
 
 }
 .saudacao p{
     font-family: 'Noah-Regular';
-    font-size: 25px;
+    font-size: 15px;
 }
 span{
     color: #C1CA8B;
 }
 .img-novelo {
-    width: 100px;
+    width: 70px;
+    align-self: center;
+    
     
 }
 .img-croche {
     width: 95%;
-    max-width: 650px;
+    max-width: 605px;
     height: auto;
     
     
