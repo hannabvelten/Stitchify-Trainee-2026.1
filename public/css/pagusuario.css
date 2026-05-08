@@ -21,13 +21,14 @@
 
 main {
     display: flex;
-    height: 100vh;
+    
 
 }
 
 .sidebar {
     width: 20%;
     background-color: #FAD2E1;
+    
 
 }
 
