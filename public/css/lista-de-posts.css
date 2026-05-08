@@ -1,0 +1,85 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    gap: 0px;
+    display: flex;
+    width: 1440px;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #FAD2E1;
+}
+
+:root {
+    --branco: #FFFFFF;
+    --bege: #FEF3E2;
+    --rosa-claro: #FAD2E1;
+    --verde-claro: #D0D996;
+    --rosa: #D81A67;
+    --vinho: #770523;
+    --vinho-escuro: #1F0008;
+}
+
+main {
+    display: flex;
+    height: 2535px;
+    padding: 0px 10px;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+    align-self: stretch;
+    background: linear-gradient(180deg, #FAD2E1 48.56%, #BA6E85 73.56%, #770523 100%);
+}
+
+.barra-de-pesquisa {
+    display: flex;
+    height: 306px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    align-self: stretch;
+    background: var(--rosa-claro, #FAD2E1);
+}
+
+
+
+
+
+
+
+
+
+
+@font-face {
+  font-family: 'Baloo';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/baloo (1)/Baloo-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Noah';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/Noah Free Font Family/Fonts/noah-regular.otf') format('opentype');
+}
+
+:root {
+  --font-primary: 'Baloo', Regular, sans-serif;
+  --font-secondary: 'Noah', sans-serif;
+}
+
+
+
+@font-face {
+    font-family: "Noah";
+    src: url('../assets/fonts/noah-regular.otf') format('truetype');
+}
+
+@font-face {
+    font-family: "Baloo";
+    src: url('../assets/fonts/Baloo-Regular.ttf') format('truetype');
+}
