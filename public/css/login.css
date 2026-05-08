@@ -18,6 +18,7 @@
 }
 body{
     font-family: 'Noah-Regular';
+    background-color: #F2E8D9;
     
 }
 main{
@@ -30,46 +31,45 @@ main{
     width: 50%;
     height: 100vh;
     background-image: url("../assets/onda.svg");
+    display: flex;
     flex-direction: column;
+    justify-content: space-between;
     background-size: cover;
-    z-index: 2;
-    position: relative;
     
 }
 .saudacao{
     padding-top: 40px;
     padding-left: 30px;
-    align-items: center;
 }
 .saudacao h3{
     font-family: 'Noah-Regular';
     color: white;
+    font-size: 30px;
 
 }
 .saudacao h2{
     font-family: 'Baloo';
-    font-size: 40px;
+    font-size: 60px;
     color: white;
 
 }
 .saudacao p{
     font-family: 'Noah-Regular';
+    font-size: 25px;
 }
 span{
     color: #C1CA8B;
 }
 .img-novelo {
-    width: 120px;
-    position: absolute;
-    right: 250px;
+    width: 100px;
+    
 }
 .img-croche {
+    width: 95%;
+    max-width: 650px;
+    height: auto;
     
-    position: absolute;
-    bottom:-150px;
-    left: 0;
-    width: 610px;
-    max-height: none;
+    
    
 }
 .login-container{
@@ -88,20 +88,17 @@ span{
     display: flex;
     flex-direction: column;
     gap: 20px;
-    position: relative;
-    
-    
-
 }
 .inputs input{
     width: 400px;
     height: 50px;
-    border: none;  
+    border: none; 
     font-family: 'Noah-Regular';
     background-color: #F2E8D9;
     color: black;
     border-radius: 15px;
     padding-left: 40px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
 
 }
 input::placeholder{
