@@ -103,8 +103,14 @@ input{
     font-size: 16px;
     color: #67635E;
     border-radius: 5px;
-}
+    padding-left: 30px;
 
+}
+.lupa{
+    position: absolute;
+    left: 20px;
+    top: 23px;
+}
 .box-users{
     display: flex;
     flex-direction: column;
@@ -113,6 +119,7 @@ input{
     border-radius: 10px;
     padding-left: 10px;
     padding-top: 15px;
+    position: relative;
 }
 
 table{
