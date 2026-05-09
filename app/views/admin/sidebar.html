@@ -5,58 +5,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../public/css/sidebar.css">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_left" />
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_right" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=move_item" />
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <title>Sidebar</title>
 </head>
 
 <body>
 
-    <div class="sidebar">
+    <div class="sidebar close">
 
         <div class="botao-sidebar">
-            <span class="material-symbols-outlined" id="left">
-                arrow_left
-            </span>
-            <span class="material-symbols-outlined" id="right">
-                arrow_right
-            </span>
+            <i class="bi bi-caret-left-fill"></i>
+            <i class="bi bi-caret-right-fill toggle"></i>
+
         </div>
+
         <div class="logo">
-            <img src="../../../public/assets/Logo_1.png" alt="">
+            <img src="../../../public/assets/logo.png" alt="" class="stitchify">
+            <img src="../../../public/assets/Novelo_logo_3.png" alt="" class="novelo">
         </div>
+
         <div class="paginas">
 
-            <div class="dashboard">
-                <span><i class="bi bi-bar-chart-fill"></i></span>
+            <div class="link">
+                <i class="bi bi-bar-chart-fill"></i>
                 <p>Dashboard</p>
             </div>
-            <div class="posts">
-                <span><i class="bi bi-file-richtext-fill"></i></span>
+            <div class="link">
+                <i class="bi bi-file-richtext-fill"></i>
                 <p>Posts</p>
             </div>
-            <div class="usuarios">
-                <span><i class="bi bi-people-fill"></i></span>
+            <div class="link">
+                <i class="bi bi-people-fill"></i>
                 <p>Usuários</p>
             </div>
 
-            <div class="logout">
-                <span class="material-symbols-outlined">
-                    move_item
-                </span>
+            <div class="link">
+                <i class="bi bi-box-arrow-right"></i>
                 <p>Logout</p>
             </div>
 
         </div>
 
     </div>
+
+    <script src="../../../public/js/sidebar.js"></script>
 
 </body>
 
