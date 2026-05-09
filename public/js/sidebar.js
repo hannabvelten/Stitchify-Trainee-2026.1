@@ -1,7 +1,12 @@
 const body = document.querySelector("body"),
     sidebar = body.querySelector(".sidebar"),
-    toggle = body.querySelector(".toggle");
+    toggleLeft = body.querySelector(".toggle.left"),
+    toggleRight = body.querySelector(".toggle.right");
 
-    toggle.addEventListener("click", () =>{
-        sidebar.classList.toggle("close");
+    toggleLeft.addEventListener("click", () =>{
+        sidebar.classList.add("close");
+    });
+
+    toggleRight.addEventListener("click", () =>{
+        sidebar.classList.remove("close");
     });

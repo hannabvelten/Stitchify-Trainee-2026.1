@@ -23,10 +23,13 @@
     --tran-05: all 0.5s ease;
 }
 
+
+/* ==== Sidebar Aberta ==== */
 .sidebar{
     top: 0;
     left: 0;
-    height: 100vh;
+    position: fixed;
+    height: 100%;
     width: 280px;
     display: flex;
     flex-direction: column;
@@ -34,10 +37,6 @@
     padding: 10px 10px;
     background-color: var(--rosa-claro);
     transition: var(--tran-05);
-}
-
-.sidebar.close{
-    width: 88px;
 }
 
 .botao-sidebar {
@@ -57,6 +56,10 @@
     cursor: pointer;
 }
 
+.toggle.right{
+    display: none;
+}
+
 .logo {
     display: flex;
     flex-direction: column;
@@ -64,13 +67,15 @@
     justify-content: center;
 }
 
-.logo.stitchify img{
+.logo .stitchify{
     width: 220px;
     height: auto;
+    transition: var(--tran-05);
+
 }
 
-.sidebar.close.logo.stitchify img{
-    display: ;
+.logo .novelo {
+    display: none;
 }
 
 .sidebar p {
@@ -82,16 +87,12 @@
 
 }
 
-.sidebar.close p{
-    opacity: 0;
-}
-
 .paginas {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 10px;
-    padding: 15px 15px;
+    padding: 15px 5px;
 }
 
 i {
@@ -105,7 +106,7 @@ i {
     gap: 20px;
     align-items: center;
     cursor: pointer;
-    padding: 12px;
+    padding: 10px 15px;
     transition: var(--tran-03);
 }
 
@@ -121,4 +122,37 @@ i {
 
 .link:hover p{
     color: var(--vinho);
+}
+
+/* ==== Sidebar Fechada ==== */
+
+.sidebar.close{
+    width: 88px;
+}
+
+.sidebar.close .toggle.left{
+    display: none;
+}
+
+.sidebar.close .botao-sidebar {
+    display: flex;
+    justify-content: center;
+    padding: 0px 0px;
+}
+
+.sidebar.close .toggle.right{
+    display: block;
+}
+
+.sidebar.close .logo .stitchify{
+    display: none;
+}
+
+.sidebar.close .logo .novelo{
+    display: block;
+    width: 60px;
+}
+
+.sidebar.close p{
+    opacity: 0;
 }
