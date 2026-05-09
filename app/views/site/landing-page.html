@@ -7,11 +7,13 @@
     <link rel="stylesheet" href="../../../public/css/landingpage.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_back_ios,arrow_forward_ios" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 
 </head>
 
 <body>
-   <!--Hero-Section-->
+    <!--Hero-Section-->
     <div class="hero-section">
 
         <div class="content">
@@ -44,8 +46,11 @@
 
     <!--Sobre nós-->
     <div class="sobre" id="sobre">
+
+        <!-- Imagem -->
         <img src="../../../public/assets/Imagem.svg" alt="" class="croche">
 
+        <!-- Texto e cards -->
         <div class="content-sobre">
 
             <div class="texto">
@@ -82,40 +87,54 @@
 
     </div>
 
-    <!-- <div class="container-fio">
+    <div class="container-fio">
+
         <svg width="1219" height="1583" viewBox="0 0 1219 1583" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
                 d="M857.44 6.70579C857.44 6.70579 1201.94 -46.2943 1201.94 278.706C1201.94 546.706 86.94 201.886 86.94 688.206C86.94 1160.21 1191.87 628.069 1214.94 1103.21C1238 1578.34 133.44 1462.31 43.9401 1495.81C-45.5599 1529.31 41.4401 1579.21 41.4401 1579.21"
                 stroke="#770523" stroke-width="7" />
         </svg>
 
+
         <div class="item-fio item-1">
             <h2>Criar é Transformar</h2>
         </div>
         <div class="item-fio item-2">
-            <img src="./assets/planta.svg" alt="">
+            <img src="../../../public/assets/planta.svg" alt="">
         </div>
         <div class="item-fio item-3">
-            <img src="./assets/cogumelo.svg" alt="">
+            <img src="../../../public/assets/cogumelo.svg" alt="">
         </div>
         <div class="item-fio item-4">
-            <img src="./assets/bichinhos-do-mar.svg" alt="">
-            <h2>Relaxar</h2>
-            <img src="./assets/nemo.svg" alt="">
+            <img src="../../../public/assets/bichinhos-do-mar.svg" alt="">
         </div>
         <div class="item-fio item-5">
-            <img src="./assets/solelua.svg" alt="">
-            <h2>Se conectar</h2>
-            <img src="./assets/beija-flor.svg" alt="">
+            <h2>Relaxar</h2>
         </div>
+        <div class="item-fio item-6">
+            <img src="../../../public/assets/nemo.svg" alt="">
+        </div>
+        <div class="item-fio item-7">
+            <img src="../../../public/assets/beija-flor.svg" alt="">
+        </div>
+        <div class="item-fio item-8">
+            <h2>Se conectar</h2>
+        </div>
+        <div class="item-fio item-9">
+            <img src="../../../public/assets/solelua.svg" alt="">    
+        </div>
+        
+        
 
     </div>
-    <script src="../../../public/js/landingpage.js"></script> -->
+
 
     <!--BLOG-->
     <div class="blog-container">
+        <!-- Parte ondulada de cima -->
         <img src="../../../public/assets/onda-cima.svg" alt="" class="onda">
-        
+
+
         <div class="blog">
 
             <div class="content-blog">
@@ -127,6 +146,7 @@
 
                 <p>Inspire-se com novas ideias e projetos feitos à mão.</p>
 
+                <!-- CARROSSEL -->
                 <div class="cards-blog">
                     <!--Setinha Esquerda-->
                     <span class="material-symbols-outlined" id="seta-esquerda">arrow_back_ios</span>
@@ -159,7 +179,8 @@
                         </div>
 
                         <div class="card-blog">
-                            <img src="../../../public/assets/Coffee (or tea), a sweet treat, a good book, and a….webp" alt="">
+                            <img src="../../../public/assets/Coffee (or tea), a sweet treat, a good book, and a….webp"
+                                alt="">
 
                             <h3>Lorem Ipsum</h3>
 
@@ -169,6 +190,7 @@
                             </p>
                             <button>Ver mais</button>
                         </div>
+
                         <div class="card-blog">
                             <img src="../../../public/assets/Imagem salva da internet _INSPIRAÇÃO_.webp" alt="">
 
@@ -201,6 +223,8 @@
                 <button class="posts">Ver todos os posts</button>
             </div>
         </div>
+
+        <!-- Parte ondulada de baixo -->
         <img src="../../../public/assets/onda-baixo.svg" alt="" class="onda">
 
     </div>

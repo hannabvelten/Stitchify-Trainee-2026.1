@@ -70,49 +70,57 @@ window.addEventListener('resize', updateCarrossel);
 updateCarrossel();
 startAutoSlide();
 
+// ---------- ANIMAÇÃO DO FIO ----------
 
+let svg = document.querySelector("svg");
+let path = svg.querySelector("path");
 
-// const fioPath = document.querySelector('.container-fio path');
-// const itens = document.querySelectorAll('.item-fio');
-// const secao = document.querySelector('.container-fio');
+const pathLength = path.getTotalLength();
 
-// const comprimento = fioPath.getTotalLength();
-// fioPath.style.strokeDasharray = comprimento;
-// fioPath.style.strokeDashoffset = comprimento;
-// fioPath.style.transition = 'none';
+console.log(pathLength);
 
-// itens.forEach(item => {
-//     item.style.opacity = '0';
-//     item.style.transform = 'translateY(20px)';
-//     item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-// });
+gsap.set(path, { strokeDasharray: pathLength });
 
-// const limiares = [0.08, 0.2, 0.42, 0.58, 0.76];
+gsap.fromTo(
+    path,
+    {
+        strokeDashoffset: pathLength,
+    },
+    {
+        strokeDashoffset: 0,
+        duration: 10,
+        ease: "none",
+        scrollTrigger:{
+            trigger:".container-fio",
+            start:"-10%",
+            end:"bottom bottom",
+            scrub:1,
+        }
+    }
 
-// function animarScroll() {
-//     const secaoRect = secao.getBoundingClientRect();
-//const alturaTela = window.innerHeight;
-//     const alturaTotalSecao = secaoRect.height;
+);
 
-//     const inicio = alturaTela - secaoRect.top;
-//     const total = alturaTotalSecao + alturaTela;
+gsap.utils.toArray(".item-fio").forEach((item) => {
 
-//     const progresso = Math.min(Math.max(inicio / total, 0), 1);
+    const itemTop = item.offsetTop;
+    const containerHeight = document.querySelector(".container-fio").offsetHeight;
+    
+    const startPercent = (itemTop / containerHeight) * 100;
 
-//     fioPath.style.strokeDashoffset = comprimento - (comprimento * progresso);
-
-//     itens.forEach((item, index) => {
-//         const limiar = limiares[index] ?? (index / itens.length);
-
-//         if (progresso >= limiar) {
-//             item.style.opacity = '1';
-//             item.style.transform = 'translateY(0)';
-//         } else {
-//             item.style.opacity = '0';
-//             item.style.transform = 'translateY(20px)';
-//         }
-//     });
-// }
-
-// window.addEventListener('scroll', animarscroll);
-// animarScroll();
+    gsap.fromTo(
+        item,
+        { opacity: 0},
+        {
+            opacity: 1,
+            y: 0,
+            duration: 0.5,
+            ease: "power2.out",
+            scrollTrigger: {
+                trigger: ".container-fio",
+                start: `${startPercent}% center`,
+                toggleActions: "play none none reverse",
+                scrub: false,
+            }
+        }
+    );
+});
