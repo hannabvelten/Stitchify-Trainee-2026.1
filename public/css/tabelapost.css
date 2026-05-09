@@ -1,0 +1,183 @@
+@font-face {
+    font-family: 'Baloo';
+    src: url('Baloo-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Noah';
+    src: url('Noah-Regular.ttf');
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #FEF3E2;
+    min-height: 100vh;
+}
+
+.layout{
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar{
+    width: 16rem;
+    background-color: #FAD2E1;
+}
+
+.content{
+    flex: 1;
+    background-color: #FEF3E2;
+    border-radius: 2rem 0 0 2rem;
+    padding: 0rem;
+}
+
+.topbar{
+    background-color: #FAD2E1;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1rem 1.5rem;
+
+    border-radius: 0 0 1.5rem 1.5rem;
+
+    box-shadow: 0 0.2rem 0.4rem rgba(0,0,0,0.2);
+}
+
+.title-area{
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.title-area h1{
+    font-family: 'Baloo';
+    color: #770523;
+    font-size: 2.2rem;
+}
+
+.title-area i{
+    font-size: 2rem;
+    color: #770523;
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.avatar{
+    width: 3rem;
+    height: 3rem;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.foto-perfil{
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.admin-btn{
+    background-color: #770523;
+    color: white;
+
+    border: none;
+
+    padding: 0.5rem 1rem;
+
+    border-radius: 2rem;
+
+    font-family: 'Noah';
+
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    cursor: pointer;
+}
+
+.table-section{
+    margin-top: 2rem;
+
+    background-color: #FEF3E2;
+
+    border-radius: 2rem;
+
+    padding: 1.5rem;
+
+    box-shadow: 0 0.2rem 0.6rem rgba(0,0,0,0.2);
+}
+
+.table-actions{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 1rem;
+
+    flex-wrap: wrap;
+}
+
+.left-actions{
+    display: flex;
+    gap: 1rem;
+}
+
+.left-actions button{
+    background-color: #FFFFFF;
+
+    border: none;
+
+    padding: 0.8rem 1.2rem;
+
+    border-radius: 0.8rem;
+
+    font-family: 'Noah';
+
+    color: #770523;
+
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    box-shadow: 0 0.2rem 0.4rem rgba(0,0,0,0.2);
+
+    cursor: pointer;
+}
+
+.search-box{
+    background-color: white;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0.6rem 1rem;
+
+    border-radius: 2rem;
+
+    width: 18rem;
+}
+
+.search-box input{
+    border: none;
+    outline: none;
+
+    flex: 1;
+
+    font-family: 'Noah';
+}
