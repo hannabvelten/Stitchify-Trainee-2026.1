@@ -42,19 +42,22 @@ main {
 }
 
 .topo {
+    width: 100%;
     display: flex;   
-    justify-content: flex-end;
-    
+    justify-content: space-between;
+     align-items: center;
     font-family: 'Noah-Regular';
     
 }
-
 .box-perfiladm{
     display: flex;
     align-items: center;
-    padding-right: 20px;
     gap: 10px;
-   
+}
+.admin{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
 }
 .textoadm{
     display: flex;
@@ -74,13 +77,14 @@ main {
     align-items: center;
     font-family: 'Baloo';
     gap: 10px;
+    font-size: 39px;
+    color: #770523;
 }
 
 .box-criauser {
     display: flex;
     gap: 10px;
     justify-content: space-between;
-    font-size: 39px;
     align-items: center;
     color: #770523;
 }
@@ -165,14 +169,7 @@ thead th{
     border-radius: 10px ;
       
 }
-.admin{
-    background-color: #DBB8C1;
-    color: #770523;
-}
-.usuario{
-    background-color: #FEF3E2;
-    color: #8B7149;
-}
+
 
 
 .acoesc img{
