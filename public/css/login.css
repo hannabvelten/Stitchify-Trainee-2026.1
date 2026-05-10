@@ -1,0 +1,119 @@
+@font-face {
+    font-family: 'Noah-Regular';
+    src: url(../assets/Fonts/noah-regular.otf);
+}
+@font-face {
+    font-family: 'Noah-Bold';
+    src: url(../assets/Fonts/noah-bold.otf);
+}
+@font-face {
+    font-family: 'Baloo' ;
+    src: url(../assets/Fonts/Baloo-Regular.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Noah-Regular';
+    
+}
+main{
+
+    display: flex;
+    overflow: hidden;
+    
+}
+.onda-container{
+    width: 50%;
+    height: 100vh;
+    background-image: url("../assets/onda.svg");
+    flex-direction: column;
+    background-size: cover;
+    z-index: 2;
+    position: relative;
+    
+}
+.saudacao{
+    align-items: center;
+}
+.saudacao h3{
+    font-family: 'Noah-Regular';
+}
+.saudacao h2{
+    font-family: 'Baloo';
+}
+.saudacao p{
+    font-family: 'Noah-Regular';
+}
+.img-novelo {
+    width: 120px;
+    position: absolute;
+    right: 250px;
+}
+.img-croche {
+    
+    position: absolute;
+    bottom:-150px;
+    left: 0;
+    width: 610px;
+    max-height: none;
+   
+}
+.login-container{
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap:60px;
+}
+.imagem-logo{
+    width: 300px;
+}
+.inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    
+    
+
+}
+.inputs input{
+    width: 400px;
+    height: 50px;
+    border: none;  
+    font-family: 'Noah-Regular';
+    background-color: #F2E8D9;
+    color: black;
+    border-radius: 15px;
+    padding-left: 40px;
+
+}
+input::placeholder{
+    color:black;
+}
+
+.inputs button{
+    width: 400px;
+    height: 55px;
+    font-family: 'Noah-Bold';
+    color: white;
+    border: none;
+    border-radius: 15px;
+    background: linear-gradient(to top, #770523,#AA0732, #AA0732, #BD103D, #BE0939)
+}
+.inscricao{
+    font-family: 'Noah-Bold';
+}
+.inscricao p a{
+    display: inline;
+}
+.inscricao a{
+    text-decoration: none;
+    color:#770523;
+}
