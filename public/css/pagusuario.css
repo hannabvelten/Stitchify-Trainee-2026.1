@@ -218,12 +218,12 @@ thead th{
         width: 100%;
         height: 70px;
     }
-    .topo{
-        
+    .paginausers{
+        width: 100%;
+    }
+    .topo{  
         flex-direction: column;
         align-items: flex-start;
-        
-    
     }
     .box-perfiladm{
         display: none;
