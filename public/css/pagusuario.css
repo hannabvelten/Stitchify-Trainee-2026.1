@@ -87,6 +87,7 @@ main {
     justify-content: space-between;
     align-items: center;
     color: #770523;
+    position: relative;
 }
 .box-criauser img{
     color: #67635E;
@@ -115,8 +116,7 @@ input{
 }
 .lupa{
     position: absolute;
-    left: 20px;
-    top: 23px;
+    left: 10px;
 }
 .box-users{
     display: flex;
@@ -126,7 +126,6 @@ input{
     border-radius: 10px;
     padding-left: 10px;
     padding-top: 15px;
-    position: relative;
     background-color: #C1CA8B;
 }
 
