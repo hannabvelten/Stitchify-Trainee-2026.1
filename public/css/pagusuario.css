@@ -228,10 +228,15 @@ thead th{
     .box-perfiladm{
         display: none;
     }
+    .box-criauser{
+        display: flex;
+        flex-direction: column;
+    }
     .box-criauser input{
-        display: none;
+        width: 80%;
+        position: relative;
     }
     .box-criauser img{
-        display: none;
+        position: absolute;
     }
 }
