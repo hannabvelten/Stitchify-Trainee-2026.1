@@ -1,12 +1,7 @@
 * {
-    margin: 0px;
-    padding: 0px;
-    gap: 0px;
-    display: flex;
-    width: 1440px;
-    flex-direction: column;
-    align-items: flex-start;
-    background: #FAD2E1;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 @font-face {
@@ -24,282 +19,185 @@
     --bege: #FEF3E2;
     --rosa-claro: #FAD2E1;
     --verde-claro: #D0D996;
-    --rosa: #D81A67;
     --vinho: #770523;
-    --vinho-escuro: #1F0008;
     --font-baloo: 'Baloo', sans-serif;
     --font-noah: 'Noah', sans-serif;
 }
 
+body {
+    background: var(--rosa-claro);
+    font-family: var(--font-noah);
+}
 
 main {
     display: flex;
-    height: 2535px;
-    padding: 0px 10px;
-    gap: 10px;
     flex-direction: column;
     align-items: center;
-    align-self: stretch;
-    background: linear-gradient(180deg, #FAD2E1 48.56%, #BA6E85 73.56%, #770523 100%);
+    min-height: 100vh;
+    padding-bottom: 80px;
+    background: linear-gradient(180deg, #FAD2E1 48%, #BA6E85 73%, #770523 100%);
 }
 
 .barra-de-pesquisa {
+    width: 100%;
+    padding: 50px 20px;
     display: flex;
-    height: 306px;
-    padding: 10px;
     justify-content: center;
-    align-items: center;
-    gap: 10px;
-    flex-shrink: 0;
-    align-self: stretch;
-    background: var(--rosa-claro, #FAD2E1);
 }
 
 .busca {
     display: flex;
-    width: 1300px;
-    height: 80px;
-    padding: 10px 40px;
+    width: 100%;
+    max-width: 1100px;
+    height: 75px;
+    padding: 0 40px;
     justify-content: space-between;
     align-items: center;
     border-radius: 50px;
-    border: 3px solid var(--vinho, #770523);
-    background: var(--bege, #FEF3E2);
+    border: 3px solid var(--vinho);
+    background: var(--bege);
 }
 
 .busca h2 {
-    width: 201px;
-    flex-shrink: 0;
-    color: var(--vinho, #770523);
-    font-family: Baloo;
-    font-size: 40px;
-    font-style: normal;
+    color: var(--vinho);
+    font-family: var(--font-baloo);
+    font-size: 36px;
     font-weight: 400;
-    line-height: normal;
-    opacity: 0.6;
+    opacity: 0.5;
 }
 
 .search-filter {
     display: flex;
-    width: 142px;
-    padding: 7px 15px;
-    justify-content: center;
+    gap: 20px;
     align-items: center;
-    flex-shrink: 0;
-    background: var(--bege, #FEF3E2);
 }
 
-.link-search {
-    width: 40px;
-    height: 40px;
-    flex-shrink: 0;
-    fill: #000;
-}
-
-.filter {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-}
-
-.link-filter {
-    width: 40px;
-    height: 40px;
-    fill: #000;
+.search-filter svg {
+    color: var(--vinho);
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
 }
 
 .titulo {
-    display: flex;
-    height: 122px;
-    padding: 0 709px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    flex-shrink: 0;
-    align-self: stretch;
-    border-radius: 10px;
-    border: 0 solid var(--vinho, #770523);
-    background: var(--rosa-claro, #FAD2E1);
+    margin: 60px 0;
 }
 
 .titulo h1 {
-    color: var(--vinho, #770523);
+    color: var(--vinho);
     font-family: var(--font-baloo);
-    font-size: 96px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    opacity: 0.9;
+    font-size: 86px;
+    font-weight: bold;
 }
 
 .div-cards {
-    display: flex;
-    padding: 50px 10px;
-    flex-direction: column;
-    align-items: center;
-    align-self: stretch;
-}
-
-.cards {
-    display: flex;
-    height: 1756px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    align-self: stretch;
-}
-
-.line-cards {
-    display: flex;
-    height: 869px;
-    padding: 10px 20px;
-    justify-content: center;
-    align-items: center;
-    gap: 60px;
-    flex-shrink: 0;
-    align-self: stretch;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    max-width: 1200px;
+    padding: 20px;
 }
 
 .card-unit {
-    display: flex;
-    width: 400px;
-    padding: 20px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
+    background: var(--vinho);
     border-radius: 50px;
-    background: #770523;
-    box-shadow: 0 4px 1px 0 rgba(0, 0, 0, 0.10);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.15);
+}
+
+.div-img {
+    padding: 15px 15px 0 15px;
+}
+
+.div-img img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 35px;
+}
+
+.conteudo-card {
+    padding: 20px 30px 30px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .titulo-post {
-    display: flex;
-    padding: 0 10px;
-    flex-direction: column;
-    align-items: center;
-    align-self: stretch;
-}
-
-.card-unit .titulo-post h3 {
-    font-family: var(--font-baloo);
     color: var(--bege);
-    text-align: center;
-    font-size: 40px;
-    font-style: normal;
-    line-height: normal;
-    font-weight: 400;
-}
-
-.card-unit .texto-post {
-    display: flex;
-    padding: 0 20px 20px 20px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-    align-self: stretch;
-}
-
-.card-unit .texto-post p b {
-    align-self: stretch;
-    color: var(--bege, #FEF3E2);
-    font-family: var(--font-noah);
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-}
-
-.card-unit .texto-post p {
-    align-self: stretch;
-    color: var(--bege, #FEF3E2);
-    font-family: var(--font-noah);
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
-
-.card-unit .botao-ver-mais {
-    display: flex;
-    width: 250px;
-    height: 40px;
-    padding: 10px 40px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    border-radius: 50px;
-    border: 2px solid var(--verde-claro, #C1CA8B);
-    background: var(--verde-claro, #C1CA8B);
-}
-
-.card-unit .botao-ver-mais button {
-    color: var(--vinho, #770523);
     font-family: var(--font-baloo);
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 400px;
-    line-height: normal;
+    font-size: 32px;
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
 }
 
+.texto-post {
+    color: var(--bege);
+    font-family: var(--font-noah);
+    font-size: 18px;
+    margin-bottom: 25px;
+    line-height: 1.3;
+}
+
+.botao-ver-mais {
+    background: var(--verde-claro);
+    color: var(--vinho);
+    border: none;
+    padding: 8px 0;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+    border-radius: 30px;
+    font-family: var(--font-baloo);
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* 5. Paginação */
 .paginacao {
+    margin-top: 80px;
+    width: 100%;
     display: flex;
-    height: 167px;
-    padding: 10px;
     justify-content: center;
-    align-items: center;
-    gap: 10px;
-    flex-shrink: 0;
-    align-self: stretch;
-    border: 1px solid rgba(0, 0, 0, 0.00);
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25) inset;
 }
 
-.seta {
+.num-paginacao {
     display: flex;
-    width: 54px;
-    height: 54px;
-    padding: 10px;
-    justify-content: center;
+    list-style: none;
+    gap: 12px;
     align-items: center;
-    gap: 10px;
-    border-radius: 20px;
-    border: 0 solid #7B6D6D;
-}
-
-.vector-seta {
-    width: 25px;
-    height: 25px;
-    flex-shrink: 0;
-    fill: #FAD2E1;
 }
 
 .tracado-paginacao {
     display: flex;
-    width: 54px;
-    height: 54px;
-    padding: 10x;
+    gap: 12px;
+}
+
+.num-paginacao a, .num-paginacao span {
+    display: flex;
+    width: 45px;
+    height: 45px;
+    background: var(--branco);
+    border-radius: 50%;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-    border-radius: 25px;
-    border: 1px solid var(--vinho, #770523);
-    background: var(--branco, #FFF);
-}
-
-.tracado-paginacao li {
-    list-style: none;
-}
-
-.tracado-paginacao a {
-    color: var(--vinho, #770523);
+    text-decoration: none;
+    color: var(--vinho);
     font-family: var(--font-baloo);
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.seta svg {
+    color: var(--bege);
+    width: 35px;
+    height: 35px;
+}
+
+.seta a {
+    background: transparent;
+    border: none;
 }
