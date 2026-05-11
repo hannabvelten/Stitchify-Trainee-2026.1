@@ -284,4 +284,7 @@ thead th{
         display: block;
         width: 100%;
     }
+    thead{
+        display: none;
+    }
 }
