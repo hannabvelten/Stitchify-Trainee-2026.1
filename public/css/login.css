@@ -35,11 +35,14 @@ main{
     flex-direction: column;
     justify-content: space-between;
     background-size: cover;
-    
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    padding: 15px 30px;
 }
 .saudacao{
-    padding-top: 40px;
-    padding-left: 30px;
+    position: absolute;
+   max-width: 500px;
 }
 .saudacao h3{
     font-family: 'Noah-Regular';
@@ -49,7 +52,7 @@ main{
 }
 .saudacao h2{
     font-family: 'Baloo';
-    font-size: 50px;
+    font-size: 40px;
     color: white;
 
 }
@@ -125,4 +128,11 @@ input::placeholder{
 .inscricao a{
     text-decoration: none;
     color:#770523;
+}
+
+@media (max-width: 768px){
+    main{
+        flex-direction: column;
+    }
+   
 }
