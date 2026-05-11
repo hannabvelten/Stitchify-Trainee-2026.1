@@ -1,0 +1,341 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Baloo';
+    src: url('../assets/fonts/Baloo2-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Noah';
+    src: url('../assets/fonts/noah-regular.otf') format('opentype');
+}
+
+:root {
+    --branco: #FFFFFF;
+    --bege: #FEF3E2;
+    --rosa-claro: #FAD2E1;
+    --verde-claro: #D0D996;
+    --rosa-escuro: #BA6E85;
+    --font-baloo: 'Baloo', sans-serif;
+    --font-noah: 'Noah', sans-serif;
+}
+
+html, body {
+    min-height: 100%;
+}
+
+body {
+    background: url('../assets/fundo-dash.jpeg') center/cover no-repeat fixed;
+    padding: 0;
+    align-items: center;
+    flex-direction: column;
+    max-width: 100vw;
+    max-height: 100vh;
+    font-family: var(--font-noah);
+}
+
+.controle-admin {
+    align-items: center;
+    flex-direction:row;
+    padding: 0 10px;
+    gap: 10px;
+    position: absolute;
+    left: 70px;
+    top: 46.5px;
+}
+
+.total-usuarios {
+    background-color: var(--verde-claro);
+    width: 231px;
+    height: 59px;
+    border-radius: 20px;
+    display: flex;
+    padding: 10px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+
+h3 {
+    color: #000;
+    font-family: var(--font-noah);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.total-publicacoes {
+    background-color: var(--verde-claro);
+    width: 270px;
+    height: 59px;
+    border-radius: 20px;
+    display: flex;
+    padding: 10px;
+    gap: 10px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 251px;
+}
+
+.admin-profile {
+    background-color: var(--bege);
+    width: 245px;
+    height: 61px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    right: 0;
+    bottom: -2px;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    align-self: stretch;
+}
+
+.link-profile {
+    width: 40px;
+    height: 40px;
+    fill:#000;
+}
+
+.caixa-admin {
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.username {
+    display: flex;
+    width: 135px;
+    height: 17px;
+    padding: 7px 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    top: 13.5px;
+}
+
+h4 {
+    color: #000;
+    font-family: var(--font-noah);
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.admin {
+    display: flex;
+    width: 104px;
+    padding: 0 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    bottom: 10.5px;
+}
+
+.admin p {
+    color: #000;
+    font-family: var(--font-noah);
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.seta {
+    display: flex;
+    width: 24px;
+    height: 29px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.link-seta {
+    width: 16px;
+    height: 10px;
+    flex-shrink: 0;
+    fill: #000;
+}
+
+.titulo {
+    display: flex;
+    width: 1042px;
+    height: 59px;
+    align-items: center;
+    position: absolute;
+    left: 191px;
+    top: 137.5px;
+}
+
+h1 {
+    display: flex;
+    width: 240px;
+    height: 59px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    color: var(--bege);
+    text-align: center;
+    font-family: var(--font-noah);
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.cards {
+    display: flex;
+    width: 968px;
+    height: 332px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+    left: 232px;
+    top: 228.5px;
+}
+
+.card-unit {
+    display: flex;
+    width: 287px;
+    padding: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    align-self: stretch;
+}
+
+.box {
+    display: flex;
+    width: 205px;
+    height: 205px;
+    padding: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 20px;
+    background: var(--bege);
+}
+
+.box-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    color: #000;
+    font-family: var(--font-noah);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.box-text {
+    display: flex;
+    padding: 14px 0;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.box-text p {
+    color: #000;
+    font-family: var(--font-noah);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+}
+
+.vetor {
+    display: flex;
+    width: 57px;
+    height: 57px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    left: 114.5px;
+    top: 44px;
+    border-radius: 10px;
+    background: var(--rosa-claro);
+}
+
+.vetor .home {
+    flex: 1 0 0;
+    align-self: stretch;
+    fill: var(--rosa-escuro)
+}
+
+.vetor .publi {
+    flex: 1 0 0;
+    align-self: stretch;
+    position: absolute;
+    left: 8px;
+    top: 10px;
+    fill: var(--rosa-escuro);
+}
+
+.vetor .perfil {
+    flex: 1 0 0;
+    align-self: stretch;
+    flex-shrink: 0;
+    fill: var(--rosa-escuro);
+}
+
+.ver-mais {
+    display: flex;
+    width: 101px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    left: 92.5px;
+    bottom: 0;
+    border-radius: 10px;
+    background: var(--rosa-claro);
+    color: #000;
+    font-family: var(--font-noah);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
