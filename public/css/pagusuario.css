@@ -280,5 +280,8 @@ thead th{
         border-radius: 10px;
 
     }
-    
+    table, thead, tbody, tr, td{
+        display: block;
+        width: 100%;
+    }
 }
