@@ -28,7 +28,7 @@ main{
     
 }
 .onda-container{
-    width: 50%;
+    width: 45%;
     height: 100vh;
     background-image: url("../assets/onda.svg");
     display: flex;
@@ -39,6 +39,8 @@ main{
     position: relative;
 }
 .saudacao{
+    position: absolute;
+    top: 10px;
     padding-left: 40px;
     padding-top: 30px;
 }
@@ -63,7 +65,7 @@ span{
     color: #C1CA8B;
 }
 .login-container{
-    width: 50%;
+    width: 55%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -153,8 +155,7 @@ input::placeholder{
     .saudacao-mobile{
        display: block;
        width: 100%;
-       padding-left: 40px;
-       padding-right: 20px;
+       padding-left: 90px;
     }
     .saudacao-mobile h3{
         color: #770523;
@@ -179,7 +180,7 @@ input::placeholder{
         gap: 20px;
     }
     .inputs input{
-        width: 300px;
+        width: 350px;
         height: 55px;
         border: none;
         border-radius: 15px;
@@ -188,7 +189,7 @@ input::placeholder{
         box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
     }
     .inputs button{
-         width: 300px;
+         width: 350px;
         height: 55px;
 
         border: none;
