@@ -314,9 +314,57 @@ thead th{
         display: none;
     }
     tr{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: white;
         border-radius: 15px;
-        padding: 15px;
+        padding: 50px;
         margin-bottom: 15px;
+        position: relative;
+    }
+    td{
+        padding: 0;
+        border: none;
+    }
+    .nomec{
+        gap: 15px;
+        position: absolute;
+        left: 20px;
+        top:3px;
+        
+    }
+    .nomec img{
+        
+        width: 70px;
+        height: 70px;
+    }
+    .emailc{
+        position: absolute;
+        left: 105px;
+
+    }
+    .adm{
+        position: absolute;
+        left: 100px;
+        top:90px;
+        display: flex;
+        align-items: center;
+    }
+    .tipoc{
+        margin-top: 10px;
+    }
+    .iduser{
+        position: absolute;
+        left: 250px;
+        bottom: 20px;
+    }
+    .acoesc{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        position: absolute;
+        left: 350px;
     }
     .deletar{
         display: none;
