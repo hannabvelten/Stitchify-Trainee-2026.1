@@ -1,15 +1,19 @@
 
 
-// ---------- ANIMAÇÃO DO FIO ----------
+// ---------- ANIMAÇÃO DO FIO - Responsivo ----------
 
-let svg = document.querySelector("svg");
-let path = svg.querySelector("path");
+gsap.registerPlugin(ScrollTrigger);
+
+const isMobile = window.innerWidth <= 767;
+const svg = document.querySelector(isMobile ? ".svg-mobile" : ".svg-desktop");
+const path = svg.querySelector("path");
 
 const pathLength = path.getTotalLength();
 
-console.log(pathLength);
-
-gsap.set(path, { strokeDasharray: pathLength });
+gsap.set(path, { 
+    strokeDasharray: pathLength,
+    strokeDashoffset: pathLength 
+});
 
 gsap.fromTo(
     path,
