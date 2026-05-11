@@ -134,5 +134,9 @@ input::placeholder{
     main{
         flex-direction: column;
     }
-   
+   .onda-container{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(../assets/onda-mobile.svg);
+   }
 }
