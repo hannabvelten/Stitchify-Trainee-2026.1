@@ -225,6 +225,14 @@ thead th{
         flex-direction: column;
         align-items: flex-start;
     }
+    
+    .usuarios{
+        font-size: 30px;
+        padding-left: 20px;
+    }
+    .usuarios img{
+        display: none;
+    }
     .box-perfiladm{
         display: none;
     }
