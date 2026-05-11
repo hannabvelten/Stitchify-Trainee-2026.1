@@ -31,7 +31,9 @@ main {
     
 
 }
-
+.bsidebar{
+    display: none;
+}
 .paginausers {
     width: 80%;
     padding: 20px;
@@ -217,12 +219,15 @@ thead th{
     .sidebar{
         width: 100%;
         height: 80px;
+        display: flex;
+        align-items: center;
+        padding-left: 50px;
         background-color: #770523;
         background-image: url(../assets/newstitchify.png);
-        background-size: 150px;
+        background-size: 170px;
         background-repeat: no-repeat;
-        background-position: center;
-        
+        background-position: 26% center;
+
     }
     .paginausers{
         width: 100%;
@@ -230,6 +235,16 @@ thead th{
     .topo{  
         flex-direction: column;
         align-items: flex-start;
+    }
+    .bsidebar{
+        display: block;
+        background: none;
+        border: none;
+        
+    }
+    .bsidebar img{
+        width: 25px;
+        height: 25px;
     }
     
     .usuarios{
@@ -265,4 +280,5 @@ thead th{
         border-radius: 10px;
 
     }
+    
 }
