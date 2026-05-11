@@ -176,12 +176,21 @@ thead th{
 .acoesc img{
     display: block;
 }
+.bvisualizar{
+    display: none;
+}
+.filtro{
+    display: none;
+}
 .acoesc button{
     border: none;
     border-radius: 5px;
     padding: 5px;
     background-color: #FEF3E2;
 
+}
+.bvisualização{
+    display: none;
 }
 .adm{
     border-radius: 20px;
@@ -316,31 +325,33 @@ thead th{
     tr{
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        justify-content: space-between;
         background: white;
         border-radius: 15px;
         padding: 20px;
         margin-bottom: 15px;
         gap: 15px;
+        position: relative;
     }
     td{
         padding: 0;
         border: none;
     }
-    .nomec{
-        display: flex;
-        gap: 10px;
-    }
-    .
-    .tipoc{
+    
 
-    }
-    .iduser{
-       
-    }
     .acoesc{
        display: flex;
-       justify-content: end;
+       position: absolute;
+       left: 320px;
+       top: 80px;
+    }
+    .acoesc button{
+        background-color: white;
+        align-items: center;
+    }
+    .visualizar{
+        display: none;
     }
     .deletar{
         display: none;
