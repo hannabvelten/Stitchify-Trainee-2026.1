@@ -32,23 +32,21 @@ main{
     height: 100vh;
     background-image: url("../assets/onda.svg");
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    align-items: center;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
-    padding: 15px 30px;
 }
 .saudacao{
-    position: absolute;
-   max-width: 500px;
+    padding-left: 40px;
+    padding-top: 30px;
 }
 .saudacao h3{
     font-family: 'Noah-Regular';
     color: white;
     font-size: 20px;
-
+    margin-bottom: 10px;
 }
 .saudacao h2{
     font-family: 'Baloo';
@@ -59,27 +57,13 @@ main{
 .saudacao p{
     font-family: 'Noah-Regular';
     font-size: 15px;
+    color: white;
 }
 span{
     color: #C1CA8B;
 }
-.img-novelo {
-    width: 70px;
-    align-self: center;
-    
-    
-}
-.img-croche {
-    width: 95%;
-    max-width: 605px;
-    height: auto;
-    
-    
-   
-}
 .login-container{
     width: 50%;
-    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -129,24 +113,51 @@ input::placeholder{
     text-decoration: none;
     color:#770523;
 }
-
+.saudacao-mobile{
+    display: none;
+}
+.onda-mobile{
+    display: none;
+}
 @media (max-width: 768px){
 
     main{
         flex-direction: column;
-    }
-    .logo{
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        overflow: visible;
     }
     .saudacao{
-        position: absolute;
-        left: 45px;
-        top: 90px;
+        display: none;
     }
-    .saudacao p{
+    .login-container{
+        order: 1;
+
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        gap: 20px;
+
+       padding-top: 20px;
+    }
+    .imagem-logo{
+        width: 220px;
+    }
+    .logo{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .saudacao-mobile{
+       display: block;
+       width: 100%;
+       padding-left: 40px;
+       padding-right: 20px;
+    }
+    .saudacao-mobile h3{
         color: #770523;
+        font-size: 18px;
     }
     .saudacao h2{
         color: #770523;
@@ -167,19 +178,6 @@ input::placeholder{
         display: block;
     }
 
-    .login-container{
-        order: 1;
-
-        width: 100%;
-
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        gap: 20px;
-
-        position: relative;
-        z-index: 1;
-    }
+    
 
 }
