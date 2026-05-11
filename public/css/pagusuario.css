@@ -231,6 +231,7 @@ thead th{
     }
     .paginausers{
         width: 100%;
+
     }
     .topo{  
         flex-direction: column;
@@ -280,6 +281,13 @@ thead th{
         border-radius: 10px;
 
     }
+    .box-users{
+        border: none;
+        border-radius: 0;
+        width: 100%;
+
+       
+    }
     table, thead, tbody, tr, td{
         display: block;
         width: 100%;
@@ -292,5 +300,10 @@ thead th{
         padding: 15px;
         margin-bottom: 15px;
     }
-    
+    .deletar{
+        display: none;
+    }
+    .editar{
+        display: none;
+    }
 }
