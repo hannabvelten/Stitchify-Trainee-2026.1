@@ -183,6 +183,24 @@ thead th{
     background-color: #FEF3E2;
 
 }
+.adm{
+    border-radius: 20px;
+    background-color: #DBB8C1;
+    color: #770523;
+    width: 100px;
+    align-items: center;
+    justify-content: center;
+
+}
+.usuario{
+     border-radius: 20px;
+    background-color: #FEF3E2;
+    color: #8B7149;
+    width: 100px;
+    align-items: center;
+    justify-content: center;
+
+}
 .paginacao{
     justify-content: flex-end;
     display: flex;
