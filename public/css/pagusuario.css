@@ -21,15 +21,19 @@
 
 main {
     display: flex;
-    
+
 
 }
 
 .sidebar {
     width: 20%;
     background-color: #FAD2E1;
-    
 
+
+}
+
+.bsidebar {
+    display: none;
 }
 
 .paginausers {
@@ -42,46 +46,60 @@ main {
 }
 
 .topo {
-    display: flex;   
-    justify-content: flex-end;
-    
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     font-family: 'Noah-Regular';
-    
+
 }
 
-.box-perfiladm{
+.box-perfiladm {
     display: flex;
     align-items: center;
-    padding-right: 20px;
     gap: 10px;
-   
 }
-.textoadm{
+
+.admin {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.textoadm {
     display: flex;
     flex-direction: column;
 }
-.linha{
-    width: 100%;
+
+.linha {
+    border: none;
+    width: calc(100% + 40px);
     height: 1px;
     background-color: #67635E;
+    align-self: stretch;
+    margin-left: -20px;
 }
+
 .usuarios {
     display: flex;
     flex-direction: row;
     align-items: center;
     font-family: 'Baloo';
     gap: 10px;
+    font-size: 39px;
+    color: #770523;
 }
 
 .box-criauser {
     display: flex;
     gap: 10px;
     justify-content: space-between;
-    font-size: 39px;
     align-items: center;
     color: #770523;
+    position: relative;
 }
-.box-criauser img{
+
+.box-criauser img {
     color: #67635E;
 }
 
@@ -95,7 +113,8 @@ main {
     color: white;
     font-size: 16px;
 }
-input{
+
+input {
     width: 500px;
     height: 35px;
     border: 1px solid #D6C5C5;
@@ -106,12 +125,13 @@ input{
     padding-left: 30px;
 
 }
-.lupa{
+
+.lupa {
     position: absolute;
-    left: 20px;
-    top: 23px;
+    left: 10px;
 }
-.box-users{
+
+.box-users {
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -119,91 +139,111 @@ input{
     border-radius: 10px;
     padding-left: 10px;
     padding-top: 15px;
-    position: relative;
+    background-color: #C1CA8B;
 }
 
-table{
+table {
     width: 100%;
     font-family: 'Noah-Bold';
     font-weight: 100;
     border-collapse: collapse;
     overflow: hidden;
-    background-color: #FBF6EF;
+    background-color: #C1CA8B;
     border-collapse: separate;
     border-spacing: 0 10px;
-    
+    padding-right: 10px;
+
 }
 
-th, td{
+th,
+td {
     padding: 15px;
     background-color: white;
 
 }
-th{
+
+th {
     text-align: left;
 }
-thead th{
+
+thead th {
     background-color: #F7EFE6;
     color: #770523;
 }
+
 .nomec {
     display: flex;
     align-items: center;
     gap: 5px;
 }
-.nomec img{
+
+.nomec img {
     width: 20px;
     height: 37px;
 }
-.tipoc span{
-    padding: 5px 7px;
-    border-radius: 10px ;
-      
-}
-.admin{
-    background-color: #DBB8C1;
-    color: #770523;
-}
-.usuario{
-    background-color: #FEF3E2;
-    color: #8B7149;
-}
-.statusc span{
+
+.tipoc span {
     padding: 5px 7px;
     border-radius: 10px;
-}
-.ativo{
-    background-color: #DFE7AD;
-    color: #478316;
-}
-
-.inativo{
-    background-color: #B1B2AB;
-    color: #333532;
 
 }
 
-.acoesc img{
+.acoesc img {
     display: block;
 }
-.acoesc button{
+
+.bvisualizar {
+    display: none;
+}
+
+.filtro {
+    display: none;
+}
+
+.acoesc button {
     border: none;
     border-radius: 5px;
     padding: 5px;
     background-color: #FEF3E2;
 
 }
-.paginacao{
+
+.bvisualização {
+    display: none;
+}
+
+.adm {
+    border-radius: 20px;
+    background-color: #DBB8C1;
+    color: #770523;
+    width: 100px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.usuario {
+    border-radius: 20px;
+    background-color: #FEF3E2;
+    color: #8B7149;
+    width: 100px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.paginacao {
     justify-content: flex-end;
     display: flex;
     align-items: center;
-    padding-right: 45px;   
+    padding-right: 45px;
     padding-bottom: 15px;
     gap: 10px;
-    
-     
+
+
 }
-.paginacao button{
+
+.paginacao button {
     font-family: 'Noah-Regular';
     width: 40px;
     height: 40px;
@@ -213,12 +253,171 @@ thead th{
     border-radius: 5px;
     font-size: 16px;
 
-    
+
 }
+
 .paginacao .pag1 {
     border: none;
     background-color: #770523;
     color: white;
-    
+
 }
 
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+    body{
+        overflow-x: hidden;
+    }
+    .sidebar {
+        width: 100%;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        padding-left: 50px;
+        background-color: #770523;
+        background-image: url(../assets/newstitchify.png);
+        background-size: 170px;
+        background-repeat: no-repeat;
+        background-position: 26% center;
+
+    }
+
+    .paginausers {
+        width: 100%;
+        padding: 0px;
+
+    }
+
+    .topo {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .bsidebar {
+        display: block;
+        background: none;
+        border: none;
+
+    }
+
+    .bsidebar img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .usuarios {
+        font-size: 30px;
+        padding-left: 20px;
+    }
+
+    .usuarios img {
+        display: none;
+    }
+
+    .box-perfiladm {
+        display: none;
+    }
+
+    .box-criauser {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .box-criauser input {
+        width: 95%;
+        border-radius: 10px;
+        height: 40px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .box-criauser img {
+        position: absolute;
+        left: 20px;
+        top: 10px;
+    }
+
+    .box-criauser button {
+        width: 95%;
+        height: 45px;
+        border-radius: 10px;
+
+    }
+
+    .box-users {
+        border: none;
+        border-radius: 0;
+        width: 100%;
+        padding: 15px;
+    }
+
+    table,
+    thead,
+    tbody,
+    tr,
+    td {
+        display: block;
+        width: 100%;
+    }
+    table, tbody{
+        width: 100%;
+    }
+    thead {
+        display: none;
+    }
+
+    tr {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        background: white;
+        border-radius: 15px;
+        padding: 20px;
+        margin-bottom: 15px;
+        gap: 15px;
+        position: relative;
+    }
+
+    td {
+        padding: 0;
+        border: none;
+    }
+
+
+    .acoesc {
+        display: flex;
+        position: absolute;
+        left: 320px;
+        top: 50%;
+    }
+
+    .acoesc button {
+        background-color: white;
+        align-items: center;
+    }
+
+    .bvisualizar {
+        display: block;
+    }
+
+    .filtro {
+        display: block;
+    }
+
+    .visualizar {
+        display: none;
+    }
+
+    .deletar {
+        display: none;
+    }
+
+    .editar {
+        display: none;
+    }
+}
