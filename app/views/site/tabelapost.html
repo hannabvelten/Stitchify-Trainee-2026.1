@@ -9,6 +9,7 @@
     <link 
     rel="stylesheet" 
     href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../../public/css/modais.css">
 </head>
 <body>
 
@@ -85,6 +86,39 @@
 
     </div>
 
+    <!-- Modal Criar Post -->
+    <form class="modalContainer" id="modalCriar" action="" method="post" enctype="multipart/form-data">
+
+        <div class="cabeçalho">
+            <img src="" alt="">
+            <p>Criar Post</p>
+        </div>
+
+        <!-- Upload Imagem -->
+        <label class="uploadImage" for="imagemPost">
+            <i class="bi bi-cloud-arrow-up-fill"></i>
+            <p>Arraste uma nova imagem ou <b>clique para fazer upload</b></p>
+        </label>
+        <input type="file" id="imagemPost" name="imagem" accept="image/*" hidden>
+
+        <!-- Título -->
+        <label>Título do Post*</label>
+        <input type="text" name="titulo" placeholder="Digite o título do post" required>
+
+        <!-- Descrição -->
+        <label>Descrição*</label>
+        <textarea type="text" name="descricao" placeholder="Digite a descricao" required></textarea>
+
+        <!-- Categorias -->
+        <label>Categoria(s)*</label>
+        <input type="text" name="categorias" placeholder="Ex: tutoriais, roupas e etc">
+
+        <div class="modalActions">
+            <button class="btnCancel" type="button">Cancelar</button>
+            <button class="btnCreate" type="submit">Criar</button>
+        </div>
+    </form>
+
 </body>
-  
+
 </html>
