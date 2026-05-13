@@ -1,90 +1,334 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="  ../../../public/css/tabelapost.css">
+
+    <title>Tabela de Posts</title>
+
+    <link rel="stylesheet" href="../../../public/css/tabelapost.css">
 
     <link 
     rel="stylesheet" 
     href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
 </head>
+
 <body>
 
     <div class="layout">
 
-        
         <aside class="sidebar"></aside>
 
-        
-        <main class="content">
+        <main class="conteudo">
+
             <header class="topbar">
 
-                <div class="title-area">
+                <div class="titulo-area">
 
                     <i class="bi bi-card-checklist"></i>
 
-                    <h1>Tabela de Post</h1>
+                    <h1>Tabela de Posts</h1>
 
                 </div>
 
-                <div class="profile">
+                <div class="perfil">
 
                     <i class="bi bi-bell"></i>
 
                     <div class="avatar">
+
                         <img 
                         src="../../../public/assets/fotousuario.jpg" 
-                        alt="Foto do usuario"
-                        class="foto-perfil"
-                        >
+                        alt="Foto do usuário"
+                        class="foto-perfil">
+
                     </div>
 
-                    <button class="admin-btn">
-                        Adimin
+                    <button class="botao-admin">
+
+                        Admin
+
                         <i class="bi bi-caret-down-fill"></i>
+
                     </button>
 
                 </div>
 
             </header>
-                
-                <section class="table-section">
 
-                    <div class="table-actions">
+            <section class="secao-tabela">
+
+                <div class="acoes-tabela">
+
+                    <div class="botoes-esquerda">
+
+                        <button>
+
+                            <i class="bi bi-plus-square"></i>
+
+                            Adicionar
+
+                        </button>
+
+                        <button>
+
+                            <i class="bi bi-calendar-event"></i>
+
+                        </button>
+
+                    </div>
+
+                    <div class="caixa-pesquisa">
+
+                        <input type="text" placeholder="Buscar posts">
+
+                        <i class="bi bi-search"></i>
+
+                    </div>
+
+                </div>
+
+                <div class="tabela-posts">
+
+                    <div class="cabecalho-tabela">
+
+                        <span>ID</span>
+                        <span>Título</span>
+                        <span>Autor</span>
+                        <span>Categoria</span>
+                        <span>Data</span>
+                        <span>Ações</span>
+
+                    </div>
+
                     
-                        <div class="left-actions">
 
-                            <button>
-                                <i class="bi bi-plus-square"></i>
-                                Adicionar
-                            </button>
+                    <div class="linha-post">
 
-                            <button>
-                                <i class="bi bi-calendar-event"></i>
-                                
-                                </button>
+                        <span>0123456789</span>
+
+                        <div class="info-post">
+
+                            <img 
+                            src="../../../public/assets/portacopo.jpg"
+                            alt="Post">
+
+                            <p>Porta Copo</p>
 
                         </div>
 
-                        <div class="search-box">
+                        <div class="info-autor">
 
-                            <input type="text" placeholder="Buscar posts">
+                            <img 
+                            src="../../../public/assets/fotousuario.jpg"
+                            alt="Autor">
 
-                            <i class="bi bi-search"></i>
+                            <p>Vasco da Gama</p>
+
+                        </div>
+
+                        <div class="tag">
+                            Post
+                        </div>
+
+                        <span>25/04/2026</span>
+
+                        <div class="acoes">
+
+                            <button>
+                                <i class="bi bi-eye"></i>
+                            </button>
+
+                            <button>
+                                <i class="bi bi-pencil"></i>
+                            </button>
+
+                            <button>
+                                <i class="bi bi-trash"></i>
+                            </button>
 
                         </div>
 
                     </div>
 
-                </section>
+                    
+                    <div class="linha-post">
 
-            </main>    
+                        <span>8473628190</span>
+
+                        <div class="info-post">
+
+                            <img 
+                            src="../../../public/assets/dory.jpg"
+                            alt="Post">
+
+                            <p>Dory</p>
+
+                        </div>
+
+                        <div class="info-autor">
+
+                            <img 
+                            src="../../../public/assets/fotousuario.jpg"
+                            alt="Autor">
+
+                            <p>Hadassa</p>
+
+                        </div>
+
+                        <div class="tag">
+                            Tutorial
+                        </div>
+
+                        <span>02/05/2026</span>
+
+                        <div class="acoes">
+
+                            <button>
+                                <i class="bi bi-eye"></i>
+                            </button>
+
+                            <button>
+                                <i class="bi bi-pencil"></i>
+                            </button>
+
+                            <button>
+                                <i class="bi bi-trash"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                   
+                    <div class="linha-post">
+
+                        <span>9182736455</span>
+
+                        <div class="info-post">
+
+                            <img 
+                            src="../../../public/assets/toucafrango.jpg"
+                            alt="Post">
+
+                            <p>Touca de Frango</p>
+
+                        </div>
+
+                        <div class="info-autor">
+
+                            <img 
+                            src="../../../public/assets/fotousuario.jpg"
+                            alt="Autor">
+
+                            <p>Maria Luiza</p>
+
+                        </div>
+
+                        <div class="tag">
+                            Dicas
+                        </div>
+
+                        <span>10/05/2026</span>
+
+                        <div class="acoes">
+
+                            <button>
+                                <i class="bi bi-eye"></i>
+                            </button>
+
+                            <button>
+                                <i class="bi bi-pencil"></i>
+                            </button>
+
+                            <button>
+                                <i class="bi bi-trash"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    
+                    <div class="linha-post">
+
+                        <span>6655443322</span>
+
+                        <div class="info-post">
+
+                            <img 
+                            src="../../../public/assets/mascaracroche.jpg"
+                            alt="Post">
+
+                            <p>Mascara com Rosa</p>
+
+                        </div>
+
+                        <div class="info-autor">
+
+                            <img 
+                            src="../../../public/assets/fotousuario.jpg"
+                            alt="Autor">
+
+                            <p>Murilo</p>
+
+                        </div>
+
+                        <div class="tag">
+                            Materiais
+                        </div>
+
+                        <span>15/05/2026</span>
+
+                        <div class="acoes">
+
+                            <button>
+                                <i class="bi bi-eye"></i>
+                            </button>
+
+                            <button>
+                                <i class="bi bi-pencil"></i>
+                            </button>
+
+                            <button>
+                                <i class="bi bi-trash"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <div class="paginacao">
+
+                        <button>
+                            <i class="bi bi-chevron-left"></i>
+                        </button>
+
+                        <button class="ativo">1</button>
+
+                        <button>2</button>
+
+                        <button>3</button>
+
+                        <span>...</span>
+
+                        <button>6</button>
+
+                        <button>
+                            <i class="bi bi-chevron-right"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
         </main>
 
     </div>
 
 </body>
-  
 </html>

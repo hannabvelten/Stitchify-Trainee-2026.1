@@ -1,12 +1,13 @@
-@font-face {
+@font-face{
     font-family: 'Baloo';
     src: url('Baloo-Regular.ttf');
 }
 
-@font-face {
+@font-face{
     font-family: 'Noah';
     src: url('Noah-Regular.ttf');
 }
+
 *{
     margin: 0;
     padding: 0;
@@ -14,61 +15,73 @@
 }
 
 body{
-    background-color: #FEF3E2;
     min-height: 100vh;
+
+    background-color: #FEF3E2;
+
+    font-family: 'Noah';
 }
 
 .layout{
     display: flex;
+
     min-height: 100vh;
 }
 
 .sidebar{
     width: 16rem;
+
     background-color: #FAD2E1;
 }
 
-.content{
+.conteudo{
     flex: 1;
+
     background-color: #FEF3E2;
-    border-radius: 2rem 0 0 2rem;
-    padding: 0rem;
 }
 
 .topbar{
     background-color: #FAD2E1;
 
     display: flex;
+
     justify-content: space-between;
     align-items: center;
 
-    padding: 1rem 1.5rem;
+    padding: 1rem 2rem;
 
-    border-radius: 0 0 1.5rem 1.5rem;
+    border-radius: 0 0 1.8rem 1.8rem;
 
-    box-shadow: 0 0.2rem 0.4rem rgba(0,0,0,0.2);
+    box-shadow: 0 0.2rem 0.5rem rgba(0,0,0,0.15);
 }
 
-.title-area{
+.titulo-area{
     display: flex;
+
     align-items: center;
+
     gap: 0.8rem;
 }
 
-.title-area h1{
+.titulo-area h1{
     font-family: 'Baloo';
+
     color: #770523;
-    font-size: 2.2rem;
+
+    font-size: 2.3rem;
 }
 
-.title-area i{
+.titulo-area i{
+    color: #770523;
+
     font-size: 2rem;
-    color: #770523;
 }
 
-.profile{
+.perfil{
     display: flex;
+
     align-items: center;
+
     gap: 1rem;
 }
 
@@ -79,10 +92,6 @@ body{
     border-radius: 50%;
 
     overflow: hidden;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .foto-perfil{
@@ -92,39 +101,35 @@ body{
     object-fit: cover;
 }
 
-.admin-btn{
+.botao-admin{
     background-color: #770523;
+
     color: white;
 
     border: none;
 
-    padding: 0.5rem 1rem;
-
     border-radius: 2rem;
 
-    font-family: 'Noah';
+    padding: 0.6rem 1rem;
 
     display: flex;
+
     align-items: center;
+
     gap: 0.5rem;
 
     cursor: pointer;
+
+    font-family: 'Noah';
 }
 
-.table-section{
-    margin-top: 2rem;
-
-    background-color: #FEF3E2;
-
-    border-radius: 2rem;
-
-    padding: 1.5rem;
-
-    box-shadow: 0 0.2rem 0.6rem rgba(0,0,0,0.2);
+.secao-tabela{
+    padding: 2rem;
 }
 
-.table-actions{
+.acoes-tabela{
     display: flex;
+
     justify-content: space-between;
     align-items: center;
 
@@ -133,13 +138,14 @@ body{
     flex-wrap: wrap;
 }
 
-.left-actions{
+.botoes-esquerda{
     display: flex;
+
     gap: 1rem;
 }
 
-.left-actions button{
-    background-color: #FFFFFF;
+.botoes-esquerda button{
+    background-color: white;
 
     border: none;
 
@@ -147,37 +153,268 @@ body{
 
     border-radius: 0.8rem;
 
-    font-family: 'Noah';
+    display: flex;
+
+    align-items: center;
+
+    gap: 0.5rem;
 
     color: #770523;
 
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-
-    box-shadow: 0 0.2rem 0.4rem rgba(0,0,0,0.2);
-
     cursor: pointer;
+
+    box-shadow: 0 0.2rem 0.4rem rgba(0,0,0,0.15);
 }
 
-.search-box{
+.caixa-pesquisa{
     background-color: white;
 
     display: flex;
+
     align-items: center;
 
-    padding: 0.6rem 1rem;
+    padding: 0.7rem 1rem;
 
     border-radius: 2rem;
 
     width: 18rem;
 }
 
-.search-box input{
+.caixa-pesquisa input{
     border: none;
+
     outline: none;
 
     flex: 1;
 
     font-family: 'Noah';
+}
+
+.tabela-posts{
+    margin-top: 2rem;
+
+    background-color: #C1CA8B;
+
+    border-radius: 2.5rem;
+
+    padding: 1.5rem;
+
+    box-shadow: 0 0.3rem 0.8rem rgba(0,0,0,0.15);
+}
+
+.cabecalho-tabela{
+    display: grid;
+
+    grid-template-columns:
+    1fr
+    2fr
+    2fr
+    1fr
+    1fr
+    1fr;
+
+    align-items: center;
+    justify-items: center;
+
+    padding: 1rem;
+
+    color: #770523;
+
+    font-family: 'Baloo';
+
+    font-size: 1.5rem;
+}
+
+.linha-post{
+    display: grid;
+
+    grid-template-columns:
+    1fr
+    2fr
+    2fr
+    1fr
+    1fr
+    1fr;
+
+    align-items: center;
+    justify-items: center;
+
+    gap: 1rem;
+
+    background-color: #FEF3E2;
+
+    padding: 1.2rem;
+
+    border-radius: 1.5rem;
+
+    margin-bottom: 1rem;
+}
+
+.info-post{
+    display: flex;
+
+    align-items: center;
+
+    gap: 0.8rem;
+}
+
+.info-post img{
+    width: 3rem;
+    height: 3rem;
+
+    border-radius: 0.6rem;
+
+    object-fit: cover;
+}
+
+.info-autor{
+    display: flex;
+
+    align-items: center;
+
+    gap: 0.8rem;
+}
+
+.info-autor img{
+    width: 2.5rem;
+    height: 2.5rem;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+}
+
+.tag{
+    background-color: #FAD2E1;
+
+    color: #770523;
+
+    padding: 0.4rem 1rem;
+
+    border-radius: 2rem;
+
+    font-size: 0.9rem;
+}
+
+.acoes{
+    display: flex;
+
+    gap: 0.5rem;
+}
+
+.acoes button{
+    width: 2.5rem;
+    height: 2.5rem;
+
+    border: none;
+
+    border-radius: 0.8rem;
+
+    background-color: white;
+
+    color: #770523;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+    box-shadow: 0 0.1rem 0.3rem rgba(0,0,0,0.15);
+}
+
+.acoes button:hover{
+    transform: scale(1.05);
+
+    background-color: #FAD2E1;
+}
+
+.paginacao{
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 0.6rem;
+
+    margin-top: 2rem;
+}
+
+.paginacao button{
+    width: 2.3rem;
+    height: 2.3rem;
+
+    border: none;
+
+    border-radius: 0.6rem;
+
+    background-color: white;
+
+    color: #770523;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+    font-weight: bold;
+}
+
+.paginacao .ativo{
+    background-color: #770523;
+
+    color: white;
+}
+
+.paginacao button:hover{
+    transform: scale(1.05);
+}
+
+@media (max-width: 900px){
+
+    .cabecalho-tabela{
+        display: none;
+    }
+
+    .linha-post{
+        grid-template-columns: 1fr;
+
+        justify-items: start;
+    }
+
+    .tabela-posts{
+        padding: 1rem;
+    }
+
+    .acoes-tabela{
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .caixa-pesquisa{
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 600px){
+
+    .topbar{
+        flex-direction: column;
+
+        gap: 1rem;
+
+        align-items: flex-start;
+    }
+
+    .titulo-area h1{
+        font-size: 1.8rem;
+    }
+
+    .sidebar{
+        display: none;
+    }
+
+    .secao-tabela{
+        padding: 1rem;
+    }
+
 }
