@@ -330,5 +330,41 @@
 
     </div>
 
+    <!-- Modal Criar Post -->
+    <form class="modalContainer" id="modalCriar" action="" method="post" enctype="multipart/form-data">
+
+        <div class="header">
+            <img src="../../../public/assets/Novelo_cortado.png" alt="">
+            <p>Criar Post</p>
+        </div>
+
+        <div class="formContent">
+            <!-- Upload Imagem -->
+            <label class="uploadImage" for="imagemPost">
+                <i class="bi bi-cloud-arrow-up-fill"></i>
+                <p>Arraste uma nova imagem ou <b>clique para fazer upload</b></p>
+            </label>
+            <input type="file" id="imagemPost" name="imagem" accept="image/*" hidden>
+
+            <!-- Título -->
+            <label>Título do Post*</label>
+            <input type="text" name="titulo" placeholder="Digite o título do post" required>
+
+            <!-- Descrição -->
+            <label>Descrição*</label>
+            <textarea type="text" name="descricao" placeholder="Digite a descricao" required></textarea>
+
+            <!-- Categorias -->
+            <label>Categoria(s)*</label>
+            <input type="text" name="categorias" placeholder="Adicione categorias (ex: tutoriais, roupas e etc)">
+
+            <div class="modalActions">
+                <button class="btnCancel" type="button">Cancelar</button>
+                <button class="btnCreate" type="submit">Criar</button>
+            </div>
+        </div>
+            
+    </form>
+
 </body>
 </html>

@@ -1,0 +1,61 @@
+@font-face {
+    font-family: 'Baloo';
+    src: url('../assets/fonts/Baloo-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Noah';
+    src: url('../assets/fonts/noah-regular.otf');
+}
+
+/* === Variáveis de cor e transição === */
+:root {
+    --branco: #FFFFFF;
+    --bege: #FEF3E2;
+    --rosa-claro: #FAD2E1;
+    --verde-claro: #D0D996;
+    --vinho: #770523;
+    --vinho-escuro: #1F0008;
+}
+
+form{
+    width: 550px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 25px;
+    background-color: var(--branco);
+    padding: 0px;
+    margin: auto;
+
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--bege);
+    padding: 20px;
+    gap: 10px;
+    align-items: center;
+    border-radius: 25px 25px 0px 0px;
+}
+
+.header img{
+    width: 50px;
+    height: auto;
+}
+
+.header p {
+    font-family: "Baloo", sans-serif;
+    font-size: 35px;
+    color: var(--vinho);
+}
+
+.formContent{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    margin: 20px;
+}
+
+
