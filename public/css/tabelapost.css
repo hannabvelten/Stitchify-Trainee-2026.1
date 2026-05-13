@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'Baloo';
-    src: url('Baloo-Regular.ttf');
+    src: url('../assets/fonts/Baloo-Regular.ttf');
 }
 
 @font-face {
     font-family: 'Noah';
-    src: url('Noah-Regular.ttf');
+    src: url('../assets/fonts/noah-regular.otf');
 }
 *{
     margin: 0;
