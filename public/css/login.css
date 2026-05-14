@@ -25,6 +25,7 @@ main{
 
     display: flex;
     overflow: hidden;
+
     
 }
 .onda-container{
@@ -125,10 +126,16 @@ input::placeholder{
 .onda-mobile{
     display: none;
 }
-@media (max-width: 768px){
+.responsividade{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        width: 100%;
+    }
+@media (max-width: 768px) {
 
     main{
-        flex-direction: column;
+        display: flex;
         overflow: visible;
     }
    
@@ -219,11 +226,16 @@ input::placeholder{
        width: 100%;
        background: none;
        height: auto;
+       display: none;
     }
     .onda-mobile{
         display: block;
         width: 100%;
     }
-    
+    .responsividade{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column-reverse;
+    }
 
 }
