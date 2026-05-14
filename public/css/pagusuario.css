@@ -233,7 +233,7 @@ thead th {
 }
 
 .paginacao {
-    justify-content: flex-end;
+    justify-content: center;
     display: flex;
     align-items: center;
     padding-right: 45px;
