@@ -61,7 +61,7 @@
 
                     <div class="botoes-esquerda">
 
-                        <button>
+                        <button onclick="abriModal('modalCriar')">
 
                             <i class="bi bi-plus-square"></i>
 
@@ -311,8 +311,11 @@
 
     </div>
 
+    <!-- Sombreado para quando abrir os modais -->
+    <div class="filtro" id="filtro"></div>
+
     <!-- Modal Criar Post -->
-    <form class="modalContainer" id="modalCriar" action="" method="post" enctype="multipart/form-data">
+    <form class="modalCriar" id="modalCriar" action="" method="post" enctype="multipart/form-data">
 
         <div class="header">
             <img src="../../../public/assets/Novelo_cortado.png" alt="">
@@ -338,7 +341,7 @@
             <!-- Descrição -->
             <div class="descricao">
                 <label>Descrição*</label>
-                <textarea type="text" name="descricao" placeholder="Digite a descricao" required></textarea>
+                <textarea type="text" name="descricao" placeholder="Digite a descrição" required></textarea>
             </div>
 
             <!-- Categorias -->
@@ -348,12 +351,14 @@
             </div>
 
             <div class="modalActions">
-                <button class="btnCancel" type="button">Cancelar</button>
+                <button class="btnCancel" type="button" onclick="fecharModal('modalCriar')">Cancelar</button>
                 <button class="btnCreate" type="submit">Criar</button>
             </div>
         </div>
 
     </form>
+
+    <script src="../../../public/js/modais.js"></script>
 
 
 

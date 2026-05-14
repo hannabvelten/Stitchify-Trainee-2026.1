@@ -19,15 +19,19 @@
     --cinza: #CBC9C9;
 }
 
-form{
+.modalCriar {
     width: 550px;
-    display: flex;
+    display: none;
     flex-direction: column;
     border-radius: 25px;
     background-color: var(--branco);
     padding: 0px;
     margin: auto;
-
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: 0.3s ease;
+    transform: translate(-50%, -50%);
 }
 
 .header{
@@ -54,7 +58,7 @@ form{
 .formContent{
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
     padding: 10px;
     margin: 20px;
 }
@@ -68,6 +72,7 @@ form{
     padding: 30px;
     border: 2px var(--cinza) dashed;
     border-radius: 30px;
+    transition: 0.3s;
 }
 
 .uploadImage i{
@@ -87,7 +92,7 @@ form{
 .titulo{
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 2px;
 }
 
 .titulo label{
@@ -96,13 +101,6 @@ form{
     font-size: 25px;
 }
 
-.titulo input{
-    padding: 10px;
-    border-color: var(--cinza);
-    border-style: solid;
-    border-radius: 30px;
-    align-items: center;
-}
 
 .descricao{
     display: flex;
@@ -118,11 +116,16 @@ form{
 
 .descricao textarea{
     padding: 15px 10px;
-    border-color: var(--cinza);
-    border-style: solid;
+    border: 2px solid var(--cinza);
     border-radius: 30px;
     align-items: center;
+    outline: none;
     height: 100px;
+    transition: 0.3s;
+}
+
+.modalCriar textarea:focus{
+    border-color: var(--vinho);
 }
 
 .categoria{
@@ -137,12 +140,17 @@ form{
     font-size: 25px;
 }
 
-.categoria input{
+.modalCriar input{
     padding: 10px;
-    border-color: var(--cinza);
-    border-style: solid;
+    border: 2px solid var(--cinza);
     border-radius: 30px;
     align-items: center;
+    transition: 0.3s;
+    outline: none;
+}
+
+.modalCriar input:focus{
+    border-color: var(--vinho);
 }
 
 .modalActions{
@@ -152,6 +160,7 @@ form{
     justify-content: end;
     gap: 20px;
     padding-right: 5px;
+    font-family: "Noah", sans-serif;
 }
 
 .btnCancel{
@@ -163,6 +172,7 @@ form{
     color: var(--vinho);
     font-weight: bold;
     font-size: 15px;
+    transition: 0.2s;
 }
 
 .btnCancel:hover{
@@ -179,6 +189,7 @@ form{
     color: var(--vinho);
     font-weight: bold;
     font-size: 15px;
+    transition: 0.3s;
 }
 
 .btnCreate:hover{
@@ -187,3 +198,11 @@ form{
 }
 
 
+.filtro {
+    width: 100%;
+    height: 100%;
+    background-color:var(--bege);
+    opacity: 0.5;
+    position: absolute;
+    display: none;
+}
