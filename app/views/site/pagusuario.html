@@ -1,223 +1,253 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lista de usuários</title>
-    <link rel="stylesheet" href="../../../public/css/pagusuario.css">
-</head>
+    <link rel="stylesheet" href="../../../public/css/pagusuario.css" />
+  </head>
 
-<body>
+  <body>
     <main>
-        <div class="sidebar"></div>
-        <div class="paginausers">
-            <div class="topo">
-            <div class="box-perfiladm">
-                
-                    <img src="../../../public/assets/PersonCircle.svg" alt="iconeperfil">
-                    <div class="textoadmin">
-                        <p>Ola, Admin</p>
-                        <p>Administrador</p>
-                    </div>
-                    <img src="../../../public/assets/Down Arrow.svg" alt="iconemaisadmin">
-                    <hr class="linha">
+      <div class="sidebar">
+        <button class="bsidebar">
+          <img src="../../../public/assets/list.svg" alt="botao" />
+        </button>
+      </div>
+      <div class="paginausers">
+        <div class="topo">
+          <div class="usuarios">
+            <img src="../../../public/assets/Vector.svg" alt="iconeuser" />
+            <h2>Tabela de usuários</h2>
+          </div>
+          <div class="box-perfiladm">
+            <div class="admin">
+              <img
+                src="../../../public/assets/PersonCircle.svg"
+                alt="iconeperfil"
+              />
+              <div class="textoadmin">
+                <p>Ola, Admin</p>
+                <p>Administrador</p>
+              </div>
             </div>
-            </div>
-            <div class="box-criauser">
-                    <div class="usuarios">
-                    <img src="../../../public/assets/Vector.svg" alt="iconeuser">
-                    <h2>Usuários</h2>
-                    </div>
-                    <button>+ Criar Usuário</button>
-
-                </table>
-            </div>
-            <div class="box-users">
-                
-                    <img src="../../../public/assets/lupa.svg" alt="lupa" class="lupa">
-                <input type="text" placeholder="Busca por nome ou email">
-                
-                <table class="cabecalho">
-                    <thead>
-                    <tr>
-                        <th class="usuário">USUÁRIO</th>
-                        <th class="email">EMAIL</th>
-                        <th class="tipo">TIPO</th>
-                        <th class="status">STATUS</th>
-                        <th class="data">DATA DE CADASTROS</th>
-                        <th>AÇÕES</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td class="nomec"><img src="../../../public/assets/PersonCircle.svg" alt="">Nome do usuário</td>
-                        <td class="emailc">user.email@email.com</td>
-                        <td class="tipoc">
-                            <span class="admin"> Admin</span>
-                        </td>
-                        <td class="statusc">
-                            <span class="ativo"><img src="../../../public/assets/Ponto.svg" alt="Ponto">Ativo</span>
-                        </td>
-                        <td class="datac">06/05/2025 14:38</td>
-                        <td class="acoesc">
-                                <button class="visualizar"><img src="../../../public/assets/Visualizar.svg"
-                                        alt="visualizar"></button>
-                                <button class="editar"><img src="../../../public/assets/Editar.svg"
-                                        alt="editar"></button>
-                                <button class="deletar"><img src="../../../public/assets/Deletar.svg"
-                                        alt="deletar"></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="nomec"><img src="../../../public/assets/PersonCircle.svg" alt="">Nome do usuário</td>
-                        <td class="emailc">user.email@email.com</td>
-                        <td class="tipoc">
-                            <span class="usuario"> Usuário</span>
-                        </td>
-                        <td class="statusc">
-                            <span class="ativo"><img src="../../../public/assets/Ponto.svg" alt="Ponto">Ativo</span>
-                        </td>
-                        <td class="datac">06/05/2025 14:38</td>
-                        <td class="acoesc">
-                                <button class="visualizar"><img src="../../../public/assets/Visualizar.svg"
-                                        alt="visualizar"></button>
-                                <button class="editar"><img src="../../../public/assets/Editar.svg"
-                                        alt="editar"></button>
-                                <button class="deletar"><img src="../../../public/assets/Deletar.svg"
-                                        alt="deletar"></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="nomec"><img src="../../../public/assets/PersonCircle.svg" alt="">Nome do usuário</td>
-                        <td class="emailc">user.email@email.com</td>
-                        <td class="tipoc">
-                            <span class="usuario"> Usuário</span>
-                        </td>
-                        <td class="statusc">
-                            <span class="ativo"><img src="../../../public/assets/Ponto.svg" alt="Ponto">Ativo</span>
-                        </td>
-                        <td class="datac">06/05/2025 14:38</td>
-                        <td class="acoesc">
-                                <button class="visualizar"><img src="../../../public/assets/Visualizar.svg"
-                                        alt="visualizar"></button>
-                                <button class="editar"><img src="../../../public/assets/Editar.svg"
-                                        alt="editar"></button>
-                                <button class="deletar"><img src="../../../public/assets/Deletar.svg"
-                                        alt="deletar"></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="nomec"><img src="../../../public/assets/PersonCircle.svg" alt="">Nome do usuário</td>
-                        <td class="emailc">user.email@email.com</td>
-                        <td class="tipoc">
-                            <span class="usuario"> Usuário</span>
-                        </td>
-                        <td class="statusc">
-                            <span class="ativo"><img src="../../../public/assets/Ponto.svg" alt="Ponto">Ativo</span>
-                        </td>
-                        <td class="datac">06/05/2025 14:38</td>
-                        <td class="acoesc">
-                                <button class="visualizar"><img src="../../../public/assets/Visualizar.svg"
-                                        alt="visualizar"></button>
-                                <button class="editar"><img src="../../../public/assets/Editar.svg"
-                                        alt="editar"></button>
-                                <button class="deletar"><img src="../../../public/assets/Deletar.svg"
-                                        alt="deletar"></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="nomec"><img src="../../../public/assets/PersonCircle.svg" alt="">Nome do usuário</td>
-                        <td class="emailc">user.email@email.com</td>
-                        <td class="tipoc">
-                            <span class="usuario"> Usuário</span>
-                        </td>
-                        <td class="statusc">
-                            <span class="ativo"><img src="../../../public/assets/Ponto.svg" alt="Ponto">Ativo</span>
-                        </td>
-                        <td class="datac">06/05/2025 14:38</td>
-                        <td class="acoesc">
-                                <button class="visualizar"><img src="../../../public/assets/Visualizar.svg"
-                                        alt="visualizar"></button>
-                                <button class="editar"><img src="../../../public/assets/Editar.svg"
-                                        alt="editar"></button>
-                                <button class="deletar"><img src="../../../public/assets/Deletar.svg"
-                                        alt="deletar"></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="nomec"><img src="../../../public/assets/PersonCircle.svg" alt="">Nome do usuário</td>
-                        <td class="emailc">user.email@email.com</td>
-                        <td class="tipoc">
-                            <span class="usuario"> Usuário</span>
-                        </td>
-                        <td class="statusc">
-                            <span class="inativo"><img src="../../../public/assets/CircleFill1.svg" alt="Ponto">Inativo</span>
-                        </td>
-                        <td class="datac">06/05/2025 14:38</td>
-                        <td class="acoesc">
-                                <button class="visualizar"><img src="../../../public/assets/Visualizar.svg"
-                                        alt="visualizar"></button>
-                                <button class="editar"><img src="../../../public/assets/Editar.svg"
-                                        alt="editar"></button>
-                                <button class="deletar"><img src="../../../public/assets/Deletar.svg"
-                                        alt="deletar"></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="nomec"><img src="../../../public/assets/PersonCircle.svg" alt="">Nome do usuário</td>
-                        <td class="emailc">user.email@email.com</td>
-                        <td class="tipoc">
-                            <span class="usuario">Usuário</span>
-                        </td>
-                        <td class="statusc">
-                            <span class="ativo"><img src="../../../public/assets/Ponto.svg" alt="Ponto">Ativo</span>
-                        </td>
-                        <td class="datac">06/05/2025 14:38</td>
-                        <td class="acoesc">
-                                <button class="visualizar"><img src="../../../public/assets/Visualizar.svg"
-                                        alt="visualizar"></button>
-                                <button class="editar"><img src="../../../public/assets/Editar.svg"
-                                        alt="editar"></button>
-                                <button class="deletar"><img src="../../../public/assets/Deletar.svg"
-                                        alt="deletar"></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="nomec"><img src="../../../public/assets/PersonCircle.svg" alt="">Nome do usuário</td>
-                        <td class="emailc">user.email@email.com</td>
-                        <td class="tipoc">
-                            <span class="usuario"> Usuário</span>
-                        </td>
-                        <td class="statusc">
-                            <span class="ativo"><img src="../../../public/assets/Ponto.svg" alt="Ponto">Ativo</span>
-                            </td>
-                        <td class="datac">06/05/2025 14:38</td>
-                        <td class="acoesc">
-                                <button class="visualizar"><img src="../../../public/assets/Visualizar.svg"
-                                        alt="visualizar"></button>
-                                <button class="editar"><img src="../../../public/assets/Editar.svg"
-                                        alt="editar"></button>
-                                <button class="deletar"><img src="../../../public/assets/Deletar.svg"
-                                        alt="deletar"></button>
-                        </td>
-                    </tr>
-                     
-                    </tbody>
-                </table>
-                <div class="paginacao">
-                    <button class="voltar"><</button>
-                            <button class="pag1">1</button>
-                            <button class="pag2">2</button>
-                            <button class="pag3">3</button>
-                            <span>...</span>
-                            <button class="pag 5">5</button>
-                            <button class="proximo">></button>
-                </div>
-            </div>
+            <img
+              src="../../../public/assets/Down Arrow.svg"
+              alt="iconemaisadmin"
+            />
+          </div>
         </div>
-
+        <div class="linha"></div>
+        <div class="box-criauser">
+          <img src="../../../public/assets/lupa.svg" alt="lupa" class="lupa" />
+          <input type="text" placeholder="Busca por nome ou email" />
+          <button>+ Criar Usuário</button>
+        </div>
+        <div class="box-users">
+          <table class="cabecalho">
+            <thead>
+              <tr>
+                <th class="usuário">USUÁRIO</th>
+                <th class="email">EMAIL</th>
+                <th class="tipo">TIPO</th>
+                <th class="iduser">ID DO USUÁRIO</th>
+                <th>AÇÕES</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="nomec">
+                  <img
+                    src="../../../public/assets/PersonCircle.svg"
+                    alt=""
+                    class="nimg"
+                  />Nome do usuário
+                </td>
+                <td class="emailc">user.email@email.com</td>
+                <td class="tipoc">
+                  <span class="adm"> Admin</span>
+                </td>
+                <td class="iduser">
+                  <p>000000000</p>
+                </td>
+                <td class="acoesc">
+                  <button class="visualizar">
+                    <img
+                      src="../../../public/assets/Visualizar.svg"
+                      alt="visualizar"
+                    />
+                  </button>
+                  <button class="bvisualizar">
+                    <img
+                      src="../../../public/assets/Visualização-branca.svg"
+                      alt=""
+                    />
+                  </button>
+                  <button class="editar">
+                    <img src="../../../public/assets/Editar.svg" alt="editar" />
+                  </button>
+                  <button class="deletar">
+                    <img
+                      src="../../../public/assets/Deletar.svg"
+                      alt="deletar"
+                    />
+                  </button>
+                  <button class="filtro">
+                    <img src="../../../public/assets/Ellipsis.svg" alt="list" />
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td class="nomec">
+                  <img
+                    src="../../../public/assets/PersonCircle.svg"
+                    alt=""
+                  />Nome do usuário
+                </td>
+                <td class="emailc">user.email@email.com</td>
+                <td class="tipoc">
+                  <span class="usuario"> Usuário</span>
+                </td>
+                <td class="iduser">
+                  <p>000000000</p>
+                </td>
+                <td class="acoesc">
+                  <button class="visualizar">
+                    <img
+                      src="../../../public/assets/Visualizar.svg"
+                      alt="visualizar"
+                    />
+                  </button>
+                  <button class="bvisualizar">
+                    <img
+                      src="../../../public/assets/Visualização-branca.svg"
+                      alt=""
+                    />
+                  </button>
+                  <button class="editar">
+                    <img src="../../../public/assets/Editar.svg" alt="editar" />
+                  </button>
+                  <button class="deletar">
+                    <img
+                      src="../../../public/assets/Deletar.svg"
+                      alt="deletar"
+                    />
+                  </button>
+                  <button class="filtro">
+                    <img src="../../../public/assets/Ellipsis.svg" alt="list" />
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td class="nomec">
+                  <img
+                    src="../../../public/assets/PersonCircle.svg"
+                    alt=""
+                  />Nome do usuário
+                </td>
+                <td class="emailc">user.email@email.com</td>
+                <td class="tipoc">
+                  <span class="usuario"> Usuário</span>
+                </td>
+                <td class="iduser">
+                  <p>000000000</p>
+                </td>
+                <td class="acoesc">
+                  <button class="visualizar">
+                    <img
+                      src="../../../public/assets/Visualizar.svg"
+                      alt="visualizar"
+                    />
+                  </button>
+                  <button class="editar">
+                    <img src="../../../public/assets/Editar.svg" alt="editar" />
+                  </button>
+                  <button class="deletar">
+                    <img
+                      src="../../../public/assets/Deletar.svg"
+                      alt="deletar"
+                    />
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td class="nomec">
+                  <img
+                    src="../../../public/assets/PersonCircle.svg"
+                    alt=""
+                  />Nome do usuário
+                </td>
+                <td class="emailc">user.email@email.com</td>
+                <td class="tipoc">
+                  <span class="usuario"> Usuário</span>
+                </td>
+                <td class="iduser">
+                  <p>000000000</p>
+                </td>
+                <td class="acoesc">
+                  <button class="visualizar">
+                    <img
+                      src="../../../public/assets/Visualizar.svg"
+                      alt="visualizar"
+                    />
+                  </button>
+                  <button class="editar">
+                    <img src="../../../public/assets/Editar.svg" alt="editar" />
+                  </button>
+                  <button class="deletar">
+                    <img
+                      src="../../../public/assets/Deletar.svg"
+                      alt="deletar"
+                    />
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td class="nomec">
+                  <img
+                    src="../../../public/assets/PersonCircle.svg"
+                    alt=""
+                  />Nome do usuário
+                </td>
+                <td class="emailc">user.email@email.com</td>
+                <td class="tipoc">
+                  <span class="usuario"> Usuário</span>
+                </td>
+                <td class="iduser">
+                  <p>000000000</p>
+                </td>
+                <td class="acoesc">
+                  <button class="visualizar">
+                    <img
+                      src="../../../public/assets/Visualizar.svg"
+                      alt="visualizar"
+                    />
+                  </button>
+                  <button class="editar">
+                    <img src="../../../public/assets/Editar.svg" alt="editar" />
+                  </button>
+                  <button class="deletar">
+                    <img
+                      src="../../../public/assets/Deletar.svg"
+                      alt="deletar"
+                    />
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="paginacao">
+            <button class="voltar"><</button>
+            <button class="pag1">1</button>
+            <button class="pag2">2</button>
+            <button class="pag3">3</button>
+            <button>...</button>
+            <button class="pag 5">5</button>
+            <button class="proximo">></button>
+          </div>
+        </div>
+      </div>
+      <form></form>
     </main>
-</body>
-
+  </body>
 </html>
