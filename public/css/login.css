@@ -72,6 +72,10 @@ span{
     flex-direction: column;
     gap:60px;
 }
+.logo{
+    display: flex;
+    justify-content: center;
+}
 .imagem-logo{
     width: 300px;
 }
@@ -153,9 +157,12 @@ input::placeholder{
         display: none;
     }
     .saudacao-mobile{
-       display: block;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       text-align: center;
        width: 100%;
-       padding-left: 90px;
+       padding: 0 20px;
     }
     .saudacao-mobile h3{
         color: #770523;
@@ -164,7 +171,7 @@ input::placeholder{
     .saudacao-mobile h2{
         font-family: 'Baloo';
         color: #770523;
-        font-size: 45px;
+        font-size: 40px;
         line-height: 1.1;
     }
     .saudacao-mobile p{
@@ -173,6 +180,7 @@ input::placeholder{
         margin-top: 15px;
         font-size: 14px;
         line-height: 1.5;
+        max-width: 300px;
     }
     .inputs{
         display: flex;
