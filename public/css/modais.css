@@ -16,6 +16,7 @@
     --verde-claro: #D0D996;
     --vinho: #770523;
     --vinho-escuro: #1F0008;
+    --cinza: #CBC9C9;
 }
 
 form{
@@ -33,7 +34,7 @@ form{
     display: flex;
     flex-direction: row;
     background-color: var(--bege);
-    padding: 20px;
+    padding: 15px;
     gap: 10px;
     align-items: center;
     border-radius: 25px 25px 0px 0px;
@@ -53,9 +54,136 @@ form{
 .formContent{
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
     padding: 10px;
     margin: 20px;
+}
+
+
+.uploadImage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    border: 2px var(--cinza) dashed;
+    border-radius: 30px;
+}
+
+.uploadImage i{
+    font-size: 40px;
+    color: var(--vinho);
+}
+
+.uploadImage p{
+    color: var(--cinza);
+}
+
+.uploadImage:hover {
+    background-color: #e2e2e281;
+    cursor: pointer;
+}
+
+.titulo{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.titulo label{
+    font-family: "Baloo", sans-serif;
+    color: var(--vinho);
+    font-size: 25px;
+}
+
+.titulo input{
+    padding: 10px;
+    border-color: var(--cinza);
+    border-style: solid;
+    border-radius: 30px;
+    align-items: center;
+}
+
+.descricao{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.descricao label{
+    font-family: "Baloo", sans-serif;
+    color: var(--vinho);
+    font-size: 25px;
+}
+
+.descricao textarea{
+    padding: 15px 10px;
+    border-color: var(--cinza);
+    border-style: solid;
+    border-radius: 30px;
+    align-items: center;
+    height: 100px;
+}
+
+.categoria{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.categoria label{
+    font-family: "Baloo", sans-serif;
+    color: var(--vinho);
+    font-size: 25px;
+}
+
+.categoria input{
+    padding: 10px;
+    border-color: var(--cinza);
+    border-style: solid;
+    border-radius: 30px;
+    align-items: center;
+}
+
+.modalActions{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+    gap: 20px;
+    padding-right: 5px;
+}
+
+.btnCancel{
+    padding: 3px 5px;
+    width: 20%;
+    background-color: var(--branco);
+    border-radius: 30px;
+    border: #D0D996 solid 2px;
+    color: var(--vinho);
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.btnCancel:hover{
+    background-color: var(--verde-claro);
+    cursor: pointer;
+}
+
+.btnCreate{
+    padding: 3px 5px;
+    width: 20%;
+    background-color: var(--verde-claro);
+    border-radius: 30px;
+    border: #D0D996 solid 2px;
+    color: var(--vinho);
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.btnCreate:hover{
+    background-color: var(--branco);
+    cursor: pointer;
 }
 
 
