@@ -286,7 +286,8 @@ thead th {
         background-image: url(../assets/newstitchify.png);
         background-size: 170px;
         background-repeat: no-repeat;
-        background-position: 26% center;
+        background-position: 30% center;
+        gap: ;
 
     }
 
@@ -315,7 +316,8 @@ thead th {
     }
 
     .usuarios {
-        font-size: 30px;
+        
+        font-size: 25px;
         padding-left: 20px;
     }
 
