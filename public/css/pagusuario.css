@@ -287,7 +287,6 @@ thead th {
         background-size: 170px;
         background-repeat: no-repeat;
         background-position: 30% center;
-        gap: ;
 
     }
 
@@ -300,6 +299,7 @@ thead th {
     .topo {
         flex-direction: column;
         align-items: flex-start;
+        justify-content: center;
     }
 
     .bsidebar {
@@ -316,7 +316,7 @@ thead th {
     }
 
     .usuarios {
-        
+        align-items: center;
         font-size: 25px;
         padding-left: 20px;
     }
