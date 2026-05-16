@@ -111,3 +111,11 @@ button{
     font-family: 'Noah-bold';
     
 }
+.rodape{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    padding-left: 1rem;
+    margin-top: auto;
+    padding-bottom: 1rem;
+}
