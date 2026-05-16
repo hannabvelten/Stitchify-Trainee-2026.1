@@ -247,7 +247,75 @@
           </div>
         </div>
       </div>
-      <form></form>
+
+      <div class="modal-overlay" id="overlay-edit">
+          <form class="modaledit" id="modaledit" action="" method="post">
+              <div class="topo">
+                  <img src="../../../public/assets/Novelo_cortado.png" alt="">
+                  <p>Editar Usuário</p>
+              </div>
+
+              <div class="edit-form">
+                  <div class="edit-nome">
+                      <label>Nome Completo:</label>
+                      <input type="text" name="nome" placeholder="Nome completo" required>
+                  </div>
+
+                  <div class="edit-email">
+                      <label>Novo Email:</label>
+                      <input type="email" name="email" placeholder="Email" required> 
+                  </div>
+
+                  <div class="edit-senha">
+                      <label>Nova Senha:</label>
+                      <input type="password" name="senha" placeholder="Nova senha" required> 
+                  </div>
+
+                  <div class="edit-tipo">
+                      <label>Tipo de Usuário:</label>
+                      <select name="opcoes" id="escolha">
+                          <option value="" disabled selected hidden>Escolha uma opção</option>
+                          <option value="user">Usuário</option>
+                          <option value="admin">Admin</option>
+                      </select>
+                  </div>
+
+                  <div class="botoes">
+                      <button class="cancel" type="button">Cancelar</button>
+                      <button class="confirm" type="submit">Confirmar alterações</button>
+                  </div>
+              </div>
+          </form>   
+      </div>
+
+      <div class="modal-overlay" id="overlay-delete">
+          <form class="modaldelete" id="modaldelete" action="" method="post">
+              <div class="box-delete">
+                  <span class="vetor-atencao">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-triangle-alert-icon lucide-triangle-alert">
+                          <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/>
+                          <path d="M12 9v4"/>
+                          <path d="M12 17h.01"/>
+                      </svg>
+                  </span>
+
+                  <div class="title-delete">
+                      <p>Deletar Usuário</p>
+                  </div>
+
+                  <div class="text-delete">
+                      <p>Você tem certeza que deseja deletar este usuário?</p>
+                      <p>Esta ação não poderá ser desfeita.</p>
+                  </div>
+
+                  <div class="button-delete">
+                      <button class="cancel-delete" type="button">Não, mantê-lo.</button>
+                      <button class="confirm-delete" type="submit">Sim, deletar!</button>
+                  </div>
+              </div>
+          </form>   
+      </div>
+
     </main>
   </body>
 </html>
