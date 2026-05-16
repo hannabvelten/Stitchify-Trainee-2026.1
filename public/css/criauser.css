@@ -40,3 +40,10 @@
     padding-left: 1rem;
     gap: 0.5rem;
 }
+.criauser p{
+   
+    font-family: 'Baloo';
+    align-items: flex-start;
+    color: #770523;
+    font-size: 20px;
+}
