@@ -143,4 +143,11 @@ button{
     .visualizar p{
         font-size: 1.2rem;
     }
+     .flor{
+        width: 120px;
+        height: 120px;
+        left: auto;
+        right: 0;
+        bottom: 0;
+    }
 }
