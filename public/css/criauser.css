@@ -141,4 +141,7 @@ p{
     input{
         width: 99%;
     }
+     .inputs p{
+        font-size: 12px;
+    }
 }
