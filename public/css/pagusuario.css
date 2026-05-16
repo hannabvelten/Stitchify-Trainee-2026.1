@@ -18,7 +18,10 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+html, body{
+    overflow-x: hidden;
+    width: 100%;
+}
 main {
     display: flex;
 
@@ -43,6 +46,7 @@ main {
     flex-direction: column;
     gap: 20px;
     background-color: #FBF6EF;
+    min-height: 100vh;
 }
 
 .topo {
@@ -140,6 +144,7 @@ input {
     padding-left: 10px;
     padding-top: 15px;
     background-color: #C1CA8B;
+    flex: 1;
 }
 
 table {
@@ -264,6 +269,7 @@ thead th {
 }
 
 @media (max-width: 768px) {
+   
     main {
         flex-direction: column;
     }
@@ -275,7 +281,7 @@ thead th {
         height: 80px;
         display: flex;
         align-items: center;
-        padding-left: 50px;
+        padding-left: 30px;
         background-color: #770523;
         background-image: url(../assets/newstitchify.png);
         background-size: 170px;
@@ -287,7 +293,7 @@ thead th {
     .paginausers {
         width: 100%;
         padding: 0px;
-
+        min-height: calc(100vh - 80px);
     }
 
     .topo {
@@ -299,6 +305,7 @@ thead th {
         display: block;
         background: none;
         border: none;
+        
 
     }
 
@@ -318,6 +325,7 @@ thead th {
 
     .box-perfiladm {
         display: none;
+        overflow-y: auto;
     }
 
     .box-criauser {
@@ -346,78 +354,21 @@ thead th {
         border-radius: 10px;
 
     }
-
-    .box-users {
-        border: none;
-        border-radius: 0;
-        width: 100%;
-        padding: 15px;
+      .box-users {
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding-right: 10px;
+        height: auto;
     }
 
-    table,
-    thead,
-    tbody,
-    tr,
+    table {
+        min-width: 700px;
+        border-spacing: 0 10px;
+    }
+
+    th,
     td {
-        display: block;
-        width: 100%;
+        white-space: nowrap;
     }
-    table, tbody{
-        width: 100%;
-    }
-    thead {
-        display: none;
-    }
-
-    tr {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-        background: white;
-        border-radius: 15px;
-        padding: 20px;
-        margin-bottom: 15px;
-        gap: 15px;
-        position: relative;
-    }
-
-    td {
-        padding: 0;
-        border: none;
-    }
-
-
-    .acoesc {
-        display: flex;
-        position: absolute;
-        left: 320px;
-        top: 50%;
-    }
-
-    .acoesc button {
-        background-color: white;
-        align-items: center;
-    }
-
-    .bvisualizar {
-        display: block;
-    }
-
-    .filtro {
-        display: block;
-    }
-
-    .visualizar {
-        display: none;
-    }
-
-    .deletar {
-        display: none;
-    }
-
-    .editar {
-        display: none;
-    }
+   
 }
