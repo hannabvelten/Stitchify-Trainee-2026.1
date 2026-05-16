@@ -97,3 +97,17 @@ table{
     border-collapse: collapse;
    
 }
+td{
+    padding-right: 2rem;
+}
+button{
+    border-radius: 20px;
+    border: none;
+    background-color: #D0D996;
+    color: #770523;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    height: 1.5rem;
+    font-family: 'Noah-bold';
+    
+}
