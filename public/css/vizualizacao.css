@@ -51,3 +51,10 @@
     align-items: center;
     padding-left: 1rem;
 }
+.visualizar p{
+    font-family: 'Baloo';
+    align-items: center;
+    font-size: 20px;
+    color: #770523;
+    padding-left: 1rem;
+}
