@@ -89,3 +89,11 @@
 p{
     font-family: 'Noah-bold';
 }
+.conteudo{
+    font-family: 'Noah-bold';
+    padding-left: 1rem;
+}
+table{
+    border-collapse: collapse;
+   
+}
