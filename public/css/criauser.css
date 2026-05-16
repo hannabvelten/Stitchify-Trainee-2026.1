@@ -138,5 +138,7 @@ p{
     .criauser p{
         font-size: 1.2rem;
     }
-
+    input{
+        width: 99%;
+    }
 }
