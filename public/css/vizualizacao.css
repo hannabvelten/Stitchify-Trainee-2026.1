@@ -119,3 +119,10 @@ button{
     margin-top: auto;
     padding-bottom: 1rem;
 }
+.flor{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 13rem;
+    bottom: -1rem;
+}
