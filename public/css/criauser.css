@@ -131,6 +131,9 @@ p{
     z-index: 1;
 
 }
+.modal-criauser.hide, .fade.hide{
+    opacity: 0;
+}
 @media (max-width: 480px) {
     .modal{
         width: 90%;
