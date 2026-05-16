@@ -22,7 +22,8 @@
         <aside class="sidebar"></aside>
 
         <main class="conteudo">
-
+            <!-- Sombreado para quando abrir os modais -->
+            <div class="filtro" id="filtro"></div>
             <header class="topbar">
 
                 <div class="titulo-area">
@@ -130,7 +131,7 @@
 
                         <div class="acoes">
 
-                            <button>
+                            <button onclick="abriModal('modalVisualizar')">
                                 <i class="bi bi-eye"></i>
                             </button>
 
@@ -311,8 +312,7 @@
 
     </div>
 
-    <!-- Sombreado para quando abrir os modais -->
-    <div class="filtro" id="filtro"></div>
+
 
     <!-- Modal Criar Post -->
     <form class="modalCriar" id="modalCriar" action="" method="post" enctype="multipart/form-data">
@@ -357,6 +357,63 @@
         </div>
 
     </form>
+
+    <!-- Modal Visualizar Post -->
+    <div class="modalVisualizar" id="modalVisualizar">
+        <div class="header">
+            <img src="../../../public/assets/Novelo_cortado.png" alt="">
+            <p>Visualizar Post</p>
+        </div>
+
+        <div class="modalContent">
+            <!-- Imagem Post -->
+            <div class="imagem">
+                <img src="" alt="">
+            </div>
+
+            <!-- Título -->
+            <div class="titulo">
+                <label>Título do Post</label>
+                <div class="input-titulo">
+                    <p>Titulo</p>
+                </div>
+            </div>
+
+            <!-- Descrição -->
+            <div class="descricao">
+                <label>Descrição</label>
+                <div class="input-descricao">
+                    <p>Lorem ipsum</p>
+                </div>
+            </div>
+
+            <!-- Categorias -->
+            <div class="categoria">
+                <label>Categoria(s)</label>
+                <div class="input-categoria">
+
+                </div>
+            </div>
+
+            <div class="autor">
+                <label>Autor</label>
+                <div class="input-autor">
+                    <p>Autor</p>
+                </div>
+            </div>
+
+            <div class="data">
+                <label>Data de Criação</label>
+                <div class="input-data">
+                    <p>16/05/2026</p>
+                </div>
+            </div>
+
+            <div class="modalActions">
+                <button class="btnClose" type="button" onclick="fecharModal('modalVisualizar')">Fechar</button>
+            </div>
+        </div>
+    </div>
 
     <script src="../../../public/js/modais.js"></script>
 

@@ -27,11 +27,14 @@
     background-color: var(--branco);
     padding: 0px;
     margin: auto;
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transition: 0.3s ease;
     transform: translate(-50%, -50%);
+    max-height: 90vh;
+    overflow-y: auto;
+    z-index: 20;
 }
 
 .header{
@@ -63,7 +66,6 @@
     margin: 20px;
 }
 
-
 .uploadImage{
     display: flex;
     flex-direction: column;
@@ -82,6 +84,7 @@
 
 .uploadImage p{
     color: var(--cinza);
+    font-family: "Noah", sans-serif;
 }
 
 .uploadImage:hover {
@@ -100,7 +103,6 @@
     color: var(--vinho);
     font-size: 25px;
 }
-
 
 .descricao{
     display: flex;
@@ -122,6 +124,7 @@
     outline: none;
     height: 100px;
     transition: 0.3s;
+    font-family: "Noah", sans-serif;
 }
 
 .modalCriar textarea:focus{
@@ -147,6 +150,7 @@
     align-items: center;
     transition: 0.3s;
     outline: none;
+    font-family: "Noah", sans-serif;
 }
 
 .modalCriar input:focus{
@@ -160,7 +164,6 @@
     justify-content: end;
     gap: 20px;
     padding-right: 5px;
-    font-family: "Noah", sans-serif;
 }
 
 .btnCancel{
@@ -173,6 +176,7 @@
     font-weight: bold;
     font-size: 15px;
     transition: 0.2s;
+    font-family: "Noah", sans-serif;
 }
 
 .btnCancel:hover{
@@ -190,6 +194,7 @@
     font-weight: bold;
     font-size: 15px;
     transition: 0.3s;
+    font-family: "Noah", sans-serif;
 }
 
 .btnCreate:hover{
@@ -197,12 +202,232 @@
     cursor: pointer;
 }
 
+/* Modal Visualizar  */
+.modalVisualizar{
+    width: 550px;
+    display: none;
+    flex-direction: column;
+    border-radius: 25px;
+    background-color: var(--branco);
+    padding: 0px;
+    margin: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transition: 0.3s ease;
+    transform: translate(-50%, -50%);
+    max-height: 90vh;
+    overflow-y: auto;
+    z-index: 20;
+    overflow-y: auto;
+}
+
+.modalVisualizar .header p {
+    color: var(--vinho);
+    font-family: "Baloo", sans-serif;
+}
+
+.modalContent{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    margin: 20px;
+}
+
+.imagem{
+    width: 100%;
+    height: 150px;
+    border: 2px var(--cinza) dashed;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.imagem:hover {
+    background-color: #e2e2e281;
+    cursor: pointer;
+}
+
+.modalVisualizar .input-titulo, .input-categoria, .input-autor{
+    padding: 10px;
+    height: 35px;
+    border: 2px solid var(--cinza);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transition: 0.3s;
+    outline: none;
+}
+
+.modalVisualizar label{
+    font-family: "Baloo", sans-serif;
+    color: var(--vinho);
+    font-size: 25px;
+}
+
+.modalVisualizar p{
+    color: var(--vinho-escuro);
+    font-family: "Noah", sans-serif;
+}
+
+
+.titulo{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.descricao{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.descricao .input-descricao{
+    padding: 15px 10px;
+    border: 2px solid var(--cinza);
+    border-radius: 30px;
+    align-items: center;
+    outline: none;
+    height: 100px;
+    transition: 0.3s;
+}
+
+.categoria{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.modalVisualizar .input-data{
+    background-color: #FBF6EF;
+    padding: 10px;
+    width: 50%;
+    border: 2px solid var(--cinza);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    outline: none;
+}
+
+.btnClose{
+    padding: 3px 5px;
+    width: 20%;
+    background-color: var(--verde-claro);
+    border-radius: 30px;
+    border: #D0D996 solid 2px;
+    color: var(--vinho);
+    font-family: "Noah", sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.btnClose:hover{
+    background-color: var(--branco);
+    cursor: pointer;
+}
 
 .filtro {
     width: 100%;
     height: 100%;
-    background-color:var(--bege);
-    opacity: 0.5;
-    position: absolute;
+    top: 0;
+    left: 0;
+    background-color:var(--vinho);
+    opacity: 60%;
+    position: fixed;
     display: none;
+    align-self: center;
+    z-index: 10;
+    transition: 0.3s ease;
+}
+
+/* === Scrollbar nos modais === */
+
+/* Largura da scrollbar */
+.modalCriar::-webkit-scrollbar,
+.modalVisualizar::-webkit-scrollbar {
+    width: 6px;
+}
+
+/* Trilho (fundo da scrollbar) */
+.modalCriar::-webkit-scrollbar-track,
+.modalVisualizar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Barra */
+.modalCriar::-webkit-scrollbar-thumb,
+.modalVisualizar::-webkit-scrollbar-thumb {
+    background-color: var(--vinho);
+    border-radius: 10px;
+}
+
+/* Hover na barra */
+.modalCriar::-webkit-scrollbar-thumb:hover,
+.modalVisualizar::-webkit-scrollbar-thumb:hover {
+    background-color: var(--vinho-escuro);
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .modalCriar,
+    .modalVisualizar {
+        width: 85%;    
+
+        .header p {
+            font-size: 28px;
+        }
+    }
+}
+
+
+/* Mobile */
+@media (max-width: 480px) {
+    .modalCriar,
+    .modalVisualizar {
+        width: 95%;         
+        border-radius: 15px;
+    }
+
+    .header {
+        padding: 10px;
+    }
+
+    .header img {
+        width: 35px;
+    }
+
+    .header p {
+        font-size: 22px;
+    }
+
+    .formContent {
+        margin: 10px;
+    }
+
+    .uploadImage p {
+        text-align: center;
+    }
+
+    .titulo label,
+    .descricao label,
+    .categoria label,
+    .autor label,
+    .data label {
+        font-size: 18px;   
+    }
+
+    .btnCancel,
+    .btnCreate,
+    .btnClose {
+        width: 35%;         
+        padding: 8px 5px;
+        font-size: 14px;
+    }
+
 }
