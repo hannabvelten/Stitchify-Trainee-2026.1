@@ -135,5 +135,8 @@ p{
     .modal{
         width: 90%;
     }
+    .criauser p{
+        font-size: 1.2rem;
+    }
 
 }
