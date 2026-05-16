@@ -132,5 +132,8 @@ p{
 
 }
 @media (max-width: 480px) {
-    
+    .modal{
+        width: 90%;
+    }
+
 }
