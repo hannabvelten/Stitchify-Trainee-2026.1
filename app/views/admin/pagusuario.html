@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lista de usuários</title>
     <link rel="stylesheet" href="../../../public/css/pagusuario.css" />
+    <link rel="stylesheet" href="../../../public/css/criauser.css">
+    <link rel="stylesheet" href="../../../public/css/vizualizacao.css">
   </head>
 
   <body>
@@ -41,7 +43,7 @@
         <div class="box-criauser">
           <img src="../../../public/assets/lupa.svg" alt="lupa" class="lupa" />
           <input type="text" placeholder="Busca por nome ou email" />
-          <button>+ Criar Usuário</button>
+          <button class="criar-usuario">+ Criar Usuário</button>
         </div>
         <div class="box-users">
           <table class="cabecalho">
@@ -70,16 +72,10 @@
                   <p>000000000</p>
                 </td>
                 <td class="acoesc">
-                  <button class="visualizar">
+                  <button class="btn-visualizar">
                     <img
                       src="../../../public/assets/Visualizar.svg"
                       alt="visualizar"
-                    />
-                  </button>
-                  <button class="bvisualizar">
-                    <img
-                      src="../../../public/assets/Visualização-branca.svg"
-                      alt=""
                     />
                   </button>
                   <button class="editar">
@@ -111,16 +107,10 @@
                   <p>000000000</p>
                 </td>
                 <td class="acoesc">
-                  <button class="visualizar">
+                  <button class="btn-visualizar">
                     <img
                       src="../../../public/assets/Visualizar.svg"
                       alt="visualizar"
-                    />
-                  </button>
-                  <button class="bvisualizar">
-                    <img
-                      src="../../../public/assets/Visualização-branca.svg"
-                      alt=""
                     />
                   </button>
                   <button class="editar">
@@ -152,7 +142,7 @@
                   <p>000000000</p>
                 </td>
                 <td class="acoesc">
-                  <button class="visualizar">
+                  <button class="btn-visualizar">
                     <img
                       src="../../../public/assets/Visualizar.svg"
                       alt="visualizar"
@@ -184,7 +174,7 @@
                   <p>000000000</p>
                 </td>
                 <td class="acoesc">
-                  <button class="visualizar">
+                  <button class="btn-visualizar">
                     <img
                       src="../../../public/assets/Visualizar.svg"
                       alt="visualizar"
@@ -216,7 +206,7 @@
                   <p>000000000</p>
                 </td>
                 <td class="acoesc">
-                  <button class="visualizar">
+                  <button class="btn-visualizar">
                     <img
                       src="../../../public/assets/Visualizar.svg"
                       alt="visualizar"
@@ -245,6 +235,73 @@
             <button class="proximo">></button>
           </div>
         </div>
+      </div>
+
+
+     <div class="modal-criaruser hide">
+     <div class="fade-criaruser"></div>
+    <form class="modalc">
+    <div class="topo-modal">
+        <div class="criauser-modal">
+            <img src="../../../public/assets/Logo-novelo.svg" alt="" class="novelo-modal">
+        <p>Criar Usuário</p>
+        </div>
+        <img src="../../../public/assets/icone x.svg" alt="" class="x">
+    </div>
+    <div class="inputs-modal">
+        <p>Nome Completo</p>
+        <input type="text" placeholder="Nome Completo">
+        <p>Email</p>
+        <input type="text" placeholder="Email">
+        <p>Senha</p>
+        <input type="text" placeholder="Senha">
+        <p>Tipo de Usuário</p>
+        <input type="text" placeholder="Tipo de Usuário">
+    </div>
+    <div class="botoes-modal">
+        <button class="cancelar-modal">Cancelar</button>
+        <button class="criar-modal">Criar Usuário</button>
+    </div>
+    </form>
+    </div>
+
+     <div class="fadev hide"></div>
+     <div class="modal-visualizar hide">
+    <div class="modalv">
+        <div class="topov">
+            <div class="visualizacao">
+                <img src="../../../public/assets/Logo-novelo.svg" alt="" class="novelov">
+                 <p>Visualizar Usuário</p>
+            </div>
+        </div>
+        <div class="container">
+        <div class="identificacao">
+            <div class="imagem">
+                <img src="../../../public/assets/perfil usuario.svg" alt="" class="perfilv">
+            </div>
+            <div class="conteudov">
+                <p>Nome de Usuário</p>
+                <p class="admv">Admin</p>
+            </div>
+        </div>
+        <div class="conteudov">
+            <table>
+            <tr>
+                <td>Email</td>
+                <td>user.email@email.com</td>
+            </tr>
+            <tr>
+                <td>ID do Usuário</td>
+                <td>000000000</td>
+            </tr>
+            </table>
+        </div>
+        <div class="rodapev">
+            <button class="fechar">Fechar</button>
+            <img src="../../../public/assets/Frame 76.svg" alt="" class="flor">
+        </div>
+        </div>
+    </div>
       </div>
 
       <div class="modal-overlay" id="overlay-edit">
@@ -286,7 +343,6 @@
               </div>
           </form>   
       </div>
-
       <div class="modal-overlay" id="overlay-delete">
           <form class="modaldelete" id="modaldelete" action="" method="post">
               <div class="box-delete">
@@ -314,8 +370,8 @@
               </div>
           </form>   
       </div>
-
     </main>
-    
+    <script src="../../../public/js/visualizar.js"></script>
+     <script src="../../../public/js/criarusuario.js"></script>
   </body>
 </html>
