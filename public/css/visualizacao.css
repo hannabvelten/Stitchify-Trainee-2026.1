@@ -90,3 +90,10 @@
     justify-content: center;
     font-size: 13px;
 }
+p{
+    font-family: 'Noah-bold';
+}
+.conteudov{
+    font-family: 'Noah-bold';
+    padding-left: 1rem;
+}
