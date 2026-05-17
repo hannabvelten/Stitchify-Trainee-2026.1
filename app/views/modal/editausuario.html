@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edita usuario</title>
+    <link rel="stylesheet" href="../../../public/css/edituser.css">
+</head>
+<body>
+    <form class="modaledit" id="modaledit" action="" method="post">
+        <div class="topo">
+            <img src="../../../public/assets/Novelo_cortado.png" alt="">
+            <p>Editar Usuário</p>
+        </div>
+
+        <div class="edit-form">
+            <div class="edit-nome">
+                <label>Nome Completo:</label>
+                <input type="text" name="nome" placeholder="Nome completo" required>
+            </div>
+
+            <div class="edit-email">
+                <label>Novo Email:</label>
+                <input type="email" name="email" placeholder="Email" required> 
+            </div>
+
+            <div class="edit-senha">
+                <label>Nova Senha:</label>
+                <input type="password" name="senha" placeholder="Nova senha" required> 
+            </div>
+
+            <div class="edit-tipo">
+                <label>Tipo de Usuário:</label>
+                <select name="opcoes" id="escolha">
+                    <option value="" disabled selected hidden>Escolha uma opção</option>
+
+                    <option value="user">Usuário</option>
+                    <option value="admin">Admin</option>
+                </select>
+            </div>
+
+            <div class="botoes">
+                <button class="cancel" type="button">Cancelar</button>
+                <button class="confirm" type="submit">Confirmar alterações</button>
+            </div>
+        </div>
+    </form>    
+</body>
+</html>
