@@ -142,5 +142,9 @@ button{
 }
 @media (max-width: 480px){
 
-    
+    .modalv{
+        width: 99%;
+        border-radius: 15px;
+    }
+
 }
