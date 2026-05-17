@@ -51,3 +51,16 @@
     flex-direction: row;
     justify-content: space-between;
 }
+.visualizacao{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+}
+.visualizacao p{
+    font-family: 'Baloo';
+    align-items: center;
+    font-size: 20px;
+    color: #770523;
+    padding-left: 1rem;
+}
