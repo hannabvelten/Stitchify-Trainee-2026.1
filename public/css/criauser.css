@@ -77,3 +77,8 @@ input{
     border-radius: 20px;
     
 }
+input::placeholder{
+    font-family: 'Noah-regular';
+    color: #333;
+    font-size: 10px;
+}
