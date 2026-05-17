@@ -80,3 +80,13 @@
     height: 60px;
     padding-left: 0.5rem;
 }
+.admv{
+    border-radius: 20px;
+    background-color: #DBB8C1;
+    color: #770523;
+    width: 3rem;
+    padding-left: 0.3rem;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+}
