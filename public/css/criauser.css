@@ -137,4 +137,7 @@ p{
     .modalc{
         width: 90%;
     }
+    .criauser-modal p{
+        font-size: 1.2rem;
+    }
 }
