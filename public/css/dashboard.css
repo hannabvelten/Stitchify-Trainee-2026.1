@@ -50,15 +50,16 @@ main {
     margin-bottom: 20px;
 }
 
-.informacoes-pessoais { 
+.informacoes-pessoais {
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 10px;
 }
 
-.total-usuarios, .total-publicacoes {
+.total-usuarios,
+.total-publicacoes {
     background-color: var(--verde-claro);
-    padding: 12px 20px;
+    padding: 12px 10px;
     border-radius: 18px;
     display: flex;
     align-items: center;
@@ -188,11 +189,33 @@ h1 {
     font-size: 14px;
     font-weight: 600;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .ver-mais:hover {
     background: var(--rosa-escuro);
     color: white;
     transform: translateX(-50%) translateY(-2px);
+}
+
+@media screen and (max-width:767px) {
+    .informacoes-pessoais {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .controle-admin {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 10px;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .titulo h1 {
+        text-align: center;
+    }
 }
