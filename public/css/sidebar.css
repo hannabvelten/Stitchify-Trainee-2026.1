@@ -65,13 +65,13 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    transition: var(--tran-05);
 }
 
 .logo .stitchify{
     width: 220px;
     height: auto;
     transition: var(--tran-05);
-
 }
 
 .logo .novelo {
@@ -155,4 +155,40 @@ i {
 
 .sidebar.close p{
     opacity: 0;
+    pointer-events: none;
+}
+
+
+@media screen and (max-width: 767px){
+    .sidebar {
+        width: 88px;
+    }
+
+    .sidebar .toggle.left {
+        display: none;
+    }
+
+    .sidebar .botao-sidebar{
+        justify-content: center;
+        padding: 0px;
+    }
+
+    .sidebar .toggle.right{
+        display: none;
+    }
+
+    .sidebar .logo .stitchify{
+        display: none;
+    }
+
+    .sidebar .logo .novelo{
+        display: block;
+        width: 60px;
+    }
+
+    .sidebar p{
+        opacity: 0;
+        pointer-events: none;
+    }
+    
 }
