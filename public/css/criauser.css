@@ -70,3 +70,10 @@
 .inputs-modal p{
     padding-right: 3rem;
 }
+input{
+    width: 23rem;
+    height: 2.5rem;
+    border: 2px solid #D0D996;
+    border-radius: 20px;
+    
+}
