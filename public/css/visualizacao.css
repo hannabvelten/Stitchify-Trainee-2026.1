@@ -140,3 +140,7 @@ button{
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 9998;
 }
+@media (max-width: 480px){
+
+    
+}
