@@ -1,26 +1,21 @@
 @font-face {
     font-family: 'Baloo';
-    src: url(../../assets/Fonts/Baloo-Regular.ttf);
+    src: url(../assets/Fonts/Baloo-Regular.ttf);
 }
 @font-face {
     font-family: 'Noah-regular';
-    src: url(../../assets/Fonts/noah-regular.otf);
+    src: url(../assets/Fonts/noah-regular.otf);
 }
 @font-face {
     font-family: 'Noah-bold';
-    src: url(../../assets/Fonts/noah-bold.otf);
+    src: url(../assets/Fonts/noah-bold.otf);
 }
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-.modal-visualizar{
-    position: fixed;
-    inset: 0;
-    z-index: 9999;
-}
-.modalv{
+.modalc{
     position: fixed;
     left: 50%;
     top: 50%;
@@ -28,11 +23,12 @@
     border-radius: 20px;
     overflow: hidden;
     background-color: white;
-    z-index: 9999;
-    width: 24.5rem;
-    height: 27.125rem;
-    z-index: 1;
+    z-index: 2;
+}
+ .topo-modal{
+    width: 100%;
+    background-color: #FEF3E2;
     display: flex;
-    flex-direction: column;
-
+    flex-direction: row;
+    justify-content: space-between;
 }
