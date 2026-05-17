@@ -85,6 +85,16 @@ input::placeholder{
 p{
     font-family: 'Noah-bold';
 }
+.foto-usuario{
+    display: block;
+    margin: 0 auto;
+    border: none;
+    background: none;
+    cursor: pointer;
+    height: auto;
+    padding: 0;
+}
+
 .botoes-modal{
     width: 100%;
     display: flex;
