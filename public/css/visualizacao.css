@@ -146,5 +146,10 @@ button{
         width: 99%;
         border-radius: 15px;
     }
+    
+    .visualizacao p{
+        font-size: 1.2rem;
+    }
 
+    
 }
