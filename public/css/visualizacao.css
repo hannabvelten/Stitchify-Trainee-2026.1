@@ -97,3 +97,11 @@ p{
     font-family: 'Noah-bold';
     padding-left: 1rem;
 }
+table{
+    border-collapse: collapse;
+   
+}
+
+td{
+    padding-right: 2rem;
+}
