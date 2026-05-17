@@ -17,6 +17,10 @@
 
 <body>
 
+
+    <!-- Fundo Escuro -->
+    <div class="filtro" id="filtro"></div>
+    
     <div class="layout">
 
         <aside class="sidebar"></aside>
@@ -88,224 +92,226 @@
 
                 </div>
 
-                <div class="tabela-posts">
+                <div class="tabelaResponsiva">
+                    <div class="tabela-posts">
 
-                    <div class="cabecalho-tabela">
+                        <div class="cabecalho-tabela">
 
-                        <span>ID</span>
-                        <span>Título</span>
-                        <span>Autor</span>
-                        <span>Categoria</span>
-                        <span>Data</span>
-                        <span>Ações</span>
+                            <span>ID</span>
+                            <span>Título</span>
+                            <span>Autor</span>
+                            <span>Categoria</span>
+                            <span>Data</span>
+                            <span>Ações</span>
+
+                        </div>
+
+
+
+                        <div class="linha-post">
+
+                            <span>0123456789</span>
+
+                            <div class="info-post">
+
+                                <img src="../../../public/assets/portacopo.jpg" alt="Post">
+
+                                <p>Porta Copo</p>
+
+                            </div>
+
+                            <div class="info-autor">
+
+                                <img src="../../../public/assets/fotousuario.jpg" alt="Autor">
+
+                                <p>Vasco da Gama</p>
+
+                            </div>
+
+                            <div class="tag">
+                                Post
+                            </div>
+
+                            <span>25/04/2026</span>
+
+                            <div class="acoes">
+
+                                <button onclick="abriModal('modalVisualizar')">
+                                    <i class="bi bi-eye"></i>
+                                </button>
+
+                                <button onclick="abriModal('modalEditar')">
+                                    <i class="bi bi-pencil"></i>
+                                </button>
+
+                                <button onclick="abriModal('modalExcluir')">
+                                    <i class="bi bi-trash"></i>
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="linha-post">
+
+                            <span>8473628190</span>
+
+                            <div class="info-post">
+
+                                <img src="../../../public/assets/dory.jpg" alt="Post">
+
+                                <p>Dory</p>
+
+                            </div>
+
+                            <div class="info-autor">
+
+                                <img src="../../../public/assets/fotousuario.jpg" alt="Autor">
+
+                                <p>Hadassa</p>
+
+                            </div>
+
+                            <div class="tag">
+                                Tutorial
+                            </div>
+
+                            <span>02/05/2026</span>
+
+                            <div class="acoes">
+
+                                <button>
+                                    <i class="bi bi-eye"></i>
+                                </button>
+
+                                <button>
+                                    <i class="bi bi-pencil"></i>
+                                </button>
+
+                                <button>
+                                    <i class="bi bi-trash"></i>
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="linha-post">
+
+                            <span>9182736455</span>
+
+                            <div class="info-post">
+
+                                <img src="../../../public/assets/toucafrango.jpg" alt="Post">
+
+                                <p>Touca de Frango</p>
+
+                            </div>
+
+                            <div class="info-autor">
+
+                                <img src="../../../public/assets/fotousuario.jpg" alt="Autor">
+
+                                <p>Maria Luiza</p>
+
+                            </div>
+
+                            <div class="tag">
+                                Dicas
+                            </div>
+
+                            <span>10/05/2026</span>
+
+                            <div class="acoes">
+
+                                <button>
+                                    <i class="bi bi-eye"></i>
+                                </button>
+
+                                <button>
+                                    <i class="bi bi-pencil"></i>
+                                </button>
+
+                                <button>
+                                    <i class="bi bi-trash"></i>
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="linha-post">
+
+                            <span>6655443322</span>
+
+                            <div class="info-post">
+
+                                <img src="../../../public/assets/mascaracroche.jpg" alt="Post">
+
+                                <p>Mascara com Rosa</p>
+
+                            </div>
+
+                            <div class="info-autor">
+
+                                <img src="../../../public/assets/fotousuario.jpg" alt="Autor">
+
+                                <p>Murilo</p>
+
+                            </div>
+
+                            <div class="tag">
+                                Materiais
+                            </div>
+
+                            <span>15/05/2026</span>
+
+                            <div class="acoes">
+
+                                <button>
+                                    <i class="bi bi-eye"></i>
+                                </button>
+
+                                <button>
+                                    <i class="bi bi-pencil"></i>
+                                </button>
+
+                                <button>
+                                    <i class="bi bi-trash"></i>
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                        <div class="paginacao">
+
+                            <button>
+                                <i class="bi bi-chevron-left"></i>
+                            </button>
+
+                            <button class="ativo">1</button>
+
+                            <button>2</button>
+
+                            <button>3</button>
+
+                            <span>...</span>
+
+                            <button>6</button>
+
+                            <button>
+                                <i class="bi bi-chevron-right"></i>
+                            </button>
+
+                        </div>
 
                     </div>
-
-
-
-                    <div class="linha-post">
-
-                        <span>0123456789</span>
-
-                        <div class="info-post">
-
-                            <img src="../../../public/assets/portacopo.jpg" alt="Post">
-
-                            <p>Porta Copo</p>
-
-                        </div>
-
-                        <div class="info-autor">
-
-                            <img src="../../../public/assets/fotousuario.jpg" alt="Autor">
-
-                            <p>Vasco da Gama</p>
-
-                        </div>
-
-                        <div class="tag">
-                            Post
-                        </div>
-
-                        <span>25/04/2026</span>
-
-                        <div class="acoes">
-
-                            <button onclick="abriModal('modalVisualizar')">
-                                <i class="bi bi-eye"></i>
-                            </button>
-
-                            <button>
-                                <i class="bi bi-pencil"></i>
-                            </button>
-
-                            <button>
-                                <i class="bi bi-trash"></i>
-                            </button>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="linha-post">
-
-                        <span>8473628190</span>
-
-                        <div class="info-post">
-
-                            <img src="../../../public/assets/dory.jpg" alt="Post">
-
-                            <p>Dory</p>
-
-                        </div>
-
-                        <div class="info-autor">
-
-                            <img src="../../../public/assets/fotousuario.jpg" alt="Autor">
-
-                            <p>Hadassa</p>
-
-                        </div>
-
-                        <div class="tag">
-                            Tutorial
-                        </div>
-
-                        <span>02/05/2026</span>
-
-                        <div class="acoes">
-
-                            <button>
-                                <i class="bi bi-eye"></i>
-                            </button>
-
-                            <button>
-                                <i class="bi bi-pencil"></i>
-                            </button>
-
-                            <button>
-                                <i class="bi bi-trash"></i>
-                            </button>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="linha-post">
-
-                        <span>9182736455</span>
-
-                        <div class="info-post">
-
-                            <img src="../../../public/assets/toucafrango.jpg" alt="Post">
-
-                            <p>Touca de Frango</p>
-
-                        </div>
-
-                        <div class="info-autor">
-
-                            <img src="../../../public/assets/fotousuario.jpg" alt="Autor">
-
-                            <p>Maria Luiza</p>
-
-                        </div>
-
-                        <div class="tag">
-                            Dicas
-                        </div>
-
-                        <span>10/05/2026</span>
-
-                        <div class="acoes">
-
-                            <button>
-                                <i class="bi bi-eye"></i>
-                            </button>
-
-                            <button>
-                                <i class="bi bi-pencil"></i>
-                            </button>
-
-                            <button>
-                                <i class="bi bi-trash"></i>
-                            </button>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="linha-post">
-
-                        <span>6655443322</span>
-
-                        <div class="info-post">
-
-                            <img src="../../../public/assets/mascaracroche.jpg" alt="Post">
-
-                            <p>Mascara com Rosa</p>
-
-                        </div>
-
-                        <div class="info-autor">
-
-                            <img src="../../../public/assets/fotousuario.jpg" alt="Autor">
-
-                            <p>Murilo</p>
-
-                        </div>
-
-                        <div class="tag">
-                            Materiais
-                        </div>
-
-                        <span>15/05/2026</span>
-
-                        <div class="acoes">
-
-                            <button>
-                                <i class="bi bi-eye"></i>
-                            </button>
-
-                            <button>
-                                <i class="bi bi-pencil"></i>
-                            </button>
-
-                            <button>
-                                <i class="bi bi-trash"></i>
-                            </button>
-
-                        </div>
-
-                    </div>
-
-                    <div class="paginacao">
-
-                        <button>
-                            <i class="bi bi-chevron-left"></i>
-                        </button>
-
-                        <button class="ativo">1</button>
-
-                        <button>2</button>
-
-                        <button>3</button>
-
-                        <span>...</span>
-
-                        <button>6</button>
-
-                        <button>
-                            <i class="bi bi-chevron-right"></i>
-                        </button>
-
-                    </div>
-
                 </div>
-
+            
             </section>
 
         </main>
@@ -417,6 +423,219 @@
 
     <script src="../../../public/js/modais.js"></script>
 
+    
+    <!-- Modal Visualizar Post -->
+    <form class="modalVisualizar" id="modalEditar">
+
+        <div class="header">
+
+            <img 
+            src="../../../public/assets/Novelo_cortado.png" 
+            alt="Logo">
+
+            <p>Editar Post</p>
+
+        </div>
+
+        <div class="modalContent">
+
+            <!-- Imagem -->
+            <label class="uploadImage" for="editarImagem">
+
+                <img 
+                src="../../../public/assets/portacopo.jpg" 
+                alt="Imagem Post"
+                class="imagemEditar">
+
+                <div class="overlayImagem">
+
+                    <i class="bi bi-cloud-arrow-up-fill"></i>
+
+                    <p>
+
+                        Arraste uma nova imagem ou 
+                        <b>clique para fazer upload</b>
+
+                    </p>
+
+                </div>
+
+            </label>
+
+            <input 
+            type="file" 
+            id="editarImagem" 
+            hidden>
+
+            <!-- Titulo -->
+            <div class="titulo">
+
+                <div class="tituloIcone">
+
+                    <label>Título do Post</label>
+
+                    <i class="bi bi-pencil-square"></i>
+
+                </div>
+
+                <input 
+                type="text" 
+                value="Porta Copo">
+
+            </div>
+
+            <!-- Descrição -->
+            <div class="descricao">
+
+                <div class="tituloIcone">
+
+                    <label>Descrição</label>
+
+                    <i class="bi bi-pencil-square"></i>
+
+                </div>
+
+                <textarea>Um porta-copo de crochê artesanal feito com carinho, unindo beleza, praticidade e um toque acolhedor para qualquer ambiente. Produzido com fios de qualidade e pontos delicados, ele protege superfícies contra manchas e calor, enquanto adiciona charme e personalidade à decoração. Perfeito para quem valoriza peças feitas à mão, esse acessório combina funcionalidade com o encanto único do crochê, trazendo um detalhe especial para sua mesa ou cantinho do café.</textarea>
+
+            </div>
+
+            <!-- Categorias -->
+            <div class="categoria">
+
+                <div class="tituloIcone">
+
+                    <label>Categoria(s)</label>
+
+                    <i class="bi bi-pencil-square"></i>
+
+                </div>
+
+                <input 
+                type="text" 
+                value="Dicas, Materiais">
+
+            </div>
+
+            <!-- Data -->
+            <div class="data">
+
+                <label>Data de Criação</label>
+
+                <div class="input-data">
+
+                    10/05/2026
+
+                </div>
+
+            </div>
+
+            <!-- Botoes -->
+            <div class="modalActions">
+
+                <button 
+                type="button" 
+                class="btnCancel"
+                onclick="fecharModal('modalEditar')">
+
+                    Fechar
+
+                </button>
+
+                <button 
+                type="submit" 
+                class="btnCreate">
+
+                    Aplicar Edições
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </form>
+
+     <script src="../../../public/js/modais.js"></script>
+
+
+    <!-- Modal Excluir Post -->
+    <div class="modalVisualizar" id="modalExcluir">
+
+        <div class="header">
+
+            <img 
+            src="../../../public/assets/Novelo_cortado.png" 
+            alt="Logo">
+
+            <p>Excluir Post</p>
+
+        </div>
+
+        <div class="modalContent">
+
+            <!-- Texto -->
+            <div class="textoExcluir">
+
+                <h2>
+                    Tem certeza que deseja
+                    excluir este post?
+                </h2>
+
+            </div>
+
+            <!-- Imagem -->
+            <img 
+            src="../../../public/assets/portacopo.jpg" 
+            alt="Post"
+            class="imagemExcluir">
+
+            <!-- Titulo -->
+            <div class="tituloExcluir">
+
+                <label>Título do Post :</label>
+
+                <div class="inputExcluir">
+
+                    Porta Copo
+
+                </div>
+
+            </div>
+
+            <!-- Alerta -->
+            <div class="alertaExcluir">
+
+                <i class="bi bi-exclamation-triangle"></i>
+
+                <p>Essa ação não poderá ser desfeita.</p>
+
+            </div>
+
+            <!-- Botoes -->
+            <div class="modalActions">
+
+                <button 
+                type="button" 
+                class="btnCancel"
+                onclick="fecharModal('modalExcluir')">
+
+                    Cancelar
+
+                </button>
+
+                <button 
+                type="button" 
+                class="btnDelete">
+
+                    Excluir
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
 
 
 </body>
