@@ -75,3 +75,8 @@
     flex-direction: row;
     align-items: center;
 }
+.perfilv{
+    width: 60px;
+    height: 60px;
+    padding-left: 0.5rem;
+}
