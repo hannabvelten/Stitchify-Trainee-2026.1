@@ -140,4 +140,10 @@ p{
     .criauser-modal p{
         font-size: 1.2rem;
     }
+    input{
+        width: 99%;
+    }
+     .inputs-modal p{
+        font-size: 12px;
+    }
 }
