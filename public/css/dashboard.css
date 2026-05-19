@@ -25,7 +25,7 @@
 }
 
 body {
-    background: url('../assets/fundo-dash.jpeg') center/cover no-repeat fixed;
+    background: url('../assets/novo-fundo.svg') center/cover no-repeat fixed;
     font-family: var(--font-noah);
     min-height: 100vh;
     display: flex;
