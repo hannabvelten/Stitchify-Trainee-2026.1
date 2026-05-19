@@ -309,6 +309,7 @@
       </div>
 
       <div class="modal-overlay" id="overlay-edit">
+        <div class="body-style">
           <form class="modaledit" id="modaledit" action="" method="post">
               <div class="topo">
                   <img src="../../../public/assets/Novelo_cortado.png" alt="">
@@ -331,13 +332,9 @@
                       <input type="password" name="senha" placeholder="Nova senha" required> 
                   </div>
 
-                  <div class="edit-tipo">
-                      <label>Tipo de Usuário:</label>
-                      <select name="opcoes" id="escolha">
-                          <option value="" disabled selected hidden>Escolha uma opção</option>
-                          <option value="user">Usuário</option>
-                          <option value="admin">Admin</option>
-                      </select>
+                  <div class="edit-foto">
+                      <p>Foto do Usuário</p>
+                      <button class="foto-usuario"><img src="../../../public/assets/adicioanar-foto.svg" alt="" class="nova-foto"></button>
                   </div>
 
                   <div class="botoes">
@@ -345,7 +342,8 @@
                       <button class="confirm" type="submit">Confirmar alterações</button>
                   </div>
               </div>
-          </form>   
+          </form>
+        </div>
       </div>
       <div class="modal-overlay" id="overlay-delete">
           <form class="modaldelete" id="modaldelete" action="" method="post">
