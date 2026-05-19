@@ -24,13 +24,31 @@
     --font-noah: 'Noah', sans-serif;
 }
 
-body {
+.hide {
+    display: none;
+}
+
+#fade-delete {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4); 
+    z-index: 9998;
+}
+
+.modal-deletar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    background: var(--bege);
-    border-radius: 20px;
+    z-index: 9999;
+    pointer-events: none;
 }
 
 .modaldelete {
@@ -42,6 +60,8 @@ body {
     gap: 24px;
     border-radius: 30px;
     background: var(--branco);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    pointer-events: auto;
 }
 
 .box-delete {
@@ -133,12 +153,4 @@ body {
 .confirm-delete {
     background: var(--vermelho);
     color: var(--branco);
-}
-
-.cancel-delete:hover, .confirm-delete:hover {
-    filter: brightness(0.92);
-}
-
-.cancel-delete:active, .confirm-delete:active {
-    transform: scale(0.98);
 }

@@ -308,8 +308,8 @@
     </div>
       </div>
 
-      <div class="modal-overlay" id="overlay-edit">
-        <div class="body-style">
+     <div class="fade-edit hide" id="fade-edit"></div>
+        <div class="modal-editar hide" id="modal-editar">
           <form class="modaledit" id="modaledit" action="" method="post">
               <div class="topo">
                   <img src="../../../public/assets/Novelo_cortado.png" alt="">
@@ -344,8 +344,9 @@
               </div>
           </form>
         </div>
-      </div>
-      <div class="modal-overlay" id="overlay-delete">
+
+      <div class="fade-delete hide" id="fade-delete"></div>
+        <div class="modal-deletar hide" id="modal-deletar">
           <form class="modaldelete" id="modaldelete" action="" method="post">
               <div class="box-delete">
                   <span class="vetor-atencao">
@@ -371,9 +372,11 @@
                   </div>
               </div>
           </form>   
-      </div>
+        </div>
     </main>
     <script src="../../../public/js/visualizar.js"></script>
-     <script src="../../../public/js/criarusuario.js"></script>
+    <script src="../../../public/js/criarusuario.js"></script>
+    <script src="../../../public/js/editarusuario.js"></script>
+    <script src="../../../public/js/deletarusuario.js"></script>
   </body>
 </html>
