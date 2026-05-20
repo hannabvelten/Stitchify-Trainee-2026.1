@@ -156,47 +156,50 @@ main {
     cursor: pointer;
 }
 
-.paginacao {
-    margin-top: 80px;
-    width: 100%;
+.paginacao{
     display: flex;
     justify-content: center;
-}
-
-.num-paginacao {
-    display: flex;
-    list-style: none;
-    gap: 12px;
     align-items: center;
+    gap: 0.6rem;
+    margin-top: 2rem;
 }
 
-.tracado-paginacao {
-    display: flex;
-    gap: 12px;
-}
-
-.num-paginacao a, .num-paginacao span {
-    display: flex;
-    width: 45px;
-    height: 45px;
-    background: var(--branco);
-    border-radius: 50%;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
+.paginacao button{
+    width: 2.8rem;
+    height: 2.8rem;
+    border: none;
+    border-radius: 0.6rem;
+    background-color: var(--bege);
     color: var(--vinho);
+    cursor: pointer;
+    transition: 0.2s;
     font-family: var(--font-baloo);
     font-weight: bold;
-    font-size: 20px;
+    font-size: 1.3rem;
 }
 
-.seta svg {
+.paginacao .ativo{
+    background-color: var(--vinho);
+    border: 0.2rem solid var(--bege);
     color: var(--bege);
-    width: 35px;
-    height: 35px;
 }
 
-.seta a {
-    background: transparent;
+.points {
+    font-size: 1.6rem;
+    color: var(--vinho);
+    background-color: var(--bege);
+    width: 2.8rem;
+    height: 2.8rem;
     border: none;
+    border-radius: 0.6rem;
+    cursor: pointer;
+    transition: 0.2s;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.paginacao button:hover{
+    transform: scale(1.05);
 }
