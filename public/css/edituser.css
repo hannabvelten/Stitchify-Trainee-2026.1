@@ -139,7 +139,7 @@
     width: 100%;
 }
 
-.botoes {
+.botoes-edit {
     display: flex;
     padding: 30px 40px 20px 40px;
     align-items: center;
