@@ -31,8 +31,6 @@ main {
 .sidebar {
     width: 20%;
     background-color: #FAD2E1;
-
-
 }
 
 .bsidebar {
@@ -212,7 +210,9 @@ thead th {
     background-color: #FEF3E2;
 
 }
-
+.acoesc img{
+    
+}
 .bvisualização {
     display: none;
 }
@@ -286,7 +286,7 @@ thead th {
         background-image: url(../assets/newstitchify.png);
         background-size: 170px;
         background-repeat: no-repeat;
-        background-position: 30% center;
+        background-position: 10% center;
 
     }
 
@@ -316,6 +316,8 @@ thead th {
     }
 
     .usuarios {
+        display: flex;
+        padding-top: 10px;
         align-items: center;
         font-size: 25px;
         padding-left: 20px;
@@ -347,7 +349,7 @@ thead th {
     .box-criauser img {
         position: absolute;
         left: 20px;
-        top: 10px;
+        top: 13px;
     }
 
     .box-criauser button {
