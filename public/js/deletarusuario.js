@@ -1,5 +1,5 @@
 const openDeleteButton = document.querySelectorAll(".deletar");
-const closeDeleteButton = document.querySelector(".cancel-delete");
+const closeDeleteButton = document.querySelector(".modal-deletar .cancel-delete");
 const modalDelete = document.querySelector("#modal-deletar");
 const fadeDelete = document.querySelector("#fade-delete");
 

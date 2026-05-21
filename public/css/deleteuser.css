@@ -24,7 +24,7 @@
     --font-noah: 'Noah', sans-serif;
 }
 
-.hide {
+.modal-deletar.hide {
     display: none;
 }
 
@@ -52,7 +52,6 @@
 }
 
 .modaldelete {
-    display: flex;
     width: 500px;
     padding: 40px 30px;
     flex-direction: column;

@@ -24,7 +24,7 @@
     --font-noah: 'Noah', sans-serif;
 }
 
-.hide {
+.modal-editar.hide {
     display: none;
 }
 
