@@ -538,7 +538,7 @@ button:hover {
     .cards {
         grid-template-columns: repeat(1, 50vw);
         grid-template-rows: repeat(3, 200px);
-        row-gap: 10px;
+        row-gap: 15px;
     }
 
     .card {
@@ -598,7 +598,7 @@ button:hover {
         grid-template-columns: repeat(1, 80vw);
         grid-template-rows: repeat(3, 200px);
         max-width: 100%;
-        gap: 10px;
+        gap: 15px;
         justify-content: center;
     }
 
