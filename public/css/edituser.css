@@ -65,7 +65,7 @@
     pointer-events: auto;
 }
 
-.topo {
+.topo-edit {
     display: flex;
     padding: 24px 40px;
     gap: 16px;
@@ -75,12 +75,12 @@
     border-bottom: 2px solid #F5E6D0;
 }
 
-.topo img {
+.topo-edit img {
     width: 45px;
     height: auto;
 }
 
-.topo p {
+.topo-edit p {
     color: var(--vinho);
     font-family: var(--font-baloo);
     font-size: 48px;
