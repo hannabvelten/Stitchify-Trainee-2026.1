@@ -203,3 +203,30 @@ main {
 .paginacao button:hover{
     transform: scale(1.05);
 }
+
+/* RESPONSIVIDADE TABLET */
+@media screen and (max-width: 768px) {
+    .div-cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    h1 {
+        font-size: 48px;
+    }
+
+    .div-img img {
+        height: 220px;
+    }
+}
+
+/* RESPONSIVIDADE MOBILE */
+@media screen and (max-width: 480px) {
+    .div-cards {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+}
