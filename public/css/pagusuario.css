@@ -121,13 +121,16 @@ main {
     height: 35px;
     border: 1px solid #D6C5C5;
     font-family: 'Noah-Regular';
-    font-size: 16px;
     color: #67635E;
     border-radius: 5px;
     padding-left: 30px;
 
 }
-
+.busca::placeholder{
+    font-family: 'Noah-Regular';
+    color: #67635E;
+    font-size: 14px;
+}
 .lupa {
     position: absolute;
     left: 10px;
