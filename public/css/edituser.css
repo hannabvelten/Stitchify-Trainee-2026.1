@@ -47,6 +47,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
     z-index: 9999;
     pointer-events: none;
 }
@@ -58,17 +59,17 @@
     border-radius: 20px;
     background: var(--branco);
     width: 100%;
-    max-width: 650px;
-    border: 4px solid var(--preto-modal);
+    max-width: 400px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     pointer-events: auto;
+    max-height: 90vh;
 }
 
 .topo-edit {
     display: flex;
-    padding: 24px 40px;
-    gap: 16px;
+    padding: 10px 32px;
+    gap: 10px;
     align-self: stretch;
     align-items: center;
     background: var(--bege);
@@ -76,14 +77,14 @@
 }
 
 .topo-edit img {
-    width: 45px;
+    width: 35px;
     height: auto;
 }
 
 .topo-edit p {
     color: var(--vinho);
     font-family: var(--font-baloo);
-    font-size: 48px;
+    font-size: 24px;
     font-style: normal;
     font-weight: bold;
     line-height: normal;
@@ -92,22 +93,22 @@
 .edit-form {
     display: flex;
     flex-direction: column;
-    padding: 20px 10px;
+    padding: 10px 0;
 }
 
 .edit-nome, .edit-email, .edit-senha, .edit-foto {
     display: flex;
-    padding: 14px 40px;
+    padding: 6px 30px;
     flex-direction: column;
     align-items: flex-start;
-    gap: 8px;
+    gap: 4px;
     align-self: stretch;
 }
 
 .edit-nome label, .edit-email label, .edit-senha label {
     color: var(--vinho);
     font-family: var(--font-noah);
-    font-size: 22px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -116,7 +117,7 @@
 .edit-foto p {
     color: var(--vinho);
     font-family: var(--font-noah);
-    font-size: 22px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -124,8 +125,8 @@
 
 .modaledit input, .modaledit select {
     display: flex;
-    height: 56px;
-    padding: 10px 25px;
+    height: 42px;
+    padding: 0 20px;
     align-items: center;
     gap: 10px;
     align-self: stretch;
@@ -133,28 +134,33 @@
     border: 2px solid var(--verde-claro);
     background: var(--branco);
     font-family: var(--font-noah);
-    font-size: 16px;
+    font-size: 14px;
     color: #4A4A4A;
     outline: none;
     width: 100%;
 }
 
+.edit-foto .nova-foto {
+    width: 100%;
+    height: auto;
+}
+
 .botoes-edit {
     display: flex;
-    padding: 30px 40px 20px 40px;
+    padding: 10px 20px;
     align-items: center;
-    gap: 20px;
+    gap: 16px;
     align-self: stretch;
 }
 
 .cancel, .confirm {
     display: flex;
-    height: 54px;
+    height: 40px;
     justify-content: center;
     align-items: center;
     border-radius: 30px;
     font-family: var(--font-noah);
-    font-size: 22px;
+    font-size: 14px;
     font-style: normal;
     font-weight: 700;
     cursor: pointer;
@@ -163,7 +169,7 @@
 
 .cancel {
     flex: 1;
-    max-width: 180px;
+    max-width: 100px;
     border: 2px solid var(--verde-claro);
     background: var(--branco);
     color: var(--vinho);
@@ -171,7 +177,172 @@
 
 .confirm {
     flex: 2;
+    max-width: 180px;
     border: 2px solid var(--verde-claro);
     background: var(--verde-claro);
     color: var(--vinho);
+}
+
+/* RESPONSIVIDADE TABLET */
+@media screen and (max-width: 768px) {
+    .modal-editar {
+        padding: 10px;
+    }
+
+    .modaledit {
+        width: 90%;
+        max-width: 440px;
+    }
+
+    .topo-edit {
+        padding: 20px 24px;
+        gap: 12px;
+    }
+
+    .topo-edit p {
+        font-size: 22px;
+    }
+
+    .topo-edit img {
+        width: 35px;
+    }
+
+    .edit-form {
+        padding: 5px 0;
+    }
+
+    .edit-nome, .edit-email, .edit-senha, .edit-foto {
+        padding: 6px 24px;
+        gap: 10px;
+    }
+
+    .edit-nome label, .edit-email label, .edit-senha label, .edit-foto p {
+        font-size: 15px;
+    }
+
+    .modaledit input, .modaledit select {
+        height: 44px;
+        padding: 0 20px;
+        font-size: 15px;
+    }
+
+    .edit-foto .foto-usuario {
+        width: 110px;
+        height: 110px;
+    }
+
+    .edit-foto .nova-foto {
+        width: 100%;
+        height: auto;
+    }
+
+    .botoes-edit {
+        padding: 12px 24px 20px 24px;
+        justify-content: flex-start;
+        gap: 12px;
+    }
+
+    .cancel, .confirm {
+        font-size: 15px;
+        height: 30px;
+    }
+
+    .cancel {
+        flex: 0 1 auto;
+        width: 110px;
+    }
+
+    .confirm {
+        flex: 0 1 auto;
+        width: 190px;
+    }
+}
+
+/* RESPONSIVIDADE MOBILE */
+@media screen and (max-width: 480px) {
+    .modal-editar {
+        padding: 10px;
+    }
+
+    .modaledit {
+        width: 100%;
+        max-width: 320px;
+        max-height: 95vh;
+    }
+
+    .topo-edit {
+        padding: 12px 20px;
+        gap: 10px;
+    }
+
+    .topo-edit p {
+        font-size: 20px;
+    }
+
+    .topo-edit img {
+        width: 30px;
+    }
+
+    .edit-form {
+        padding: 5px 0;
+    }
+
+    .edit-nome, .edit-email, .edit-senha, .edit-foto {
+        padding: 5px 20px;
+        gap: 2px;
+    }
+
+    .edit-nome label, .edit-email label, .edit-senha label, .edit-foto p {
+        font-size: 14px;
+    }
+
+    .modaledit input, .modaledit select {
+        height: 38px;
+        padding: 0 15px;
+        font-size: 13px;
+    }
+
+    .edit-foto {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .edit-foto .foto-usuario {
+        width: 80px;
+        height: 80px;
+    }
+
+    .edit-foto .nova-foto {
+        width: 100%;
+        height: auto;
+    }
+
+    .botoes-edit {
+        padding: 5px 5px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 8px; 
+        width: 100%;
+    }
+
+    .cancel, .confirm {
+        height: 25px;
+        font-size: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .cancel {
+        flex: 1;
+        max-width: 90px;
+        padding: 0;
+    }
+
+    .confirm {
+        flex: 2;
+        padding: 0;
+    }
 }
