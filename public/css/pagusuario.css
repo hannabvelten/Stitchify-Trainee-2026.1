@@ -153,7 +153,7 @@ table {
     overflow: hidden;
     background-color: #C1CA8B;
     border-collapse: separate;
-    border-spacing: 0 10px;
+    border-spacing: 0 15px;
     padding-right: 10px;
 
 }
@@ -366,5 +366,10 @@ thead th {
     td {
         white-space: nowrap;
     }
-   
+   .paginacao button{
+    display: flex;
+    align-items: center;
+    width: 20px;
+    hei
+   }
 }
