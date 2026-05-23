@@ -359,9 +359,9 @@ thead th {
         height: auto;
     }
 
-    table {
+    .cabecalho {
         min-width: 700px;
-        border-spacing: 0 10px;
+        border-spacing: 0 5px;
     }
 
     th,
@@ -371,6 +371,8 @@ thead th {
    .paginacao button{
     display: flex;
     align-items: center;
-    width: 20px;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
    }
 }
