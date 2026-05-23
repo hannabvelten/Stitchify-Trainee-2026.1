@@ -1,5 +1,5 @@
 const abrirCriar = document.querySelector(".criar-usuario");
-const fecharCriar = document.querySelector(".x");
+const fecharCriar = document.querySelector(".cancelar-modal");
 const modalCriar = document.querySelector(".modal-criaruser");
 const fadeCriar = document.querySelector(".fade-criaruser");
 const botaoFoto = document.querySelector(".foto-usuario");
