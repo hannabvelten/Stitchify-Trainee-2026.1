@@ -71,9 +71,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 2px var(--cinza) dashed;
+    width: 100%;
+    border: 2px var(--cinza) dashed !important;
     border-radius: 30px;
-    padding: 30px;
+    padding: 30px !important;
     transition: 0.3s;
 }
 
