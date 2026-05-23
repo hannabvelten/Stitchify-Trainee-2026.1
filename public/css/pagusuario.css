@@ -116,7 +116,7 @@ main {
     font-size: 16px;
 }
 
-input {
+.busca {
     width: 500px;
     height: 35px;
     border: 1px solid #D6C5C5;
@@ -210,9 +210,6 @@ thead th {
     background-color: #FEF3E2;
 
 }
-.acoesc img{
-    
-}
 .bvisualização {
     display: none;
 }
@@ -241,8 +238,6 @@ thead th {
     justify-content: center;
     display: flex;
     align-items: center;
-    padding-right: 45px;
-    padding-bottom: 15px;
     gap: 10px;
 
 
@@ -257,15 +252,12 @@ thead th {
     color: #67635E;
     border-radius: 5px;
     font-size: 16px;
-
-
 }
 
 .paginacao .pag1 {
     border: none;
     background-color: #770523;
     color: white;
-
 }
 
 @media (max-width: 768px) {
