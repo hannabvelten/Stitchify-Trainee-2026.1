@@ -145,15 +145,14 @@ main {
     flex: 1;
 }
 
-table {
+.cabecalho {
     width: 100%;
     font-family: 'Noah-Bold';
     font-weight: 100;
-    border-collapse: collapse;
     overflow: hidden;
     background-color: #C1CA8B;
     border-collapse: separate;
-    border-spacing: 0 15px;
+    border-spacing: 0 10px;
     padding-right: 10px;
 
 }

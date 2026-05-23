@@ -105,7 +105,7 @@ table{
 td{
     padding-right: 2rem;
 }
-button{
+.fechar{
     border-radius: 20px;
     border: none;
     background-color: #D0D996;
