@@ -122,8 +122,9 @@ main {
     border: 1px solid #D6C5C5;
     font-family: 'Noah-Regular';
     color: #67635E;
-    border-radius: 5px;
+    border-radius: 10px;
     padding-left: 30px;
+    
 
 }
 .busca::placeholder{
