@@ -249,7 +249,272 @@ button:hover{
     margin-bottom: 1rem;
 }
 
-@media (max-width: 992px){
+/* === Modal Autor === */
+
+.fundo-modal{
+
+    width: 100%;
+    height: 100%;
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    background-color: rgba(0,0,0,0.45);
+
+    z-index: 10;
+
+    display: none;
+}
+
+
+
+.modal-autor{
+
+    width: 95%;
+    max-width: 850px;
+
+    background-color: #FEF3E2;
+
+    border-radius: 2rem;
+
+    overflow: hidden;
+
+    position: fixed;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    z-index: 20;
+
+    display: none;
+
+    flex-direction: column;
+
+    box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.30);
+
+}
+
+
+
+.topo-modal-autor{
+
+    background-color: #C1CA8B;
+
+    padding: 1.5rem;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 1.5rem;
+
+    box-shadow: 0 0.3rem 1rem rgba(0,0,0,0.15);
+}
+
+.foto-modal-autor{
+
+    width: 8rem;
+    height: 8rem;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    border: 0.2rem solid #770523;
+
+}
+
+.informacoes-autor h2{
+
+    font-family: 'Baloo';
+
+    color: #770523;
+
+    font-size: 2.2rem;
+}
+
+.informacoes-autor span{
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 0.4rem;
+
+    color: #770523;
+
+    font-size: 1.5rem;
+
+    margin-top: 0.3rem;
+}
+
+
+
+.conteudo-modal-autor{
+
+    padding: 2rem;
+}
+
+.titulo-posts{
+    display: flex;
+
+    align-items: center;
+
+    gap: 0rem;
+
+    margin-bottom: 0rem;
+
+    margin-top: 0rem;
+}
+
+.titulo-posts img{
+    width: 5rem;
+
+    height: auto;
+}
+
+.titulo-posts h2{
+    font-family: 'Baloo', cursive;
+
+    color: #770523;
+
+    font-size: 2.5rem;
+}
+
+.titulo-posts-autor i{
+
+    color: #770523;
+
+    font-size: 2rem;
+}
+
+
+
+.lista-posts-autor{
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 1rem;
+}
+
+
+
+.card-post-autor{
+
+    background-color: #FAD2E1;
+
+    border-radius: 1.5rem;
+
+    overflow: hidden;
+
+    transition: 0.3s;
+}
+
+.card-post-autor:hover{
+
+    transform: translateY(-0.2rem);
+}
+
+.card-post-autor img{
+
+    width: 100%;
+
+    height: 10rem;
+
+    object-fit: cover;
+}
+
+.informacoes-post-autor{
+
+    padding: 1rem;
+
+    text-align: center;
+}
+
+.informacoes-post-autor h3{
+
+    color: #770523;
+
+    font-family: 'Baloo';
+
+    font-size: 1.5rem;
+
+    margin-bottom: 0.5rem;
+}
+
+
+
+.categoria-post{
+
+    background-color: #C1CA8B;
+
+    color: #1F0008;
+
+    padding: 0.3rem 0.8rem;
+
+    border-radius: 2rem;
+
+    font-size: 0.8rem;
+
+    display: inline-block;
+
+    margin-bottom: 0.8rem;
+}
+
+
+
+.informacoes-post-autor p{
+
+    color: #770523;
+
+    font-size: 0.9rem;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 0.3rem;
+}
+
+
+
+.acoes-modal-autor{
+
+    display: flex;
+
+    justify-content: center;
+
+    padding: 1.5rem;
+}
+
+.acoes-modal-autor button{
+
+    background-color: #770523;
+
+    color: #FFFFFF;
+
+    padding: 0.6rem 3rem;
+
+    border-radius: 2rem;
+
+    font-size: 1.1rem;
+}
+
+.acoes-modal-autor button:hover{
+
+    background-color: #5a031a;
+}
+
+
+@media (max-width: 1050px){
 
     html{
         font-size: 15px;
@@ -258,57 +523,143 @@ button:hover{
     .conteudo{
         flex-direction: column;
     }
+    
 
     .post,
     .sidebar{
         width: 100%;
     }
 
+    .info-post{
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 2rem;
+
+    margin-bottom: 0.5rem;
+
+    color: #1F0008;
+
+    font-size: 1.2rem;
+}
 }
 
-@media (max-width: 768px){
 
-    html{
-        font-size: 14px;
+@media (max-width: 600px){
+
+    .modal-autor{
+        width: 95%;
+        max-width: 380px;
+
+        border-radius: 1.5rem;
     }
 
-    body{
+    
+    .topo-modal-autor{
+        padding: 1rem;
+
+        gap: 1rem;
+
+        align-items: center;
+    }
+
+    .foto-modal-autor{
+        width: 6rem;
+        height: 6rem;
+    }
+
+    .informacoes-autor h2{
+        font-size: 1.2rem;
+    }
+
+    .informacoes-autor span{
+        font-size: 1rem;
+    }
+
+    
+    .conteudo-modal-autor{
         padding: 1rem;
     }
 
-    .post{
-        padding: 1.5rem;
-    }
-
-    .autor-card,
-    .categorias{
-        padding: 1.5rem;
-    }
-
-    .post h1{
-        font-size: 2.2rem;
-    }
-
-    .titulo-pagina{
-        font-size: 2rem;
-    }
-
-}
-
-@media (max-width: 480px){
-
-    html{
-        font-size: 13px;
-    }
-
     .info-post{
-        flex-direction: column;
-        gap: 0.5rem;
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 1rem;
+
+    margin-bottom: 0.5rem;
+
+    color: #1F0008;
+
+    font-size: 0.857rem;
     }
 
-    .foto-perfil{
-        width: 8rem;
-        height: 8rem;
+    .titulo-posts{
+        gap: 0rem;
+
+        margin-bottom: 1rem;
     }
 
+    .titulo-posts img{
+        width: 3.8rem;
+    }
+
+    .titulo-posts h2{
+        font-size: 1.6rem;
+    }
+
+     
+    .lista-posts-autor{
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 1rem;
+    }
+
+    
+    .card-post-autor img{
+        height: 7rem;
+    }
+
+    .informacoes-post-autor{
+        padding: 0.7rem;
+    }
+
+    .informacoes-post-autor h3{
+        font-size: 1.3rem;
+    }
+
+    .categoria-post{
+        font-size: 0.9rem;
+
+        padding: 0.2rem 0.6rem;
+    }
+
+    .informacoes-post-autor p{
+        font-size: 0.8rem;
+        gap: 0.4rem;
+    }
+
+   
+    .acoes-modal-autor{
+        padding: 1rem;
+    }
+
+    .acoes-modal-autor button{
+        width: 70%;
+
+        font-size: 0.9rem;
+
+        padding: 0.5rem 0;
+    }
 }
