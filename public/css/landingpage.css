@@ -1,0 +1,1072 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    gap: 0px;
+}
+
+@font-face {
+    font-family: "Noah";
+    src: url('../assets/fonts/noah-regular.otf') format('truetype');
+}
+
+@font-face {
+    font-family: "Baloo";
+    src: url('../assets/fonts/Baloo-Regular.ttf') format('truetype');
+}
+
+/* === Variáveis de cor e transição === */
+:root {
+    --branco: #FFFFFF;
+    --bege: #FEF3E2;
+    --rosa-claro: #FAD2E1;
+    --verde-claro: #D0D996;
+    --rosa: #D81A67;
+    --vinho: #770523;
+    --vinho-escuro: #1F0008;
+    --transition: transform 0.3s ease;
+    --transform-hover: scale(1.1);
+}
+
+/* === Estilização Geral === */
+body {
+    background-color: var(--bege);
+}
+
+p {
+    font-family: "Noah", sans-serif;
+}
+
+h2 {
+    font-family: "Baloo", sans-serif;
+
+}
+
+button {
+    border: none;
+    border-radius: 25px;
+    padding: 0.5% 3%;
+    font-family: "Noah", sans-serif;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+button:hover {
+    transform: var(--transform-hover);
+}
+
+/* === Estilização Hero Section === */
+
+.hero-section {
+    background-image: url(../assets/Hero\ Section.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px;
+    margin: 0px;
+
+}
+
+.content {
+    padding-left: 5%;
+    max-width: 50%;
+
+
+}
+
+.hero-section h1 {
+    text-align: left;
+    color: var(--bege);
+    font-size: 3vw;
+    font-family: "Baloo", sans-serif;
+    font-weight: 10px;
+    margin-bottom: 1.0vw;
+}
+
+.hero-section button {
+    background-color: var(--verde-claro);
+    border: none;
+    border-radius: 25px;
+    padding: 0.5% 3%;
+    color: var(--vinho);
+    font-family: "Noah", sans-serif;
+    font-size: 1.5vw;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.hero-section button:hover {
+    background-color: #c4cc8c;
+    transform: var(--transform-hover);
+}
+
+/* === Estilização o que somos === */
+
+.o-que-somos {
+    background-color: var(--bege);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.o-que-somos h2 {
+    color: var(--vinho);
+    text-align: center;
+    font-family: "Baloo", sans-serif;
+    font-size: 1.7vw;
+}
+
+.cards {
+    display: grid;
+    margin: auto;
+    grid-template-columns: repeat(3, 18vw);
+    grid-template-rows: repeat(1, 300px);
+    column-gap: 100px;
+    justify-content: center;
+
+}
+
+.card {
+    background-color: var(--vinho);
+    border-radius: 25px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+/* === Estilização Sobre === */
+
+.sobre {
+    background-color: #D0D996;
+    display: flex;
+    padding: 5px 0px;
+
+}
+
+.sobre .croche {
+    height: 90vh;
+}
+
+.sobre .content-sobre {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+}
+
+.texto {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 70%;
+}
+
+.sobre h2 {
+
+    color: var(--vinho);
+    font-size: 1.7vw;
+
+}
+
+.sobre .texto p {
+    font-size: 1.5vw;
+}
+
+.cards-mvv {
+    display: grid;
+    grid-template-columns: repeat(3, 18vw);
+    grid-template-rows: repeat(1, 240px);
+    max-width: 70%;
+    gap: 15px;
+}
+
+.card-mvv img {
+    width: 50px;
+}
+
+.card-mvv {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--branco);
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    gap: 20px;
+    border-radius: 30px;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.card-mvv:hover {
+    transform: var(--transform-hover);
+}
+
+.sobre h3 {
+    font-family: "Noah", sans-serif;
+    color: var(--vinho-escuro);
+    border-bottom: 2px solid var(--rosa-claro);
+
+}
+
+/* === Estilização do Container Fio === */
+
+.container-fio {
+    position: relative;
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.container-fio .svg-desktop svg {
+    width: 80%;
+    height: auto;
+    display: block;
+    justify-self: center;
+}
+
+.svg-desktop path,
+.svg-mobile path {
+    fill: none;
+    stroke: #770523;
+    stroke-width: 7;
+}
+
+.svg-mobile {
+    display: none;
+}
+
+.item-fio {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.item-fio img {
+    width: 10vw;
+    height: auto;
+}
+
+.item-fio h2 {
+    color: var(--vinho);
+    font-size: 3vw;
+    text-align: center;
+}
+
+.item-1 {
+    top: 0%;
+}
+
+.item-2 {
+    top: 6%;
+    right: 10%;
+}
+
+.item-3 {
+    top: 18%;
+    left: 30%;
+}
+
+.item-4 {
+    top: 45%;
+    left: 17%;
+}
+
+.item-4 img {
+    width: 200px;
+    height: auto;
+}
+
+.item-5 {
+    top: 40%;
+    right: 45%;
+}
+
+.item-6 {
+    top: 50%;
+    right: 10%;
+}
+
+.item-6 img {
+    width: 280px;
+    height: auto;
+}
+
+.item-7 {
+    top: 75%;
+    right: 10%;
+}
+
+.item-7 img {
+    width: 220px;
+}
+
+.item-8 {
+    top: 80%;
+}
+
+.item-9 {
+    top: 87%;
+    left: 20%;
+}
+
+.item-9 img {
+    width: 210px;
+    height: auto;
+}
+
+/* === Estilização Stitchify === */
+.stitchify {
+    margin: 100px 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.stitchify img {
+    width: 400px;
+    height: auto;
+}
+
+.stitchify p {
+    color: var(--vinho-escuro);
+    font-size: 30px;
+    width: 50%;
+}
+
+
+/* === Estilização do BLOG === */
+.blog-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0px !important;
+}
+
+.blog {
+    background-color: var(--rosa-claro);
+}
+
+.content-blog {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo-blog {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0px;
+    color: var(--vinho);
+    font-size: 2vw;
+}
+
+.content-blog p {
+    margin-bottom: 20px;
+    font-size: 1.7vw;
+}
+
+.titulo-blog img {
+    width: 100px;
+    height: auto;
+}
+
+/* Setas do Carrossel */
+.material-symbols-outlined {
+    color: var(--vinho);
+    cursor: pointer;
+    transition: var(--transition);
+    position: absolute;
+    z-index: 10;
+}
+
+.material-symbols-outlined:hover {
+    transform: var(--transform-hover);
+}
+
+#seta-esquerda {
+    left: 10px;
+    z-index: 10;
+}
+
+#seta-direita {
+    right: 10px;
+    z-index: 10;
+}
+
+/* Carrossel */
+
+.cards-blog {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+}
+
+/* Slider */
+
+.slider-conteudo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    scroll-behavior: smooth;
+    overflow: hidden;
+    gap: 20px;
+    width: 90%;
+    margin-bottom: 40px;
+    padding: 10px 0px;
+}
+
+
+.card-blog {
+    background-color: var(--vinho);
+    flex: 0 0 calc(33.333% - 14px);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 25px;
+    transform: 0.3s ease;
+}
+
+.card-blog:hover {
+    cursor: pointer;
+}
+
+.card-blog h3 {
+    font-family: "Baloo", sans-serif;
+    color: var(--bege);
+    text-align: center;
+    font-size: 1.5vw;
+}
+
+.card-blog p {
+    color: var(--bege);
+    font-size: 1.2vw;
+}
+
+.card-blog img {
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+.card-blog button {
+    background-color: var(--verde-claro);
+    width: 50%;
+    align-self: center;
+    justify-content: center;
+    color: var(--vinho);
+    font-weight: bold;
+    font-size: 17px;
+
+}
+
+/* Botão ver posts */
+.posts {
+    background-color: var(--verde-claro);
+    color: var(--vinho);
+    font-weight: bold;
+    font-size: 20px;
+    padding: 7px;
+}
+
+/* Estilização Junte-se */
+
+.junte-se {
+    margin: 50px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.junte-se h2 {
+    color: var(--vinho);
+}
+
+
+/* === RESPONSIVIDADE MOBILE === */
+
+@media only screen and (max-width: 767px) {
+    .hero-section {
+        background-image: url(../assets/Hero\ Section\ -\ Mobile.svg);
+        background-size: 100%;
+        min-height: 45vh;
+        align-items: flex-start;
+    }
+
+    .hero-section h1 {
+        font-size: 6vw;
+    }
+
+    .hero-section button {
+        font-size: 4vw;
+    }
+
+    .cards {
+        grid-template-columns: repeat(1, 50vw);
+        grid-template-rows: repeat(3, 200px);
+        row-gap: 15px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .o-que-somos {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .o-que-somos h2 {
+        font-size: 4.5vw;
+    }
+
+    .sobre {
+        background-color: #D0D996;
+        display: flex;
+        padding: 20px 0px;
+    }
+
+    .sobre .croche {
+        display: none;
+    }
+
+    .sobre .content-sobre {
+        padding-top: 20px;
+        padding-left: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        gap: 20px;
+    }
+
+    .texto {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        padding-right: 40px;
+        gap: 5px;
+        max-width: 100%;
+    }
+
+    .sobre h2 {
+        font-size: 7vw;
+    }
+
+    .sobre .texto p {
+        font-size: 4vw;
+    }
+
+    .cards-mvv {
+        display: grid;
+        grid-template-columns: repeat(1, 80vw);
+        grid-template-rows: repeat(3, 200px);
+        max-width: 100%;
+        gap: 15px;
+        justify-content: center;
+    }
+
+    .card-mvv {
+        gap: 10px;
+    }
+
+    .card-mvv h3 {
+        font-size: 17px;
+    }
+
+    .card-mvv p {
+        font-size: 14px;
+    }
+
+    .card-mvv img {
+        width: 50px;
+    }
+
+    .container-fio {
+        position: relative;
+        margin-top: 20px;
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: start;
+        justify-content: center;
+    }
+
+    .container-fio .svg-mobile{
+        width: 90%;
+        height: auto;
+        display: block;
+        justify-self: center;
+    }
+
+    .container-fio .svg-desktop{
+        display: none;
+    }
+
+    .item-fio {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .item-fio img {
+        width: 20vw;
+        height: auto;
+    }
+
+    .item-fio h2 {
+        color: var(--vinho);
+        font-size: 6vw;
+        text-align: center;
+    }
+
+    .item-1 {
+        top: 0%;
+    }
+
+    .item-2 {
+        top: 6%;
+        left: 50%;
+        right: 50%;
+    }
+
+    .item-3 {
+        display: none;
+    }
+
+    .item-4 {
+        display: none;
+    }
+
+
+    .item-5 {
+        top: 35%;
+        left: 50%;
+        right: 50%;
+    }
+
+    .item-6 {
+        top: 45%;
+        left: 50%;
+        right: 50%;
+    }
+
+    .item-6 img {
+        width: 200px;
+        height: auto;
+    }
+
+    .item-7 {
+        display: none;
+    }
+
+    .item-8 {
+        top: 75%;
+        margin: auto;
+    }
+
+    .item-9 {
+        top: 87%;
+        left: 50%;
+        right: 50%;
+    }
+
+    .item-9 img {
+        width: 150px;
+        height: auto;
+    }
+
+    .stitchify {
+        margin: 100px 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .stitchify img {
+        width: 300px;
+        height: auto;
+    }
+
+    .stitchify p {
+        color: var(--vinho-escuro);
+        font-size: 20px;
+        text-align: center;
+        width: 80%;
+    }
+
+
+    .blog-container {
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    .titulo-blog {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0px;
+        color: var(--vinho);
+        font-size: 4.2vw;
+    }
+
+    .titulo-blog img {
+        width: 120px;
+        height: auto;
+        order: 1;
+    }
+
+    .titulo-blog h2 {
+        order: 2;
+    }
+
+    .content-blog p {
+        margin-bottom: 20px;
+        font-size: 4vw;
+    }
+
+    .cards-blog{
+        gap: 20px;
+        width: 100%;
+    }
+
+    .slider-conteudo{
+        width: 80%;
+        gap: 0px;
+    }
+
+    .card-blog {
+        flex: 0 0 100%;
+    }
+
+    .card-blog h3 {
+        font-size: 5vw;
+    }
+
+    .card-blog p {
+        font-size: 4vw;
+    }
+
+    .card-blog img {
+        height: 30vh;
+    }
+
+    .card-blog button {
+        width: 30%;
+        font-size: 15px;
+
+    }
+
+    .posts {
+        font-size: 17px;
+    }
+
+}
+
+/* === RESPONSIVIDADE TABLET === */
+
+@media only screen and (min-width: 600px) and (max-width: 1200px) {
+    .hero-section {
+        min-height: 35vw;
+    }
+
+    .hero-section h1 {
+        font-size: 3.5vw;
+    }
+
+    .hero-section button {
+        font-size: 2.4vw;
+    }
+
+    .cards {
+        grid-template-columns: repeat(3, 30vw);
+        grid-template-rows: repeat(1, 220px);
+        column-gap: 20px;
+        justify-content: center;
+
+    }
+
+    .o-que-somos {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .o-que-somos h2 {
+        font-size: 2.5vw;
+    }
+
+    .sobre {
+        background-color: #D0D996;
+        display: flex;
+        padding: 20px 0px;
+
+    }
+
+    .sobre .croche {
+        height: 40vh;
+    }
+
+    .sobre .content-sobre {
+        padding-top: 20px;
+        padding-left: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        gap: 20px;
+    }
+
+    .texto {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        padding-right: 40px;
+        gap: 5px;
+        max-width: 100%;
+
+    }
+
+    .sobre h2 {
+        font-size: 2.5vw;
+    }
+
+    .sobre .texto p {
+        font-size: 2vw;
+    }
+
+    .cards-mvv {
+        display: grid;
+        grid-template-columns: repeat(3, 20vw);
+        grid-template-rows: repeat(1, 170px);
+        max-width: 100%;
+        gap: 1px;
+    }
+
+    .cards-mvv h3 {
+        font-size: 15px;
+    }
+
+    .cards-mvv p {
+        font-size: 10px;
+    }
+
+    .card-mvv {
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .card-mvv img {
+        width: 50px;
+    }
+
+    .container-fio{
+        padding: 20px;
+    }
+    .container-fio .svg-desktop{
+        width: 100%;
+        height: auto;
+        display: block;
+        justify-self: center;
+    }
+
+    .container-fio .svg-mobile{
+        display: none;
+    }
+
+    .item-fio {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .item-fio img {
+        width: 20vw;
+        height: auto;
+    }
+
+    .item-fio h2 {
+        color: var(--vinho);
+        font-size: 6vw;
+        text-align: center;
+    }
+
+    .item-1 {
+        top: 0%;
+    }
+
+    .item-2 {
+        top: 10%;
+        left: 50%;
+        right: 50%;
+    }
+
+    .item-2 img{
+        width: 80px;
+        height: auto;
+    }
+
+    .item-3 {
+        display: none;
+    }
+
+    .item-4 {
+        display: none;
+    }
+
+
+    .item-5 {
+        top: 40%;
+        left: 50%;
+        right: 50%;
+    }
+
+    .item-6 {
+        top: 50%;
+        left: 50%;
+        right: 50%;
+    }
+
+    .item-6 img {
+        width: 200px;
+        height: auto;
+    }
+
+    .item-7 {
+        display: none;
+    }
+
+    .item-8 {
+        top: 75%;
+        margin: auto;
+    }
+
+    .item-9 {
+        top: 85%;
+        left: 50%;
+        right: 50%;
+    }
+
+    .item-9 img {
+        width: 170px;
+        height: auto;
+    }
+
+
+    .stitchify {
+        margin: 100px 0px 50px 0px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 50px;
+    }
+
+    .stitchify img {
+        width: 250px;
+        height: auto;
+    }
+
+    .stitchify p {
+
+        font-size: 20px;
+        margin-top: 30px;
+        text-align: left;
+        width: 80%;
+    }
+
+    .titulo-blog {
+        font-size: 2.5vw;
+    }
+
+    .content-blog p {
+        margin-bottom: 20px;
+        font-size: 15px;
+    }
+
+    .titulo-blog img {
+        width: 80px;
+        height: auto;
+    }
+
+    .cards-blog {
+        gap: 20px;
+    }
+
+    .card-blog {
+        flex: 0 0 calc(50% - 10px);
+    }
+
+    .card-blog h3 {
+        margin-top: 10px;
+        font-size: 2.5vw;
+    }
+
+    .card-blog p {
+        color: var(--bege);
+        font-size: 1.7vw;
+    }
+
+    .card-blog img {
+        width: 100%;
+        height: 20vh;
+        object-fit: cover;
+        border-radius: 30px;
+    }
+
+    .card-blog button {
+        font-size: 15px;
+        width: 30%;
+    }
+
+    .posts {
+        font-size: 17px;
+    }
+
+
+
+}
