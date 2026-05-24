@@ -153,3 +153,85 @@
     background: var(--vermelho);
     color: var(--branco);
 }
+
+/* RESPONSIVIDADE TABLET */
+@media screen and (max-width: 768px) {
+    .modaldelete {
+        width: 90%;
+        max-width: 420px;
+        padding: 30px 24px;
+    }
+
+    .vetor-atencao svg {
+        width: 54px;
+        height: 54px;
+    }
+
+    .title-delete {
+        font-size: 26px;
+    }
+
+    .text-delete p {
+        font-size: 15px;
+    }
+
+    .button-delete {
+        padding: 4px 10px 0 10px;
+        gap: 12px;
+    }
+
+    .cancel-delete, .confirm-delete {
+        height: 40px;
+        font-size: 14px;
+    }
+}
+
+/* RESPONSIVIDADE MOBILE */
+@media screen and (max-width: 480px) {
+    .modaldelete {
+        padding: 20px 16px;
+        max-width: 320px;
+        padding: 24px 16px;
+    }
+
+    .box-delete {
+        gap: 16px;
+    }
+
+    .vetor-atencao svg {
+        width: 42px;
+        height: 42px;
+    }
+
+    .title-delete {
+        font-size: 22px;
+    }
+
+    .text-delete {
+        gap: 6px;
+    }
+
+    .text-delete p {
+        font-size: 14px;
+    }
+
+    .button-delete {
+        padding: 8px 0 0 0;
+        gap: 10px;
+    }
+
+    .cancel-delete, .confirm-delete {
+        height: 33px;
+        font-size: 13px;
+    }
+
+    .cancel-delete {
+        flex: 1;
+        max-width: 130px;
+    }
+
+    .confirm-delete {
+        flex: 1.2;
+        max-width: 130px;
+    }
+}

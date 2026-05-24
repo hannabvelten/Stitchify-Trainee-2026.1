@@ -318,12 +318,12 @@
     }
 
     .botoes-edit {
-        padding: 5px 5px;
+        padding: 5px 15px;
         display: flex;
         justify-content: flex-start;
         align-items: center;
         gap: 8px; 
-        width: 100%;
+        width: 75%;
     }
 
     .cancel, .confirm {
