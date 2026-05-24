@@ -1,0 +1,416 @@
+@font-face{
+    font-family: 'Baloo';
+    src: url('../assets/fonts/Baloo-Regular.ttf');
+}
+
+@font-face{
+    font-family: 'Noah';
+    src: url('../assets/fonts/noah-regular.otf');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+
+    background-color: #FEF3E2;
+
+    font-family: 'Noah';
+}
+
+.layout{
+    display: flex;
+
+    min-height: 100vh;
+}
+
+.sidebar{
+    width: 16rem;
+
+    background-color: #FAD2E1;
+}
+
+.conteudo{
+    flex: 1;
+
+    background-color: #FEF3E2;
+}
+
+.topbar{
+    background-color: #FAD2E1;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1rem 2rem;
+
+    border-radius: 0 0 1.8rem 1.8rem;
+
+    box-shadow: 0 0.2rem 0.5rem rgba(0,0,0,0.15);
+}
+
+.titulo-area{
+    display: flex;
+
+    align-items: center;
+
+    gap: 0.8rem;
+}
+
+.titulo-area h1{
+    font-family: 'Baloo';
+
+    color: #770523;
+
+    font-size: 2.3rem;
+}
+
+.titulo-area i{
+    color: #770523;
+
+    font-size: 2rem;
+}
+
+.perfil{
+    display: flex;
+
+    align-items: center;
+
+    gap: 1rem;
+}
+
+.avatar{
+    width: 3rem;
+    height: 3rem;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+}
+
+.foto-perfil{
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.botao-admin{
+    background-color: #770523;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 2rem;
+
+    padding: 0.6rem 1rem;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 0.5rem;
+
+    cursor: pointer;
+
+    font-family: 'Noah';
+}
+
+.secao-tabela{
+    padding: 2rem;
+}
+
+.acoes-tabela{
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 1rem;
+
+    flex-wrap: wrap;
+}
+
+.botoes-esquerda{
+    display: flex;
+
+    gap: 1rem;
+}
+
+.botoes-esquerda button{
+    background-color: white;
+
+    border: none;
+
+    padding: 0.8rem 1.2rem;
+
+    border-radius: 0.8rem;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 0.5rem;
+
+    color: #770523;
+
+    cursor: pointer;
+
+    box-shadow: 0 0.2rem 0.4rem rgba(0,0,0,0.15);
+}
+
+.caixa-pesquisa{
+    background-color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0.7rem 1rem;
+
+    border-radius: 2rem;
+
+    width: 18rem;
+}
+
+.caixa-pesquisa input{
+    border: none;
+
+    outline: none;
+
+    flex: 1;
+
+    font-family: 'Noah';
+}
+
+.tabela-posts{
+    margin-top: 2rem;
+
+    background-color: #C1CA8B;
+
+    border-radius: 2.5rem;
+
+    padding: 1.5rem;
+
+    box-shadow: 0 0.3rem 0.8rem rgba(0,0,0,0.15);
+}
+
+.cabecalho-tabela{
+    display: grid;
+
+    grid-template-columns:
+    1fr
+    2fr
+    2fr
+    1fr
+    1fr
+    1fr;
+
+    align-items: center;
+    justify-items: center;
+
+    padding: 1rem;
+
+    color: #770523;
+
+    font-family: 'Baloo';
+
+    font-size: 1.5rem;
+}
+
+.linha-post{
+    display: grid;
+
+    grid-template-columns:
+    1fr
+    2fr
+    2fr
+    1fr
+    1fr
+    1fr;
+
+    align-items: center;
+    justify-items: center;
+
+    gap: 1rem;
+
+    background-color: #FEF3E2;
+
+    padding: 1.2rem;
+
+    border-radius: 1.5rem;
+
+    margin-bottom: 1rem;
+}
+
+.info-post{
+    display: flex;
+
+    align-items: center;
+
+    gap: 0.8rem;
+}
+
+.info-post img{
+    width: 3rem;
+    height: 3rem;
+
+    border-radius: 0.6rem;
+
+    object-fit: cover;
+}
+
+.info-autor{
+    display: flex;
+
+    align-items: center;
+
+    gap: 0.8rem;
+}
+
+.info-autor img{
+    width: 2.5rem;
+    height: 2.5rem;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+}
+
+.tag{
+    background-color: #FAD2E1;
+
+    color: #770523;
+
+    padding: 0.4rem 1rem;
+
+    border-radius: 2rem;
+
+    font-size: 0.9rem;
+}
+
+.acoes{
+    display: flex;
+
+    gap: 0.5rem;
+}
+
+.acoes button{
+    width: 2.5rem;
+    height: 2.5rem;
+
+    border: none;
+
+    border-radius: 0.8rem;
+
+    background-color: white;
+
+    color: #770523;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+    box-shadow: 0 0.1rem 0.3rem rgba(0,0,0,0.15);
+}
+
+.acoes button:hover{
+    transform: scale(1.05);
+
+    background-color: #FAD2E1;
+}
+
+.paginacao{
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 0.6rem;
+
+    margin-top: 2rem;
+}
+
+.paginacao button{
+    width: 2.3rem;
+    height: 2.3rem;
+
+    border: none;
+
+    border-radius: 0.6rem;
+
+    background-color: white;
+
+    color: #770523;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+    font-weight: bold;
+}
+
+.paginacao .ativo{
+    background-color: #770523;
+
+    color: white;
+}
+
+.paginacao button:hover{
+    transform: scale(1.05);
+}
+
+/* ================= RESPONSIVIDADE ================= */
+
+@media (max-width: 900px){
+
+    .secao-tabela{
+        overflow-x: auto;
+    }
+
+    .tabela-posts{
+        min-width: 900px;
+    }
+
+    .acoes-tabela{
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+}
+
+/* CELULAR */
+
+@media (max-width: 600px){
+
+    .topbar{
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+
+    .titulo-area h1{
+        font-size: 1.8rem;
+    }
+
+    .sidebar{
+        display: none;
+    }
+
+    .secao-tabela{
+        padding: 1rem;
+        overflow-x: auto;
+    }
+
+    .tabela-posts{
+        min-width: 900px;
+    }
+
+}

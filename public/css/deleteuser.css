@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Baloo';
+    src: url('../assets/fonts/Baloo2-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Noah';
+    src: url('../assets/fonts/noah-regular.otf') format('opentype');
+}
+
+:root {
+    --branco: #FFFFFF;
+    --bege: #FEF3E2;
+    --cinza: #D9D9D9;
+    --vinho: #770523;
+    --vermelho: #F42E31;
+    --font-baloo: 'Baloo', sans-serif;
+    --font-noah: 'Noah', sans-serif;
+}
+
+.modal-deletar.hide {
+    display: none;
+}
+
+#fade-delete {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4); 
+    z-index: 9998;
+}
+
+.modal-deletar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    pointer-events: none;
+}
+
+.modaldelete {
+    width: 500px;
+    padding: 40px 30px;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    border-radius: 30px;
+    background: var(--branco);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    pointer-events: auto;
+}
+
+.box-delete {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.vetor-atencao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+}
+
+.vetor-atencao svg {
+    width: 64px;
+    height: 64px;
+    stroke: var(--vermelho);
+}
+
+.title-delete {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+    color: #000000;
+    font-family: var(--font-baloo);
+    font-size: 32px;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.text-delete {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    align-self: stretch;
+    text-align: center;
+}
+
+.text-delete p {
+    color: #000000;
+    font-family: var(--font-noah);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+.text-delete p:last-child {
+    font-weight: 700;
+    color: var(--vinho);
+}
+
+.button-delete {
+    display: flex;
+    padding: 10px 20px 0 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    align-self: stretch;
+}
+
+.cancel-delete, .confirm-delete {
+    display: flex;
+    height: 54px;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    font-family: var(--font-noah);
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    transition: transform 0.1s ease, filter 0.2s ease;
+}
+
+.cancel-delete {
+    background: var(--cinza);
+    color: #333333;
+}
+
+.confirm-delete {
+    background: var(--vermelho);
+    color: var(--branco);
+}
+
+/* RESPONSIVIDADE TABLET */
+@media screen and (max-width: 768px) {
+    .modaldelete {
+        width: 90%;
+        max-width: 420px;
+        padding: 30px 24px;
+    }
+
+    .vetor-atencao svg {
+        width: 54px;
+        height: 54px;
+    }
+
+    .title-delete {
+        font-size: 26px;
+    }
+
+    .text-delete p {
+        font-size: 15px;
+    }
+
+    .button-delete {
+        padding: 4px 10px 0 10px;
+        gap: 12px;
+    }
+
+    .cancel-delete, .confirm-delete {
+        height: 40px;
+        font-size: 14px;
+    }
+}
+
+/* RESPONSIVIDADE MOBILE */
+@media screen and (max-width: 480px) {
+    .modaldelete {
+        padding: 20px 16px;
+        max-width: 320px;
+        padding: 24px 16px;
+    }
+
+    .box-delete {
+        gap: 16px;
+    }
+
+    .vetor-atencao svg {
+        width: 42px;
+        height: 42px;
+    }
+
+    .title-delete {
+        font-size: 22px;
+    }
+
+    .text-delete {
+        gap: 6px;
+    }
+
+    .text-delete p {
+        font-size: 14px;
+    }
+
+    .button-delete {
+        padding: 8px 0 0 0;
+        gap: 10px;
+    }
+
+    .cancel-delete, .confirm-delete {
+        height: 33px;
+        font-size: 13px;
+    }
+
+    .cancel-delete {
+        flex: 1;
+        max-width: 130px;
+    }
+
+    .confirm-delete {
+        flex: 1.2;
+        max-width: 130px;
+    }
+}

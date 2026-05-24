@@ -1,0 +1,748 @@
+@font-face {
+    font-family: 'Baloo';
+    src: url('../assets/fonts/Baloo-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Noah';
+    src: url('../assets/fonts/noah-regular.otf');
+}
+
+/* === Variáveis de cor e transição === */
+:root {
+    --branco: #FFFFFF;
+    --bege: #FEF3E2;
+    --rosa-claro: #FAD2E1;
+    --verde-claro: #D0D996;
+    --vinho: #770523;
+    --vinho-escuro: #1F0008;
+    --cinza: #CBC9C9;
+}
+
+.modalCriar {
+    width: 550px;
+    display: none;
+    flex-direction: column;
+    border-radius: 25px;
+    background-color: var(--branco);
+    padding: 0px;
+    margin: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transition: 0.3s ease;
+    transform: translate(-50%, -50%);
+    max-height: 90vh;
+    overflow-y: auto;
+    z-index: 20;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--bege);
+    padding: 15px;
+    gap: 10px;
+    align-items: center;
+    border-radius: 25px 25px 0px 0px;
+}
+
+.header img{
+    width: 50px;
+    height: auto;
+}
+
+.header p {
+    font-family: "Baloo", sans-serif;
+    font-size: 35px;
+    color: var(--vinho);
+}
+
+.formContent{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    margin: 20px;
+}
+
+.uploadImage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border: 2px var(--cinza) dashed !important;
+    border-radius: 30px;
+    padding: 30px !important;
+    transition: 0.3s;
+}
+
+.uploadImage i{
+    font-size: 40px;
+    color: var(--vinho);
+}
+
+.uploadImage p{
+    color: var(--cinza);
+    font-family: "Noah", sans-serif;
+}
+
+.uploadImage:hover {
+    background-color: #e2e2e281;
+    cursor: pointer;
+}
+
+.titulo{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.titulo label{
+    font-family: "Baloo", sans-serif;
+    color: var(--vinho);
+    font-size: 25px;
+}
+
+.descricao{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.descricao label{
+    font-family: "Baloo", sans-serif;
+    color: var(--vinho);
+    font-size: 25px;
+}
+
+.descricao textarea{
+    padding: 15px 10px;
+    border: 2px solid var(--cinza);
+    border-radius: 30px;
+    align-items: center;
+    outline: none;
+    height: 100px;
+    transition: 0.3s;
+    font-family: "Noah", sans-serif;
+}
+
+.modalCriar textarea:focus{
+    border-color: var(--vinho);
+}
+
+.categoria{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.categoria label{
+    font-family: "Baloo", sans-serif;
+    color: var(--vinho);
+    font-size: 25px;
+}
+
+.modalCriar input{
+    padding: 10px;
+    border: 2px solid var(--cinza);
+    border-radius: 30px;
+    align-items: center;
+    transition: 0.3s;
+    outline: none;
+    font-family: "Noah", sans-serif;
+}
+
+.modalCriar input:focus{
+    border-color: var(--vinho);
+}
+
+.modalActions{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding-right: 5px;
+}
+
+.btnCancel{
+    padding: 3px 5px;
+    width: 20%;
+    background-color: var(--branco);
+    border-radius: 30px;
+    border: #D0D996 solid 2px;
+    color: var(--vinho);
+    font-weight: bold;
+    font-size: 15px;
+    transition: 0.2s;
+    font-family: "Noah", sans-serif;
+}
+
+.btnCancel:hover{
+    background-color: var(--verde-claro);
+    cursor: pointer;
+}
+
+.btnCreate{
+    padding: 3px 5px;
+    width: 20%;
+    background-color: var(--verde-claro);
+    border-radius: 30px;
+    border: #D0D996 solid 2px;
+    color: var(--vinho);
+    font-weight: bold;
+    font-size: 15px;
+    transition: 0.3s;
+    font-family: "Noah", sans-serif;
+}
+
+.btnCreate:hover{
+    background-color: var(--branco);
+    cursor: pointer;
+}
+
+/* Modal Visualizar  */
+.modalVisualizar{
+    width: 550px;
+    display: none;
+    flex-direction: column;
+    border-radius: 25px;
+    background-color: var(--branco);
+    padding: 0px;
+    margin: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transition: 0.3s ease;
+    transform: translate(-50%, -50%);
+    max-height: 90vh;
+    overflow-y: auto;
+    z-index: 20;
+    overflow-y: auto;
+}
+
+.modalVisualizar .header p {
+    color: var(--vinho);
+    font-family: "Baloo", sans-serif;
+}
+
+.modalContent{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    margin: 20px;
+}
+
+.imagem{
+    width: 100%;
+    height: 150px;
+    border: 2px var(--cinza) dashed;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.imagem:hover {
+    background-color: #e2e2e281;
+    cursor: pointer;
+}
+
+.modalVisualizar .input-titulo, .input-categoria, .input-autor{
+    padding: 10px;
+    height: 35px;
+    border: 2px solid var(--cinza);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transition: 0.3s;
+    outline: none;
+}
+
+.modalVisualizar label{
+    font-family: "Baloo", sans-serif;
+    color: var(--vinho);
+    font-size: 25px;
+}
+
+.modalVisualizar p{
+    color: var(--vinho-escuro);
+    font-family: "Noah", sans-serif;
+}
+
+
+.titulo{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.descricao{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.descricao .input-descricao{
+    padding: 15px 10px;
+    border: 2px solid var(--cinza);
+    border-radius: 30px;
+    align-items: center;
+    outline: none;
+    height: 100px;
+    transition: 0.3s;
+}
+
+.categoria{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.modalVisualizar .input-data{
+    background-color: #FBF6EF;
+    padding: 10px;
+    width: 50%;
+    border: 2px solid var(--cinza);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    outline: none;
+}
+
+.modalVisualizar .dataContent{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 10px;
+}
+
+.modalVisualizar .modalActions{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 5px;
+}
+
+.btnClose{
+    padding: 3px 5px;
+    width: 80px;
+    background-color: var(--verde-claro);
+    border-radius: 30px;
+    border: #D0D996 solid 2px;
+    color: var(--vinho);
+    font-family: "Noah", sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.btnClose:hover{
+    background-color: var(--branco);
+    cursor: pointer;
+}
+
+.filtro {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color:var(--vinho);
+    opacity: 60%;
+    position: fixed;
+    display: none;
+    align-self: center;
+    z-index: 10;
+    transition: 0.3s ease;
+}
+
+/* === Scrollbar nos modais === */
+
+/* Largura da scrollbar */
+.modalCriar::-webkit-scrollbar,
+.modalVisualizar::-webkit-scrollbar {
+    width: 6px;
+}
+
+/* Trilho (fundo da scrollbar) */
+.modalCriar::-webkit-scrollbar-track,
+.modalVisualizar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Barra */
+.modalCriar::-webkit-scrollbar-thumb,
+.modalVisualizar::-webkit-scrollbar-thumb {
+    background-color: var(--vinho);
+    border-radius: 10px;
+}
+
+/* Hover na barra */
+.modalCriar::-webkit-scrollbar-thumb:hover,
+.modalVisualizar::-webkit-scrollbar-thumb:hover {
+    background-color: var(--vinho-escuro);
+}
+
+.imagemEditar{
+    width: 100%;
+    height: 180px;
+
+    object-fit: cover;
+
+    border-radius: 25px;
+
+    filter: brightness(40%);
+}
+
+.uploadImage{
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 0;
+
+    border: none;
+
+    cursor: pointer;
+}
+
+.overlayImagem{
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    width: 100%;
+
+    text-align: center;
+}
+
+.overlayImagem i{
+    font-size: 45px;
+
+    color: var(--rosa-claro);
+}
+
+.overlayImagem p{
+    color: var(--branco);
+
+    font-family: "Noah", sans-serif;
+
+    font-size: 16px;
+}
+
+.tituloIcone{
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 5px;
+}
+
+.tituloIcone i{
+    color: var(--vinho);
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.tituloIcone i:hover{
+    transform: scale(1.1);
+}
+
+.modalVisualizar textarea{
+    resize: none;
+}
+
+.modalVisualizar .input-data{
+    background-color: #FBF6EF;
+
+    padding: 12px;
+
+    width: 50%;
+
+    border: 2px solid var(--cinza);
+
+    border-radius: 20px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-family: "Noah", sans-serif;
+
+    color: var(--vinho-escuro);
+}
+
+.data{
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.data label{
+    font-family: "Baloo", sans-serif;
+
+    color: var(--vinho);
+
+    font-size: 25px;
+}
+
+#modalEditar input,
+#modalEditar textarea{
+
+    width: 100%;
+
+    padding: 14px 18px;
+
+    border: 2px solid var(--cinza);
+
+    border-radius: 30px;
+
+    outline: none;
+
+    font-family: "Noah", sans-serif;
+
+    font-size: 15px;
+
+    color: var(--vinho-escuro);
+
+    background-color: #FBF6EF;
+
+    transition: 0.3s;
+}
+
+#modalEditar textarea{
+
+    min-height: 120px;
+
+    resize: none;
+}
+
+#modalEditar input:focus,
+#modalEditar textarea:focus{
+
+    border-color: var(--vinho);
+
+    background-color: var(--branco);
+}
+
+
+/* ===== MODAL EXCLUIR ===== */
+
+.textoExcluir{
+
+    display: flex;
+
+    justify-content: center;
+
+    text-align: center;
+}
+
+.textoExcluir h2{
+
+    font-family: "Baloo", sans-serif;
+
+    color: var(--vinho-escuro);
+
+    font-size: 29px;
+
+    width: 80%;
+
+    line-height: 45px;
+}
+
+.imagemExcluir{
+
+    width: 100%;
+
+    height: 220px;
+
+    object-fit: cover;
+
+    border-radius: 25px;
+}
+
+.tituloExcluir{
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 10px;
+}
+
+.tituloExcluir label{
+
+    font-family: "Baloo", sans-serif;
+
+    color: var(--vinho);
+
+    font-size: 25px;
+
+    white-space: nowrap;
+}
+
+.inputExcluir{
+
+    width: 100%;
+
+    padding: 10px 15px;
+
+    border: 2px solid var(--cinza);
+
+    border-radius: 20px;
+
+    background-color: #FBF6EF;
+
+    font-family: "Noah", sans-serif;
+
+    color: var(--vinho-escuro);
+}
+
+.alertaExcluir{
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-top: 10px;
+}
+
+.alertaExcluir i{
+
+    color: var(--vinho);
+
+    font-size: 35px;
+}
+
+.alertaExcluir p{
+
+    color: var(--vinho);
+
+    font-family: "Noah", sans-serif;
+
+    font-size: 21px;
+
+    font-weight: bold;
+}
+
+.btnDelete{
+
+    padding: 3px 5px;
+
+    width: 20%;
+
+    background-color: var(--vinho);
+
+    border-radius: 30px;
+
+    border: 2px solid var(--vinho);
+
+    color: var(--verde-claro);
+
+    font-weight: bold;
+
+    font-size: 15px;
+
+    transition: 0.3s;
+
+    font-family: "Noah", sans-serif;
+
+    cursor: pointer;
+    
+
+}
+
+.btnDelete:hover{
+
+    background-color: #5a031a;
+}
+
+
+/* Tablet */
+@media (max-width: 768px) {
+    .modalCriar,
+    .modalVisualizar {
+        width: 85%;    
+
+        .header p {
+            font-size: 28px;
+        }
+    }
+}
+
+
+/* Mobile */
+@media (max-width: 480px) {
+    .modalCriar,
+    .modalVisualizar {
+        width: 95%;         
+        border-radius: 15px;
+    }
+
+    .header {
+        padding: 10px;
+    }
+
+    .header img {
+        width: 35px;
+    }
+
+    .header p {
+        font-size: 22px;
+    }
+
+    .formContent {
+        margin: 10px;
+    }
+
+    .uploadImage p {
+        text-align: center;
+    }
+
+    .titulo label,
+    .descricao label,
+    .categoria label,
+    .autor label,
+    .data label {
+        font-size: 18px;   
+    }
+
+    .btnCancel,
+    .btnCreate,
+    .btnClose {
+        width: 35%;         
+        padding: 8px 5px;
+        font-size: 14px;
+    }
+
+}
