@@ -1,16 +1,11 @@
 @font-face {
-    font-family: 'Noah-Regular';
-    src: url(../assets/Fonts/noah-regular.otf);
-}
-
-@font-face {
-    font-family: 'Noah-Bold';
-    src: url(../assets/Fonts/noah-bold.otf);
-}
-
-@font-face {
     font-family: 'Baloo';
-    src: url(../assets/Fonts/Baloo-Regular.ttf);
+    src: url('../assets/fonts/Baloo-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Noah';
+    src: url('../assets/fonts/noah-regular.otf');
 }
 
 * {
@@ -18,362 +13,346 @@
     padding: 0;
     box-sizing: border-box;
 }
-html, body{
-    overflow-x: hidden;
-    width: 100%;
+
+body {
+    min-height: 100vh;
+    background-color: #FEF3E2;
+    font-family: 'Noah';
 }
+
 main {
     display: flex;
-
-
-}
-
-.sidebar {
-    width: 20%;
-    background-color: #FAD2E1;
-}
-
-.bsidebar {
-    display: none;
-}
-
-.paginausers {
-    width: 80%;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    background-color: #FBF6EF;
     min-height: 100vh;
 }
 
+.sidebar {
+    width: 16rem;
+    background-color: #FAD2E1;
+}
+
+.paginausers {
+    flex: 1;
+    background-color: #FEF3E2;
+}
+
 .topo {
-    width: 100%;
+    background-color: #FAD2E1;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: 'Noah-Regular';
+    padding: 1rem 2rem;
+    border-radius: 0 0 1.8rem 1.8rem;
+    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.15);
+}
 
+.usuarios {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.usuarios h2 {
+    font-family: 'Baloo';
+    color: #770523;
+    font-size: 2.3rem;
+}
+
+.usuarios img {
+    width: 2rem;
 }
 
 .box-perfiladm {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 1rem;
 }
 
 .admin {
     display: flex;
-    flex-direction: row;
-    gap: 10px;
+    align-items: center;
+    gap: 0.8rem;
 }
 
-.textoadm {
-    display: flex;
-    flex-direction: column;
+.admin img {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.textoadmin p:first-child {
+    font-weight: bold;
+    color: #770523;
+}
+
+.textoadmin p:last-child {
+    font-size: 0.85rem;
+    color: #770523;
+    opacity: 0.8;
 }
 
 .linha {
-    border: none;
-    width: calc(100% + 40px);
-    height: 1px;
-    background-color: #67635E;
-    align-self: stretch;
-    margin-left: -20px;
-}
-
-.usuarios {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    font-family: 'Baloo';
-    gap: 10px;
-    font-size: 39px;
-    color: #770523;
+    display: none;
 }
 
 .box-criauser {
+    padding: 2rem;
     display: flex;
-    gap: 10px;
     justify-content: space-between;
     align-items: center;
-    color: #770523;
+    gap: 1rem;
+    flex-wrap: wrap;
     position: relative;
 }
 
-.box-criauser img {
-    color: #67635E;
-}
-
-.box-criauser button {
-    font-family: 'Noah-Regular';
-    width: 160px;
-    height: 40px;
-    border: none;
-    border-radius: 10px;
-    background-color: #770523;
-    color: white;
-    font-size: 16px;
-}
-
 .busca {
-    width: 500px;
-    height: 35px;
-    border: 1px solid #D6C5C5;
-    font-family: 'Noah-Regular';
-    color: #67635E;
-    border-radius: 10px;
-    padding-left: 30px;
-    
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding: 0.7rem 1rem 0.7rem 2.5rem;
+    border-radius: 2rem;
+    width: 20rem;
+    border: none;
+    outline: none;
+    font-family: 'Noah';
+    box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.1);
+}
 
+.busca::placeholder {
+    color: #999;
+    font-size: 0.9rem;
 }
-.busca::placeholder{
-    font-family: 'Noah-Regular';
-    color: #67635E;
-    font-size: 14px;
-}
+
 .lupa {
     position: absolute;
-    left: 10px;
+    left: 2.7rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1rem;
+}
+
+.criar-usuario {
+    background-color: #770523;
+    color: white;
+    border: none;
+    border-radius: 2rem;
+    padding: 0.7rem 1.5rem;
+    cursor: pointer;
+    font-family: 'Noah';
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: 0.2s;
+    box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.15);
+}
+
+.criar-usuario:hover {
+    transform: scale(1.02);
+    background-color: #5e041c;
 }
 
 .box-users {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    border: 1px solid #67635E;
-    border-radius: 10px;
-    padding-left: 10px;
-    padding-top: 15px;
-    background-color: #C1CA8B;
-    flex: 1;
+    padding: 0 2rem 2rem 2rem;
 }
 
 .cabecalho {
     width: 100%;
-    font-family: 'Noah-Bold';
-    font-weight: 100;
-    overflow: hidden;
     background-color: #C1CA8B;
+    border-radius: 2.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 0.3rem 0.8rem rgba(0, 0, 0, 0.15);
     border-collapse: separate;
-    border-spacing: 0 10px;
-    padding-right: 10px;
-
-}
-
-th,
-td {
-    padding: 15px;
-    background-color: white;
-
-}
-
-th {
-    text-align: left;
+    border-spacing: 0 1rem;
 }
 
 thead th {
-    background-color: #F7EFE6;
+    background-color: transparent;
     color: #770523;
+    font-family: 'Baloo';
+    font-size: 1.3rem;
+   
+    text-align: left;
+}
+
+tbody td {
+    background-color: #FEF3E2;
+    
 }
 
 .nomec {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 0.8rem;
 }
 
 .nomec img {
-    width: 20px;
-    height: 37px;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 .tipoc span {
-    padding: 5px 7px;
-    border-radius: 10px;
-
-}
-
-.acoesc img {
-    display: block;
-}
-
-.bvisualizar {
-    display: none;
-}
-
-.filtro {
-    display: none;
-}
-
-.acoesc button {
-    border: none;
-    border-radius: 5px;
-    padding: 5px;
-    background-color: #FEF3E2;
-
-}
-.bvisualização {
-    display: none;
+    padding: 0.4rem 1rem;
+    border-radius: 2rem;
+    font-size: 0.9rem;
+    display: inline-block;
 }
 
 .adm {
-    border-radius: 20px;
     background-color: #DBB8C1;
     color: #770523;
-    width: 100px;
-    align-items: center;
-    justify-content: center;
-
 }
 
 .usuario {
-    border-radius: 20px;
-    background-color: #FEF3E2;
-    color: #8B7149;
-    width: 100px;
+    background-color: #FAD2E1;
+    color: #770523;
+}
+
+.iduser p {
+    font-family: monospace;
+}
+
+.acoesc {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.acoesc button {
+    width: 2.5rem;
+    height: 2.5rem;
+    border: none;
+    border-radius: 0.8rem;
+    background-color: white;
+    cursor: pointer;
+    transition: 0.2s;
+    box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.15);
+    display: inline-flex;
     align-items: center;
     justify-content: center;
+}
 
+.acoesc button:hover {
+    transform: scale(1.05);
+    background-color: #FAD2E1;
+}
+
+.acoesc img {
+    width: 1.2rem;
+    height: 1.2rem;
 }
 
 .paginacao {
-    justify-content: center;
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 10px;
-    padding-bottom: 20px;
-
+    gap: 0.6rem;
+    margin-top: 2rem;
+    padding-bottom: 2rem;
 }
 
 .paginacao button {
-    font-family: 'Noah-Regular';
-    width: 40px;
-    height: 40px;
+    width: 2.3rem;
+    height: 2.3rem;
+    border: none;
+    border-radius: 0.6rem;
     background-color: white;
-    border: 0.5px solid #67635E;
-    color: #67635E;
-    border-radius: 5px;
-    font-size: 16px;
+    color: #770523;
+    cursor: pointer;
+    transition: 0.2s;
+    font-weight: bold;
+    font-family: 'Noah';
+    box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.1);
 }
 
 .paginacao .pag1 {
-    border: none;
     background-color: #770523;
     color: white;
 }
 
+.paginacao button:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 900px) {
+    .box-users {
+        overflow-x: auto;
+        padding: 0 1rem 1rem 1rem;
+    }
+
+    .cabecalho {
+        min-width: 800px;
+    }
+
+    .box-criauser {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .busca {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .lupa {
+        left: 2.7rem;
+    }
+}
+
 @media (max-width: 768px) {
-   
     main {
         flex-direction: column;
     }
-    body{
-        overflow-x: hidden;
-    }
+
     .sidebar {
         width: 100%;
-        height: 80px;
-        display: flex;
-        align-items: center;
-        padding-left: 30px;
+        height: 4rem;
         background-color: #770523;
-        background-image: url(../assets/newstitchify.png);
+        background-image: url('../assets/newstitchify.png');
         background-size: 170px;
         background-repeat: no-repeat;
-        background-position: 10% center;
-
+        background-position: 1rem center;
     }
 
     .paginausers {
         width: 100%;
-        padding: 0px;
-        min-height: calc(100vh - 80px);
     }
 
     .topo {
         flex-direction: column;
         align-items: flex-start;
-        justify-content: center;
+        gap: 1rem;
+        border-radius: 0;
     }
 
-    .bsidebar {
-        display: block;
-        background: none;
-        border: none;
-        
-
-    }
-
-    .bsidebar img {
-        width: 25px;
-        height: 25px;
-    }
-
-    .usuarios {
-        display: flex;
-        padding-top: 10px;
-        align-items: center;
-        font-size: 25px;
-        padding-left: 20px;
-    }
-
-    .usuarios img {
-        display: none;
+    .usuarios h2 {
+        font-size: 1.8rem;
     }
 
     .box-perfiladm {
-        display: none;
-        overflow-y: auto;
+        width: 100%;
+        justify-content: space-between;
     }
 
     .box-criauser {
-        display: flex;
-        flex-direction: column;
-        position: relative;
+        padding: 1rem;
     }
 
-    .box-criauser input {
-        width: 95%;
-        border-radius: 10px;
-        height: 40px;
+    .busca {
+        width: 100%;
+    }
+
+    .criar-usuario {
+        width: 100%;
         justify-content: center;
-        align-items: center;
     }
 
-    .box-criauser img {
-        position: absolute;
-        left: 20px;
-        top: 13px;
-    }
-
-    .box-criauser button {
-        width: 95%;
-        height: 45px;
-        border-radius: 10px;
-
-    }
-      .box-users {
+    .box-users {
         overflow-x: auto;
-        overflow-y: hidden;
-        padding-right: 10px;
-        height: auto;
+        padding: 0 1rem 1rem 1rem;
     }
-   
+
     .cabecalho {
         min-width: 700px;
-        border-spacing: 0 5px;
     }
-
-    th,
-    td {
-        white-space: nowrap;
-    }
-   .paginacao button{
-    display: flex;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    justify-content: center;
-   }
 }
