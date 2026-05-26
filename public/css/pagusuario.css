@@ -4,8 +4,8 @@
 }
 
 @font-face {
-    font-family: 'Noah';
-    src: url('../assets/fonts/noah-regular.otf');
+    font-family: 'Noah-Bold';
+    src: url('../assets/fonts/noah-bold.otf');
 }
 
 * {
@@ -176,13 +176,19 @@ thead th {
 
 tbody td {
     background-color: #FEF3E2;
-    
+   
+}
+.linha-tr{
+    padding: 0;
+    background-color: #FEF3E2;
+    align-items: center;
 }
 
 .nomec {
     display: flex;
     align-items: center;
     gap: 0.8rem;
+    padding-left: 1rem;
 }
 
 .nomec img {
@@ -216,6 +222,7 @@ tbody td {
 .acoesc {
     display: flex;
     gap: 0.5rem;
+    padding: 1.5rem;
 }
 
 .acoesc button {
