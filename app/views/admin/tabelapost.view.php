@@ -59,6 +59,7 @@
 
             </header>
 
+
             <section class="secao-tabela">
 
                 <div class="acoes-tabela">
@@ -102,7 +103,54 @@
                 </div>
 
                 <div class="tabelaResponsiva">
-                    <div class="tabela-posts">
+                    <table class="tabela-posts">
+                        
+                        <thead class="cabecalho-tabela">
+                            <th><span>ID</span></th>
+                            <th><span>Título</span></th>
+                            <th><span>Autor</span></th>
+                            <th><span>Categoria</span></th>
+                            <th><span>Data</span></th>
+                            <th><span>Ações</span></th>
+                        </thead>
+
+                        <tbody>
+                            <tr class="linha-post">
+                                <td>
+                                    <span>ID</span>
+                                </td>
+                                <td class="info-post">
+                                    <img src="../../../public/assets/portacopo.jpg" alt="Post">
+                                    <p>Porta Copo</p>
+                                </td>
+                                <td class="info-autor">
+                                    <img src="../../../public/assets/fotousuario.jpg" alt="Autor">
+                                    <p>Vasco da Gama</p>
+                                </td>
+                                <td class="tag">
+                                    Post
+                                </td>
+                                <td>
+                                    <span>25/04/2026</span>
+                                </td>
+                                <td class="acoes">
+                                    <button onclick="abriModal('modalVisualizar')">
+                                        <i class="bi bi-eye"></i>
+                                    </button>
+
+                                    <button onclick="abriModal('modalEditar')">
+                                        <i class="bi bi-pencil"></i>
+                                    </button>
+
+                                    <button onclick="abriModal('modalExcluir')">
+                                        <i class="bi bi-trash"></i>
+                                    </button>
+
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- <div class="tabela-posts">
 
                         <div class="cabecalho-tabela">
 
@@ -295,30 +343,30 @@
                             </div>
 
                         </div>
+                    </div> -->
+                    <div class="paginacao">
 
-                        <div class="paginacao">
+                        <button>
+                            <i class="bi bi-chevron-left"></i>
+                        </button>
 
-                            <button>
-                                <i class="bi bi-chevron-left"></i>
-                            </button>
+                        <button class="ativo">1</button>
 
-                            <button class="ativo">1</button>
+                        <button>2</button>
 
-                            <button>2</button>
+                        <button>3</button>
 
-                            <button>3</button>
+                        <span>...</span>
 
-                            <span>...</span>
+                        <button>6</button>
 
-                            <button>6</button>
-
-                            <button>
-                                <i class="bi bi-chevron-right"></i>
-                            </button>
-
-                        </div>
+                        <button>
+                            <i class="bi bi-chevron-right"></i>
+                        </button>
 
                     </div>
+
+                    
                 </div>
 
             </section>
