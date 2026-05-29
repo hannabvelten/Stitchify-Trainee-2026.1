@@ -164,7 +164,7 @@ main {
 th,
 td {
     padding: 15px;
-    background-color: white;
+    background-color: #FEF3E2;
 
 }
 
@@ -173,7 +173,7 @@ th {
 }
 
 thead th {
-    background-color: #F7EFE6;
+    background-color: #FEF3E2;
     color: #770523;
 }
 
