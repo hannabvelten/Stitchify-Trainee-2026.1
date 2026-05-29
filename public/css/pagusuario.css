@@ -123,6 +123,8 @@ main {
     color: #67635E;
     border-radius: 10px;
     padding-left: 30px;
+    border: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.30);
     
 
 }
