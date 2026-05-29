@@ -106,48 +106,55 @@
                     <table class="tabela-posts">
                         
                         <thead class="cabecalho-tabela">
-                            <th><span>ID</span></th>
-                            <th><span>Título</span></th>
-                            <th><span>Autor</span></th>
-                            <th><span>Categoria</span></th>
-                            <th><span>Data</span></th>
-                            <th><span>Ações</span></th>
+                            <tr>
+                                <th><span>ID</span></th>
+                                <th><span>Título</span></th>
+                                <th><span>Autor</span></th>
+                                <th><span>Categoria</span></th>
+                                <th><span>Data</span></th>
+                                <th><span>Ações</span></th>
+                            </tr>
+                            
                         </thead>
 
                         <tbody>
-                            <tr class="linha-post">
-                                <td>
-                                    <span>ID</span>
-                                </td>
-                                <td class="info-post">
-                                    <img src="../../../public/assets/portacopo.jpg" alt="Post">
-                                    <p>Porta Copo</p>
-                                </td>
-                                <td class="info-autor">
-                                    <img src="../../../public/assets/fotousuario.jpg" alt="Autor">
-                                    <p>Vasco da Gama</p>
-                                </td>
-                                <td class="tag">
-                                    Post
-                                </td>
-                                <td>
-                                    <span>25/04/2026</span>
-                                </td>
-                                <td class="acoes">
-                                    <button onclick="abriModal('modalVisualizar')">
-                                        <i class="bi bi-eye"></i>
-                                    </button>
+                            
+                            <?php foreach($posts as $post): ?>
+                                <tr class="linha-post">
+                                    <td>
+                                        <span>ID</span>
+                                    </td>
+                                    <td class="info-post">
+                                        <img src="../../../public/assets/portacopo.jpg" alt="Post">
+                                        <p>Porta Copo</p>
+                                    </td>
+                                    <td class="info-autor">
+                                        <img src="../../../public/assets/fotousuario.jpg" alt="Autor">
+                                        <p>Vasco da Gama</p>
+                                    </td>
+                                    <td class="tag">
+                                        Post
+                                    </td>
+                                    <td>
+                                        <span>25/04/2026</span>
+                                    </td>
+                                    <td class="acoes">
+                                        <button onclick="abriModal('modalVisualizar')">
+                                            <i class="bi bi-eye"></i>
+                                        </button>
 
-                                    <button onclick="abriModal('modalEditar')">
-                                        <i class="bi bi-pencil"></i>
-                                    </button>
+                                        <button onclick="abriModal('modalEditar')">
+                                            <i class="bi bi-pencil"></i>
+                                        </button>
 
-                                    <button onclick="abriModal('modalExcluir')">
-                                        <i class="bi bi-trash"></i>
-                                    </button>
+                                        <button onclick="abriModal('modalExcluir')">
+                                            <i class="bi bi-trash"></i>
+                                        </button>
 
-                                </td>
-                            </tr>
+                                    </td>
+                                </tr>
+                            <?php endforeach ?>
+
                         </tbody>
                     </table>
                     <!-- <div class="tabela-posts">
