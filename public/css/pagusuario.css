@@ -116,10 +116,9 @@ main {
     font-size: 16px;
 }
 
-.busca {
+.busca-user {
     width: 500px;
     height: 35px;
-    border: 1px solid #D6C5C5;
     font-family: 'Noah-Regular';
     color: #67635E;
     border-radius: 10px;
