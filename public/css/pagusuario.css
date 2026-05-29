@@ -46,7 +46,7 @@ main {
 }
 
 .topo {
-    
+
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -101,7 +101,7 @@ main {
     width: 160px;
     height: 40px;
     border: none;
-    border-radius: 10px;
+    border-radius: 20px;
     background-color: #770523;
     color: white;
     font-size: 16px;
@@ -112,7 +112,7 @@ main {
     height: 35px;
     font-family: 'Noah-Regular';
     color: #67635E;
-    border-radius: 10px;
+    border-radius: 20px;
     padding-left: 30px;
     border: none;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.30);
@@ -128,7 +128,6 @@ main {
     position: absolute;
     left: 10px;
 }
-
 .box-users {
     display: flex;
     flex-direction: column;
