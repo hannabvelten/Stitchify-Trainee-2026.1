@@ -24,7 +24,6 @@ html, body{
 }
 main {
     display: flex;
-    background-color: #FEF3E2;
 }
 
 .sidebar {
@@ -42,11 +41,12 @@ main {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    background-color: #FBF6EF;
+    background-color: #FEF3E2;
     min-height: 100vh;
 }
 
 .topo {
+    
     width: 100%;
     display: flex;
     justify-content: space-between;
