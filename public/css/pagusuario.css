@@ -24,8 +24,7 @@ html, body{
 }
 main {
     display: flex;
-
-
+    background-color: #FEF3E2;
 }
 
 .sidebar {
@@ -212,7 +211,10 @@ thead th {
     border: none;
     border-radius: 5px;
     padding: 5px;
-    background-color: #FEF3E2;
+    background-color: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.30);
+
+    
 
 }
 .bvisualização {
