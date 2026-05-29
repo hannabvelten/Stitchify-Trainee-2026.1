@@ -66,14 +66,14 @@
     padding-right: 0.5rem;
 }
 
-input{
+.inputs-modal{
     width: 23rem;
     height: 2.5rem;
     border: 2px solid #D0D996;
     border-radius: 20px;
     
 }
-input::placeholder{
+.inputs-modal::placeholder{
     font-family: 'Noah-regular';
     color: #333;
     font-size: 10px;
