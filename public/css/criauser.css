@@ -115,11 +115,13 @@ p{
     border: 2px solid #D0D996;
     background-color: white;
     border-radius: 20px;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    height: 1.5rem;
+    padding-left: 2.2rem;
+    padding-right: 2.2rem;
+    height: 2.2rem;
     font-family: 'Noah-bold';
     color: #770523;
+    font-size: 15px;
+
 
 }
 .criar-modal{
@@ -127,10 +129,12 @@ p{
     border: none;
     background-color: #D0D996;
     color: #770523;
-     padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    height: 1.5rem;
+     padding-left: 2.2rem;
+    padding-right: 2.2rem;
+    height: 2.2rem;
     font-family: 'Noah-bold';
+    font-size: 15px;
+
     
 
 }
