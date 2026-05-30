@@ -193,27 +193,21 @@ thead th {
 
 }
 
-.acoesc img {
-    display: block;
-}
-
-.bvisualizar {
-    display: none;
-}
-
-
 .acoesc button {
     border: none;
     border-radius: 5px;
-    padding: 5px;
+    padding: 10px;
     background-color: white;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.30);
 
     
 
 }
-.bvisualização {
-    display: none;
+
+.btn-visualizar img, .editar img, .deletar img{
+    display: flex;
+    align-items: center;
+    width: 15px;
 }
 
 .adm {
