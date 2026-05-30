@@ -97,13 +97,13 @@ p{
     font-family: 'Noah-bold';
     padding-left: 1rem;
 }
-table{
+.tconteudo table{
     border-collapse: collapse;
-   
 }
 
-td{
+.tconteudo td{
     padding-right: 2rem;
+    background-color: white;
 }
 .fechar{
     border-radius: 20px;
