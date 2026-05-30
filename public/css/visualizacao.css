@@ -111,17 +111,18 @@ p{
     border: none;
     background-color: #D0D996;
     color: #770523;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    height: 1.5rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    height: 2.5rem;
     font-family: 'Noah-bold';
+    font-size: 17px;
     
 }
 .rodapev{
     display: flex;
     justify-content: space-between;
     align-items: end;
-    padding-left: 8rem;
+    padding-left: 11rem;
     margin-top: auto;
     padding-bottom: 1rem;
 }
@@ -129,7 +130,7 @@ p{
     width: 200px;
     height: 200px;
     position: absolute;
-    left: 13rem;
+    left: 20rem;
     bottom: -1rem;
 }
 .fadev{
