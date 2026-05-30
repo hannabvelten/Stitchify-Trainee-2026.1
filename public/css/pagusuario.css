@@ -47,12 +47,25 @@ main {
 
 .topo {
 
-    width: 100%;
+    /*width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-family: 'Baloo';
+    background-color: #FAD2E1;
+    */
+    background-color: #FAD2E1;
 
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1rem 2rem;
+
+    border-radius: 0 0 1.8rem 1.8rem;
+
+    box-shadow: 0 0.2rem 0.5rem rgba(0,0,0,0.15);
 }
 
 .box-perfiladm {
