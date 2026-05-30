@@ -118,41 +118,43 @@
                         </thead>
 
                         <tbody>
-                            
+
                             <?php foreach($posts as $post): ?>
                                 <tr class="linha-post">
                                     <td>
-                                        <span>ID</span>
+                                        <span><?= $post->id_post ?></span>
                                     </td>
                                     <td class="info-post">
                                         <img src="../../../public/assets/portacopo.jpg" alt="Post">
-                                        <p>Porta Copo</p>
+                                        <p><?= $post->titulo ?></p>
                                     </td>
-                                    <td class="info-autor">
+                                    <td class="info-autor"> <!--Arrumar por conta da chave estrangeira-->
                                         <img src="../../../public/assets/fotousuario.jpg" alt="Autor">
                                         <p>Vasco da Gama</p>
                                     </td>
                                     <td class="tag">
-                                        Post
+                                        <?= $post->categoria ?>
                                     </td>
                                     <td>
-                                        <span>25/04/2026</span>
+                                        <span><?= $post->data ?></span>
                                     </td>
                                     <td class="acoes">
-                                        <button onclick="abriModal('modalVisualizar')">
+                                        <button onclick="abriModal('modalVisualizar-<?= $post->id_post?>')"> 
                                             <i class="bi bi-eye"></i>
                                         </button>
 
-                                        <button onclick="abriModal('modalEditar')">
+                                        <button onclick="abriModal('modalEditar-<?= $post->id_post?>')">
                                             <i class="bi bi-pencil"></i>
                                         </button>
 
-                                        <button onclick="abriModal('modalExcluir')">
+                                        <button onclick="abriModal('modalExcluir-<?= $post->id_post?>')">
                                             <i class="bi bi-trash"></i>
                                         </button>
 
                                     </td>
                                 </tr>
+
+                                
                             <?php endforeach ?>
 
                         </tbody>
@@ -381,8 +383,6 @@
         </main>
 
     </div>
-
-
 
     <!-- Modal Criar Post -->
     <form class="modalCriar" id="modalCriar" action="" method="post" enctype="multipart/form-data">
@@ -677,7 +677,6 @@
         </div>
 
     </div>
-
 
 </body>
 
