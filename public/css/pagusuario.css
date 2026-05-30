@@ -138,8 +138,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    border: 1px solid #67635E;
-    border-radius: 10px;
+    border-radius: 30px;
     padding-left: 10px;
     padding-top: 15px;
     background-color: #C1CA8B;
@@ -148,14 +147,12 @@ main {
 
 .cabecalho {
     width: 100%;
-    font-family: 'Noah-Bold';
     font-weight: 100;
     overflow: hidden;
     background-color: #C1CA8B;
     border-collapse: separate;
     border-spacing: 0 10px;
     padding-right: 10px;
-    font-family: 'Baloo';
 
 }
 
@@ -165,9 +162,13 @@ td {
     background-color: #FEF3E2;
 
 }
-
+td{
+    font-family: 'Noah-Bold';
+}
 th {
     text-align: left;
+     font-family: 'Baloo';
+     font-size: 23px;
 }
 
 thead th {
