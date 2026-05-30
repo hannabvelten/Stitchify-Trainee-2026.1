@@ -289,7 +289,7 @@ thead th {
     }
 
     .usuarios img {
-        width: 35px;
+        width: 37px;
     }
     
     .box-perfiladm {
@@ -337,6 +337,9 @@ thead th {
     th,
     td {
         white-space: nowrap;
+    }
+    .paginacao{
+        padding-left: 1rem;
     }
    .paginacao button{
     display: flex;
