@@ -37,7 +37,6 @@ main {
 
 .paginausers {
     width: 80%;
-    /*padding: 20px;*/
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -278,33 +277,21 @@ thead th {
         flex-direction: column;
         align-items: flex-start;
         justify-content: center;
+        font-size: 10px;
     }
 
-    .bsidebar {
-        display: block;
-        background: none;
-        border: none;
-        
-
-    }
-
-    .bsidebar img {
-        width: 25px;
-        height: 25px;
-    }
 
     .usuarios {
         display: flex;
         padding-top: 10px;
         align-items: center;
-        font-size: 25px;
-        padding-left: 20px;
+        font-size: 22px;
     }
 
     .usuarios img {
-        display: none;
+        width: 35px;
     }
-
+    
     .box-perfiladm {
         display: none;
         overflow-y: auto;
@@ -313,7 +300,6 @@ thead th {
     .box-criauser {
         display: flex;
         flex-direction: column;
-        position: relative;
     }
 
     .box-criauser input {
@@ -326,8 +312,8 @@ thead th {
 
     .box-criauser img {
         position: absolute;
-        left: 20px;
-        top: 13px;
+        left: 30px;
+        top: 11px;
     }
 
     .box-criauser button {
