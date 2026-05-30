@@ -37,7 +37,7 @@ main {
 
 .paginausers {
     width: 80%;
-    padding: 20px;
+    /*padding: 20px;*/
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -46,18 +46,12 @@ main {
 }
 
 .topo {
-
     background-color: #FAD2E1;
-
     display: flex;
-
     justify-content: space-between;
     align-items: center;
-
     padding: 1rem 2rem;
-
     border-radius: 0 0 1.8rem 1.8rem;
-
     box-shadow: 0 0.2rem 0.5rem rgba(0,0,0,0.15);
 }
 
@@ -96,6 +90,7 @@ main {
     align-items: center;
     color: #770523;
     position: relative;
+    padding: 0 15px;
 }
 
 .box-criauser img {
@@ -132,7 +127,7 @@ main {
 }
 .lupa {
     position: absolute;
-    left: 10px;
+    left: 25px;
 }
 .box-users {
     display: flex;
@@ -140,7 +135,9 @@ main {
     gap: 15px;
     border-radius: 30px;
     padding-left: 10px;
+    padding-right: 10px;
     padding-top: 15px;
+    margin: 15px;
     background-color: #C1CA8B;
     flex: 1;
 }
@@ -152,7 +149,6 @@ main {
     background-color: #C1CA8B;
     border-collapse: separate;
     border-spacing: 0 10px;
-    padding-right: 10px;
 
 }
 
