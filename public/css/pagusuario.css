@@ -194,9 +194,6 @@ thead th {
     display: none;
 }
 
-.filtro {
-    display: none;
-}
 
 .acoesc button {
     border: none;
@@ -214,7 +211,7 @@ thead th {
 
 .adm {
     border-radius: 20px;
-    background-color: #DBB8C1;
+    background-color: #FAD2E1;
     color: #770523;
     width: 100px;
     align-items: center;
@@ -222,9 +219,9 @@ thead th {
 
 }
 
-.usuario {
+.usuario{
     border-radius: 20px;
-    background-color: #FEF3E2;
+    background-color: #FAD2E1;
     color: #8B7149;
     width: 100px;
     align-items: center;
