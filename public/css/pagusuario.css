@@ -245,14 +245,22 @@ thead th {
 }
 
 .paginacao button {
-    font-family: 'Noah-Regular';
-    width: 40px;
-    height: 40px;
+    width: 2.3rem;
+    height: 2.3rem;
+
+    border: none;
+
+    border-radius: 0.6rem;
+
     background-color: white;
-    border: 0.5px solid #67635E;
-    color: #67635E;
-    border-radius: 5px;
-    font-size: 16px;
+
+    color: #770523;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+    font-weight: bold;
 }
 
 .paginacao .pag1 {
