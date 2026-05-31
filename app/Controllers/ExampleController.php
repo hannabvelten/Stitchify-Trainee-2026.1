@@ -5,11 +5,11 @@ namespace App\Controllers;
 use App\Core\App;
 use Exception;
 
-class UsuariosController
+class ExampleController
 {
 
     public function index()
     {
-        return view('admin/crudUsuarios');
+        return view('site/index');
     }
 }
