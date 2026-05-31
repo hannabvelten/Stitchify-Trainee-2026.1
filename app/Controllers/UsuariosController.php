@@ -10,7 +10,7 @@ class UsuariosController
 
     public function index()
     {
-        $usuarios = App::get('database')-> selectAll('usuarios');
+        $usuarios = App::get('database')->selectAll('usuarios');
 
         return view('admin/crudUsuarios', compact('usuarios'));
     }
@@ -20,6 +20,11 @@ class UsuariosController
             'nome' => $_POST['nome'],
             'email' => $_POST['email'],
             'senha'  => $_POST['senha']
-        ]
+        ];
+
+        App::get('database')->insert('usuarios', $parameters);
+
+        header('Location: /crudUsuarios');
+
     }
 }
