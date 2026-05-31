@@ -7,7 +7,7 @@ const inputFoto = document.querySelector("#foto-usuario");
 const fotoIcon = document.querySelector("#fotoIcon");
 const fotoPreview = document.querySelector("#fotoPreview");
 
-const criarUsuariosBtn = document.querySelector("criar-modal");
+const criarUsuariosBtn = document.querySelector(".criar-modal");
 botaoFoto.addEventListener("click", () => {
     inputFoto.click();
 });
