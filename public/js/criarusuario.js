@@ -31,4 +31,8 @@ criarUsuariosBtn.addEventListener("click", () =>{
     const email= document.querySelector('.inputs-modal input[placeholder="Email"]').value;
     const senha = document.querySelector(' .inputs-modal input[placeholder="Senha"]').value;
     const foto = inputFoto.files[0];
+    if(!nome || !email || !senha){
+        console.log("Por favor, preencha todos os campos");
+        return;
+    }
 })
