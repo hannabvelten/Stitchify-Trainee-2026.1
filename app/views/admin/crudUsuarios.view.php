@@ -111,7 +111,7 @@
 
       <div class="modal-criaruser hide">
         <div class="fade-criaruser"></div>
-        <form class="modalc">
+        <form class="modalc" method="POST" action="/crudUsuarios/create">
           <div class="topo-modal">
             <div class="criauser-modal">
               <img
