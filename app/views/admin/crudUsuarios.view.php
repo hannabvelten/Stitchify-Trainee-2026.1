@@ -124,11 +124,11 @@
           </div>
           <div class="inputs-modal">
             <p>Nome Completo</p>
-            <input type="text" placeholder="Nome Completo" />
+            <input type="text" name="nome" placeholder="Nome Completo" />
             <p>Email</p>
-            <input type="text" placeholder="Email" />
+            <input type="text" name="email" placeholder="Email" />
             <p>Senha</p>
-            <input type="text" placeholder="Senha" />
+            <input type="text" name="senha" placeholder="Senha" />
             <div class="foto">
               <p>Foto do Usuário</p>
               <div class="foto-container">
