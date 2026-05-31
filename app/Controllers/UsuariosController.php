@@ -12,6 +12,6 @@ class UsuariosController
     {
         $usuarios = App::get('database')-> selectAll('usuarios');
 
-        return view('admin/crudUsuarios', $usuarios);
+        return view('admin/crudUsuarios', compact('usuarios'));
     }
 }
