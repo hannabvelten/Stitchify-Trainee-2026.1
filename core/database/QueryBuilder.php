@@ -28,4 +28,12 @@ class QueryBuilder
             die($e->getMessage());
         }
     }
+
+    public function insert($table, $parameters){
+        $sql = sprintf('INSERT INTO ¢s (%s) VALUES (:%s)',
+        $table, 
+        implode(', ', array_keys($parameters)),
+        implode(', :', array_keys($parameters)),
+        );
+    }
 }
