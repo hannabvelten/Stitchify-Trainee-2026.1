@@ -25,7 +25,7 @@
             <h3 id="sobre-nos"><a href="#">Sobre nós</a></h3>
             <div class="linha2"></div>
             <div class="imagem-logo">
-                <img src="/public/assets/Logo 1 (1).png" alt="Logo Stitchify">
+                <img src="../../../public/assets/logo-stitchify.png" alt="Logo Stitchify">
             </div>
         </div>
     </footer>
