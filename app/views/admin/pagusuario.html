@@ -269,12 +269,15 @@
             <input type="text" placeholder="Senha" />
             <div class="foto">
               <p>Foto do Usuário</p>
+              <div class="foto-container">
               <button type="button" class="foto-usuario">
                 <img
                   src="../../../public/assets/adicioanar-foto.svg"
                   alt=""
                   class="adicioanar-foto"
+                  id="fotoIcon"
                 />
+                
               </button>
               <input type="file" id="foto-usuario" name="foto-usuario" hidden />
             </div>
@@ -282,6 +285,7 @@
           <div class="botoes-modal">
             <button type="button" class="cancelar-modal">Cancelar</button>
             <button type="button" class="criar-modal">Criar Usuário</button>
+          </div>
           </div>
         </form>
       </div>
