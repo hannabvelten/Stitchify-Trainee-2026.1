@@ -15,7 +15,10 @@ botaoFoto.addEventListener("click", () => {
 inputFoto.addEventListener("change", () => {
     const arquivo = inputFoto.files[0];
     if (arquivo) {
-        console.log("Foto selecionada:", arquivo.name);
+        const url = URL.createObjectURL(arquivo);
+        fotoIcon.style.display = "none";
+        fotoPreview.style.display = "block";
+        fotoPreview.src = url;
     }
 
 }); 
