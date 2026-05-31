@@ -1,14 +1,14 @@
 @font-face {
     font-family: 'Baloo';
-    src: url(../assets/Fonts/Baloo-Regular.ttf);
+    src: url(../fontes/Baloo-Regular.ttf);
 }
 @font-face {
     font-family: 'Noah-regular';
-    src: url(../assets/Fonts/noah-regular.otf);
+    src: url(../fontes/noah-regular.otf);
 }
 @font-face {
     font-family: 'Noah-bold';
-    src: url(../assets/Fonts/noah-bold.otf);
+    src: url(../fontes/noah-bold.otf);
 }
 *{
     margin: 0;
