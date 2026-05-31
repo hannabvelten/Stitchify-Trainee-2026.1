@@ -19,7 +19,8 @@ class UsuariosController
         $parameters = [
             'nome' => $_POST['nome'],
             'email' => $_POST['email'],
-            'senha'  => $_POST['senha']
+            'senha'  => $_POST['senha'],
+            'tipo'  => 'usuario'
         ];
 
         App::get('database')->insert('usuarios', $parameters);
