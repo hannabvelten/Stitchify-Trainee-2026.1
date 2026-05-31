@@ -90,15 +90,27 @@ p{
     font-family: 'Noah-bold';
 }
 .foto-usuario{
-    display: block;
+     position: relative;
+    width: 180px;
+    height: 180px;
+    display: flex;
     margin: 0 auto;
-    border: none;
+    border: 3px solid #D0D996;
+    border-radius: 50%;
     background: none;
     cursor: pointer;
-    height: auto;
     padding: 0;
+    object-fit: cover;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
-
+.foto-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem 0;
+}
 .botoes-modal{
     width: 100%;
     display: flex;
