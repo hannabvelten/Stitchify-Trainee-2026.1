@@ -146,7 +146,7 @@
           </div>
           <div class="botoes-modal">
             <button type="button" class="cancelar-modal">Cancelar</button>
-            <button type="button" class="criar-modal">Criar Usuário</button>
+            <button type="submit" class="criar-modal">Criar Usuário</button>
           </div>
           </div>
         </form>
