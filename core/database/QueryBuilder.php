@@ -29,6 +29,30 @@ class QueryBuilder
         }
     }
 
+    // Como temos uma chave estrangeira(autor) na tabela_posts precisamos
+    // fazer um tipo de consulta diferente no BD para poder pegar o nome
+    // e a foto do autor
+
+    public function selectAllPosts()
+    {
+        $sql = "SELECT 
+                tabela_posts.*,
+                tabela_usuarios.nome AS nome_autor,
+                tabela_usuarios.imagem AS foto_autor
+                FROM tabela_posts
+                INNER JOIN tabela_usuarios ON tabela_posts.autor = tabela_usuarios.id_usuario";
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
     public function insert($table, $parameters)
     {
         $sql = sprintf('INSERT INTO %s (%s) VALUES (:%s)',

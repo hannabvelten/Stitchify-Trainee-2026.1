@@ -236,12 +236,25 @@
     margin: 20px;
 }
 
+
 .imagem{
     width: 100%;
     height: 150px;
     border: 2px var(--cinza) dashed;
     border-radius: 30px;
     transition: 0.3s;
+    overflow: hidden;
+    position: relative;
+}
+
+.imagem img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 28px;
 }
 
 .imagem:hover {

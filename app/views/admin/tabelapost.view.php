@@ -125,18 +125,18 @@
                                         <span><?= $post->id_post ?></span>
                                     </td>
                                     <td class="info-post">
-                                        <img src="../../../public/assets/portacopo.jpg" alt="Post">
+                                        <img src="../../../public/assets/posts/<?= $post->imagem?>" alt="Post">
                                         <p><?= $post->titulo ?></p>
                                     </td>
                                     <td class="info-autor"> <!--Arrumar por conta da chave estrangeira-->
-                                        <img src="../../../public/assets/fotousuario.jpg" alt="Autor">
-                                        <p>Vasco da Gama</p>
+                                        <img src="../../../public/assets/usuarios/<?= $post->foto_autor?>" alt="Autor">
+                                        <p><?= $post->nome_autor ?></p>
                                     </td>
                                     <td class="tag">
                                         <?= $post->categoria ?>
                                     </td>
                                     <td>
-                                        <span><?= $post->data ?></span>
+                                        <span><?= date('d/m/Y', strtotime($post->data)) ?></span>
                                     </td>
                                     <td class="acoes">
                                         <button onclick="abriModal('modalVisualizar-<?= $post->id_post?>')"> 
@@ -385,7 +385,7 @@
     </div>
 
     <!-- Modal Criar Post -->
-    <form class="modalCriar" id="modalCriar" action="" method="post" enctype="multipart/form-data">
+    <form class="modalCriar" id="modalCriar" action="/tabelapost/create" method="POST" enctype="multipart/form-data">
 
         <div class="header">
             <img src="../../../public/assets/Novelo_cortado.png" alt="">
@@ -417,7 +417,7 @@
             <!-- Categorias -->
             <div class="categoria">
                 <label>Categoria(s)*</label>
-                <input type="text" name="categorias" placeholder="Adicione categorias (ex: tutoriais, roupas e etc)">
+                <input type="text" name="categoria" placeholder="Adicione categorias (ex: tutoriais, roupas e etc)">
             </div>
 
             <div class="modalActions">
@@ -427,256 +427,257 @@
         </div>
 
     </form>
-
-    <!-- Modal Visualizar Post -->
-    <div class="modalVisualizar" id="modalVisualizar">
-        <div class="header">
-            <img src="../../../public/assets/Novelo_cortado.png" alt="">
-            <p>Visualizar Post</p>
-        </div>
-
-        <div class="modalContent">
-            <!-- Imagem Post -->
-            <div class="imagem">
-                <img src="" alt="">
+    
+    <?php foreach($posts as $post): ?>
+        <!-- Modal Visualizar Post -->
+        <div class="modalVisualizar" id="modalVisualizar-<?= $post->id_post ?>">
+            <div class="header">
+                <img src="../../../public/assets/Novelo_cortado.png" alt="">
+                <p>Visualizar Post</p>
             </div>
 
-            <!-- Título -->
-            <div class="titulo">
-                <label>Título do Post</label>
-                <div class="input-titulo">
-                    <p>Titulo</p>
-                </div>
-            </div>
-
-            <!-- Descrição -->
-            <div class="descricao">
-                <label>Descrição</label>
-                <div class="input-descricao">
-                    <p>Lorem ipsum</p>
-                </div>
-            </div>
-
-            <!-- Categorias -->
-            <div class="categoria">
-                <label>Categoria(s)</label>
-                <div class="input-categoria">
-
-                </div>
-            </div>
-
-            <div class="autor">
-                <label>Autor</label>
-                <div class="input-autor">
-                    <p>Autor</p>
-                </div>
-            </div>
-
-            <div class="data">
-                <label>Data de Criação</label>
-                <div class="dataContent">
-                    <div class="input-data">
-                        <p>16/05/2026</p>
-                    </div>
-
-                    <div class="modalActions">
-                        <button class="btnClose" type="button" onclick="fecharModal('modalVisualizar')">Fechar</button>
-                    </div>
+            <div class="modalContent">
+                <!-- Imagem Post -->
+                <div class="imagem">
+                    <img src="../../../public/assets/posts/<?= $post->imagem ?>" alt="Imagem Post">
                 </div>
 
-            </div>
-
-        </div>
-    </div>
-
-    <script src="../../../public/js/modais.js"></script>
-
-
-    <!-- Modal Visualizar Post -->
-    <form class="modalVisualizar" id="modalEditar">
-
-        <div class="header">
-
-            <img src="../../../public/assets/Novelo_cortado.png" alt="Logo">
-
-            <p>Editar Post</p>
-
-        </div>
-
-        <div class="modalContent">
-
-            <!-- Imagem -->
-            <label class="uploadImage" for="editarImagem">
-
-                <img src="../../../public/assets/portacopo.jpg" alt="Imagem Post" class="imagemEditar">
-
-                <div class="overlayImagem">
-
-                    <i class="bi bi-cloud-arrow-up-fill"></i>
-
-                    <p>
-
-                        Arraste uma nova imagem ou
-                        <b>clique para fazer upload</b>
-
-                    </p>
-
-                </div>
-
-            </label>
-
-            <input type="file" id="editarImagem" hidden>
-
-            <!-- Titulo -->
-            <div class="titulo">
-
-                <div class="tituloIcone">
-
+                <!-- Título -->
+                <div class="titulo">
                     <label>Título do Post</label>
-
-                    <i class="bi bi-pencil-square"></i>
-
+                    <div class="input-titulo">
+                        <p><?= $post->titulo ?></p>
+                    </div>
                 </div>
 
-                <input type="text" value="Porta Copo">
-
-            </div>
-
-            <!-- Descrição -->
-            <div class="descricao">
-
-                <div class="tituloIcone">
-
+                <!-- Descrição -->
+                <div class="descricao">
                     <label>Descrição</label>
-
-                    <i class="bi bi-pencil-square"></i>
-
+                    <div class="input-descricao">
+                        <p><?= $post->descricao ?></p>
+                    </div>
                 </div>
 
-                <textarea>Um porta-copo de crochê artesanal feito com carinho, unindo beleza, praticidade e um toque acolhedor para qualquer ambiente. Produzido com fios de qualidade e pontos delicados, ele protege superfícies contra manchas e calor, enquanto adiciona charme e personalidade à decoração. Perfeito para quem valoriza peças feitas à mão, esse acessório combina funcionalidade com o encanto único do crochê, trazendo um detalhe especial para sua mesa ou cantinho do café.</textarea>
-
-            </div>
-
-            <!-- Categorias -->
-            <div class="categoria">
-
-                <div class="tituloIcone">
-
+                <!-- Categorias -->
+                <div class="categoria">
                     <label>Categoria(s)</label>
+                    <div class="input-categoria">
+                        <?= $post->categoria?>
+                    </div>
+                </div>
 
-                    <i class="bi bi-pencil-square"></i>
+                <div class="autor">
+                    <label>Autor</label>
+                    <div class="input-autor">
+                        <p><?= $post->nome_autor ?></p>
+                    </div>
+                </div>
+
+                <div class="data">
+                    <label>Data de Criação</label>
+                    <div class="dataContent">
+                        <div class="input-data">
+                            <p><?= date('d/m/Y', strtotime($post->data)) ?></p>
+                        </div>
+
+                        <div class="modalActions">
+                            <button class="btnClose" type="button" onclick="fecharModal('modalVisualizar-<?= $post->id_post ?>')">Fechar</button>
+                        </div>
+                    </div>
 
                 </div>
 
-                <input type="text" value="Dicas, Materiais">
+            </div>
+        </div>
+
+        <!-- Modal Editar Post -->
+        <form class="modalVisualizar" id="modalEditar-<?= $post->id_post ?>" method="POST">
+
+            <div class="header">
+
+                <img src="../../../public/assets/Novelo_cortado.png" alt="Logo">
+
+                <p>Editar Post</p>
 
             </div>
 
-            <!-- Data -->
-            <div class="data">
+            <div class="modalContent">
 
-                <label>Data de Criação</label>
+                <!-- Imagem -->
+                <label class="uploadImage" for="editarImagem-<?= $post->id_post ?>">
 
-                <div class="input-data">
+                    <img src="../../../public/assets/posts/<?= $post->imagem?>" alt="Imagem Post" class="imagemEditar">
 
-                    10/05/2026
+                    <div class="overlayImagem">
+
+                        <i class="bi bi-cloud-arrow-up-fill"></i>
+
+                        <p>
+
+                            Arraste uma nova imagem ou
+                            <b>clique para fazer upload</b>
+
+                        </p>
+
+                    </div>
+
+                </label>
+
+                <input type="file" id="editarImagem-<?= $post->id_post ?>" name="imagem" hidden>
+
+                <!-- Titulo -->
+                <div class="titulo">
+
+                    <div class="tituloIcone">
+
+                        <label>Título do Post</label>
+
+                        <i class="bi bi-pencil-square"></i>
+
+                    </div>
+
+                    <input type="text" name="titulo" value="<?= $post->titulo ?>">
+
+                </div>
+
+                <!-- Descrição -->
+                <div class="descricao">
+
+                    <div class="tituloIcone">
+
+                        <label>Descrição</label>
+
+                        <i class="bi bi-pencil-square"></i>
+
+                    </div>
+
+                    <textarea name="descricao"><?= $post->descricao?></textarea>
+
+                    <!-- <textarea name="descricao">Um porta-copo de crochê artesanal feito com carinho, unindo beleza, praticidade e um toque acolhedor para qualquer ambiente. Produzido com fios de qualidade e pontos delicados, ele protege superfícies contra manchas e calor, enquanto adiciona charme e personalidade à decoração. Perfeito para quem valoriza peças feitas à mão, esse acessório combina funcionalidade com o encanto único do crochê, trazendo um detalhe especial para sua mesa ou cantinho do café.</textarea> -->
+
+                </div>
+
+                <!-- Categorias -->
+                <div class="categoria">
+
+                    <div class="tituloIcone">
+
+                        <label>Categoria(s)</label>
+
+                        <i class="bi bi-pencil-square"></i>
+
+                    </div>
+
+                    <input type="text" name="categoria" value="<? $post->categoria ?>">
+
+                </div>
+
+                <!-- Data -->
+                <div class="data">
+
+                    <label>Data de Criação</label>
+
+                    <div class="input-data">
+
+                        <?= date('d/m/Y', strtotime($post->data)) ?>
+
+                    </div>
+
+                </div>
+
+                <!-- Botoes -->
+                <div class="modalActions">
+
+                    <button type="button" class="btnCancel" onclick="fecharModal('modalEditar-<?= $post->id_post ?>')">
+
+                        Fechar
+
+                    </button>
+
+                    <button type="submit" class="btnCreate">
+
+                        Confirmar
+
+                    </button>
 
                 </div>
 
             </div>
 
-            <!-- Botoes -->
-            <div class="modalActions">
+        </form>
 
-                <button type="button" class="btnCancel" onclick="fecharModal('modalEditar')">
+        <!-- Modal Excluir Post -->
+        <div class="modalVisualizar" id="modalExcluir-<?= $post->id_post ?>">
 
-                    Fechar
+            <div class="header">
 
-                </button>
+                <img src="../../../public/assets/Novelo_cortado.png" alt="Logo">
 
-                <button type="submit" class="btnCreate">
+                <p>Excluir Post</p>
 
-                    Confirmar
+            </div>
 
-                </button>
+            <div class="modalContent">
+
+                <!-- Texto -->
+                <div class="textoExcluir">
+
+                    <h2>
+                        Tem certeza que deseja
+                        excluir este post?
+                    </h2>
+
+                </div>
+
+                <!-- Imagem -->
+                <img src="../../../public/assets/posts/<? $post->imagem ?>" alt="Post" class="imagemExcluir">
+
+                <!-- Titulo -->
+                <div class="tituloExcluir">
+
+                    <label>Título do Post :</label>
+
+                    <div class="inputExcluir">
+
+                        <?= $post->titulo?>
+
+                    </div>
+
+                </div>
+
+                <!-- Alerta -->
+                <div class="alertaExcluir">
+
+                    <i class="bi bi-exclamation-triangle"></i>
+
+                    <p>Essa ação não poderá ser desfeita.</p>
+
+                </div>
+
+                <!-- Botoes -->
+                <div class="modalActions">
+
+                    <button type="button" class="btnCancel" onclick="fecharModal('modalExcluir-<?= $post->id_post ?>')">
+
+                        Cancelar
+
+                    </button>
+
+                    <button type="button" class="btnDelete">
+
+                        Excluir
+
+                    </button>
+
+                </div>
 
             </div>
 
         </div>
 
-    </form>
+    <?php endforeach ?>
 
     <script src="../../../public/js/modais.js"></script>
-
-
-    <!-- Modal Excluir Post -->
-    <div class="modalVisualizar" id="modalExcluir">
-
-        <div class="header">
-
-            <img src="../../../public/assets/Novelo_cortado.png" alt="Logo">
-
-            <p>Excluir Post</p>
-
-        </div>
-
-        <div class="modalContent">
-
-            <!-- Texto -->
-            <div class="textoExcluir">
-
-                <h2>
-                    Tem certeza que deseja
-                    excluir este post?
-                </h2>
-
-            </div>
-
-            <!-- Imagem -->
-            <img src="../../../public/assets/portacopo.jpg" alt="Post" class="imagemExcluir">
-
-            <!-- Titulo -->
-            <div class="tituloExcluir">
-
-                <label>Título do Post :</label>
-
-                <div class="inputExcluir">
-
-                    Porta Copo
-
-                </div>
-
-            </div>
-
-            <!-- Alerta -->
-            <div class="alertaExcluir">
-
-                <i class="bi bi-exclamation-triangle"></i>
-
-                <p>Essa ação não poderá ser desfeita.</p>
-
-            </div>
-
-            <!-- Botoes -->
-            <div class="modalActions">
-
-                <button type="button" class="btnCancel" onclick="fecharModal('modalExcluir')">
-
-                    Cancelar
-
-                </button>
-
-                <button type="button" class="btnDelete">
-
-                    Excluir
-
-                </button>
-
-            </div>
-
-        </div>
-
-    </div>
 
 </body>
 
