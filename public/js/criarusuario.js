@@ -5,6 +5,7 @@ const fadeCriar = document.querySelector(".fade-criaruser");
 const botaoFoto = document.querySelector(".foto-usuario");
 const inputFoto = document.querySelector("#foto-usuario");
 
+const criarUsuariosBtn = document.querySelector("criar-modal");
 botaoFoto.addEventListener("click", () => {
     inputFoto.click();
 });
