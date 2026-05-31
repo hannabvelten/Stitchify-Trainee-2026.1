@@ -26,3 +26,13 @@ const toggleCriar = () => {
 [abrirCriar, fecharCriar, fadeCriar].forEach((el) => {
     el.addEventListener("click", toggleCriar);
 });
+criarUsuariosBtn.addEventListener("click", () =>{
+    const nome= document.querySelector(' .inputs-modal input[placeholder="Nome Completo"]').value;
+    const email= document.querySelector('.inputs-modal input[placeholder="Email"]').value;
+    const senha = document.querySelector(' .inputs-modal input[placeholder="Senha"]').value;
+    const foto = inputFoto.files[0];
+    if(!nome || !email || !senha){
+        console.log("Por favor, preencha todos os campos");
+        return;
+    }
+});
