@@ -14,4 +14,12 @@ class UsuariosController
 
         return view('admin/crudUsuarios', compact('usuarios'));
     }
+    public function store()
+    {
+        $parameters = [
+            'nome' => $_POST['nome'],
+            'email' => $_POST['email'],
+            'senha'  => $_POST['senha']
+        ]
+    }
 }
