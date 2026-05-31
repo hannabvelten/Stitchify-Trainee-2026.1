@@ -4,6 +4,8 @@ const modalCriar = document.querySelector(".modal-criaruser");
 const fadeCriar = document.querySelector(".fade-criaruser");
 const botaoFoto = document.querySelector(".foto-usuario");
 const inputFoto = document.querySelector("#foto-usuario");
+const fotoIcon = document.querySelector("#fotoIcon");
+const fotoPreview = document.querySelector("#fotoPreview");
 
 const criarUsuariosBtn = document.querySelector("criar-modal");
 botaoFoto.addEventListener("click", () => {
