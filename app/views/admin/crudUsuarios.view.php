@@ -58,34 +58,35 @@
               </tr>
             </thead>
             <tbody>
+              <?php foreach($usuarios as $usuario): ?>
               <tr>
                 <td class="nomec">
                   <img
                     src="../../../public/assets/PersonCircle.svg"
                     alt=""
-                  />Nome do usuário
+                  /><?= htmlspecialchars($usuario->nome)?>
                 </td>
-                <td class="emailc">user.email@email.com</td>
+                <td class="emailc"><?= htmlspecialchars($usuario->email)?></td>
                 <td class="tipoc">
-                  <span class="adm"> Admin</span>
+                  <span class="adm"> <?= htmlspecialchars($usuario->tipo)?></span>
                 </td>
                 <td class="iduser">
-                  <p>000000000</p>
+                  <p><?= htmlspecialchars($usuario->id)?></p>
                 </td>
                 <td class="acoesc">
-                  <button class="btn-visualizar">
+                  <button class="btn-visualizar" data-id="<?= htmlspecialchars($usuario->id) ?>">
                     <img
                       src="../../../public/assets/icones-acoes/Eye.svg"
                       alt="visualizar"
                     />
                   </button>
-                  <button class="editar">
+                  <button class="editar" data-id="<?= htmlspecialchars($usuario->id) ?>">
                     <img
                       src="../../../public/assets/icones-acoes/Pencil.svg"
                       alt="editar"
                     />
                   </button>
-                  <button class="deletar">
+                  <button class="deletar" data-id="<?= htmlspecialchars($usuario->id) ?>">
                     <img
                       src="../../../public/assets/icones-acoes/Trash.svg"
                       alt="deletar"
@@ -93,146 +94,7 @@
                   </button>
                 </td>
               </tr>
-              <tr>
-                <td class="nomec">
-                  <img
-                    src="../../../public/assets/PersonCircle.svg"
-                    alt=""
-                  />Nome do usuário
-                </td>
-                <td class="emailc">user.email@email.com</td>
-                <td class="tipoc">
-                  <span class="usuario"> Usuário</span>
-                </td>
-                <td class="iduser">
-                  <p>000000000</p>
-                </td>
-                <td class="acoesc">
-                  <button class="btn-visualizar">
-                    <img
-                      src="../../../public/assets/icones-acoes/Eye.svg"
-                      alt="visualizar"
-                    />
-                  </button>
-                  <button class="editar">
-                    <img
-                      src="../../../public/assets/icones-acoes/Pencil.svg"
-                      alt="editar"
-                    />
-                  </button>
-                  <button class="deletar">
-                    <img
-                      src="../../../public/assets/icones-acoes/Trash.svg"
-                      alt="deletar"
-                    />
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td class="nomec">
-                  <img
-                    src="../../../public/assets/PersonCircle.svg"
-                    alt=""
-                  />Nome do usuário
-                </td>
-                <td class="emailc">user.email@email.com</td>
-                <td class="tipoc">
-                  <span class="usuario"> Usuário</span>
-                </td>
-                <td class="iduser">
-                  <p>000000000</p>
-                </td>
-                <td class="acoesc">
-                  <button class="btn-visualizar">
-                    <img
-                      src="../../../public/assets/icones-acoes/Eye.svg"
-                      alt="visualizar"
-                    />
-                  </button>
-                  <button class="editar">
-                    <img
-                      src="../../../public/assets/icones-acoes/Pencil.svg"
-                      alt="editar"
-                    />
-                  </button>
-                  <button class="deletar">
-                    <img
-                      src="../../../public/assets/icones-acoes/Trash.svg"
-                      alt="deletar"
-                    />
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td class="nomec">
-                  <img
-                    src="../../../public/assets/PersonCircle.svg"
-                    alt=""
-                  />Nome do usuário
-                </td>
-                <td class="emailc">user.email@email.com</td>
-                <td class="tipoc">
-                  <span class="usuario"> Usuário</span>
-                </td>
-                <td class="iduser">
-                  <p>000000000</p>
-                </td>
-                <td class="acoesc">
-                  <button class="btn-visualizar">
-                    <img
-                      src="../../../public/assets/icones-acoes/Eye.svg"
-                      alt="visualizar"
-                    />
-                  </button>
-                  <button class="editar">
-                    <img
-                      src="../../../public/assets/icones-acoes/Pencil.svg"
-                      alt="editar"
-                    />
-                  </button>
-                  <button class="deletar">
-                    <img
-                      src="../../../public/assets/icones-acoes/Trash.svg"
-                      alt="deletar"
-                    />
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td class="nomec">
-                  <img
-                    src="../../../public/assets/PersonCircle.svg"
-                    alt=""
-                  />Nome do usuário
-                </td>
-                <td class="emailc">user.email@email.com</td>
-                <td class="tipoc">
-                  <span class="usuario"> Usuário</span>
-                </td>
-                <td class="iduser">
-                  <p>000000000</p>
-                </td>
-                <td class="acoesc">
-                  <button class="btn-visualizar">
-                    <img
-                      src="../../../public/assets/icones-acoes/Eye.svg"
-                      alt="visualizar"
-                    />
-                  </button>
-                  <button class="editar">
-                    <img
-                      src="../../../public/assets/icones-acoes/Pencil.svg"
-                      alt="editar"
-                    />
-                  </button>
-                  <button class="deletar">
-                    <img
-                      src="../../../public/assets/icones-acoes/Trash.svg"
-                      alt="deletar"
-                    />
-                  </button>
-                </td>
-              </tr>
+             <?php endforeach ?>
             </tbody>
           </table>
           <div class="paginacao">
