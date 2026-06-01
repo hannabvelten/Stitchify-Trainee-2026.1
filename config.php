@@ -2,7 +2,7 @@
 
 return [
     'database' => [
-        'name' => 'stitchify_db',
+        'name' => 'codejr_db',
         'username' => 'root',
         'password' => 'root',
         'connection' => 'mysql:host=db',
