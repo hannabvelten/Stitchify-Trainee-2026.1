@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 use App\Controllers\ExampleController;
+//use App\Controllers\UsuariosController;
 use App\Core\Router;
 
 $router->get('', 'ExampleController@index');
