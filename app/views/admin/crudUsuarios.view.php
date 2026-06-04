@@ -154,7 +154,7 @@
         
       <?php foreach ($usuarios as $usuario): ?>
       <div class="fadev hide"></div>
-      <div class="modal-visualizar hide">
+      <div class="modal-visualizar hide" id="modal-visualizar-<?= $usuario->id ?>">
         <div class="modalv">
           <div class="topov">
             <div class="visualizacao">
