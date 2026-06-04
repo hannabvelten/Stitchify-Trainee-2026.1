@@ -46,4 +46,43 @@ class QueryBuilder
             die($e->getMessage());
         }
     }
+
+    //UPDATE `tabela_usuarios` 
+    //SET `id_usuario`='[value-1]',`nome`='[value-2]',`senha`='[value-3]',`imagem`='[value-4]',`tipo_usuario`='[value-5]',`localizacao`='[value-6]',`email`='[value-7]' WHERE 1
+    public function upadate($table, $id, $parameters){
+        $sql = sprintf('UPDATE $s SET $s WHERE id = %s',
+        $table,
+        implode(', ', array_map(function($param){
+            return $param . ' = :' . $param;
+        }, array_keys($parameters))),
+        $id
+        );
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute($parameters);
+
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+    //DELETE FROM `tabela_usuarios` WHERE 0
+    public function delete($table, $id)
+    {
+        $sql = sprintf('DELETE FROM %s WHERE $s',
+        $table,
+        'id = :id'
+        );
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute(compact('id'));
+
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
 }
