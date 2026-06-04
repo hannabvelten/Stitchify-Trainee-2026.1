@@ -27,7 +27,7 @@ class PostsController
         $offset = ($currentPage - 1) * $limit;
 
         $totalPosts = $database->countAll('tabela_posts');
-        $totalPaginas = ceil($totalPosts/$limit);
+        $totalPages = ceil($totalPosts/$limit);
 
         $posts = $database->paginate('tabela_posts', $limit, $offset);
 
@@ -41,7 +41,7 @@ class PostsController
         return view('admin/tabelapost', [
             'posts' => $posts,
             'currentPage' => $currentPage,
-            'totalPages' => $totalPaginas
+            'totalPages' => $totalPages
 
         ]);
     }
