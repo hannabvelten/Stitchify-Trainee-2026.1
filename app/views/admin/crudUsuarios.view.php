@@ -176,19 +176,19 @@
                 />
               </div>
               <div class="conteudov">
-                <p>Nome de Usuário</p>
-                <p class="admv">Admin</p>
+                <p><?= htmlspecialchars($usuario->nome) ?></p>
+                <p class="admv"><?= htmlspecialchars($usuario->tipo) ?></p>
               </div>
             </div>
             <div class="conteudov">
               <table class="tconteudo">
                 <tr>
                   <td>Email</td>
-                  <td>user.email@email.com</td>
+                  <td><?= htmlspecialchars($usuario->email) ?></td>
                 </tr>
                 <tr>
                   <td>ID do Usuário</td>
-                  <td>000000000</td>
+                  <td><?= htmlspecialchars($usuario->id) ?></td>
                 </tr>
               </table>
             </div>
