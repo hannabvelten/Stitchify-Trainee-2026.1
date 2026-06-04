@@ -21,6 +21,8 @@ class UsuariosController
     if (isset($_FILES['foto']) && $_FILES['foto']['error'] === UPLOAD_ERR_OK) {
         $nomeOriginal = $_FILES['foto']['name'];
         $foto = time() . '_' . $nomeOriginal;
+        $diretorioDestino = __DIR__ . '/../../public/uploads/' . $foto;
+        move_uploaded_file($_FILES['foto']['tmp_name'], $diretorioDestino);
     }
         $parameters = [
             'nome' => $_POST['nome'],
