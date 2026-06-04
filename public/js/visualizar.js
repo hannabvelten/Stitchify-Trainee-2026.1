@@ -13,6 +13,14 @@ document.querySelectorAll('.btn-visualizar').forEach(botao => {
 });
 document.querySelectorAll('.fechar').forEach(botaoFechar => {
     botaoFechar.addEventListener('click', () => {
-      
+      const modalAberto = botaoFechar.closest('.modal-visualizar');
+        const fadeEspecifico = modalAberto ? modalAberto.previousElementSibling : null;
+
+        if (modalAberto) {
+            modalAberto.classList.add('hide');
+            if (fadeEspecifico && fadeEspecifico.classList.contains('fadev')) {
+                fadeEspecifico.classList.add('hide');
+            }
+        }
     });
 });
