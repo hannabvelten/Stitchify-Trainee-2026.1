@@ -59,7 +59,7 @@
     border-radius: 20px;
     background: var(--branco);
     width: 100%;
-    max-width: 400px;
+    max-width: 550px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     pointer-events: auto;
@@ -147,7 +147,8 @@
 
 .botoes-edit {
     display: flex;
-    padding: 10px 20px;
+    padding: 20px 20px;
+    justify-content: center;
     align-items: center;
     gap: 16px;
     align-self: stretch;
@@ -191,7 +192,6 @@
 
     .modaledit {
         width: 90%;
-        max-width: 440px;
     }
 
     .topo-edit {
@@ -237,8 +237,6 @@
     }
 
     .botoes-edit {
-        padding: 12px 24px 20px 24px;
-        justify-content: flex-start;
         gap: 12px;
     }
 
@@ -265,9 +263,7 @@
     }
 
     .modaledit {
-        width: 100%;
-        max-width: 320px;
-        max-height: 95vh;
+        width: 90%;
     }
 
     .topo-edit {
@@ -315,15 +311,6 @@
     .edit-foto .nova-foto {
         width: 100%;
         height: auto;
-    }
-
-    .botoes-edit {
-        padding: 5px 15px;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 8px; 
-        width: 75%;
     }
 
     .cancel, .confirm {
