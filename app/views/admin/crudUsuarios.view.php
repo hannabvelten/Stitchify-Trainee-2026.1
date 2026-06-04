@@ -111,7 +111,7 @@
 
       <div class="modal-criaruser hide">
         <div class="fade-criaruser"></div>
-        <form class="modalc" method="POST" action="/crudUsuarios/create">
+        <form class="modalc" method="POST" action="/crudUsuarios/create" enctype="multipart/form-data">
           <div class="topo-modal">
             <div class="criauser-modal">
               <img
@@ -141,7 +141,7 @@
                 />
                 <img src="" alt="Preview" id="fotoPreview" style="display: none;">
               </button>
-              <input type="file" id="foto-usuario" name="foto-usuario" hidden />
+              <input type="file" id="foto-usuario" name="foto" hidden />
             </div>
           </div>
           <div class="botoes-modal">
