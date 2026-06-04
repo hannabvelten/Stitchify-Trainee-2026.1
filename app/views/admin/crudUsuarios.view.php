@@ -64,7 +64,7 @@
                   <?php if (!empty($usuario->foto)): ?>
                   <img src="../../../public/uploads/<?= htmlspecialchars($usuario->foto) ?>" alt="Foto de <?= htmlspecialchars($usuario->nome) ?>" class="foto-tabela-user" />
                   <?php else: ?>
-                  <img src="../../../public/assets/PersonCircle.svg" alt="Sem foto" class="foto-tabela-user" />
+                  <img src="../../../public/assets/PersonCircle.svg" alt="Sem foto"  />
                   <?php endif; ?><?= htmlspecialchars($usuario->nome)?>
                 </td>
                 <td class="emailc"><?= htmlspecialchars($usuario->email)?></td>

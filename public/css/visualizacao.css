@@ -81,6 +81,17 @@
     height: 60px;
     padding-left: 0.5rem;
 }
+.foto-tabela-user {
+    width: 36px;
+    min-width: 36px; 
+    height: 36px;
+    min-height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px; 
+}
 .admv{
     border-radius: 20px;
     background-color: #DBB8C1;
