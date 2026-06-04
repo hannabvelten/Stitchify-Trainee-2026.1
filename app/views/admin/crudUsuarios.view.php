@@ -170,11 +170,11 @@
           <div class="container">
             <div class="identificacao">
               <div class="imagem">
-                <img
-                  src="../../../public/assets/perfil usuario.svg"
-                  alt=""
-                  class="perfilv"
-                />
+                <?php if (!empty($usuario->foto)): ?>
+                  <img src="../../../public/uploads/<?= htmlspecialchars($usuario->foto) ?>" alt="Foto de <?= htmlspecialchars($usuario->nome) ?>" class="foto-tabela-user-modal" />
+                  <?php else: ?>
+                  <img src="../../../public/assets/PersonCircle.svg" alt="Sem foto"  />
+                  <?php endif; ?>
               </div>
               <div class="conteudov">
                 <p><?= htmlspecialchars($usuario->nome) ?></p>
