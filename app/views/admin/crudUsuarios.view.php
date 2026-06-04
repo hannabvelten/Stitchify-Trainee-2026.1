@@ -193,8 +193,7 @@
               </table>
             </div>
             <div class="rodapev">
-              <button class="fechar"
-              >Fechar</button>
+              <button class="fechar" data-id="<?= $usuario->id ?>">Fechar</button>
               <img
                 src="../../../public/assets/Frame 76.svg"
                 alt=""
