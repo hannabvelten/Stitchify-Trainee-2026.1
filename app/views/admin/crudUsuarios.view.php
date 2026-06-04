@@ -151,7 +151,8 @@
           </div>
         </form>
       </div>
-
+        
+      <?php foreach ($usuarios as $usuario): ?>
       <div class="fadev hide"></div>
       <div class="modal-visualizar hide">
         <div class="modalv">
@@ -192,7 +193,8 @@
               </table>
             </div>
             <div class="rodapev">
-              <button class="fechar">Fechar</button>
+              <button class="fechar"
+              >Fechar</button>
               <img
                 src="../../../public/assets/Frame 76.svg"
                 alt=""
@@ -202,6 +204,7 @@
           </div>
         </div>
       </div>
+      <?php endforeach; ?>
 
       <div class="fade-edit hide" id="fade-edit"></div>
       <div class="modal-editar hide" id="modal-editar">
