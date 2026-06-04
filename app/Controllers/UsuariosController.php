@@ -10,9 +10,9 @@ class UsuariosController
 
     public function index()
     {
-        $usuarios = App::get('database')->selectAll('usuarios');
+        $usuarios = App::get('database')->selectAll('tabela_usuarios');
 
-        return view('admin/crudUsuarios', compact('usuarios'));
+        return view('admin/crudUsuarios', compact('tabela_usuarios'));
     }
     public function store()
     {   
@@ -29,7 +29,7 @@ class UsuariosController
             'foto'  => $foto
         ];
 
-        App::get('database')->insert('usuarios', $parameters);
+        App::get('database')->insert('tabela_usuarios', $parameters);
 
         header('Location: /crudUsuarios');
 
