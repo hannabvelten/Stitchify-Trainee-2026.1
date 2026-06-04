@@ -13,8 +13,37 @@ class PostsController
 
     public function index()
     {
-        $posts = App::get('database') -> selectAllPosts();
-        return view('admin/tabelapost', compact('posts'));
+
+        $database = App::get('database');
+
+        $limit = 5;
+
+        $currentPage = isset($_GET['page']) ? (int)$_GET['page']:1;
+
+        if($currentPage < 1){
+            $currentPage = 1;
+        }
+
+        $offset = ($currentPage - 1) * $limit;
+
+        $totalPosts = $database->countAll('tabela_posts');
+        $totalPaginas = ceil($totalPosts/$limit);
+
+        $posts = $database->paginate('tabela_posts', $limit, $offset);
+
+
+
+        // $posts = App::get('database') -> selectAllPosts();
+
+        // $totalPosts = App::get('database')->countAll('tabela_posts');
+
+
+        return view('admin/tabelapost', [
+            'posts' => $posts,
+            'currentPage' => $currentPage,
+            'totalPages' => $totalPaginas
+
+        ]);
     }
 
     public function store()
