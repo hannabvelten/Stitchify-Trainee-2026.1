@@ -19,7 +19,8 @@ class UsuariosController
         $foto = 'default-avatar.png';
     
     if (isset($_FILES['foto']) && $_FILES['foto']['error'] === UPLOAD_ERR_OK) {
-        $foto = $_FILES['foto']['name']; 
+        $nomeOriginal = $_FILES['foto']['name'];
+        $foto = time() . '_' . $nomeOriginal;
     }
         $parameters = [
             'nome' => $_POST['nome'],
