@@ -12,7 +12,7 @@ class UsuariosController
     {
         $usuarios = App::get('database')->selectAll('tabela_usuarios');
 
-        return view('admin/crudUsuarios', compact('tabela_usuarios'));
+        return view('admin/crudUsuarios', compact('usuarios'));
     }
     public function store()
     {   
