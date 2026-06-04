@@ -11,3 +11,8 @@ document.querySelectorAll('.btn-visualizar').forEach(botao => {
         }
     });
 });
+document.querySelectorAll('.fechar').forEach(botaoFechar => {
+    botaoFechar.addEventListener('click', () => {
+      
+    });
+});
