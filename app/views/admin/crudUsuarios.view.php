@@ -205,7 +205,7 @@
 
       <div class="fade-edit hide" id="fade-edit"></div>
       <div class="modal-editar hide" id="modal-editar">
-        <form class="modaledit" id="modaledit" action="" method="post">
+        <form class="modaledit" id="modaledit" action="/crudUsuarios/edit" method="POST">
           <div class="topo-edit">
             <img src="../../../public/assets/Novelo_cortado.png" alt="" />
             <p>Editar Usuário</p>
@@ -260,7 +260,7 @@
 
       <div class="fade-delete hide" id="fade-delete"></div>
       <div class="modal-deletar hide" id="modal-deletar">
-        <form class="modaldelete" id="modaldelete" action="" method="post">
+        <form class="modaldelete" id="modaldelete" action="/crudUsuarios/delete" method="POST">
           <div class="box-delete">
             <span class="vetor-atencao">
               <svg

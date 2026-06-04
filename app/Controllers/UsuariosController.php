@@ -34,4 +34,29 @@ class UsuariosController
         header('Location: /crudUsuarios');
 
     }
+
+    public function edit()
+    {
+        $parameters = [
+            'nome' => $_POST['nome'],
+            'email' => $_POST['email'],
+            'senha'  => $_POST['senha'],
+            'tipo'  => 'usuario'
+        ];
+
+        $id = $_POST['id'];
+
+        App::get('database')->update('tabela_usuarios', $id, $parameters);
+
+        header('Location: /crudUsuarios');
+    }
+
+    public function delete()
+    {
+        $id = $_POST['id'];
+
+        App::get('database')->delete('tabela_usuarios', $id);
+
+        header('Location: /crudUsuarios');
+    }
 }
