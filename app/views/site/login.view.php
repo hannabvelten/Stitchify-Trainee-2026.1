@@ -32,10 +32,13 @@
             </p>
             </div>
        <div class="inputs">
+        <form action="">
+            
             <input type="email" placeholder="Email">
             <input type="password" placeholder="Senha">
             <button type="submit">Entrar</button>
        </div>
+       </form>
        <div class="inscricao">
         <p>Ainda não tem conta? <a href="inscreva-se.html">Inscreva-se</a></p>
        </div>
