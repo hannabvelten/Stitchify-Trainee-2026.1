@@ -377,13 +377,13 @@
 
             <div class="edit-foto">
               <p>Foto do Usuário</p>
-              <button class="foto-usuario">
-                <img
-                  src="../../../public/assets/adicioanar-foto.svg"
-                  alt=""
-                  class="nova-foto"
-                />
-              </button>
+              <div class="foto-container">
+                <button type="button" class="foto-usuario" id="btnFotoEdit">
+                  <img src="../../../public/assets/adicioanar-foto.svg" alt="" class="nova-foto" id="fotoIconEdit" />
+                  <img src="" alt="Preview" id="fotoPreviewEdit" style="display: none;">
+                </button>
+                <input type="file" id="inputFotoEdit" name="foto" hidden />
+              </div>
             </div>
 
             <div class="botoes-edit">
