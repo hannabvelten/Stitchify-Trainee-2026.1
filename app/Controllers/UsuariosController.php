@@ -14,6 +14,7 @@ class UsuariosController
 
         return view('admin/crudUsuarios', compact('usuarios'));
     }
+    
     public function store()
     {   
         $foto = 'default-avatar.png';
@@ -44,7 +45,8 @@ class UsuariosController
             'nome' => $_POST['nome'],
             'email' => $_POST['email'],
             'senha'  => $_POST['senha'],
-            'tipo'  => 'usuario'
+            'tipo'  => 'usuario',
+            'foto'  => $foto
         ];
 
         $id = $_POST['id'];
