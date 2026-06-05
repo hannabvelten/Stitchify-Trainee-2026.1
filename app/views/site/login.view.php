@@ -33,6 +33,15 @@
             </div>
        <div class="inputs">
         <form action="/login" method="POST">
+        <div class="mensagem-erro">
+            <p>
+            <?php
+                if(isset($_SESSION['mensagem-erro']))
+                echo $_SESSION['mensagem-erro'];
+                session_unset();
+                ?>
+            </p>
+        </div>
             <input type="email" name="email "placeholder="Email">
             <input type="password" name="senha" placeholder="Senha">
             <button type="submit">Entrar</button>
