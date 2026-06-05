@@ -33,7 +33,6 @@
             </div>
        <div class="inputs">
         <form action="">
-            
             <input type="email" placeholder="Email">
             <input type="password" placeholder="Senha">
             <button type="submit">Entrar</button>
