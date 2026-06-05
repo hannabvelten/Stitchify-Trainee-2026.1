@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -31,8 +32,7 @@
                 peças únicas com os fios
             </p>
             </div>
-       <div class="inputs">
-        <form action="/login" method="POST">
+        <form action="/login" method="POST" class="inputs">
         <div class="mensagem-erro">
             <p>
             <?php
@@ -41,12 +41,12 @@
                 session_unset();
                 ?>
             </p>
-        </div>
+            </div>
             <input type="email" name="email" placeholder="Email">
             <input type="password" name="senha" placeholder="Senha">
             <button type="submit">Entrar</button>
-       </div>
-       </form>
+            </form>
+      
        <div class="inscricao">
         <p>Ainda não tem conta? <a href="inscreva-se.html">Inscreva-se</a></p>
        </div>
