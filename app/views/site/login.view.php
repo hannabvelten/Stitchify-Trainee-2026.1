@@ -32,9 +32,9 @@
             </p>
             </div>
        <div class="inputs">
-        <form action="">
-            <input type="email" placeholder="Email">
-            <input type="password" placeholder="Senha">
+        <form action="/login" method="POST">
+            <input type="email" name="email "placeholder="Email">
+            <input type="password" name="senha" placeholder="Senha">
             <button type="submit">Entrar</button>
        </div>
        </form>

@@ -182,7 +182,8 @@ input::placeholder{
         line-height: 1.5;
         max-width: 300px;
     }
-    .inputs{
+    
+    .inputs form{
         display: flex;
         flex-direction: column;
         gap: 20px;
