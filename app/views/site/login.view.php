@@ -42,7 +42,7 @@
                 ?>
             </p>
         </div>
-            <input type="email" name="email "placeholder="Email">
+            <input type="email" name="email" placeholder="Email">
             <input type="password" name="senha" placeholder="Senha">
             <button type="submit">Entrar</button>
        </div>

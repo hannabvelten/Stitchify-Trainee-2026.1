@@ -16,7 +16,7 @@ class Controller
     {
         return view('site/login');
     }
-    public function exibirladingPage()
+    public function exibirlandingPage()
     {
         return view('site/landingpage');
     }
@@ -29,7 +29,7 @@ class Controller
         if( $user != false){
             session_start();
             $_SESSION['id'] = $user->id;
-            header('Location: /dashboard');
+            header('Location: /landingpage');
         }
         else{
             session_start();
