@@ -20,4 +20,10 @@ class Controller
     {
         return view('site/landingpage');
     }
+    public function efetuaLogin()
+    {
+        $email = $_POST['email'];
+        $senha = $_POST['senha'];
+        
+    }
 }
