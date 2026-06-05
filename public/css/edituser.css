@@ -145,6 +145,23 @@
     height: auto;
 }
 
+.modaledit #inputFotoEdit {
+    display: none;
+}
+
+.edit-foto .foto-container {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+#fotoPreviewEdit {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%; 
+}
+
 .botoes-edit {
     display: flex;
     padding: 20px 20px;
