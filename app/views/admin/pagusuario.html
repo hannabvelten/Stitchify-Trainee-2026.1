@@ -343,7 +343,7 @@
 
       <div class="fade-edit hide" id="fade-edit"></div>
       <div class="modal-editar hide" id="modal-editar">
-        <form class="modaledit" id="modaledit" action="" method="post">
+        <form class="modaledit" id="modaledit" action="" method="post" enctype="multipart/form-data"> 
           <div class="topo-edit">
             <img src="../../../public/assets/Novelo_cortado.png" alt="" />
             <p>Editar Usuário</p>
@@ -370,11 +370,22 @@
               <input type="password" name="senha" placeholder="Senha atual" required />
             </div>
 
-            <div class="edit-foto">
+            <!-- <div class="edit-foto">
               <p>Foto do Usuário</p>
               <button class="foto-usuario">
                 <img src="../../../public/assets/adicioanar-foto.svg" alt="" class="nova-foto" />
               </button>
+            </div> -->
+
+            <div class="edit-foto">
+              <p>Foto do Usuário</p>
+              <div class="foto-container">
+                <button type="button" class="foto-usuario" id="btnFotoEdit">
+                  <img src="../../../public/assets/adicioanar-foto.svg" alt="" class="nova-foto" id="fotoIconEdit" />
+                  <img src="" alt="Preview" id="fotoPreviewEdit" style="display: none;">
+                </button>
+                <input type="file" id="inputFotoEdit" name="foto" hidden />
+              </div>
             </div>
 
             <div class="botoes-edit">
