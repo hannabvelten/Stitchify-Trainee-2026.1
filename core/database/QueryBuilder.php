@@ -40,7 +40,7 @@ class QueryBuilder
                 tabela_usuarios.nome AS nome_autor,
                 tabela_usuarios.foto AS foto_autor
                 FROM tabela_posts
-                INNER JOIN tabela_usuarios ON tabela_posts.autor = tabela_usuarios.id_usuario";
+                INNER JOIN tabela_usuarios ON tabela_posts.autor = tabela_usuarios.id";
 
         try {
             $stmt = $this->pdo->prepare($sql);
@@ -93,7 +93,7 @@ class QueryBuilder
                 tabela_usuarios.nome AS nome_autor,
                 tabela_usuarios.foto AS foto_autor
             FROM tabela_posts
-            INNER JOIN tabela_usuarios ON tabela_posts.autor = tabela_usuarios.id_usuario
+            INNER JOIN tabela_usuarios ON tabela_posts.autor = tabela_usuarios.id
             LIMIT {$limit} OFFSET {$offset}";
 
         try {
