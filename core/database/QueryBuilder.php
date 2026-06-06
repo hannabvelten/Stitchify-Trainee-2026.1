@@ -106,4 +106,60 @@ class QueryBuilder
             die($e->getMessage());
         }
     }
+
+    public function findById($table, $idColumn, $id)
+    {
+        $sql = "SELECT * FROM {$table} WHERE {$idColumn} = :id LIMIT 1";
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute(['id' => $id]);
+
+            return $stmt->fetch(PDO::FETCH_ASSOC);
+
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+    public function update($table, $idColumn, $id, $parameters)
+    {
+        $setParts = [];
+        foreach ($parameters as $column => $value) {
+            $setParts[] = "{$column} = :{$column}";
+        }
+
+        $setString = implode(', ', $setParts);
+
+        $sql = "UPDATE {$table} SET {$setString} WHERE {$idColumn} = :id";
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+
+            // add id to parameters
+            $parameters['id'] = $id;
+
+            $stmt->execute($parameters);
+
+            return $stmt->rowCount();
+
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+    public function delete($table, $idColumn, $id)
+    {
+        $sql = "DELETE FROM {$table} WHERE {$idColumn} = :id";
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute(['id' => $id]);
+
+            return $stmt->rowCount();
+
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
 }

@@ -534,7 +534,7 @@
         </div>
 
         <!-- Modal Editar Post -->
-        <form class="modalVisualizar" id="modalEditar-<?= $post->id_post ?>" method="POST">
+        <form class="modalVisualizar" id="modalEditar-<?= $post->id_post ?>" method="POST" action="/tabelapost/update" enctype="multipart/form-data">
 
             <div class="header">
 
@@ -567,6 +567,7 @@
                 </label>
 
                 <input type="file" id="editarImagem-<?= $post->id_post ?>" name="imagem" hidden>
+                <input type="hidden" name="id_post" value="<?= $post->id_post ?>">
 
                 <!-- Titulo -->
                 <div class="titulo">
@@ -611,7 +612,7 @@
 
                     </div>
 
-                    <input type="text" name="categoria" value="<? $post->categoria ?>">
+                    <input type="text" name="categoria" value="<?= $post->categoria ?>">
 
                 </div>
 
@@ -650,7 +651,7 @@
         </form>
 
         <!-- Modal Excluir Post -->
-        <div class="modalVisualizar" id="modalExcluir-<?= $post->id_post ?>">
+        <form class="modalVisualizar" id="modalExcluir-<?= $post->id_post ?>" action="/tabelapost/delete" method="POST">
 
             <div class="header">
 
@@ -661,6 +662,8 @@
             </div>
 
             <div class="modalContent">
+
+                <input type="hidden" name="id_post" value="<?= $post->id_post ?>">
 
                 <!-- Texto -->
                 <div class="textoExcluir">
@@ -673,7 +676,7 @@
                 </div>
 
                 <!-- Imagem -->
-                <img src="../../../public/assets/posts/<? $post->imagem ?>" alt="Post" class="imagemExcluir">
+                <img src="../../../public/assets/posts/<?= $post->imagem ?>" alt="Post" class="imagemExcluir">
 
                 <!-- Titulo -->
                 <div class="tituloExcluir">
@@ -706,7 +709,7 @@
 
                     </button>
 
-                    <button type="button" class="btnDelete">
+                    <button type="submit" class="btnDelete">
 
                         Excluir
 
@@ -716,7 +719,7 @@
 
             </div>
 
-        </div>
+        </form>
 
     <?php endforeach ?>
 

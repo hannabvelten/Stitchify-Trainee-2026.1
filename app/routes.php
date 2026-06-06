@@ -8,3 +8,6 @@ use App\Core\Router;
 $router->get('', 'ExampleController@index');
 $router->get('tabelapost', 'PostsController@index');
 $router->post('tabelapost/create', 'PostsController@store');
+// Rotas para editar e excluir posts
+$router->post('tabelapost/update', 'PostsController@update');
+$router->post('tabelapost/delete', 'PostsController@destroy');
