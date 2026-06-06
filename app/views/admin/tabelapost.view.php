@@ -358,7 +358,7 @@
                         <div class="paginacao-container">
                             <ul class="paginacao">
                                 <li>
-                                    <a href="?page=<?= max(1, $currentPage - 1) ?>" class="<?= $currentPage <= 1 ? 'disabled' : ''?>">&laquo; <i class="bi bi-chevron-left"></i></a>
+                                    <a href="?page=<?= max(1, $currentPage - 1) ?>" class="<?= $currentPage <= 1 ? 'disabled' : ''?>"><i class="bi bi-chevron-left"></i></a>
                                 </li>
 
                                 <?php
@@ -390,7 +390,7 @@
                                 </li> 
 
                                 <li>
-                                    <a href="?page=<?= min($totalPages, $currentPage + 1) ?>" class="<?= $currentPage >= $totalPages ? 'disabled' : ''?>">&laquo; <i class="bi bi-chevron-right"></i></a>
+                                    <a href="?page=<?= min($totalPages, $currentPage + 1) ?>" class="<?= $currentPage >= $totalPages ? 'disabled' : ''?>"><i class="bi bi-chevron-right"></i></a>
                                 </li>
 
                             </ul>
