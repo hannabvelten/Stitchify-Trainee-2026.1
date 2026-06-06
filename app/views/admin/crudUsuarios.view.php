@@ -81,7 +81,10 @@
                       alt="visualizar"
                     />
                   </button>
-                  <button class="editar" data-id="<?= htmlspecialchars($usuario->id) ?>">
+                  <button class="editar" 
+                      data-id="<?= htmlspecialchars($usuario->id) ?>"
+                      data-nome="<?= htmlspecialchars($usuario->nome) ?>"
+                      data-email="<?= htmlspecialchars($usuario->email) ?>">
                     <img
                       src="../../../public/assets/icones-acoes/Pencil.svg"
                       alt="editar"
@@ -208,7 +211,8 @@
 
       <div class="fade-edit hide" id="fade-edit"></div>
       <div class="modal-editar hide" id="modal-editar">
-        <form class="modaledit" id="modaledit" action="/crudUsuarios/edit" method="POST">
+        <form class="modaledit" id="modaledit" action="/crudUsuarios/edit" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="id" id="id_usuario_editar">
           <div class="topo-edit">
             <img src="../../../public/assets/Novelo_cortado.png" alt="" />
             <p>Editar Usuário</p>
@@ -235,7 +239,7 @@
               <input
                 type="password"
                 name="senha"
-                placeholder="Senha atual"
+                placeholder="Digite a nova senha"
                 required
               />
             </div>
@@ -264,6 +268,7 @@
       <div class="fade-delete hide" id="fade-delete"></div>
       <div class="modal-deletar hide" id="modal-deletar">
         <form class="modaldelete" id="modaldelete" action="/crudUsuarios/delete" method="POST">
+          <input type="hidden" name="id" id="id_deletar">
           <div class="box-delete">
             <span class="vetor-atencao">
               <svg

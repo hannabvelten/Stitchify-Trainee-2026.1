@@ -8,8 +8,20 @@ const toggleModalDelete = () => {
 };
 
 openDeleteButton.forEach((btn) => {
-    btn.addEventListener("click", () => toggleModalDelete());
+    btn.addEventListener("click", () => {
+        const idUsuario = btn.getAttribute('data-id');
+        const inputIdDeletar = document.querySelector("#id_deletar");
+        if(inputIdDeletar) {
+            inputIdDeletar.value = idUsuario;
+        }
+        
+        toggleModalDelete();
+    });
 });
+
+// openDeleteButton.forEach((btn) => {
+//     btn.addEventListener("click", () => toggleModalDelete());
+// });
 
 [closeDeleteButton, fadeDelete].forEach((el) => {
     el.addEventListener("click", () => toggleModalDelete());

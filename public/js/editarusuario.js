@@ -12,8 +12,39 @@ const toggleModalEdit = () => {
 };
 
 openEditButton.forEach((btn) => {
-    btn.addEventListener("click", () => toggleModalEdit());
+    btn.addEventListener("click", () => {
+        const idUsuario = btn.getAttribute('data-id');
+        const nomeUsuario = btn.getAttribute('data-nome');
+        const emailUsuario = btn.getAttribute('data-email');
+        const inputIdEditar = document.querySelector("#id_usuario_editar");
+        if(inputIdEditar) {
+            inputIdEditar.value = idUsuario;
+        }
+        const inputNome = document.querySelector(".modaledit input[name='nome']");
+        const inputEmail = document.querySelector(".modaledit input[name='email']");
+        
+        if (inputNome) inputNome.value = nomeUsuario;
+        if (inputEmail) inputEmail.value = emailUsuario;
+
+        toggleModalEdit();
+    });
 });
+
+// openEditButton.forEach((btn) => {
+//     btn.addEventListener("click", () => {
+//         const idUsuario = btn.getAttribute('data-id');
+//         const inputIdEditar = document.querySelector("#id_usuario_editar");
+//         if(inputIdEditar) {
+//             inputIdEditar.value = idUsuario;
+//         }
+        
+//         toggleModalEdit();
+//     });
+// });
+
+// openEditButton.forEach((btn) => {
+//     btn.addEventListener("click", () => toggleModalEdit());
+// });
 
 [closeEditButton, fadeEdit].forEach((el) => {
     el.addEventListener("click", () => toggleModalEdit());

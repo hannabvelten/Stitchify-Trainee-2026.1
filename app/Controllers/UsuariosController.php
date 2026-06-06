@@ -45,9 +45,18 @@ class UsuariosController
             'nome' => $_POST['nome'],
             'email' => $_POST['email'],
             'senha'  => $_POST['senha'],
-            'tipo'  => 'usuario',
-            'foto'  => $foto
+
+            // 'foto'  => $foto
         ];
+
+        if (isset($_FILES['foto']) && $_FILES['foto']['error'] === UPLOAD_ERR_OK) {
+            $nomeOriginal = $_FILES['foto']['name'];
+            $foto = time() . '_' . $nomeOriginal;
+            $diretorioDestino = __DIR__ . '/../../public/uploads/' . $foto;
+            move_uploaded_file($_FILES['foto']['tmp_name'], $diretorioDestino);
+            
+            $parameters['foto'] = $foto; 
+        }
 
         $id = $_POST['id'];
 

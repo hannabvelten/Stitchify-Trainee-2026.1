@@ -47,10 +47,10 @@ class QueryBuilder
         }
     }
 
-    //UPDATE `tabela_usuarios` 
-    //SET `id_usuario`='[value-1]',`nome`='[value-2]',`senha`='[value-3]',`imagem`='[value-4]',`tipo_usuario`='[value-5]',`localizacao`='[value-6]',`email`='[value-7]' WHERE 1
-    public function upadate($table, $id, $parameters){
-        $sql = sprintf('UPDATE $s SET $s WHERE id = %s',
+    // UPDATE `tabela_usuarios` 
+    // SET `id`='[value-1]',`nome`='[value-2]',`email`='[value-3]',`tipo`='[value-4]',`senha`='[value-5]',`foto`='[value-6]' WHERE 1
+    public function update($table, $id, $parameters){
+        $sql = sprintf('UPDATE %s SET %s WHERE id = %s',
         $table,
         implode(', ', array_map(function($param){
             return $param . ' = :' . $param;
@@ -72,7 +72,7 @@ class QueryBuilder
     //DELETE FROM `tabela_usuarios` WHERE 0
     public function delete($table, $id)
     {
-        $sql = sprintf('DELETE FROM %s WHERE $s',
+        $sql = sprintf('DELETE FROM %s WHERE %s',
         $table,
         'id = :id'
         );
