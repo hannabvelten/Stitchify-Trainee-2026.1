@@ -18,7 +18,7 @@
         <div class="topo">
           <div class="usuarios">
             <img src="../../../public/assets/iconeuser.svg" alt="iconeuser" />
-            <h2>Tabela de usuários</h2>
+            <h1>Tabela de usuários</h1>
           </div>
           <div class="box-perfiladm">
             <div class="admin">

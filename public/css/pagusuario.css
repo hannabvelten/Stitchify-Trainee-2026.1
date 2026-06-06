@@ -10,11 +10,11 @@
 
 @font-face {
     font-family: 'Baloo';
-    src: url(../fontes/Baloo-Regular.ttf);
+    src: url(../assets/Fonts/Baloo-Regular.ttf);
 }
 
 * {
-    margin: 0;
+    margin: 0; 
     padding: 0;
     box-sizing: border-box;
 }
@@ -53,7 +53,9 @@ main {
     border-radius: 0 0 1.8rem 1.8rem;
     box-shadow: 0 0.2rem 0.5rem rgba(0,0,0,0.15);
 }
-
+.usuarios h1{
+    font-size: 2.3rem;
+}
 .box-perfiladm {
     display: flex;
     align-items: center;
@@ -153,12 +155,12 @@ main {
 
 th,
 td {
-    padding: 15px;
+    padding: 1.2rem;
     background-color: #FEF3E2;
-
 }
 td{
-    font-family: 'Noah-Bold';
+    font-family: 'Noah-Regular';
+
 }
 th {
     text-align: left;
@@ -169,6 +171,16 @@ th {
 thead th {
     background-color: #C1CA8B;
     color: #770523;
+}
+thead tr th:first-child,
+tbody tr td:first-child {
+    border-top-left-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+}
+thead tr th:last-child,
+tbody tr td:last-child {
+    border-top-right-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
 }
 
 .nomec {
