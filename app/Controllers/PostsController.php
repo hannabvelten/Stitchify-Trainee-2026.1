@@ -75,4 +75,77 @@ class PostsController
         
         header('Location: /tabelapost');
     }
+
+    public function update()
+    {
+        $database = App::get('database');
+
+        $id = isset($_POST['id_post']) ? (int)$_POST['id_post'] : null;
+
+        if (!$id) {
+            header('Location: /tabelapost');
+            exit;
+        }
+
+        $post = $database->findById('tabela_posts', 'id_post', $id);
+
+        $parameters = [
+            'titulo' => $_POST['titulo'] ?? $post['titulo'],
+            'descricao' => $_POST['descricao'] ?? $post['descricao'],
+            'categoria' => $_POST['categoria'] ?? $post['categoria'],
+        ];
+
+        // tratar imagem somente se uma nova for enviada
+        if (isset($_FILES['imagem']) && $_FILES['imagem']['error'] === UPLOAD_ERR_OK) {
+            $nomeArquivo = uniqid() . '_' . basename($_FILES['imagem']['name']);
+            $destino = __DIR__ . '/../../public/assets/posts/' . $nomeArquivo;
+            move_uploaded_file($_FILES['imagem']['tmp_name'], $destino);
+
+            // remover imagem antiga se existir
+            if (!empty($post['imagem'])) {
+                $oldPath = __DIR__ . '/../../public/assets/posts/' . $post['imagem'];
+                if (file_exists($oldPath)) {
+                    @unlink($oldPath);
+                }
+            }
+
+            $parameters['imagem'] = $nomeArquivo;
+        }
+
+        $database->update('tabela_posts', 'id_post', $id, $parameters);
+
+        header('Location: /tabelapost');
+    }
+
+    public function destroy()
+    {
+        $database = App::get('database');
+
+        $id = null;
+        if (isset($_POST['id_post'])) {
+            $id = (int)$_POST['id_post'];
+        } elseif (isset($_GET['id_post'])) {
+            $id = (int)$_GET['id_post'];
+        }
+
+        if (!$id) {
+            header('Location: /tabelapost');
+            exit;
+        }
+
+        $post = $database->findById('tabela_posts', 'id_post', $id);
+
+        // excluir imagem física
+        if ($post && !empty($post['imagem'])) {
+            $path = __DIR__ . '/../../public/assets/posts/' . $post['imagem'];
+            if (file_exists($path)) {
+                @unlink($path);
+            }
+        }
+
+        // remover registro do banco
+        $database->delete('tabela_posts', 'id_post', $id);
+
+        header('Location: /tabelapost');
+    }
 }

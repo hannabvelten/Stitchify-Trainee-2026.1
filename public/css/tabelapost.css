@@ -190,21 +190,20 @@ body{
     font-family: 'Noah';
 }
 
+.tabelaResponsiva{
+    overflow-x: auto;
+}
+
 .tabela-posts{
     margin-top: 2rem;
-
     background-color: #C1CA8B;
-
     border-radius: 2.5rem;
-
     padding: 1.5rem;
-
     box-shadow: 0 0.3rem 0.8rem rgba(0,0,0,0.15);
 }
 
 .cabecalho-tabela{
     display: grid;
-
     grid-template-columns:
     1fr
     2fr
@@ -212,22 +211,16 @@ body{
     1fr
     1fr
     1fr;
-
     align-items: center;
     justify-items: center;
-
     padding: 1rem;
-
     color: #770523;
-
     font-family: 'Baloo';
-
     font-size: 1.5rem;
 }
 
 .linha-post{
     display: grid;
-
     grid-template-columns:
     1fr
     2fr
@@ -235,26 +228,18 @@ body{
     1fr
     1fr
     1fr;
-
     align-items: center;
     justify-items: center;
-
     gap: 1rem;
-
     background-color: #FEF3E2;
-
     padding: 1rem;
-
     border-radius: 1.5rem;
-
     margin-bottom: 1rem;
 }
 
 .info-post{
     display: flex;
-
     align-items: center;
-
     gap: 0.8rem;
 }
 
