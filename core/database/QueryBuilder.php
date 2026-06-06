@@ -38,7 +38,7 @@ class QueryBuilder
         $sql = "SELECT 
                 tabela_posts.*,
                 tabela_usuarios.nome AS nome_autor,
-                tabela_usuarios.imagem AS foto_autor
+                tabela_usuarios.foto AS foto_autor
                 FROM tabela_posts
                 INNER JOIN tabela_usuarios ON tabela_posts.autor = tabela_usuarios.id_usuario";
 
@@ -91,7 +91,7 @@ class QueryBuilder
         $sql = "SELECT 
                 tabela_posts.*,
                 tabela_usuarios.nome AS nome_autor,
-                tabela_usuarios.imagem AS foto_autor
+                tabela_usuarios.foto AS foto_autor
             FROM tabela_posts
             INNER JOIN tabela_usuarios ON tabela_posts.autor = tabela_usuarios.id_usuario
             LIMIT {$limit} OFFSET {$offset}";
