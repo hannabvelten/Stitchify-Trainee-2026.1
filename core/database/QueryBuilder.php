@@ -162,4 +162,25 @@ class QueryBuilder
             die($e->getMessage());
         }
     }
+
+    //Funcao para landing page
+    public function getLatest($table, $limit){
+        $sql = "SELECT tabela_posts.*,
+                tabela_usuarios.nome AS nome_autor,
+                tabela_usuarios.foto AS foto_autor
+            FROM tabela_posts
+            INNER JOIN tabela_usuarios ON tabela_posts.autor = tabela_usuarios.id
+            ORDER BY tabela_posts.id_post DESC
+            LIMIT {$limit}";
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+
+        } catch (Exception $e) {
+            die($e->getMessage());
+        } 
+    }
 }

@@ -148,4 +148,17 @@ class PostsController
 
         header('Location: /tabelapost');
     }
+
+
+    //Retorna os 5 ultimos posts para a landing page
+    public function landingPage(){
+        $database = App::get('database');
+        $posts = $database->paginate('tabela_posts', 5, 0);
+
+        return view('site/landing-page', [
+            'posts' => $posts,
+        ]);
+    }
+
+
 }
