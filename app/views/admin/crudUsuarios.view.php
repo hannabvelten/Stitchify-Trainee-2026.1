@@ -40,11 +40,13 @@
         </div>
         <div class="box-criauser">
           <img src="../../../public/assets/lupa.svg" alt="lupa" class="lupa" />
+          <form action="/crudUsuarios" method="GET">
           <input
             type="text"
             placeholder="Busca por nome ou email"
             class="busca-user"
           />
+          </form>
           <button class="criar-usuario">+ Criar Usuário</button>
         </div>
         <div class="box-users">
