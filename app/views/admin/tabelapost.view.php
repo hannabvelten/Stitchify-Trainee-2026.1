@@ -91,14 +91,14 @@
                         </button>
 
                     </div>
-
-                    <div class="caixa-pesquisa">
+                
+                    <form class="caixa-pesquisa" action="/tabelapost" method="GET">
 
                         <input type="text" placeholder="Buscar posts">
 
                         <i class="bi bi-search"></i>
 
-                    </div>
+                    </form>
 
                 </div>
 

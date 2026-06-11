@@ -15,7 +15,7 @@ class PostsController
     {
 
         $database = App::get('database');
-
+        
         $limit = 5;
 
         $currentPage = isset($_GET['page']) ? (int)$_GET['page']:1;

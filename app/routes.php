@@ -6,6 +6,9 @@ use App\Controllers\PostsController;
 use App\Core\Router;
 
 $router->get('', 'ExampleController@index');
+
+$router->get('', 'PostsController@index');
+
 $router->get('tabelapost', 'PostsController@index');
 $router->post('tabelapost/create', 'PostsController@store');
 // Rotas para editar e excluir posts
