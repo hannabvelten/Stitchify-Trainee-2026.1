@@ -163,15 +163,26 @@
 
                     <!--SLIDER-->
                     <div class="slider-conteudo">
-                        <div class="card-blog">
-                            <img src="../../../public/assets/No-Sew Crochet Mushroom Jewelry Holder_Trinket Dish Tutorial.webp"
-                                alt="">
+                        
+                        <?php foreach($posts as $post): ?>
+                            <div class="card-blog">
+                                <img src="../../../public/assets/posts/<?= $post->imagem ?>" alt="Imagem Post">
+
+                                <h3><?= $post->titulo ?></h3>
+
+                                <p><b><?= $post->nome_autor ?></b></p>
+                                <p><?= $post->descricao ?></p>
+                                
+                                <button>Ver mais</button>
+                            </div>
+                        <?php endforeach ?>
+                        <!-- <div class="card-blog">
+                            <img src="../../../public/assets/No-Sew Crochet Mushroom Jewelry Holder_Trinket Dish Tutorial.webp" alt="">
 
                             <h3>Lorem Ipsum</h3>
 
                             <p><b>Autor:</b></p>
-                            <p>Lorem ipsum dolor sit amet, consectur adipiscing elit. Sispendisse imperdiet maximus
-                                sodales.
+                            <p>Lorem ipsum dolor sit amet, consectur adipiscing elit. Sispendisse imperdiet maximus sodales.
                             </p>
                             <button>Ver mais</button>
                         </div>
@@ -223,7 +234,7 @@
                                 sodales.
                             </p>
                             <button>Ver mais</button>
-                        </div>
+                        </div> -->
 
                     </div>
 
