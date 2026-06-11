@@ -17,7 +17,7 @@
       <div class="paginausers">
         <div class="topo">
           <div class="usuarios">
-            <img src="../../../public/assets/iconeuser.svg" alt="iconeuser" />
+            <img src="../../../public/assets/iconeuser.svg" alt="iconeuser" class="iconuser" />
             <h1>Tabela de usuários</h1>
           </div>
           <div class="box-perfiladm">
@@ -25,16 +25,17 @@
               <img
                 src="../../../public/assets/PersonCircle.svg"
                 alt="iconeperfil"
+                
               />
               <div class="textoadmin">
-                <p>Ola, Admin</p>
-                <p>Administrador</p>
-              </div>
-            </div>
-            <img
+                <p>Admin</p>
+                <img
               src="../../../public/assets/Down Arrow.svg"
-              alt="iconemaisadmin"
-            />
+              alt="iconemaisadmin"/>
+              </div>
+              
+            </div>
+            
           </div>
         </div>
         <div class="box-criauser">
@@ -50,11 +51,11 @@
           <table class="cabecalho">
             <thead>
               <tr>
-                <th class="user">USUÁRIO</th>
-                <th class="email">EMAIL</th>
-                <th class="tipo">TIPO</th>
-                <th class="iduser">ID DO USUÁRIO</th>
-                <th>AÇÕES</th>
+                <th class="user">Usuário</th>
+                <th class="email">Email</th>
+                <th class="tipo">Tipo</th>
+                <th class="iduser">Id do Usuário</th>
+                <th>Ações</th>
               </tr>
             </thead>
             <tbody>
