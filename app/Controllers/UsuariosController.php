@@ -12,8 +12,8 @@ class UsuariosController
     {
         $usuarios = App::get('database')->selectAll('tabela_usuarios');
 
-        $buca = $_GET['busca'] ??'';
-        $query = App::get('database')->table('tabela_usuaarios');
+        $busca = $_GET['busca'] ??'';
+        $query = App::get('database')->table('tabela_usuarios');
 
         if (!empty($busca)) {
         $query->where('nome', 'LIKE', "%{$busca}%")
