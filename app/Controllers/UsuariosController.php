@@ -15,6 +15,12 @@ class UsuariosController
         $buca = $_GET['busca'] ??'';
         $query = App::get('database')->table('tabela_usuaarios');
 
+        if (!empty($busca)) {
+        $query->where('nome', 'LIKE', "%{$busca}%")
+              ->orWhere('email', 'LIKE', "%{$busca}%");
+        }
+
+        $usuarios = $query->get();
         return view('admin/crudUsuarios', compact('usuarios'));
 
     }
