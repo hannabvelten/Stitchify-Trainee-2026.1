@@ -15,11 +15,20 @@ class QueryBuilder
     {
         $this->pdo = $pdo;
     }
+
     public function table($table)
     {
         $this->table = $table;
         return $this;
     }
+
+    public function where($column, $operator, $value)
+    {
+        $this->conditions[] = "{$column} {$operator} :{$column}";
+        $this->params[$column] = $value;
+        return $this;
+    } 
+    
     public function selectAll($table)
     {
         $sql = "select * from {$table}";
