@@ -32,10 +32,10 @@ class PostsController
         $posts = $database->paginate('tabela_posts', $limit, $offset);
         
         $busca = $_GET['busca'] ?? '';
-        $query = App::('database')->table('tabela_posts');
+        $query = App::get('database')->table('tabela_posts');
         if (!empty($busca)) {
         $query->where('titulo', 'LIKE', "%{$busca}%")
-          ->orWhere('conteudo', 'LIKE', "%{$busca}%");
+          ->orWhere('categoria', 'LIKE', "%{$busca}%");
         }
 
         $posts = $query->get();
