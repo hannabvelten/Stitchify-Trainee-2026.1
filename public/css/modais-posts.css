@@ -1,0 +1,374 @@
+@font-face {
+    font-family: 'Baloo';
+    src: url('../assets/fonts/Baloo-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Noah';
+    src: url('../assets/fonts/noah-regular.otf');
+}
+
+:root {
+    --branco: #FFFFFF;
+    --bege: #FEF3E2;
+    --rosa-claro: #FAD2E1;
+    --verde-claro: #D0D996;
+    --vinho: #770523;
+    --cinza: #CBC9C9;
+}
+
+/* Modais específicos da página de posts - prefixados para evitar conflitos */
+.post-modalCriar,
+.post-modalVisualizar {
+    width: 550px;
+    display: none;
+    flex-direction: column;
+    border-radius: 25px;
+    background-color: var(--branco);
+    padding: 0px;
+    margin: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transition: 0.3s ease;
+    transform: translate(-50%, -50%);
+    max-height: 90vh;
+    overflow-y: auto;
+    z-index: 20;
+}
+
+.post-modal-header{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--bege);
+    padding: 15px;
+    gap: 10px;
+    align-items: center;
+    border-radius: 25px 25px 0px 0px;
+}
+
+.post-modal-header img{ width:50px; height:auto }
+
+.post-modal-header p{
+    font-family: "Baloo", sans-serif;
+    font-size: 35px;
+    color: var(--vinho);
+}
+
+.post-formContent{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    margin: 20px;
+}
+
+.post-uploadImage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border: 2px var(--cinza) dashed !important;
+    border-radius: 30px;
+    padding: 30px !important;
+    transition: 0.3s;
+}
+
+.post-uploadImage i{ font-size:40px; color:var(--vinho) }
+.post-uploadImage p{ color:var(--cinza); font-family: "Noah", sans-serif }
+
+.post-titulo label, .post-descricao label, .post-categoria label{ font-family: "Baloo"; color:var(--vinho); font-size:25px }
+
+.post-descricao textarea{
+    padding: 15px 10px;
+    border: 2px solid var(--cinza);
+    border-radius: 30px;
+    outline: none;
+    height: 100px;
+    transition: 0.3s;
+    font-family: "Noah", sans-serif;
+}
+
+.post-modalActions{ display:flex; flex-direction:row; gap:20px; justify-content:center }
+
+.post-btnCancel{ padding:3px 5px; width:20%; background-color:var(--branco); border-radius:30px; border:#D0D996 solid 2px; color:var(--vinho); font-weight:bold }
+.post-btnCancel:hover{ background-color:var(--verde-claro); cursor:pointer }
+
+.post-btnCreate{ padding:3px 5px; width:20%; background-color:var(--verde-claro); border-radius:30px; border:#D0D996 solid 2px; color:var(--vinho); font-weight:bold }
+.post-btnCreate:hover{ background-color:var(--branco); cursor:pointer }
+
+.post-btnDelete{ padding:3px 5px; width:20%; background-color:#F42E31; border-radius:30px; border:#F42E31 solid 2px; color:var(--branco); font-weight:bold }
+.post-btnDelete:hover{ background-color:#D41D20; cursor:pointer }
+
+.post-modalContent{ display:flex; flex-direction:column; gap:10px; padding:10px; margin:20px }
+
+.post-imagem{ width:100%; height:150px; border:2px var(--cinza) dashed; border-radius:30px; overflow:hidden; position:relative }
+.post-imagem img{ position:absolute; top:0; left:0; width:100%; height:150px; object-fit:cover; border-radius:28px }
+
+/* ============ MODAL EDITAR ============ */
+.post-modalEditar {
+    width: 550px;
+    display: none;
+    flex-direction: column;
+    border-radius: 25px;
+    background-color: var(--branco);
+    padding: 0px;
+    margin: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transition: 0.3s ease;
+    transform: translate(-50%, -50%);
+    max-height: 90vh;
+    overflow-y: auto;
+    z-index: 20;
+}
+
+.post-modalEditar .post-modal-header {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--bege);
+    padding: 15px;
+    gap: 10px;
+    align-items: center;
+    border-radius: 25px 25px 0px 0px;
+}
+
+.post-modalEditar input,
+.post-modalEditar textarea {
+    width: 100%;
+    padding: 14px 18px;
+    border: 2px solid var(--cinza);
+    border-radius: 30px;
+    outline: none;
+    font-family: "Noah", sans-serif;
+    font-size: 15px;
+    color: #1F0008;
+    background-color: #FBF6EF;
+    transition: 0.3s;
+}
+
+.post-modalEditar textarea {
+    min-height: 120px;
+    resize: none;
+}
+
+.post-modalEditar input:focus,
+.post-modalEditar textarea:focus {
+    border-color: var(--vinho);
+    background-color: var(--branco);
+}
+
+.post-editContent {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    margin: 20px;
+}
+
+.post-overlayImagem {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.post-overlayImagem i {
+    font-size: 45px;
+    color: #FAD2E1;
+}
+
+.post-overlayImagem p {
+    color: var(--branco);
+    font-family: "Noah", sans-serif;
+    font-size: 16px;
+}
+
+.post-imagemEditar {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 25px;
+    filter: brightness(40%);
+}
+
+.post-uploadImage {
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+}
+
+.post-tituloIcone {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.post-tituloIcone i {
+    color: var(--vinho);
+    font-size: 28px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.post-tituloIcone i:hover {
+    transform: scale(1.1);
+}
+
+.post-data {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.post-data label {
+    font-family: "Baloo", sans-serif;
+    color: var(--vinho);
+    font-size: 25px;
+}
+
+.post-input-data {
+    background-color: #FBF6EF;
+    padding: 12px;
+    width: 50%;
+    border: 2px solid var(--cinza);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Noah", sans-serif;
+    color: #1F0008;
+}
+
+/* ============ MODAL EXCLUIR ============ */
+.post-modalExcluir {
+    width: 550px;
+    display: none;
+    flex-direction: column;
+    border-radius: 25px;
+    background-color: var(--branco);
+    padding: 0px;
+    margin: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transition: 0.3s ease;
+    transform: translate(-50%, -50%);
+    max-height: 90vh;
+    overflow-y: auto;
+    z-index: 20;
+}
+
+.post-textoExcluir {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.post-textoExcluir h2 {
+    font-family: "Baloo", sans-serif;
+    color: #1F0008;
+    font-size: 29px;
+    width: 80%;
+    line-height: 45px;
+}
+
+.post-imagemExcluir {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+.post-tituloExcluir {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.post-tituloExcluir label {
+    font-family: "Baloo", sans-serif;
+    color: var(--vinho);
+    font-size: 20px;
+}
+
+.post-inputExcluir {
+    padding: 14px 18px;
+    border: 2px solid var(--cinza);
+    border-radius: 30px;
+    outline: none;
+    font-family: "Noah", sans-serif;
+    font-size: 15px;
+    color: #1F0008;
+    background-color: #FBF6EF;
+}
+
+.post-alertaExcluir {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px;
+    background-color: #FBF6EF;
+    border-radius: 15px;
+}
+
+.post-alertaExcluir i {
+    font-size: 24px;
+    color: #F42E31;
+}
+
+.post-alertaExcluir p {
+    font-family: "Noah", sans-serif;
+    color: #1F0008;
+    font-size: 14px;
+}
+
+.post-modalExcluir .post-modalContent {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    margin: 20px;
+}
+
+/* Scrollbar styling */
+.post-modalEditar::-webkit-scrollbar,
+.post-modalExcluir::-webkit-scrollbar {
+    width: 6px;
+}
+
+.post-modalEditar::-webkit-scrollbar-track,
+.post-modalExcluir::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.post-modalEditar::-webkit-scrollbar-thumb,
+.post-modalExcluir::-webkit-scrollbar-thumb {
+    background-color: var(--vinho);
+    border-radius: 10px;
+}
+
+.post-modalEditar::-webkit-scrollbar-thumb:hover,
+.post-modalExcluir::-webkit-scrollbar-thumb:hover {
+    background-color: #1F0008;
+}
+
+/* pequenas responsividades */
+@media screen and (max-width: 768px){
+    .post-modalCriar, .post-modalVisualizar, .post-modalEditar, .post-modalExcluir { 
+        width: 90%; 
+        max-width: 440px;
+    }
+}
