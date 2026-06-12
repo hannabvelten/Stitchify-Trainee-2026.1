@@ -12,10 +12,11 @@ class UsuariosController
     {
         $usuarios = App::get('database')->selectAll('tabela_usuarios');
 
+        $buca = $_GET['busca'] ??'';
+        $query = App::get('database')->table('tabela_usuaarios');
+
         return view('admin/crudUsuarios', compact('usuarios'));
 
-        $textoBusca = isset($_GET('busca')) ? $_GET('busca') : '';
-        $colunaBusca = $textoBusca !== '' ? ['name', 'email'] : null;
     }
     
     public function store()

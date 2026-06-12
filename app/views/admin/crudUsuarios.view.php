@@ -44,7 +44,7 @@
           <input
             type="text"
             placeholder="Busca por nome ou email"
-            class="busca-user"
+            class="busca-user" name="busca"
           />
           </form>
           <button class="criar-usuario">+ Criar Usuário</button>
