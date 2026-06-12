@@ -95,7 +95,7 @@
                 
                     <form class="caixa-pesquisa" action="/tabelapost" method="GET">
 
-                        <input type="text" placeholder="Buscar posts">
+                        <input type="text" placeholder="Buscar posts" name="busca">
 
                         <i class="bi bi-search"></i>
 
@@ -126,11 +126,11 @@
                                         <span><?= $post->id_post ?></span>
                                     </td>
                                     <td class="info-post">
-                                        <img src="../../../public/assets/posts/<?= $post->imagem?>" alt="Post">
+                                        <img src="../../../public/assets/posts/<?= $post->imagem?>" alt="Post" name="post">
                                         <p><?= $post->titulo ?></p>
                                     </td>
                                     <td class="info-autor"> <!--Arrumar por conta da chave estrangeira-->
-                                        <img src="../../../public/assets/usuarios/<?= $post->foto_autor?>" alt="Autor">
+                                        <img src="../../../public/assets/usuarios/<?= $post->foto_autor?>" alt="Autor" name="autor">
                                         <p><?= $post->nome_autor ?></p>
                                     </td>
                                     <td class="tag">

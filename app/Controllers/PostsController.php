@@ -30,8 +30,15 @@ class PostsController
         $totalPages = ceil($totalPosts/$limit);
 
         $posts = $database->paginate('tabela_posts', $limit, $offset);
+        
+        $busca = $_GET['busca'] ?? '';
+        $query = App::('database')->table('tabela_posts');
+        if (!empty($busca)) {
+        $query->where('titulo', 'LIKE', "%{$busca}%")
+          ->orWhere('conteudo', 'LIKE', "%{$busca}%");
+        }
 
-
+        $posts = $query->get();
 
         // $posts = App::get('database') -> selectAllPosts();
 
