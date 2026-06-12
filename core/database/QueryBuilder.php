@@ -34,6 +34,17 @@ class QueryBuilder
         $this->params[$column.'_or'] = $value;
         return $this;
     }
+    public function get()
+    {
+        $sql = "SELECT * FROM {$this->table}";
+        if (!empty($this->conditions)) {
+            $sql .= " WHERE " . implode(' ', $this->conditions);
+        }
+
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute($this->params ?? []);
+        return $stmt->fetchAll(PDO::FETCH_CLASS);
+    }
     public function selectAll($table)
     {
         $sql = "select * from {$table}";
