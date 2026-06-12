@@ -7,7 +7,7 @@ use App\Core\Router;
 
 $router->get('', 'ExampleController@index');
 
-$router->get('', 'UsuariosController@index');
+$router->get('crudUsuarios', 'UsuariosController@index');
 
 $router->get('crudUsuarios', 'UsuariosController@index');
 $router->post('crudUsuarios/create', 'UsuariosController@store');
