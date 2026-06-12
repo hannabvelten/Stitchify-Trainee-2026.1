@@ -7,7 +7,9 @@ use PDO, Exception;
 class QueryBuilder
 {
     protected $pdo;
-
+    protected $table;
+    protected $conditions = [];
+    protected params = [];
 
     public function __construct($pdo)
     {
