@@ -15,7 +15,11 @@ class QueryBuilder
     {
         $this->pdo = $pdo;
     }
-
+    public function table($table)
+    {
+        $this->table = $table;
+        return $this;
+    }
     public function selectAll($table)
     {
         $sql = "select * from {$table}";
