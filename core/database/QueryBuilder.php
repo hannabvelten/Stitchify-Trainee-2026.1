@@ -28,7 +28,12 @@ class QueryBuilder
         $this->params[$column] = $value;
         return $this;
     } 
-    
+    public function orWhere($column, $operator, $value)
+    {
+        $this->conditions[] = "OR {$column} {$operator} :{$column}_or";
+        $this->params[$column.'_or'] = $value;
+        return $this;
+    }
     public function selectAll($table)
     {
         $sql = "select * from {$table}";
