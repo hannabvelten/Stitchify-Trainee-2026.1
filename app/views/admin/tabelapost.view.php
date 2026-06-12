@@ -10,6 +10,7 @@
 
     <link rel="stylesheet" href="../../../public/css/tabelapost.css">
     <link rel="stylesheet" href="../../../public/css/modais.css">
+    <link rel="stylesheet" href="../../../public/css/modais-posts.css">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
@@ -428,17 +429,17 @@
     </div>
 
     <!-- Modal Criar Post -->
-    <form class="modalCriar" id="modalCriar" action="/tabelapost/create" method="POST" enctype="multipart/form-data">
+    <form class="post-modalCriar" id="modalCriar" action="/tabelapost/create" method="POST" enctype="multipart/form-data">
 
-        <div class="header">
+        <div class="post-modal-header">
             <img src="../../../public/assets/Novelo_cortado.png" alt="">
             <p>Criar Post</p>
         </div>
 
-        <div class="formContent">
+        <div class="post-formContent">
             <!-- Upload Imagem -->
             <div class="upload">
-                <label class="uploadImage" for="imagemPost">
+                <label class="post-uploadImage" for="imagemPost">
                     <i class="bi bi-cloud-arrow-up-fill"></i>
                     <p>Arraste uma nova imagem ou <b>clique para fazer upload</b></p>
                 </label>
@@ -446,26 +447,26 @@
             </div>
 
             <!-- Título -->
-            <div class="titulo">
+            <div class="post-titulo">
                 <label>Título do Post*</label>
                 <input type="text" name="titulo" placeholder="Digite o título do post" required>
             </div>
 
             <!-- Descrição -->
-            <div class="descricao">
+            <div class="post-descricao">
                 <label>Descrição*</label>
                 <textarea type="text" name="descricao" placeholder="Digite a descrição" required></textarea>
             </div>
 
             <!-- Categorias -->
-            <div class="categoria">
+            <div class="post-categoria">
                 <label>Categoria(s)*</label>
                 <input type="text" name="categoria" placeholder="Adicione categorias (ex: tutoriais, roupas e etc)">
             </div>
 
-            <div class="modalActions">
-                <button class="btnCancel" type="button" onclick="fecharModal('modalCriar')">Cancelar</button>
-                <button class="btnCreate" type="submit">Criar</button>
+            <div class="post-modalActions">
+                <button class="post-btnCancel" type="button" onclick="fecharModal('modalCriar')">Cancelar</button>
+                <button class="post-btnCreate" type="submit">Criar</button>
             </div>
         </div>
 
@@ -473,15 +474,15 @@
     
     <?php foreach($posts as $post): ?>
         <!-- Modal Visualizar Post -->
-        <div class="modalVisualizar" id="modalVisualizar-<?= $post->id_post ?>">
-            <div class="header">
+        <div class="post-modalVisualizar" id="modalVisualizar-<?= $post->id_post ?>">
+            <div class="post-modal-header">
                 <img src="../../../public/assets/Novelo_cortado.png" alt="">
                 <p>Visualizar Post</p>
             </div>
 
-            <div class="modalContent">
+            <div class="post-modalContent">
                 <!-- Imagem Post -->
-                <div class="imagem">
+                <div class="post-imagem">
                     <img src="../../../public/assets/posts/<?= $post->imagem ?>" alt="Imagem Post">
                 </div>
 
@@ -534,9 +535,9 @@
         </div>
 
         <!-- Modal Editar Post -->
-        <form class="modalVisualizar" id="modalEditar-<?= $post->id_post ?>" method="POST" action="/tabelapost/update" enctype="multipart/form-data">
+        <form class="post-modalEditar" id="modalEditar-<?= $post->id_post ?>" method="POST" action="/tabelapost/update" enctype="multipart/form-data">
 
-            <div class="header">
+            <div class="post-modal-header">
 
                 <img src="../../../public/assets/Novelo_cortado.png" alt="Logo">
 
@@ -544,14 +545,14 @@
 
             </div>
 
-            <div class="modalContent">
+            <div class="post-editContent">
 
                 <!-- Imagem -->
-                <label class="uploadImage" for="editarImagem-<?= $post->id_post ?>">
+                <label class="post-uploadImage" for="editarImagem-<?= $post->id_post ?>">
 
-                    <img src="../../../public/assets/posts/<?= $post->imagem?>" alt="Imagem Post" class="imagemEditar">
+                    <img src="../../../public/assets/posts/<?= $post->imagem?>" alt="Imagem Post" class="post-imagemEditar">
 
-                    <div class="overlayImagem">
+                    <div class="post-overlayImagem">
 
                         <i class="bi bi-cloud-arrow-up-fill"></i>
 
@@ -570,9 +571,9 @@
                 <input type="hidden" name="id_post" value="<?= $post->id_post ?>">
 
                 <!-- Titulo -->
-                <div class="titulo">
+                <div class="post-titulo">
 
-                    <div class="tituloIcone">
+                    <div class="post-tituloIcone">
 
                         <label>Título do Post</label>
 
@@ -585,9 +586,9 @@
                 </div>
 
                 <!-- Descrição -->
-                <div class="descricao">
+                <div class="post-descricao">
 
-                    <div class="tituloIcone">
+                    <div class="post-tituloIcone">
 
                         <label>Descrição</label>
 
@@ -602,9 +603,9 @@
                 </div>
 
                 <!-- Categorias -->
-                <div class="categoria">
+                <div class="post-categoria">
 
-                    <div class="tituloIcone">
+                    <div class="post-tituloIcone">
 
                         <label>Categoria(s)</label>
 
@@ -617,11 +618,11 @@
                 </div>
 
                 <!-- Data -->
-                <div class="data">
+                <div class="post-data">
 
                     <label>Data de Criação</label>
 
-                    <div class="input-data">
+                    <div class="post-input-data">
 
                         <?= date('d/m/Y', strtotime($post->data)) ?>
 
@@ -630,15 +631,15 @@
                 </div>
 
                 <!-- Botoes -->
-                <div class="modalActions">
+                <div class="post-modalActions">
 
-                    <button type="button" class="btnCancel" onclick="fecharModal('modalEditar-<?= $post->id_post ?>')">
+                    <button type="button" class="post-btnCancel" onclick="fecharModal('modalEditar-<?= $post->id_post ?>')">
 
                         Fechar
 
                     </button>
 
-                    <button type="submit" class="btnCreate">
+                    <button type="submit" class="post-btnCreate">
 
                         Confirmar
 
