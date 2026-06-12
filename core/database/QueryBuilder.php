@@ -15,7 +15,7 @@ class QueryBuilder
     {
         $this->pdo = $pdo;
     }
-    
+
     public function table($table)
     {
         $this->table = $table;
@@ -36,6 +36,17 @@ class QueryBuilder
         return $this;
     }
 
+    public function get()
+    {
+        $sql = "SELECT * FROM {$this->table}";
+        if (!empty($this->conditions)) {
+            $sql .= " WHERE " . implode(' ', $this->conditions);
+        }
+
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute($this->params ?? []);
+        return $stmt->fetchAll(PDO::FETCH_CLASS);
+    } 
     public function selectAll($table)
     {
         $sql = "select * from {$table}";
