@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'NoahBold';
-    src: url(../assets/Fonts/noah-bold.otf);
+    src: url(../fontes/noah-bold.otf);
 }
 
 * {
@@ -43,9 +43,6 @@ footer {
     gap: 8px;
 }
 
-.redes-sociais p {
-    margin-right: 20px;
-}
 
 .redes-sociais p {
     font-size: 20px;

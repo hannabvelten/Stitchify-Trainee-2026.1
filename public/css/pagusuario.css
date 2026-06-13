@@ -1,16 +1,16 @@
 @font-face {
     font-family: 'Noah-Regular';
-    src: url(../assets/Fonts/noah-regular.otf);
+    src: url(../fontes/noah-regular.otf);
 }
 
 @font-face {
     font-family: 'Noah-Bold';
-    src: url(../assets/Fonts/noah-bold.otf);
+    src: url(../fontes/noah-bold.otf);
 }
 
 @font-face {
     font-family: 'Baloo';
-    src: url(../assets/Fonts/Baloo-Regular.ttf);
+    src: url(../fontes/Baloo-Regular.ttf);
 }
 
 * {
@@ -24,8 +24,6 @@ html, body{
 }
 main {
     display: flex;
-
-
 }
 
 .sidebar {
@@ -39,21 +37,21 @@ main {
 
 .paginausers {
     width: 80%;
-    padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    background-color: #FBF6EF;
+    background-color: #FEF3E2;
     min-height: 100vh;
 }
 
 .topo {
-    width: 100%;
+    background-color: #FAD2E1;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: 'Noah-Regular';
-
+    padding: 1rem 2rem;
+    border-radius: 0 0 1.8rem 1.8rem;
+    box-shadow: 0 0.2rem 0.5rem rgba(0,0,0,0.15);
 }
 
 .box-perfiladm {
@@ -73,14 +71,6 @@ main {
     flex-direction: column;
 }
 
-.linha {
-    border: none;
-    width: calc(100% + 40px);
-    height: 1px;
-    background-color: #67635E;
-    align-self: stretch;
-    margin-left: -20px;
-}
 
 .usuarios {
     display: flex;
@@ -99,6 +89,7 @@ main {
     align-items: center;
     color: #770523;
     position: relative;
+    padding: 0 15px;
 }
 
 .box-criauser img {
@@ -110,20 +101,21 @@ main {
     width: 160px;
     height: 40px;
     border: none;
-    border-radius: 10px;
+    border-radius: 20px;
     background-color: #770523;
     color: white;
     font-size: 16px;
 }
 
-.busca {
+.busca-user {
     width: 500px;
     height: 35px;
-    border: 1px solid #D6C5C5;
     font-family: 'Noah-Regular';
     color: #67635E;
-    border-radius: 10px;
+    border-radius: 20px;
     padding-left: 30px;
+    border: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.30);
     
 
 }
@@ -134,46 +126,48 @@ main {
 }
 .lupa {
     position: absolute;
-    left: 10px;
+    left: 25px;
 }
-
 .box-users {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    border: 1px solid #67635E;
-    border-radius: 10px;
+    border-radius: 30px;
     padding-left: 10px;
+    padding-right: 10px;
     padding-top: 15px;
+    margin: 15px;
     background-color: #C1CA8B;
     flex: 1;
 }
 
 .cabecalho {
     width: 100%;
-    font-family: 'Noah-Bold';
     font-weight: 100;
     overflow: hidden;
     background-color: #C1CA8B;
     border-collapse: separate;
     border-spacing: 0 10px;
-    padding-right: 10px;
 
 }
 
 th,
 td {
     padding: 15px;
-    background-color: white;
+    background-color: #FEF3E2;
 
 }
-
+td{
+    font-family: 'Noah-Bold';
+}
 th {
     text-align: left;
+     font-family: 'Baloo';
+     font-size: 23px;
 }
 
 thead th {
-    background-color: #F7EFE6;
+    background-color: #C1CA8B;
     color: #770523;
 }
 
@@ -194,32 +188,26 @@ thead th {
 
 }
 
-.acoesc img {
-    display: block;
-}
-
-.bvisualizar {
-    display: none;
-}
-
-.filtro {
-    display: none;
-}
-
 .acoesc button {
     border: none;
     border-radius: 5px;
-    padding: 5px;
-    background-color: #FEF3E2;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.30);
+
+    
 
 }
-.bvisualização {
-    display: none;
+
+.btn-visualizar img, .editar img, .deletar img{
+    display: flex;
+    align-items: center;
+    width: 15px;
 }
 
 .adm {
     border-radius: 20px;
-    background-color: #DBB8C1;
+    background-color: #FAD2E1;
     color: #770523;
     width: 100px;
     align-items: center;
@@ -227,9 +215,9 @@ thead th {
 
 }
 
-.usuario {
+.usuario{
     border-radius: 20px;
-    background-color: #FEF3E2;
+    background-color: #FAD2E1;
     color: #8B7149;
     width: 100px;
     align-items: center;
@@ -247,14 +235,22 @@ thead th {
 }
 
 .paginacao button {
-    font-family: 'Noah-Regular';
-    width: 40px;
-    height: 40px;
+    width: 2.3rem;
+    height: 2.3rem;
+
+    border: none;
+
+    border-radius: 0.6rem;
+
     background-color: white;
-    border: 0.5px solid #67635E;
-    color: #67635E;
-    border-radius: 5px;
-    font-size: 16px;
+
+    color: #770523;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+    font-weight: bold;
 }
 
 .paginacao .pag1 {
@@ -271,20 +267,6 @@ thead th {
     body{
         overflow-x: hidden;
     }
-    .sidebar {
-        width: 100%;
-        height: 80px;
-        display: flex;
-        align-items: center;
-        padding-left: 30px;
-        background-color: #770523;
-        background-image: url(../assets/newstitchify.png);
-        background-size: 170px;
-        background-repeat: no-repeat;
-        background-position: 10% center;
-
-    }
-
     .paginausers {
         width: 100%;
         padding: 0px;
@@ -295,33 +277,21 @@ thead th {
         flex-direction: column;
         align-items: flex-start;
         justify-content: center;
+        font-size: 10px;
     }
 
-    .bsidebar {
-        display: block;
-        background: none;
-        border: none;
-        
-
-    }
-
-    .bsidebar img {
-        width: 25px;
-        height: 25px;
-    }
 
     .usuarios {
         display: flex;
         padding-top: 10px;
         align-items: center;
-        font-size: 25px;
-        padding-left: 20px;
+        font-size: 22px;
     }
 
     .usuarios img {
-        display: none;
+        width: 37px;
     }
-
+    
     .box-perfiladm {
         display: none;
         overflow-y: auto;
@@ -330,7 +300,6 @@ thead th {
     .box-criauser {
         display: flex;
         flex-direction: column;
-        position: relative;
     }
 
     .box-criauser input {
@@ -343,8 +312,8 @@ thead th {
 
     .box-criauser img {
         position: absolute;
-        left: 20px;
-        top: 13px;
+        left: 30px;
+        top: 11px;
     }
 
     .box-criauser button {
@@ -368,6 +337,9 @@ thead th {
     th,
     td {
         white-space: nowrap;
+    }
+    .paginacao{
+        padding-left: 1rem;
     }
    .paginacao button{
     display: flex;
