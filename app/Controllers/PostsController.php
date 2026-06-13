@@ -15,7 +15,7 @@ class PostsController
     {
 
         $database = App::get('database');
-
+        
         $limit = 5;
 
         $currentPage = isset($_GET['page']) ? (int)$_GET['page']:1;
@@ -30,8 +30,15 @@ class PostsController
         $totalPages = ceil($totalPosts/$limit);
 
         $posts = $database->paginate('tabela_posts', $limit, $offset);
+        
+        $busca = $_GET['busca'] ?? '';
+        $query = App::get('database')->table('tabela_posts');
+        if (!empty($busca)) {
+        $query->where('titulo', 'LIKE', "%{$busca}%")
+          ->orWhere('categoria', 'LIKE', "%{$busca}%");
+        }
 
-
+        $posts = $query->get();
 
         // $posts = App::get('database') -> selectAllPosts();
 

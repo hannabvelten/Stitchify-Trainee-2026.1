@@ -7,13 +7,46 @@ use PDO, Exception;
 class QueryBuilder
 {
     protected $pdo;
-
+    protected $table;
+    protected $conditions = [];
+    protected params = [];
 
     public function __construct($pdo)
     {
         $this->pdo = $pdo;
     }
 
+    public function table($table)
+    {
+        $this->table = $table;
+        return $this;
+    }
+
+    public function where($column, $operator, $value)
+    {
+        $this->conditions[] = "{$column} {$operator} :{$column}";
+        $this->params[$column] = $value;
+        return $this;
+    }
+
+    public function orWhere($column, $operator, $value)
+    {
+        $this->conditions[] = "OR {$column} {$operator} :{$column}_or";
+        $this->params[$column.'_or'] = $value;
+        return $this;
+    }
+
+    public function get()
+    {
+        $sql = "SELECT * FROM {$this->table}";
+        if (!empty($this->conditions)) {
+            $sql .= " WHERE " . implode(' ', $this->conditions);
+        }
+
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute($this->params ?? []);
+        return $stmt->fetchAll(PDO::FETCH_CLASS);
+    } 
     public function selectAll($table)
     {
         $sql = "select * from {$table}";
