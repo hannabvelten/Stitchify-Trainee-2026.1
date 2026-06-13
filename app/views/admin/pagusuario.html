@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de usuários</title>
+    <link rel="stylesheet" href="../../../public/css/pagusuario.css" />
+    <link rel="stylesheet" href="../../../public/css/criauser.css" />
+    <link rel="stylesheet" href="../../../public/css/visualizacao.css" />
+    <link rel="stylesheet" href="../../../public/css/edituser.css" />
+    <link rel="stylesheet" href="../../../public/css/deleteuser.css" />
+  </head>
+
+  <body>
+    <main>
+      <div class="sidebar"></div>
+      <div class="paginausers">
+        <div class="topo">
+          <div class="usuarios">
+            <img src="../../../public/assets/iconeuser.svg" alt="iconeuser" />
+            <h2>Tabela de usuários</h2>
+          </div>
+          <div class="box-perfiladm">
+            <div class="admin">
+              <img
+                src="../../../public/assets/PersonCircle.svg"
+                alt="iconeperfil"
+              />
+              <div class="textoadmin">
+                <p>Ola, Admin</p>
+                <p>Administrador</p>
+              </div>
+            </div>
+            <img
+              src="../../../public/assets/Down Arrow.svg"
+              alt="iconemaisadmin"
+            />
+          </div>
+        </div>
+        <div class="box-criauser">
+          <img src="../../../public/assets/lupa.svg" alt="lupa" class="lupa" />
+          <input
+            type="text"
+            placeholder="Busca por nome ou email"
+            class="busca-user"
+          />
+          <button class="criar-usuario">+ Criar Usuário</button>
+        </div>
+        <div class="box-users">
+          <table class="cabecalho">
+            <thead>
+              <tr>
+                <th class="user">USUÁRIO</th>
+                <th class="email">EMAIL</th>
+                <th class="tipo">TIPO</th>
+                <th class="iduser">ID DO USUÁRIO</th>
+                <th>AÇÕES</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="nomec">
+                  <img
+                    src="../../../public/assets/PersonCircle.svg"
+                    alt=""
+                  />Nome do usuário
+                </td>
+                <td class="emailc">user.email@email.com</td>
+                <td class="tipoc">
+                  <span class="adm"> Admin</span>
+                </td>
+                <td class="iduser">
+                  <p>000000000</p>
+                </td>
+                <td class="acoesc">
+                  <button class="btn-visualizar">
+                    <img
+                      src="../../../public/assets/icones-acoes/Eye.svg"
+                      alt="visualizar"
+                    />
+                  </button>
+                  <button class="editar">
+                    <img
+                      src="../../../public/assets/icones-acoes/Pencil.svg"
+                      alt="editar"
+                    />
+                  </button>
+                  <button class="deletar">
+                    <img
+                      src="../../../public/assets/icones-acoes/Trash.svg"
+                      alt="deletar"
+                    />
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td class="nomec">
+                  <img
+                    src="../../../public/assets/PersonCircle.svg"
+                    alt=""
+                  />Nome do usuário
+                </td>
+                <td class="emailc">user.email@email.com</td>
+                <td class="tipoc">
+                  <span class="usuario"> Usuário</span>
+                </td>
+                <td class="iduser">
+                  <p>000000000</p>
+                </td>
+                <td class="acoesc">
+                  <button class="btn-visualizar">
+                    <img
+                      src="../../../public/assets/icones-acoes/Eye.svg"
+                      alt="visualizar"
+                    />
+                  </button>
+                  <button class="editar">
+                    <img
+                      src="../../../public/assets/icones-acoes/Pencil.svg"
+                      alt="editar"
+                    />
+                  </button>
+                  <button class="deletar">
+                    <img
+                      src="../../../public/assets/icones-acoes/Trash.svg"
+                      alt="deletar"
+                    />
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td class="nomec">
+                  <img
+                    src="../../../public/assets/PersonCircle.svg"
+                    alt=""
+                  />Nome do usuário
+                </td>
+                <td class="emailc">user.email@email.com</td>
+                <td class="tipoc">
+                  <span class="usuario"> Usuário</span>
+                </td>
+                <td class="iduser">
+                  <p>000000000</p>
+                </td>
+                <td class="acoesc">
+                  <button class="btn-visualizar">
+                    <img
+                      src="../../../public/assets/icones-acoes/Eye.svg"
+                      alt="visualizar"
+                    />
+                  </button>
+                  <button class="editar">
+                    <img
+                      src="../../../public/assets/icones-acoes/Pencil.svg"
+                      alt="editar"
+                    />
+                  </button>
+                  <button class="deletar">
+                    <img
+                      src="../../../public/assets/icones-acoes/Trash.svg"
+                      alt="deletar"
+                    />
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td class="nomec">
+                  <img
+                    src="../../../public/assets/PersonCircle.svg"
+                    alt=""
+                  />Nome do usuário
+                </td>
+                <td class="emailc">user.email@email.com</td>
+                <td class="tipoc">
+                  <span class="usuario"> Usuário</span>
+                </td>
+                <td class="iduser">
+                  <p>000000000</p>
+                </td>
+                <td class="acoesc">
+                  <button class="btn-visualizar">
+                    <img
+                      src="../../../public/assets/icones-acoes/Eye.svg"
+                      alt="visualizar"
+                    />
+                  </button>
+                  <button class="editar">
+                    <img
+                      src="../../../public/assets/icones-acoes/Pencil.svg"
+                      alt="editar"
+                    />
+                  </button>
+                  <button class="deletar">
+                    <img
+                      src="../../../public/assets/icones-acoes/Trash.svg"
+                      alt="deletar"
+                    />
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td class="nomec">
+                  <img
+                    src="../../../public/assets/PersonCircle.svg"
+                    alt=""
+                  />Nome do usuário
+                </td>
+                <td class="emailc">user.email@email.com</td>
+                <td class="tipoc">
+                  <span class="usuario"> Usuário</span>
+                </td>
+                <td class="iduser">
+                  <p>000000000</p>
+                </td>
+                <td class="acoesc">
+                  <button class="btn-visualizar">
+                    <img
+                      src="../../../public/assets/icones-acoes/Eye.svg"
+                      alt="visualizar"
+                    />
+                  </button>
+                  <button class="editar">
+                    <img
+                      src="../../../public/assets/icones-acoes/Pencil.svg"
+                      alt="editar"
+                    />
+                  </button>
+                  <button class="deletar">
+                    <img
+                      src="../../../public/assets/icones-acoes/Trash.svg"
+                      alt="deletar"
+                    />
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="paginacao">
+            <button class="voltar"><</button>
+            <button class="pag1">1</button>
+            <button class="pag2">2</button>
+            <button class="pag3">3</button>
+            <button>...</button>
+            <button class="pag 5">5</button>
+            <button class="proximo">></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-criaruser hide">
+        <div class="fade-criaruser"></div>
+        <form class="modalc">
+          <div class="topo-modal">
+            <div class="criauser-modal">
+              <img
+                src="../../../public/assets/Logo-novelo.svg"
+                alt=""
+                class="novelo-modal"
+              />
+              <p>Criar Usuário</p>
+            </div>
+          </div>
+          <div class="inputs-modal">
+            <p>Nome Completo</p>
+            <input type="text" placeholder="Nome Completo" />
+            <p>Email</p>
+            <input type="text" placeholder="Email" />
+            <p>Senha</p>
+            <input type="text" placeholder="Senha" />
+            <div class="foto">
+              <p>Foto do Usuário</p>
+              <div class="foto-container">
+              <button type="button" class="foto-usuario">
+                <img
+                  src="../../../public/assets/adicioanar-foto.svg"
+                  alt=""
+                  class="adicioanar-foto"
+                  id="fotoIcon"
+                />
+                <img src="" alt="Preview" id="fotoPreview" style="display: none;">
+              </button>
+              <input type="file" id="foto-usuario" name="foto-usuario" hidden />
+            </div>
+          </div>
+          <div class="botoes-modal">
+            <button type="button" class="cancelar-modal">Cancelar</button>
+            <button type="button" class="criar-modal">Criar Usuário</button>
+          </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="fadev hide"></div>
+      <div class="modal-visualizar hide">
+        <div class="modalv">
+          <div class="topov">
+            <div class="visualizacao">
+              <img
+                src="../../../public/assets/Logo-novelo.svg"
+                alt=""
+                class="novelov"
+              />
+              <p>Visualizar Usuário</p>
+            </div>
+          </div>
+          <div class="container">
+            <div class="identificacao">
+              <div class="imagem">
+                <img
+                  src="../../../public/assets/perfil usuario.svg"
+                  alt=""
+                  class="perfilv"
+                />
+              </div>
+              <div class="conteudov">
+                <p>Nome de Usuário</p>
+                <p class="admv">Admin</p>
+              </div>
+            </div>
+            <div class="conteudov">
+              <table class="tconteudo">
+                <tr>
+                  <td>Email</td>
+                  <td>user.email@email.com</td>
+                </tr>
+                <tr>
+                  <td>ID do Usuário</td>
+                  <td>000000000</td>
+                </tr>
+              </table>
+            </div>
+            <div class="rodapev">
+              <button class="fechar">Fechar</button>
+              <img
+                src="../../../public/assets/Frame 76.svg"
+                alt=""
+                class="flor"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="fade-edit hide" id="fade-edit"></div>
+      <div class="modal-editar hide" id="modal-editar">
+        <form class="modaledit" id="modaledit" action="" method="post" enctype="multipart/form-data"> 
+          <div class="topo-edit">
+            <img src="../../../public/assets/Novelo_cortado.png" alt="" />
+            <p>Editar Usuário</p>
+          </div>
+
+          <div class="edit-form">
+            <div class="edit-nome">
+              <label>Nome Completo:</label>
+              <input
+                type="text"
+                name="nome"
+                placeholder="Nome completo"
+                required
+              />
+            </div>
+
+            <div class="edit-email">
+              <label>Novo Email:</label>
+              <input type="email" name="email" placeholder="Email atual" required />
+            </div>
+
+            <div class="edit-senha">
+              <label>Nova Senha:</label>
+              <input type="password" name="senha" placeholder="Senha atual" required />
+            </div>
+
+            <div class="edit-foto">
+              <p>Foto do Usuário</p>
+              <div class="foto-container">
+                <button type="button" class="foto-usuario" id="btnFotoEdit">
+                  <img src="../../../public/assets/adicioanar-foto.svg" alt="" class="nova-foto" id="fotoIconEdit" />
+                  <img src="" alt="Preview" id="fotoPreviewEdit" style="display: none;">
+                </button>
+                <input type="file" id="inputFotoEdit" name="foto" hidden />
+              </div>
+            </div>
+
+            <div class="botoes-edit">
+              <button class="cancel" type="button">Cancelar</button>
+              <button class="confirm" type="submit">
+                Confirmar alterações
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="fade-delete hide" id="fade-delete"></div>
+      <div class="modal-deletar hide" id="modal-deletar">
+        <form class="modaldelete" id="modaldelete" action="" method="post">
+          <div class="box-delete">
+            <span class="vetor-atencao">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-triangle-alert-icon lucide-triangle-alert"
+              >
+                <path
+                  d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"
+                />
+                <path d="M12 9v4" />
+                <path d="M12 17h.01" />
+              </svg>
+            </span>
+
+            <div class="title-delete">
+              <p>Deletar Usuário</p>
+            </div>
+
+            <div class="text-delete">
+              <p>Você tem certeza que deseja deletar este usuário?</p>
+              <p>Esta ação não poderá ser desfeita.</p>
+            </div>
+
+            <div class="button-delete">
+              <button class="cancel-delete" type="button">
+                Não, mantê-lo.
+              </button>
+              <button class="confirm-delete" type="submit">
+                Sim, deletar!
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </main>
+    <script src="../../../public/js/visualizar.js"></script>
+    <script src="../../../public/js/criarusuario.js"></script>
+    <script src="../../../public/js/editarusuario.js"></script>
+    <script src="../../../public/js/deletarusuario.js"></script>
+  </body>
+</html>
