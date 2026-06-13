@@ -160,5 +160,31 @@ class PostsController
         ]);
     }
 
+    public function postIndividual(){
+        $database = App::get('database');
+
+        $id = isset($_GET['id_post']) ? (int)$_GET['id_post'] : null;
+
+        if(!$id){
+            header('Location: /landing-page');
+            exit;
+        }
+
+        $post = $database->findPost($id);
+
+        if (!$post) {
+            header('Location: /landing-page');
+            exit;
+        }
+
+         $postsDoAutor = $database->getPostsByAutor($post['autor']);
+
+        return view('site/Post-individual', [
+            'post' => $post,
+            'postsDoAutor' => $postsDoAutor,
+        ]);
+
+    }
+
 
 }

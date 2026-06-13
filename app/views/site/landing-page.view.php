@@ -173,7 +173,7 @@
                                 <p><b><?= $post->nome_autor ?></b></p>
                                 <p><?= $post->descricao ?></p>
                                 
-                                <button>Ver mais</button>
+                                <a href="/Post-individual?id_post=<?= $post->id_post ?>">Ver mais</a>
                             </div>
                         <?php endforeach ?>
                         <!-- <div class="card-blog">

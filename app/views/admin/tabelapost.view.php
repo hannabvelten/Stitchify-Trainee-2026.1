@@ -354,7 +354,7 @@
                         </div>
                     </div> -->
 
-                    <?php if($totalPages >= 1):?>
+                    <?php if($totalPages > 1):?>
                         <div class="paginacao-container">
                             <ul class="paginacao">
                                 <li>
@@ -371,7 +371,7 @@
                                     <a href="?page=1" class="<?= $currentPage == 1 ? 'active' : ''?>">1</a>
                                 </li> 
                                 
-                                <?php if ($start > 3):?>
+                                <?php if ($start > 2):?>
                                     <li><span class="dots">...</span>></li>
                                 <?php endif; ?>
 

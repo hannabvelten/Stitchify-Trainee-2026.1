@@ -14,3 +14,4 @@ $router->post('tabelapost/delete', 'PostsController@destroy');
 
 
 $router->get('landing-page', 'PostsController@landingPage');
+$router->get('Post-individual', 'PostsController@postIndividual');
