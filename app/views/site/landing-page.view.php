@@ -13,6 +13,10 @@
 </head>
 
 <body>
+    <div class="navbar">
+        <?php require("app/views/site/navbar.php")?>
+    </div>
+    
     <!--Hero-Section-->
     <div class="hero-section">
 
@@ -256,6 +260,10 @@
         <p>Cada ponto conta uma história - e a sua também
             merece ser compartilhada.
         </p>
+    </div>
+
+    <div class="footer">
+        <?php require("app/views/site/footer.php")?>
     </div>
 
     <script src="../../../public/js/landingpage.js"></script>

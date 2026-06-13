@@ -10,17 +10,6 @@
 
 }
 
-body {
-    color: #770523;
-    overflow-x: hidden;
-    flex-direction: column;
-    min-height: 100vh;
-    display: flex;
-    font-family: 'NoahBold';
-    background-color: #ffffff;
-
-}
-
 footer {
     margin-top: auto;
     text-align: center;

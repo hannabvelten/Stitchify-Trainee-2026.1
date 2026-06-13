@@ -35,7 +35,7 @@ class PostsController
         $query = App::get('database')->table('tabela_posts');
         if (!empty($busca)) {
         $query->where('titulo', 'LIKE', "%{$busca}%")
-          ->orWhere('categoria', 'LIKE', "%{$busca}%");
+        ->orWhere('categoria', 'LIKE', "%{$busca}%");
         }
 
         $posts = $query->get();
@@ -184,7 +184,7 @@ class PostsController
             exit;
         }
 
-         $postsDoAutor = $database->getPostsByAutor($post['autor']);
+        $postsDoAutor = $database->getPostsByAutor($post['autor']);
 
         return view('site/Post-individual', [
             'post' => $post,

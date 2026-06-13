@@ -21,12 +21,6 @@
   --font-secondary: 'Noah', sans-serif;
 }
 
-body {
-  font-family: var(--font-primary);
-  margin: 0;
-  padding: 0;
-}
-
 header.navbar {
   display: flex;
   align-items: center;
@@ -38,7 +32,7 @@ header.navbar {
 }
 
 .navbar-logo img {
-  height: 16rem;
+  height: 3rem;
   width: auto;
 }
 
