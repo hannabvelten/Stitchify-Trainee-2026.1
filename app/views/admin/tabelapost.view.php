@@ -25,7 +25,6 @@
     <div class="layout">
 
         <aside class="sidebar">
-    
         </aside>
 
         <main class="conteudo">
