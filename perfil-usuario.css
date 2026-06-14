@@ -73,7 +73,7 @@ body{
 .boas-vindas p{
 
     font-family: 'Noah';
-    font-size: 1rem;
+    font-size: 1.5rem;
     color: #1F0008;
 }
 
@@ -248,48 +248,31 @@ body{
 
 }
 
-/* =========================
-   LISTA DE POSTS
-========================= */
 
 .lista-posts{
 
     display: flex;
     width: 85rem;
     padding: 0.9375rem 4.8125rem;
-
     flex-direction: column;
-
     gap: 1.25rem;
-
     justify-content: flex-start;
     align-items: stretch;
 }
 
-/* =========================
-   CARD DO POST
-========================= */
 
 .card-post{
+   
     display: flex;
     align-items: center;
-
     width: 100%;
-
     padding: 0.9375rem;
-
     gap: 1.25rem;
-
     border-radius: 0.9375rem;
-
     background: #C1CA8B;
-
     box-shadow: 4px 4px 4px rgba(0,0,0,0.30);
 }
 
-/* =========================
-   IMAGEM DO POST
-========================= */
 
 .imagem-post{
 
@@ -300,15 +283,10 @@ body{
     align-items: flex-start;
     gap: 0.625rem;
     flex-shrink: 0;
-
     border-radius: 0.9375rem;
-
     object-fit: cover;
 }
 
-/* =========================
-   INFORMAÇÕES DO POST
-========================= */
 
 .informacoes-post{
 
@@ -322,9 +300,7 @@ body{
     flex: 1;
 }
 
-/* =========================
-   TÍTULO E DATA
-========================= */
+
 
 .titulo-data-post{
 
@@ -334,9 +310,6 @@ body{
     align-self: stretch;
 }
 
-/* =========================
-   TÍTULO DO POST
-========================= */
 
 .titulo-post{
 
@@ -353,9 +326,6 @@ body{
     line-height: normal;
 }
 
-/* =========================
-   DATA
-========================= */
 
 .data-post{
 
@@ -384,9 +354,6 @@ body{
     line-height: normal;
 }
 
-/* =========================
-   DESCRIÇÃO DO POST
-========================= */
 
 .descricao-post{
 
@@ -406,9 +373,6 @@ body{
     line-height: 1.4;
 }
 
-/* =========================
-   CATEGORIAS
-========================= */
 
 .categorias-post{
 
@@ -418,9 +382,6 @@ body{
     align-self: stretch;
 }
 
-/* =========================
-   CATEGORIA PADRÃO
-========================= */
 
 .categoria-post{
 
@@ -442,18 +403,14 @@ body{
     line-height: normal;
 }
 
-/* =========================
-   CATEGORIA MAIOR
-========================= */
+
 
 .categoria-material{
 
     width: 6.25rem;
 }
 
-/* =========================
-   AÇÕES DO POST
-========================= */
+
 
 .acoes-post{
 
@@ -465,9 +422,7 @@ body{
     gap: 1.25rem;
 }
 
-/* =========================
-   ESTILO BASE DOS BOTÕES
-========================= */
+
 
 .botao-visualizar,
 .botao-editar-post{
@@ -478,15 +433,11 @@ body{
     padding: 0.3125rem;
     justify-content: center;
     align-items: center;
-
     border-radius: 0.625rem;
     border: 2px solid rgba(0, 0, 0, 0.60);
     background: #FFF;
-
     box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.50);
-
     cursor: pointer;
-
     color: rgba(0, 0, 0, 0.60);
     font-family: 'Noah';
     font-size: 1.375rem;
@@ -495,27 +446,17 @@ body{
     line-height: normal;
 }
 
-/* =========================
-   BOTÃO VISUALIZAR
-========================= */
+
 
 .botao-visualizar{
 
     gap: 0.3125rem;
 }
 
-/* =========================
-   BOTÃO EDITAR
-========================= */
-
 .botao-editar-post{
 
     gap: 0.625rem;
 }
-
-/* =========================
-   BOTÃO DELETAR
-========================= */
 
 .botao-deletar-post{
 
@@ -526,15 +467,11 @@ body{
     justify-content: center;
     align-items: center;
     gap: 0.625rem;
-
     border-radius: 0.625rem;
     border: 2px solid #770523;
     background: #FFF;
-
     box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.50);
-
     cursor: pointer;
-
     color: #770523;
     font-family: 'Noah';
     font-size: 1.375rem;
@@ -543,9 +480,6 @@ body{
     line-height: normal;
 }
 
-/* =========================
-   ÍCONES DOS BOTÕES
-========================= */
 
 .botao-visualizar i,
 .botao-editar-post i,
@@ -553,14 +487,11 @@ body{
 
     width: 1.5625rem;
     height: 1.5625rem;
-
     flex-shrink: 0;
     aspect-ratio: 1 / 1;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     font-size: 1.25rem;
 }
 
