@@ -108,12 +108,12 @@
                         
                         <thead class="cabecalho-tabela">
                             <tr>
-                                <th><span>ID</span></th>
-                                <th><span>Título</span></th>
-                                <th><span>Autor</span></th>
-                                <th><span>Categoria</span></th>
-                                <th><span>Data</span></th>
-                                <th><span>Ações</span></th>
+                                <th>ID</th>
+                                <th>Título</th>
+                                <th>Autor</th>
+                                <th>Categoria</th>
+                                <th>Data</th>
+                                <th>Ações</th>
                             </tr>
                             
                         </thead>

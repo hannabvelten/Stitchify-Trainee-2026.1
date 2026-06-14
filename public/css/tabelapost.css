@@ -203,34 +203,37 @@ body{
     box-shadow: 0 0.3rem 0.8rem rgba(0,0,0,0.15);
 }
 
-.cabecalho-tabela{
+.cabecalho-tabela tr{
     display: grid;
+    
     grid-template-columns:
-    1fr
-    2fr
-    2fr
-    1fr
-    1fr
-    1fr;
+        5rem
+        13rem
+        18rem
+        12rem
+        11rem
+        11rem;
+
     align-items: center;
     justify-items: center;
-    padding: 1rem;
+    padding: 0rem;
     color: #770523;
     font-family: 'Baloo';
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 .linha-post{
     display: grid;
     grid-template-columns:
-    1fr
-    2fr
-    2fr
-    1fr
-    1fr
-    1fr;
+        3rem
+        15rem
+        10rem
+        20rem
+        1rem
+        19rem;
+    
     align-items: center;
-    justify-items: flex-start;
+    justify-items: center;
     gap: 1rem;
     background-color: #FEF3E2;
     padding: 1rem;
