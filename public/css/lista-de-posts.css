@@ -27,6 +27,7 @@
 body {
     background: var(--rosa-claro);
     font-family: var(--font-noah);
+    background: linear-gradient(180deg, #FAD2E1 48%, #BA6E85 73%, #770523 100%);
 }
 
 main {
@@ -35,7 +36,7 @@ main {
     align-items: center;
     min-height: 100vh;
     padding-bottom: 80px;
-    background: linear-gradient(180deg, #FAD2E1 48%, #BA6E85 73%, #770523 100%);
+    /* background: linear-gradient(180deg, #FAD2E1 48%, #BA6E85 73%, #770523 100%); */
 }
 
 .barra-de-pesquisa {
@@ -146,7 +147,7 @@ main {
     background: var(--verde-claro);
     color: var(--vinho);
     border: none;
-    padding: 8px 0;
+    padding: 3px 0;
     width: 100%;
     max-width: 200px;
     margin: 0 auto;
@@ -154,6 +155,13 @@ main {
     font-family: var(--font-baloo);
     font-size: 18px;
     cursor: pointer;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+    text-align: center;
+}
+
+.botao-ver-mais:hover{
+    transform: scale(1.1);
 }
 
 .paginacao{
@@ -164,7 +172,7 @@ main {
     margin-top: 2rem;
 }
 
-.paginacao button{
+.paginacao a{
     width: 2.8rem;
     height: 2.8rem;
     border: none;
@@ -187,6 +195,12 @@ main {
     color: var(--bege);
 }
 
+.paginacao a.disabled {
+    opacity: 0.4;
+    pointer-events: none;
+    cursor: default;
+}
+
 .points {
     font-size: 1.6rem;
     color: var(--vinho);
@@ -203,7 +217,7 @@ main {
     align-items: center;
 }
 
-.paginacao button:hover{
+.paginacao a:hover{
     transform: scale(1.05);
 }
 
@@ -271,7 +285,7 @@ main {
         gap: 0.4rem;
     } 
 
-    .paginacao button {
+    .paginacao a {
         width: 2.4rem;
         height: 2.4rem;
         font-size: 1.1rem;

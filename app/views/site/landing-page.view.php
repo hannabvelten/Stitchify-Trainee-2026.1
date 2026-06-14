@@ -24,7 +24,7 @@
             <h1>Compartilhe criações feitas à mão,
                 com fotos, ideias e inspirações!
             </h1>
-            <button href="#sobre"><b>Saiba Mais</b></button>
+            <a href="#sobre" class="botao botao-hero"><b>Saiba Mais</b></a>
         </div>
 
     </div>
@@ -177,7 +177,7 @@
                                 <p><b><?= $post->nome_autor ?></b></p>
                                 <p><?= $post->descricao ?></p>
                                 
-                                <a href="/Post-individual?id_post=<?= $post->id_post ?>">Ver mais</a>
+                                <a href="/Post-individual?id_post=<?= $post->id_post ?>" class="botao">Ver mais</a>
                             </div>
                         <?php endforeach ?>
                         <!-- <div class="card-blog">
@@ -245,7 +245,7 @@
                     <!--Setinha Direita-->
                     <span class="material-symbols-outlined" id="seta-direita">arrow_forward_ios</span>
                 </div>
-                <button class="posts">Ver todos os posts</button>
+                <a href="/lista-de-posts" class="botao posts">Ver todos os posts</a>
             </div>
         </div>
 

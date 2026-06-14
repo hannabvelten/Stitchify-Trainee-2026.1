@@ -193,5 +193,28 @@ class PostsController
 
     }
 
+    public function posts(){
+        $database = App::get('database');
+        $limit = 6;
+        $currentPage = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+
+        if($currentPage < 1) {
+            $currentPage = 1;
+        }
+
+        $offset = ($currentPage - 1) * $limit;
+
+        $totalPosts = $database->countAll('tabela_posts');
+        $totalPages = ceil($totalPosts/$limit);
+
+        $posts = $database->paginate('tabela_posts', $limit, $offset);
+
+        return view('site/lista-de-posts', [
+            'posts' => $posts,
+            'currentPage' => $currentPage,
+            'totalPages' => $totalPages,
+        ]);
+    }
+
 
 }

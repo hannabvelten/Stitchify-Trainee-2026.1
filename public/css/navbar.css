@@ -26,9 +26,11 @@ header.navbar {
   align-items: center;
   justify-content: space-between;
   padding: 0.75rem 2rem;
-  height: 4.5rem;
+  /* height: 4.5rem; */
   background: #fef3e2;
   border-bottom: 1px solid #fef3e2;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .navbar-logo img {
@@ -38,7 +40,7 @@ header.navbar {
 
 .navbar-links {
   display: flex;
-  gap: 3rem;
+  gap: 2rem;
 }
 
 .navbar-links a {
