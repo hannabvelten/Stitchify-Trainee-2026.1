@@ -48,7 +48,7 @@
             </form>
       
        <div class="inscricao">
-        <p>Ainda não tem conta? <a href="inscreva-se.html">Inscreva-se</a></p>
+        <p>Ainda não tem conta? <a href="http://localhost:8000/inscreva-se">Inscreva-se</a></p>
        </div>
        </div>
     </main>

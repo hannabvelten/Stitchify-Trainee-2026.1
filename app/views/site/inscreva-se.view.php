@@ -79,7 +79,7 @@
         <div class="inscricao">
             <p>
                 Já tem conta?
-                <a href="login.html">Entrar</a>
+                <a href="http://localhost:8000/login">Entrar</a>
             </p>
         </div>
 
