@@ -179,6 +179,7 @@ thead th {
     background-color: #C1CA8B;
     color: #770523;
     text-align: center;
+    font-size: 30px;
 }
 thead tr th:first-child,
 tbody tr td:first-child {
