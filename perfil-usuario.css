@@ -1,0 +1,571 @@
+@font-face {
+
+    font-family: 'Baloo';
+    src: url(../fontes/Baloo-Regular.ttf);
+}
+
+@font-face {
+
+    font-family: 'Noah';
+    src: url(../fontes/noah-regular.otf);
+}
+
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body{
+
+    min-height: 100vh;
+    font-family: 'Noah', sans-serif;
+    background-color: #FEF3E2;
+}
+
+.container{
+
+    width: 100%;
+    max-width: 90rem;
+    margin: auto;
+}
+
+.pagina-perfil{
+
+    width: 100%;
+    min-height: 100vh;
+    background-color: #FEF3E2;
+}
+
+.cabecalho-perfil{
+
+    display: flex;
+    padding: 0.625rem 3.5625rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.625rem;
+    border-radius: 0 0 3.125rem 3.125rem;
+    background-color: #FAD2E1;
+}
+
+.titulo-perfil{
+
+    font-family: 'Baloo';
+    font-size: 3.5rem;
+    color: #770523;
+}
+
+.boas-vindas{
+
+    display: flex;
+    padding: 0.625rem 3.5625rem;
+    align-items: flex-start;
+    gap: 0.625rem;
+}
+
+.boas-vindas p{
+
+    font-family: 'Noah';
+    font-size: 1rem;
+    color: #1F0008;
+}
+
+.perfil{
+
+    display: flex;
+    height: 20rem;
+    padding: 0.625rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    align-self: stretch;
+}
+
+.card-perfil{
+
+    display: flex;
+    height: 18.75rem;
+    padding: 0 9.125rem;
+    align-items: center;
+    gap: 14.5rem;
+    flex-shrink: 0;
+    align-self: stretch;
+    border-radius: 0 0 11.25rem 0;
+    background: #770523;
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.30);
+}
+
+.dados-usuario{
+
+    display: flex;
+    padding: 0.625rem 0;
+    align-items: flex-start;
+    gap: 0.625rem;
+}
+
+.foto-perfil{
+
+    width: 15.625rem;
+    height: 15.625rem;
+    padding: 0.625rem;
+    border-radius: 22.5rem;
+    border: 2px solid #FEF3E2;
+    object-fit: cover;
+}
+
+.informacoes-usuario{
+
+    display: flex;
+    padding: 0.625rem;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-self: stretch;
+}
+
+.nome-email{
+
+    display: flex;
+    height: 6.25rem;
+    padding: 0 1.25rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.625rem;
+}
+
+.nome-email h2{
+
+    font-family: 'Baloo';
+    font-size: 3rem;
+    color: #FFFFFF;
+}
+
+.nome-email p{
+
+    color: #FFFFFF;
+    font-size: 1.5rem;
+}
+
+.localizacao-usuario{
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.localizacao-usuario{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    padding-left: 1.25rem;
+    color: #FFFFFF;
+    font-size: 2rem;
+}
+
+.botao-editar{
+
+    display: flex;
+    height: 4.0625rem;
+    padding: 1.5rem;
+    align-items: center;
+    gap: 0.625rem;
+    border-radius: 0.9375rem;
+    border: 2px solid #770523;
+    background: #FFF;
+    box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.60);
+    color: #770523;
+    font-family: 'Noah';
+    font-size: 1.625rem;
+    font-weight: 700;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.botao-editar{
+
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.secao-posts{
+
+    display: flex;
+    padding: 0.625rem 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.625rem;
+    padding-left: 9.5rem;
+    padding-right: 10rem;
+    margin-top: 1rem;
+}
+
+.cabecalho-posts{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.titulo-posts{
+
+    color: #770523;
+    font-family: 'Baloo';
+    font-size: 3.5rem;
+    margin: 0;
+}
+
+.botao-criar-post{
+
+    display: flex;
+    height: 4.0625rem;
+    padding: 0 1.5rem;
+    align-items: center;
+    gap: 0.625rem;
+    border: none;
+    border-radius: 0.9375rem;
+    background: #C1CA8B;
+    box-shadow: 4px 4px 4px 0 rgba(0,0,0,0.30);
+    color: #770523;
+    font-family: 'Noah';
+    font-size: 1.625rem;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+
+}
+
+/* =========================
+   LISTA DE POSTS
+========================= */
+
+.lista-posts{
+
+    display: flex;
+    width: 85rem;
+    padding: 0.9375rem 4.8125rem;
+
+    flex-direction: column;
+
+    gap: 1.25rem;
+
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+/* =========================
+   CARD DO POST
+========================= */
+
+.card-post{
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+
+    padding: 0.9375rem;
+
+    gap: 1.25rem;
+
+    border-radius: 0.9375rem;
+
+    background: #C1CA8B;
+
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.30);
+}
+
+/* =========================
+   IMAGEM DO POST
+========================= */
+
+.imagem-post{
+
+    display: flex;
+    width: 17.1875rem;
+    height: 10.9375rem;
+    padding: 0.625rem;
+    align-items: flex-start;
+    gap: 0.625rem;
+    flex-shrink: 0;
+
+    border-radius: 0.9375rem;
+
+    object-fit: cover;
+}
+
+/* =========================
+   INFORMAÇÕES DO POST
+========================= */
+
+.informacoes-post{
+
+    display: flex;
+    height: 10.9375rem;
+    padding: 0 1.25rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.25rem;
+    flex: 1;
+}
+
+/* =========================
+   TÍTULO E DATA
+========================= */
+
+.titulo-data-post{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+}
+
+/* =========================
+   TÍTULO DO POST
+========================= */
+
+.titulo-post{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: #770523;
+    font-family: 'Noah';
+    font-size: 2.125rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+/* =========================
+   DATA
+========================= */
+
+.data-post{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.data-post i{
+
+    width: 1.375rem;
+    height: 1.375rem;
+    aspect-ratio: 1/1;
+    color: rgba(0, 0, 0, 0.60);
+    font-size: 1.375rem;
+}
+
+.data-post span{
+
+    color: rgba(0, 0, 0, 0.60);
+    font-family: 'Noah';
+    font-size: 1.375rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+/* =========================
+   DESCRIÇÃO DO POST
+========================= */
+
+.descricao-post{
+
+    display: flex;
+    width: 29.125rem;
+    height: 3.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-shrink: 0;
+
+    flex: 1 0 0;
+    align-self: stretch;
+
+    color: rgba(0, 0, 0, 0.70);
+    font-family: 'Noah';
+    font-size: 1.125rem;
+    line-height: 1.4;
+}
+
+/* =========================
+   CATEGORIAS
+========================= */
+
+.categorias-post{
+
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    align-self: stretch;
+}
+
+/* =========================
+   CATEGORIA PADRÃO
+========================= */
+
+.categoria-post{
+
+    display: flex;
+    width: 4.6875rem;
+    height: 1.875rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 0.9375rem;
+    background: #FAD2E1;
+
+    color: #770523;
+    font-family: 'Noah';
+    font-size: 1.375rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+/* =========================
+   CATEGORIA MAIOR
+========================= */
+
+.categoria-material{
+
+    width: 6.25rem;
+}
+
+/* =========================
+   AÇÕES DO POST
+========================= */
+
+.acoes-post{
+
+    display: flex;
+    padding: 0.625rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.25rem;
+}
+
+/* =========================
+   ESTILO BASE DOS BOTÕES
+========================= */
+
+.botao-visualizar,
+.botao-editar-post{
+
+    display: flex;
+    width: 8.4375rem;
+    height: 2.5rem;
+    padding: 0.3125rem;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 0.625rem;
+    border: 2px solid rgba(0, 0, 0, 0.60);
+    background: #FFF;
+
+    box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.50);
+
+    cursor: pointer;
+
+    color: rgba(0, 0, 0, 0.60);
+    font-family: 'Noah';
+    font-size: 1.375rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+/* =========================
+   BOTÃO VISUALIZAR
+========================= */
+
+.botao-visualizar{
+
+    gap: 0.3125rem;
+}
+
+/* =========================
+   BOTÃO EDITAR
+========================= */
+
+.botao-editar-post{
+
+    gap: 0.625rem;
+}
+
+/* =========================
+   BOTÃO DELETAR
+========================= */
+
+.botao-deletar-post{
+
+    display: flex;
+    width: 8.4375rem;
+    height: 2.5rem;
+    padding: 0.3125rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+
+    border-radius: 0.625rem;
+    border: 2px solid #770523;
+    background: #FFF;
+
+    box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.50);
+
+    cursor: pointer;
+
+    color: #770523;
+    font-family: 'Noah';
+    font-size: 1.375rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+/* =========================
+   ÍCONES DOS BOTÕES
+========================= */
+
+.botao-visualizar i,
+.botao-editar-post i,
+.botao-deletar-post i{
+
+    width: 1.5625rem;
+    height: 1.5625rem;
+
+    flex-shrink: 0;
+    aspect-ratio: 1 / 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.25rem;
+}
+
+.botao-deletar-post i{
+
+    color: #770523;
+}
+
