@@ -16,6 +16,10 @@ class Controller
     {
         return view('site/login');
     }
+    public function exibirInscrevaSe()
+    {
+        return view('site/inscreva-se');
+    }
     public function exibirlandingPage()
     {
         return view('site/landingpage');
@@ -37,5 +41,37 @@ class Controller
             header('Location: /login');
         }
 
+    }
+    public function efetuaInscricao()
+    {
+        $email = $_POST['email'];
+        $senha = $_POST['senha'];
+        $confirmarSenha = $_POST['confirmarSenha'];
+
+        if($senha != $confirmarSenha){
+            session_start();
+            $_SESSION['mensagem-erro'] = "As senhas não coincidem";
+            header('Location: /inscreva-se');
+            return;
+        }
+
+        $user = App::get('database')->verificaEmail($email);
+
+        if($user){
+            session_start();
+            $_SESSION['mensagem-erro'] = "Email já cadastrado";
+            header('Location: /inscreva-se');
+            return;
+        }
+
+        try{
+            App::get('database')->efetuaInscricao($email, $senha);
+            header('Location: /login');
+        }
+        catch(Exception $e){
+            session_start();
+            $_SESSION['mensagem-erro'] = "Ocorreu um erro ao criar a conta. Tente novamente.";
+            header('Location: /inscreva-se');
+        }
     }
 }

@@ -41,7 +41,7 @@
                 session_unset();
                 ?>
             </p>
-            </div>
+        </div>
             <input type="email" name="email" placeholder="Email">
             <input type="password" name="senha" placeholder="Senha">
             <button type="submit">Entrar</button>
