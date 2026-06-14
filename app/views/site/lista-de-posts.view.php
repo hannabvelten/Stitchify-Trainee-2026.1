@@ -11,6 +11,9 @@
 </head>
 
 <body>
+    <div class="navbar">
+        <?php require("app/views/site/navbar.php")?>
+    </div>
     <main>
         <div class="barra-de-pesquisa">
             <div class="busca">
@@ -43,22 +46,22 @@
         </div>
 
         <div class="div-cards">
-            <article class="card-unit">
-                <div class="div-img">
-                    <img src="../../../public/assets/flor.webp" alt="Descrição da imagem 1">
-                </div>
-                <div class="conteudo-card">
-                    <h3 class="titulo-post">Lorem ipsum</h3>
-                    <div class="texto-post">
-                        <p><b>Autor: </b></p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse imperdiet maximus
-                            sodales.</p>
+            <?php foreach ($posts as $post): ?>
+                <article class="card-unit">
+                    <div class="div-img">
+                        <img src="../../../public/assets/posts/<?= htmlspecialchars($post->imagem) ?>" alt="<?= htmlspecialchars($post->titulo) ?>">
                     </div>
-                    <button class="botao-ver-mais">Ver mais</button>
-                </div>
-            </article>
-
-            <article class="card-unit">
+                    <div class="conteudo-card">
+                        <h3 class="titulo-post"><?= htmlspecialchars($post->titulo) ?></h3>
+                        <div class="texto-post">
+                            <p><b>Autor: </b><?= htmlspecialchars($post->nome_autor) ?></p>
+                            <p><?= htmlspecialchars($post->descricao) ?></p>
+                        </div>
+                        <a href="/Post-individual?id_post=<?= $post->id_post ?>" class="botao-ver-mais">Ver mais</a>
+                    </div>
+                </article>
+            <?php endforeach; ?>
+            <!-- <article class="card-unit">
                 <div class="div-img">
                     <img src="../../../public/assets/flor.webp" alt="Descrição da imagem 2">
                 </div>
@@ -131,31 +134,64 @@
                     </div>
                     <button class="botao-ver-mais">Ver mais</button>
                 </div>
-            </article>
+            </article> -->
 
         </div>
+        
+        <?php if($totalPages > 1): ?>
+            <div class="paginacao">
+                <a href="?page=<?= max(1, $currentPage - 1) ?>" class="<?= $currentPage <= 1 ? 'disabled' : '' ?>"><i class="bi bi-chevron-left"></i></a>
+                
+                <?php
+                    $start = max(2, $currentPage - 1);
+                    $end = min($totalPages - 1, $currentPage + 1);
+                ?>
 
-        <div class="paginacao">
+                <a href="?page=1" class="<?= $currentPage == 1 ? 'ativo' : '' ?>">1</a>
 
-            <button>
-                <i class="bi bi-chevron-left"></i>
-            </button>
+                <?php if ($start > 2): ?>
+                    <span class="points">...</span>
+                <?php endif; ?>
 
-            <button class="ativo">1</button>
+                <?php for ($i = $start; $i <= $end; $i++): ?>
+                    <a href="?page=<?= $i ?>" class="<?= $currentPage == $i ? 'ativo' : '' ?>"><?= $i ?></a>
+                <?php endfor; ?>
 
-            <button>2</button>
+                <?php if ($end < $totalPages - 1): ?>
+                    <span class="points">...</span>
+                <?php endif; ?>
 
-            <button>3</button>
+                <a href="?page=<?= $totalPages ?>" class="<?= $currentPage == $totalPages ? 'ativo' : '' ?>"><?= $totalPages ?></a>
 
-            <span class="points">...</span>
+                <a href="?page=<?= min($totalPages, $currentPage + 1) ?>" class="<?= $currentPage >= $totalPages ? 'disabled' : '' ?>"><i class="bi bi-chevron-right"></i></a>
 
-            <button>6</button>
+                
+                <!-- <button>
+                    <i class="bi bi-chevron-left"></i>
+                </button>
 
-            <button>
-                <i class="bi bi-chevron-right"></i>
-            </button>
+                <button class="ativo">1</button>
 
-        </div>
+                <button>2</button>
+
+                <button>3</button>
+
+                <span class="points">...</span>
+
+                <button>6</button>
+
+                <button>
+                    <i class="bi bi-chevron-right"></i>
+                </button> -->
+
+            </div>
+        
+        <?php endif; ?>
+        
     </main>
+    <div class="footer">
+        <?php require("app/views/site/footer.php")?>
+    </div>
+    
 </body>
 </html>

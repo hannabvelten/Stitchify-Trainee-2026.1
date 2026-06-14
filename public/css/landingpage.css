@@ -42,7 +42,7 @@ h2 {
 
 }
 
-button {
+/* button {
     border: none;
     border-radius: 25px;
     padding: 0.5% 3%;
@@ -68,11 +68,27 @@ a {
 
 a:hover {
     transform: var(--transform-hover);
+} */
+
+.botao {
+    display: inline-block;
+    border: none;
+    border-radius: 25px;
+    padding: 0.5% 3%;
+    font-family: "Noah", sans-serif;
+    cursor: pointer;
+    transition: var(--transition);
+    text-decoration: none;
+    text-align: center;
 }
 
+.botao:hover {
+    transform: var(--transform-hover);
+}
 
 .navbar{
-
+    width: 100%;
+    box-sizing: border-box;
 }
 
 /* === Estilização Hero Section === */
@@ -106,7 +122,7 @@ a:hover {
     margin-bottom: 1.0vw;
 }
 
-.hero-section button {
+.hero-section .botao-hero{
     background-color: var(--verde-claro);
     border: none;
     border-radius: 25px;
@@ -118,7 +134,7 @@ a:hover {
     transition: var(--transition);
 }
 
-.hero-section button:hover {
+.hero-section .botao-hero:hover {
     background-color: #c4cc8c;
     transform: var(--transform-hover);
 }
@@ -551,7 +567,7 @@ a:hover {
         font-size: 6vw;
     }
 
-    .hero-section button {
+    .hero-section .botao-hero {
         font-size: 4vw;
     }
 
@@ -836,7 +852,7 @@ a:hover {
         font-size: 3.5vw;
     }
 
-    .hero-section button {
+    .hero-section .botao-hero {
         font-size: 2.4vw;
     }
 

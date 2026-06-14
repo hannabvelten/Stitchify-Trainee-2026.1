@@ -22,7 +22,7 @@
             </div>
 
             <div class="linha1"></div>
-            <h3 id="sobre-nos"><a href="#">Sobre nós</a></h3>
+            <h3 id="sobre-nos"><a href="/landing-page#sobre">Sobre nós</a></h3>
             <div class="linha2"></div>
             <div class="imagem-logo">
                 <img src="../../../public/assets/logo-stitchify.png" alt="Logo Stitchify">
