@@ -1,23 +1,12 @@
 @font-face {
     font-family: 'NoahBold';
-    src: url(../assets/Fonts/noah-bold.otf);
+    src: url(../fontes/noah-bold.otf);
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
-}
-
-body {
-    color: #770523;
-    overflow-x: hidden;
-    flex-direction: column;
-    min-height: 100vh;
-    display: flex;
-    font-family: 'NoahBold';
-    background-color: #ffffff;
 
 }
 
@@ -54,9 +43,6 @@ footer {
     gap: 8px;
 }
 
-.redes-sociais p {
-    margin-right: 20px;
-}
 
 .redes-sociais p {
     font-size: 20px;

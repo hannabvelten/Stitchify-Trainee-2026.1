@@ -55,6 +55,26 @@ button:hover {
     transform: var(--transform-hover);
 }
 
+a {
+    border: none;
+    border-radius: 25px;
+    padding: 0.5% 3%;
+    font-family: "Noah", sans-serif;
+    cursor: pointer;
+    transition: var(--transition);
+    text-decoration: none;
+    text-align: center;
+}
+
+a:hover {
+    transform: var(--transform-hover);
+}
+
+
+.navbar{
+
+}
+
 /* === Estilização Hero Section === */
 
 .hero-section {
@@ -481,7 +501,7 @@ button:hover {
     border-radius: 30px;
 }
 
-.card-blog button {
+.card-blog a {
     background-color: var(--verde-claro);
     width: 50%;
     align-self: center;
@@ -793,7 +813,7 @@ button:hover {
         height: 30vh;
     }
 
-    .card-blog button {
+    .card-blog a {
         width: 30%;
         font-size: 15px;
 
@@ -1058,7 +1078,7 @@ button:hover {
         border-radius: 30px;
     }
 
-    .card-blog button {
+    .card-blog a {
         font-size: 15px;
         width: 30%;
     }

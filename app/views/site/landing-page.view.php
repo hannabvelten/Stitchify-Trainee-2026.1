@@ -13,6 +13,10 @@
 </head>
 
 <body>
+    <div class="navbar">
+        <?php require("app/views/site/navbar.php")?>
+    </div>
+    
     <!--Hero-Section-->
     <div class="hero-section">
 
@@ -163,15 +167,26 @@
 
                     <!--SLIDER-->
                     <div class="slider-conteudo">
-                        <div class="card-blog">
-                            <img src="../../../public/assets/No-Sew Crochet Mushroom Jewelry Holder_Trinket Dish Tutorial.webp"
-                                alt="">
+                        
+                        <?php foreach($posts as $post): ?>
+                            <div class="card-blog">
+                                <img src="../../../public/assets/posts/<?= $post->imagem ?>" alt="Imagem Post">
+
+                                <h3><?= $post->titulo ?></h3>
+
+                                <p><b><?= $post->nome_autor ?></b></p>
+                                <p><?= $post->descricao ?></p>
+                                
+                                <a href="/Post-individual?id_post=<?= $post->id_post ?>">Ver mais</a>
+                            </div>
+                        <?php endforeach ?>
+                        <!-- <div class="card-blog">
+                            <img src="../../../public/assets/No-Sew Crochet Mushroom Jewelry Holder_Trinket Dish Tutorial.webp" alt="">
 
                             <h3>Lorem Ipsum</h3>
 
                             <p><b>Autor:</b></p>
-                            <p>Lorem ipsum dolor sit amet, consectur adipiscing elit. Sispendisse imperdiet maximus
-                                sodales.
+                            <p>Lorem ipsum dolor sit amet, consectur adipiscing elit. Sispendisse imperdiet maximus sodales.
                             </p>
                             <button>Ver mais</button>
                         </div>
@@ -223,7 +238,7 @@
                                 sodales.
                             </p>
                             <button>Ver mais</button>
-                        </div>
+                        </div> -->
 
                     </div>
 
@@ -245,6 +260,10 @@
         <p>Cada ponto conta uma história - e a sua também
             merece ser compartilhada.
         </p>
+    </div>
+
+    <div class="footer">
+        <?php require("app/views/site/footer.php")?>
     </div>
 
     <script src="../../../public/js/landingpage.js"></script>

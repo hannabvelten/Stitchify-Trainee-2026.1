@@ -216,4 +216,54 @@ class QueryBuilder
             die($e->getMessage());
         } 
     }
+
+    //Funcao para o Post Individual
+
+    public function findPost($id){
+        $sql = "SELECT 
+                tabela_posts.*,
+                tabela_usuarios.nome AS nome_autor,
+                tabela_usuarios.foto AS foto_autor
+            FROM tabela_posts
+            INNER JOIN tabela_usuarios ON tabela_posts.autor = tabela_usuarios.id
+            WHERE tabela_posts.id_post = :id
+            LIMIT 1";
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute(['id' => $id]);
+
+            return $stmt->fetch(PDO::FETCH_ASSOC);
+
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+            
+    }
+
+    //Funcao para pegar os posts do autor no card do autor na página de post individual
+
+    public function getPostsByAutor($autorId){
+        $sql = "SELECT 
+                    tabela_posts.*,
+                    tabela_usuarios.nome AS nome_autor,
+                    tabela_usuarios.foto AS foto_autor
+                FROM tabela_posts
+                INNER JOIN tabela_usuarios ON tabela_posts.autor = tabela_usuarios.id
+                WHERE tabela_posts.autor = :autor_id
+                ORDER BY tabela_posts.id_post DESC
+                LIMIT 4";
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute(['autor_id' => $autorId]);
+
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+    
 }

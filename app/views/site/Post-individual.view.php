@@ -29,7 +29,7 @@
 
             <section class="post">
 
-                <h1>Porta Copo</h1>
+                <h1><?= htmlspecialchars($post['titulo']) ?></h1>
 
                 <div class="info-post">
 
@@ -37,7 +37,7 @@
 
                         <i class="bi bi-person"></i>
 
-                        Amanda_Crochezeira
+                        <?= htmlspecialchars($post['nome_autor']) ?>
 
                     </span>
 
@@ -45,7 +45,7 @@
 
                         <i class="bi bi-calendar"></i>
 
-                        25 de abril de 2026
+                        <?= date('d \d\e F \d\e Y', strtotime($post['data'])) ?>
 
                     </span>
 
@@ -60,18 +60,13 @@
                 </div>
 
                 <img 
-                src="../../../public/assets/porta-copo.jpg" 
-                alt="Porta copo de crochê"
-                class="imagem-post">
+                    src="../../../public/assets/posts/<?= htmlspecialchars($post['imagem']) ?>" 
+                    alt="<?= htmlspecialchars($post['titulo']) ?>"
+                    class="imagem-post">
 
                 <p>
 
-                    Um porta-copo de crochê artesanal feito com carinho,
-                    unindo beleza, praticidade e um toque acolhedor para qualquer ambiente. 
-                    Produzido com fios de qualidade e pontos delicados, ele protege superfícies 
-                    contra manchas e calor, enquanto adiciona charme e personalidade à decoração. 
-                    Perfeito para quem valoriza peças feitas à mão, esse acessório combina funcionalidade 
-                    com o encanto único do crochê, trazendo um detalhe especial para sua mesa ou cantinho do café.
+                    <?= htmlspecialchars($post['descricao']) ?>
 
                 </p>
 
@@ -89,7 +84,7 @@
                     <h2>Sobre o Autor</h2>
 
                     <img 
-                    src="../../../public/assets/fotousuario.jpg" 
+                    src="../../../public/assets/usuarios/<?= htmlspecialchars($post['foto_autor']) ?>" 
                     alt="Foto do autor"
                     class="foto-perfil">
 
@@ -140,13 +135,13 @@
         <div class="topo-modal-autor">
 
             <img 
-            src="../../../public/assets/fotousuario.jpg" 
+            src="../../../public/assets/usuarios/<?= htmlspecialchars($post['foto_autor']) ?>" 
             alt="Foto do autor"
             class="foto-modal-autor">
 
             <div class="informacoes-autor">
 
-                <h2>Amanda de Souza</h2>
+                <h2><?= htmlspecialchars($post['nome_autor']) ?></h2>
 
                 <span>
 
@@ -175,37 +170,36 @@
             
             <div class="lista-posts-autor">
 
-               
-                <div class="card-post-autor">
+                <?php foreach ($postsDoAutor as $postAutor):?>
+                    <a href="/Post-individual?id_post=<?= $postAutor['id_post'] ?>" class="card-post-autor">
+                        <img 
+                        src="../../../public/assets/posts/<?= htmlspecialchars($postAutor['imagem']) ?>" 
+                        alt="<?= htmlspecialchars($postAutor['titulo']) ?>">
 
-                    <img 
-                    src="../../../public/assets/dory.jpg" 
-                    alt="Dory">
+                        <div class="informacoes-post-autor">
 
-                    <div class="informacoes-post-autor">
+                            <h3><?= htmlspecialchars($postAutor['titulo']) ?></h3>
 
-                        <h3>Dory</h3>
+                            <span class="categoria-post">
 
-                        <span class="categoria-post">
+                                <?= htmlspecialchars($postAutor['categoria']) ?>
 
-                            Tutorial
+                            </span>
 
-                        </span>
+                            <p>
 
-                        <p>
+                                <i class="bi bi-calendar3"></i>
 
-                            <i class="bi bi-calendar3"></i>
+                                <?= date('d \d\e F \d\e Y', strtotime($post['data'])) ?>
 
-                            22 de Mai, 2026
+                            </p>
 
-                        </p>
-
-                    </div>
-
-                </div>
-
+                        </div>
+                        
+                    </a>
+                <?php endforeach;?>
                 
-                <div class="card-post-autor">
+                <!-- <div class="card-post-autor">
 
                     <img 
                     src="../../../public/assets/mascaracroche.jpg" 
@@ -289,7 +283,7 @@
 
                     </div>
 
-                </div>
+                </div> -->
 
             </div>
 

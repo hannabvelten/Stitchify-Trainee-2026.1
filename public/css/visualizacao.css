@@ -1,14 +1,14 @@
 @font-face {
     font-family: 'Baloo';
-    src: url(../../assets/Fonts/Baloo-Regular.ttf);
+    src: url(../fontes/Baloo-Regular.ttf);
 }
 @font-face {
     font-family: 'Noah-regular';
-    src: url(../../assets/Fonts/noah-regular.otf);
+    src: url(../fontes/noah-regular.otf);
 }
 @font-face {
     font-family: 'Noah-bold';
-    src: url(../../assets/Fonts/noah-bold.otf);
+    src: url(../fontes/noah-bold.otf);
 }
 *{
     margin: 0;
@@ -29,8 +29,9 @@
     overflow: hidden;
     background-color: white;
     z-index: 9999;
-    width: 24.5rem;
-    height: 27.125rem;
+    width: 550px;      
+    height: 35rem;
+    max-height: 90vh;  
     z-index: 1;
     display: flex;
     flex-direction: column;
@@ -97,30 +98,31 @@ p{
     font-family: 'Noah-bold';
     padding-left: 1rem;
 }
-table{
+.tconteudo table{
     border-collapse: collapse;
-   
 }
 
-td{
+.tconteudo td{
     padding-right: 2rem;
+    background-color: white;
 }
 .fechar{
     border-radius: 20px;
     border: none;
     background-color: #D0D996;
     color: #770523;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    height: 1.5rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    height: 2.5rem;
     font-family: 'Noah-bold';
+    font-size: 17px;
     
 }
 .rodapev{
     display: flex;
     justify-content: space-between;
     align-items: end;
-    padding-left: 1rem;
+    padding-left: 11rem;
     margin-top: auto;
     padding-bottom: 1rem;
 }
@@ -128,7 +130,7 @@ td{
     width: 200px;
     height: 200px;
     position: absolute;
-    left: 13rem;
+    left: 20rem;
     bottom: -1rem;
 }
 .fadev{
@@ -157,5 +159,7 @@ td{
         right: 0;
         bottom: 0;
     }
-    
+    .rodapev{
+        padding-left: 6rem;
+    }
 }
