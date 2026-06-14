@@ -120,18 +120,28 @@ class QueryBuilder
         }
     }
 
-    public function paginate($table, $limit, $offset) {
+    public function paginate($table, $limit, $offset, $busca = '') {
+        $params = [];
+        $where = '';
+
+        if (!empty($busca)) {
+            $where = " WHERE tabela_posts.titulo LIKE :busca OR tabela_posts.categoria LIKE :busca2";
+            $params['busca'] = "%{$busca}%";
+            $params['busca2'] = "%{$busca}%";
+        }
+        
         $sql = "SELECT 
                 tabela_posts.*,
                 tabela_usuarios.nome AS nome_autor,
                 tabela_usuarios.foto AS foto_autor
             FROM tabela_posts
             INNER JOIN tabela_usuarios ON tabela_posts.autor = tabela_usuarios.id
+            {$where}
             LIMIT {$limit} OFFSET {$offset}";
 
         try {
             $stmt = $this->pdo->prepare($sql);
-            $stmt->execute();
+            $stmt->execute($params);
 
             return $stmt->fetchAll(PDO::FETCH_CLASS);
 
