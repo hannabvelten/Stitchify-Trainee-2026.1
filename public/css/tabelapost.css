@@ -190,71 +190,60 @@ body{
     font-family: 'Noah';
 }
 
+.tabelaResponsiva{
+    overflow-x: auto;
+}
+
 .tabela-posts{
+    border-spacing: 1rem 1rem;
     margin-top: 2rem;
-
     background-color: #C1CA8B;
-
     border-radius: 2.5rem;
-
     padding: 1.5rem;
-
     box-shadow: 0 0.3rem 0.8rem rgba(0,0,0,0.15);
 }
 
-.cabecalho-tabela{
+.cabecalho-tabela tr{
     display: grid;
-
+    
     grid-template-columns:
-    1fr
-    2fr
-    2fr
-    1fr
-    1fr
-    1fr;
+        5rem
+        13rem
+        18rem
+        12rem
+        11rem
+        11rem;
 
     align-items: center;
     justify-items: center;
-
-    padding: 1rem;
-
+    padding: 0rem;
     color: #770523;
-
     font-family: 'Baloo';
-
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 .linha-post{
     display: grid;
-
     grid-template-columns:
-    1fr
-    2fr
-    2fr
-    1fr
-    1fr
-    1fr;
-
+        3rem
+        15rem
+        10rem
+        20rem
+        1rem
+        19rem;
+    
     align-items: center;
     justify-items: center;
-
     gap: 1rem;
-
     background-color: #FEF3E2;
-
-    padding: 1.2rem;
-
+    padding: 1rem;
     border-radius: 1.5rem;
-
     margin-bottom: 1rem;
 }
 
 .info-post{
     display: flex;
-
     align-items: center;
-
     gap: 0.8rem;
 }
 
@@ -327,18 +316,55 @@ body{
     background-color: #FAD2E1;
 }
 
-.paginacao{
+.paginacao-container {
     display: flex;
-
     justify-content: center;
-    align-items: center;
-
-    gap: 0.6rem;
-
     margin-top: 2rem;
 }
 
-.paginacao button{
+.paginacao{
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    list-style: none;
+    padding: 0;
+}
+
+.paginacao li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.3rem;
+    height: 2.3rem;
+    border-radius: 0.6rem;
+    background-color: white;
+    color: #770523;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.paginacao li a:hover {
+    transform: scale(1.05);
+    background-color: #FAD2E1;
+}
+
+.paginacao li a.active {
+    background-color: #770523;
+    color: white;
+}
+
+.paginacao li a.disabled {
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+.paginacao li .dots {
+    color: #770523;
+    font-weight: bold;
+}
+
+/* .paginacao button{
     width: 2.3rem;
     height: 2.3rem;
 
@@ -365,7 +391,7 @@ body{
 
 .paginacao button:hover{
     transform: scale(1.05);
-}
+} */
 
 /* ================= RESPONSIVIDADE ================= */
 
