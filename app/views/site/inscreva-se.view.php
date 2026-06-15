@@ -1,9 +1,10 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inscreva-se</title>
+    <title>Document</title>
     <link rel="stylesheet" href="../../../public/css/inscreva-se.css">
 </head>
 <body>
@@ -55,23 +56,30 @@
             </p>
         </div>
 
-        <div class="inputs">
+        <form action="/inscreva-se" method="POST" class="inputs">
+        <div class="mensagem-erro">
+            <p>
+            <?php
+                if(isset($_SESSION['mensagem-erro']))
+                echo $_SESSION['mensagem-erro'];
+                session_unset();
+                ?>
+            </p>
+        </div>
+            <input type="email" name="email" placeholder="Email">
 
-            <input type="email" placeholder="Email">
-
-            <input type="password" placeholder="Senha">
-            <input type="password" placeholder="Confirmar senha">
+            <input type="password" name="senha" placeholder="Senha">
+            <input type="password" name="confirmarSenha" placeholder="Confirmar senha">
 
             <button type="submit">
                 Inscreva-se
             </button>
-
-        </div>
+        </form>
 
         <div class="inscricao">
             <p>
                 Já tem conta?
-                <a href="login.html">Entrar</a>
+                <a href="http://localhost:8000/login">Entrar</a>
             </p>
         </div>
 

@@ -343,7 +343,7 @@
 
       <div class="fade-edit hide" id="fade-edit"></div>
       <div class="modal-editar hide" id="modal-editar">
-        <form class="modaledit" id="modaledit" action="" method="post">
+        <form class="modaledit" id="modaledit" action="" method="post" enctype="multipart/form-data"> 
           <div class="topo-edit">
             <img src="../../../public/assets/Novelo_cortado.png" alt="" />
             <p>Editar Usuário</p>
@@ -367,12 +367,7 @@
 
             <div class="edit-senha">
               <label>Nova Senha:</label>
-              <input
-                type="password"
-                name="senha"
-                placeholder="Digite a nova senha"
-                required
-              />
+              <input type="password" name="senha" placeholder="Senha atual" required />
             </div>
 
             <div class="edit-foto">

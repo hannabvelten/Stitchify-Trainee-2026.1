@@ -1,10 +1,12 @@
 @font-face {
     font-family: 'Noah-Regular';
     src: url(../fontes/noah-regular.otf);
+    src: url(../fontes/noah-regular.otf);
 }
 
 @font-face {
     font-family: 'Noah-Bold';
+    src: url(../fontes/noah-bold.otf);
     src: url(../fontes/noah-bold.otf);
 }
 
@@ -41,10 +43,12 @@ main {
     flex-direction: column;
     gap: 20px;
     background-color: #FEF3E2;
+    background-color: #FEF3E2;
     min-height: 100vh;
 }
 
 .topo {
+    background-color: #FAD2E1;
     background-color: #FAD2E1;
     display: flex;
     justify-content: space-between;
@@ -100,6 +104,7 @@ main {
     color: #770523;
     position: relative;
     padding: 0 15px;
+    padding: 0 15px;
 }
 
 .box-criauser img {
@@ -112,16 +117,19 @@ main {
     height: 40px;
     border: none;
     border-radius: 20px;
+    border-radius: 20px;
     background-color: #770523;
     color: white;
     font-size: 16px;
 }
 
 .busca-user {
+.busca-user {
     width: 500px;
     height: 35px;
     font-family: 'Noah-Regular';
     color: #67635E;
+    border-radius: 20px;
     border-radius: 20px;
     padding-left: 30px;
     border: none;
@@ -135,15 +143,19 @@ main {
 .lupa {
     position: absolute;
     left: 25px;
+    left: 25px;
 }
 .box-users {
     display: flex;
     flex-direction: column;
     gap: 15px;
     border-radius: 30px;
+    border-radius: 30px;
     padding-left: 10px;
     padding-right: 10px;
+    padding-right: 10px;
     padding-top: 15px;
+    margin: 15px;
     margin: 15px;
     background-color: #C1CA8B;
     flex: 1;
@@ -176,6 +188,7 @@ th {
 }
 
 thead th {
+    background-color: #C1CA8B;
     background-color: #C1CA8B;
     color: #770523;
     text-align: center;
@@ -240,6 +253,7 @@ tbody tr td:last-child {
 .adm {
     border-radius: 20px;
     background-color: #FAD2E1;
+    background-color: #FAD2E1;
     color: #770523;
     width: 100px;
     align-items: center;
@@ -248,7 +262,9 @@ tbody tr td:last-child {
 }
 
 .usuario{
+.usuario{
     border-radius: 20px;
+    background-color: #FAD2E1;
     background-color: #FAD2E1;
     color: #8B7149;
     width: 100px;
@@ -307,6 +323,7 @@ tbody tr td:last-child {
     }
 
 
+
     .usuarios {
         display: flex;
         padding-top: 10px;
@@ -317,7 +334,9 @@ tbody tr td:last-child {
     }
     .usuarios img {
         width: 37px;
+        width: 37px;
     }
+    
     
     .box-perfiladm {
        display: flex;
@@ -340,6 +359,8 @@ tbody tr td:last-child {
 
     .box-criauser img {
         position: absolute;
+        left: 30px;
+        top: 11px;
         left: 30px;
         top: 11px;
     }
@@ -365,6 +386,9 @@ tbody tr td:last-child {
     th,
     td {
         white-space: nowrap;
+    }
+    .paginacao{
+        padding-left: 1rem;
     }
     .paginacao{
         padding-left: 1rem;

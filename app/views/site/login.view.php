@@ -1,10 +1,11 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Página de Login</title>
     <link rel="stylesheet" href="../../../public/css/login.css">
 </head>
 
@@ -31,13 +32,23 @@
                 peças únicas com os fios
             </p>
             </div>
-       <div class="inputs">
-            <input type="email" placeholder="Email">
-            <input type="password" placeholder="Senha">
+        <form action="/login" method="POST" class="inputs">
+        <div class="mensagem-erro">
+            <p>
+            <?php
+                if(isset($_SESSION['mensagem-erro']))
+                echo $_SESSION['mensagem-erro'];
+                session_unset();
+                ?>
+            </p>
+        </div>
+            <input type="email" name="email" placeholder="Email">
+            <input type="password" name="senha" placeholder="Senha">
             <button type="submit">Entrar</button>
-       </div>
+            </form>
+      
        <div class="inscricao">
-        <p>Ainda não tem conta? <a href="inscreva-se.html">Inscreva-se</a></p>
+        <p>Ainda não tem conta? <a href="http://localhost:8000/inscreva-se">Inscreva-se</a></p>
        </div>
        </div>
     </main>

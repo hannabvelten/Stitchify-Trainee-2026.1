@@ -21,30 +21,26 @@
   --font-secondary: 'Noah', sans-serif;
 }
 
-body {
-  font-family: var(--font-primary);
-  margin: 0;
-  padding: 0;
-}
-
 header.navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0.75rem 2rem;
-  height: 4.5rem;
+  /* height: 4.5rem; */
   background: #fef3e2;
   border-bottom: 1px solid #fef3e2;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .navbar-logo img {
-  height: 16rem;
+  height: 3rem;
   width: auto;
 }
 
 .navbar-links {
   display: flex;
-  gap: 3rem;
+  gap: 2rem;
 }
 
 .navbar-links a {
