@@ -6,10 +6,7 @@ const botaoFoto = document.querySelector(".foto-usuario");
 const inputFoto = document.querySelector("#foto-usuario");
 const fotoIcon = document.querySelector("#fotoIcon");
 const fotoPreview = document.querySelector("#fotoPreview");
-const fotoIcon = document.querySelector("#fotoIcon");
-const fotoPreview = document.querySelector("#fotoPreview");
 
-const criarUsuariosBtn = document.querySelector(".criar-modal");
 const criarUsuariosBtn = document.querySelector(".criar-modal");
 botaoFoto.addEventListener("click", () => {
     inputFoto.click();
@@ -22,10 +19,7 @@ inputFoto.addEventListener("change", () => {
         fotoIcon.style.display = "none";
         fotoPreview.style.display = "block";
         fotoPreview.src = url;
-        const url = URL.createObjectURL(arquivo);
-        fotoIcon.style.display = "none";
-        fotoPreview.style.display = "block";
-        fotoPreview.src = url;
+    
     }
 
 }); 
