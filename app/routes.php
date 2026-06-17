@@ -3,7 +3,7 @@
 namespace App\Controllers;
 use App\Controllers\ExampleController;
 use App\Controllers\PostsController;
-//use App\Controllers\UsuariosController;
+use App\Controllers\UsuariosController;
 use App\Core\Router;
 
 $router->get('login', 'Controller@exibirLogin');

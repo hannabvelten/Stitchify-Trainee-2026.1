@@ -17,7 +17,7 @@ class UsuariosController
 
         if (!empty($busca)) {
         $query->where('nome', 'LIKE', "%{$busca}%")
-              ->orWhere('email', 'LIKE', "%{$busca}%");
+        ->orWhere('email', 'LIKE', "%{$busca}%");
         }
 
         $usuarios = $query->get();
