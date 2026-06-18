@@ -10,7 +10,7 @@
     <title>Stitchify</title>
 
     <link rel="stylesheet" href="../../../public/css/Post-individual.css">
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_back_ios,arrow_forward_ios" />
     <link 
     rel="stylesheet" 
     href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -175,11 +175,11 @@
 
                 <div class="cards-blog-autor">
                 <!-- <div class="lista-posts-autor"> -->
-                    <span class="material-symbols-outlined" id="seta-esquerda-autor">arrow_back_ios</span>
+                    <span class="material-symbols-outlined" id="seta-esquerda">arrow_back_ios</span>
 
                     <div class="slider-conteudo-autor">
                         <?php foreach ($postsDoAutor as $postAutor):?>
-                            <a href="/Post-individual?id_post=<?= $postAutor['id_post'] ?>" class="card-post-autor">
+                            <div class="card-post-autor">
                                 <img 
                                 src="../../../public/assets/posts/<?= htmlspecialchars($postAutor['imagem']) ?>" 
                                 alt="<?= htmlspecialchars($postAutor['titulo']) ?>">
@@ -188,27 +188,16 @@
 
                                     <h3><?= htmlspecialchars($postAutor['titulo']) ?></h3>
 
-                                    <span class="categoria-post">
-
-                                        <?= htmlspecialchars($postAutor['categoria']) ?>
-
-                                    </span>
-
-                                    <p>
-
-                                        <i class="bi bi-calendar3"></i>
-
-                                        <?= date('d \d\e F \d\e Y', strtotime($postAutor['data'])) ?>
-
-                                    </p>
+                                    <a href="/Post-individual?id_post=<?= $postAutor['id_post'] ?>" class="botao">Ver mais</a>
 
                                 </div>
+                            </div>
                                 
-                            </a>
+                                
                         <?php endforeach;?>
                     </div>
                     
-                    <span class="material-symbols-outlined" id="seta-direita-autor">arrow_forward_ios</span>
+                    <span class="material-symbols-outlined" id="seta-direita">arrow_forward_ios</span>
 
                 </div>
 

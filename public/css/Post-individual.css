@@ -420,6 +420,25 @@ button:hover{
     text-decoration: none;
 } */
 
+.material-symbols-outlined {
+    color: #770523;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    z-index: 10;
+}
+
+.material-symbols-outlined:hover {
+    transform: scale(1.1);
+}
+
+#seta-esquerda {
+    z-index: 10;
+}
+
+#seta-direita {
+    z-index: 10;
+}
+
 .cards-blog-autor {
     display: flex;
     align-items: center;
@@ -436,9 +455,16 @@ button:hover{
 }
 
 .card-post-autor {
-    min-width: calc(100% / 4);
+    min-width: calc(100%/4);
     box-sizing: border-box;
     padding: 10px;
+    background-color: #FAD2E1;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    margin: 10px;
+    transition: 0.3s;
+    text-decoration: none;
+    
 }
 
 .card-post-autor:hover{
@@ -449,7 +475,7 @@ button:hover{
 .card-post-autor img{
 
     width: 100%;
-
+    border-radius: 25px;
     height: 10rem;
 
     object-fit: cover;
@@ -511,7 +537,23 @@ button:hover{
     gap: 0.3rem;
 }
 
+.botao{
+    display: inline-block;
+    border: none;
+    background-color:#D0D996;
+    border-radius: 25px;
+    padding: 5px 10px;
+    font-family: "Noah", sans-serif;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+    text-align: center;
+    color: #1F0008;
+}
 
+.botao:hover {
+    transform: scale(1.1);
+}
 
 .acoes-modal-autor{
 
