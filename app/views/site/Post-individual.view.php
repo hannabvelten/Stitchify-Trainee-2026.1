@@ -107,7 +107,7 @@
 
                     <div class="categorias">
 
-                        <h2>Categorias</h2>
+                        <h2>Categoria</h2>
 
                         <ul>
 
@@ -173,129 +173,47 @@
                     <h2>Posts do Autor</h2>
                 </div>
 
-                
-                <div class="lista-posts-autor">
+                <div class="cards-blog-autor">
+                <!-- <div class="lista-posts-autor"> -->
+                    <span class="material-symbols-outlined" id="seta-esquerda-autor">arrow_back_ios</span>
 
-                    <?php foreach ($postsDoAutor as $postAutor):?>
-                        <a href="/Post-individual?id_post=<?= $postAutor['id_post'] ?>" class="card-post-autor">
-                            <img 
-                            src="../../../public/assets/posts/<?= htmlspecialchars($postAutor['imagem']) ?>" 
-                            alt="<?= htmlspecialchars($postAutor['titulo']) ?>">
+                    <div class="slider-conteudo-autor">
+                        <?php foreach ($postsDoAutor as $postAutor):?>
+                            <a href="/Post-individual?id_post=<?= $postAutor['id_post'] ?>" class="card-post-autor">
+                                <img 
+                                src="../../../public/assets/posts/<?= htmlspecialchars($postAutor['imagem']) ?>" 
+                                alt="<?= htmlspecialchars($postAutor['titulo']) ?>">
 
-                            <div class="informacoes-post-autor">
+                                <div class="informacoes-post-autor">
 
-                                <h3><?= htmlspecialchars($postAutor['titulo']) ?></h3>
+                                    <h3><?= htmlspecialchars($postAutor['titulo']) ?></h3>
 
-                                <span class="categoria-post">
+                                    <span class="categoria-post">
 
-                                    <?= htmlspecialchars($postAutor['categoria']) ?>
+                                        <?= htmlspecialchars($postAutor['categoria']) ?>
 
-                                </span>
+                                    </span>
 
-                                <p>
+                                    <p>
 
-                                    <i class="bi bi-calendar3"></i>
+                                        <i class="bi bi-calendar3"></i>
 
-                                    <?= date('d \d\e F \d\e Y', strtotime($post['data'])) ?>
+                                        <?= date('d \d\e F \d\e Y', strtotime($postAutor['data'])) ?>
 
-                                </p>
+                                    </p>
 
-                            </div>
-                            
-                        </a>
-                    <?php endforeach;?>
-                    
-                    <!-- <div class="card-post-autor">
-
-                        <img 
-                        src="../../../public/assets/mascaracroche.jpg" 
-                        alt="Máscara">
-
-                        <div class="informacoes-post-autor">
-
-                            <h3>Máscara Flor</h3>
-
-                            <span class="categoria-post">
-
-                                Utilidades
-
-                            </span>
-
-                            <p>
-
-                                <i class="bi bi-calendar3"></i>
-
-                                23 de Jun, 2026
-
-                            </p>
-
-                        </div>
-
+                                </div>
+                                
+                            </a>
+                        <?php endforeach;?>
                     </div>
                     
-
-                    <div class="card-post-autor">
-
-                        <img 
-                        src="../../../public/assets/toucafrango.jpg" 
-                        alt="Touca">
-
-                        <div class="informacoes-post-autor">
-
-                            <h3>Touca Frango</h3>
-
-                            <span class="categoria-post">
-
-                                Roupas
-
-                            </span>
-
-                            <p>
-
-                                <i class="bi bi-calendar3"></i>
-
-                                24 de Jul, 2026
-
-                            </p>
-
-                        </div>
-
-                    </div>
-                
-
-                    <div class="card-post-autor">
-
-                        <img 
-                        src="../../../public/assets/porta-copo.jpg" 
-                        alt="Porta Copo">
-
-                        <div class="informacoes-post-autor">
-
-                            <h3>Porta Copo</h3>
-
-                            <span class="categoria-post">
-
-                                Materiais
-
-                            </span>
-
-                            <p>
-
-                                <i class="bi bi-calendar3"></i>
-
-                                25 de Ago, 2026
-
-                            </p>
-
-                        </div>
-
-                    </div> -->
+                    <span class="material-symbols-outlined" id="seta-direita-autor">arrow_forward_ios</span>
 
                 </div>
 
             </div>
 
-        
 
             <div class="acoes-modal-autor">
 

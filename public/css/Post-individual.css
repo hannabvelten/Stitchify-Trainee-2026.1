@@ -395,7 +395,7 @@ button:hover{
 }
 
 
-
+/* 
 .lista-posts-autor{
 
     display: grid;
@@ -403,11 +403,9 @@ button:hover{
     grid-template-columns: repeat(4, 1fr);
 
     gap: 1rem;
-}
+} */
 
-
-
-.card-post-autor{
+/* .card-post-autor{
 
     background-color: #FAD2E1;
 
@@ -420,6 +418,27 @@ button:hover{
     cursor: pointer;
 
     text-decoration: none;
+} */
+
+.cards-blog-autor {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider-conteudo-autor {
+    display: flex;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    width: 100%;
+}
+
+.card-post-autor {
+    min-width: calc(100% / 4);
+    box-sizing: border-box;
+    padding: 10px;
 }
 
 .card-post-autor:hover{

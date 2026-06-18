@@ -180,65 +180,6 @@
                                 <a href="/Post-individual?id_post=<?= $post->id_post ?>" class="botao">Ver mais</a>
                             </div>
                         <?php endforeach ?>
-                        <!-- <div class="card-blog">
-                            <img src="../../../public/assets/No-Sew Crochet Mushroom Jewelry Holder_Trinket Dish Tutorial.webp" alt="">
-
-                            <h3>Lorem Ipsum</h3>
-
-                            <p><b>Autor:</b></p>
-                            <p>Lorem ipsum dolor sit amet, consectur adipiscing elit. Sispendisse imperdiet maximus sodales.
-                            </p>
-                            <button>Ver mais</button>
-                        </div>
-
-                        <div class="card-blog">
-                            <img src="../../../public/assets/Aprenda crochê do zero _ crie, relaxe e lucre.webp" alt="">
-
-                            <h3>Lorem Ipsum</h3>
-
-                            <p><b>Autor:</b></p>
-                            <p>Lorem ipsum dolor sit amet, consectur adipiscing elit. Sispendisse imperdiet maximus
-                                sodales.
-                            </p>
-                            <button>Ver mais</button>
-                        </div>
-
-                        <div class="card-blog">
-                            <img src="../../../public/assets/Coffee (or tea), a sweet treat, a good book, and a….webp"
-                                alt="">
-
-                            <h3>Lorem Ipsum</h3>
-
-                            <p><b>Autor:</b></p>
-                            <p>Lorem ipsum dolor sit amet, consectur adipiscing elit. Sispendisse imperdiet maximus
-                                sodales.
-                            </p>
-                            <button>Ver mais</button>
-                        </div>
-
-                        <div class="card-blog">
-                            <img src="../../../public/assets/Imagem salva da internet _INSPIRAÇÃO_.webp" alt="">
-
-                            <h3>Lorem Ipsum</h3>
-
-                            <p><b>Autor:</b></p>
-                            <p>Lorem ipsum dolor sit amet, consectur adipiscing elit. Sispendisse imperdiet maximus
-                                sodales.
-                            </p>
-                            <button>Ver mais</button>
-                        </div>
-
-                        <div class="card-blog">
-                            <img src="../../../public/assets/Vertical Crochet Hibiscus Garland.webp" alt="">
-
-                            <h3>Lorem Ipsum</h3>
-
-                            <p><b>Autor:</b></p>
-                            <p>Lorem ipsum dolor sit amet, consectur adipiscing elit. Sispendisse imperdiet maximus
-                                sodales.
-                            </p>
-                            <button>Ver mais</button>
-                        </div> -->
 
                     </div>
 

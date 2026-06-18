@@ -21,3 +21,49 @@ function fecharModal(idModal){
 
     document.body.style.overflow = "auto";
 }
+
+
+
+// Carrossel de posts
+
+const sliderAutor = document.querySelector('.slider-conteudo-autor');
+const leftArrowAutor = document.getElementById("seta-esquerda-autor");
+const rightArrowAutor = document.getElementById("seta-direita-autor");
+
+if (sliderAutor) {
+    let currentPageAutor = 0;
+    let autoSlideAutor;
+
+    function totalPagesAutor() {
+        const itens = sliderAutor.children.length;
+        const perView = window.innerWidth <= 767 ? 1 : window.innerWidth <= 1200 ? 2 : 3;
+        return Math.ceil(itens / perView);
+    }
+
+    function scrollAutor() {
+        sliderAutor.scrollTo({ left: currentPageAutor * sliderAutor.offsetWidth, behavior: 'smooth' });
+    }
+
+    function moveLeftAutor() {
+        currentPageAutor = currentPageAutor <= 0 ? totalPagesAutor() - 1 : currentPageAutor - 1;
+        scrollAutor();
+        resetAutoAutor();
+    }
+
+    function moveRightAutor() {
+        currentPageAutor = currentPageAutor >= totalPagesAutor() - 1 ? 0 : currentPageAutor + 1;
+        scrollAutor();
+        resetAutoAutor();
+    }
+
+    function resetAutoAutor() {
+        clearInterval(autoSlideAutor);
+        autoSlideAutor = setInterval(moveRightAutor, 5000);
+    }
+
+    leftArrowAutor.addEventListener('click', moveLeftAutor);
+    rightArrowAutor.addEventListener('click', moveRightAutor);
+    window.addEventListener('resize', () => { currentPageAutor = 0; scrollAutor(); });
+
+    resetAutoAutor();
+}

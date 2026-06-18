@@ -261,8 +261,7 @@ class QueryBuilder
                 FROM tabela_posts
                 INNER JOIN tabela_usuarios ON tabela_posts.autor = tabela_usuarios.id
                 WHERE tabela_posts.autor = :autor_id
-                ORDER BY tabela_posts.id_post DESC
-                LIMIT 4";
+                ORDER BY tabela_posts.id_post DESC";
 
         try {
             $stmt = $this->pdo->prepare($sql);
