@@ -124,7 +124,6 @@ main {
 }
 
 .busca-user {
-.busca-user {
     width: 500px;
     height: 35px;
     font-family: 'Noah-Regular';
@@ -168,7 +167,6 @@ main {
     background-color: #C1CA8B;
     border-collapse: separate;
     border-spacing: 0 10px;
-    
 }
 
 th,
@@ -178,7 +176,7 @@ td {
 }
 td{
     font-family: 'Noah-Regular';
-    text-align: center;
+    text-align: left0,;
 
 }
 th {
@@ -261,7 +259,6 @@ tbody tr td:last-child {
 
 }
 
-.usuario{
 .usuario{
     border-radius: 20px;
     background-color: #FAD2E1;

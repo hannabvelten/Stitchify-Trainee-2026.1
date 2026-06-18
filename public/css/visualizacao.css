@@ -89,9 +89,7 @@
     min-height: 36px;
     border-radius: 50%;
     object-fit: cover;
-    display: inline-block;
     vertical-align: middle;
-    margin-right: 10px; 
 }
 .foto-tabela-user-modal {
     width: 60px;
@@ -100,9 +98,7 @@
     min-height: 60px;
     border-radius: 50%;
     object-fit: cover;
-    display: inline-block;
     vertical-align: middle;
-    margin-right: 10px; 
 }
 .admv{
     border-radius: 20px;

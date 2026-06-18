@@ -190,14 +190,34 @@ class QueryBuilder
             die($e->getMessage());
         }
     }
+    
+    //     //DELETE FROM `tabela_usuarios` WHERE 0
+    //     public function delete($table, $id)
+    //     {
+    //         $sql = sprintf('DELETE FROM %s WHERE %s',
+    //         $table,
+    //         'id = :id'
+    //         );
+    
+    //         try {
+    //             $stmt = $this->pdo->prepare($sql);
+    //             $stmt->execute(compact('id'));
+    
+    //         } catch (Exception $e) {
+    //             die($e->getMessage());
+    //         }
+    //     }
 
-    public function delete($table, $idColumn, $id)
+    public function delete($table, $id)
     {
-        $sql = "DELETE FROM {$table} WHERE {$idColumn} = :id";
+        $sql = sprintf('DELETE FROM %s WHERE %s',
+        $table,
+        'id = :id',
+        );
 
         try {
             $stmt = $this->pdo->prepare($sql);
-            $stmt->execute(['id' => $id]);
+            $stmt->execute(compact('id'));
 
             return $stmt->rowCount();
 
@@ -301,84 +321,68 @@ class QueryBuilder
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute([
                 'email' => $email
-            ]);
-
-            $user = $stmt->fetch(PDO::FETCH_OBJ);
-            return $user;
-
-        } catch (Exception $e) {
-            die($e->getMessage());
-        }
-    }
-
-    public function efetuaInscricao($email, $senha)
-    {
-        $sql = sprintf('INSERT INTO tabela_usuarios (email, senha) VALUES (:email, :senha)');
-        try {
-            $stmt = $this->pdo->prepare($sql);
-            $stmt->execute([
-                'email' => $email,
-                'senha' => $senha
-            ]);
-        } catch (Exception $e) {
-            throw new Exception($e->getMessage());
-        }
-    }
-
-    // public function insert($table, $parameters){
-    //     $sql = sprintf('INSERT INTO %s (%s) VALUES (:%s)',
-    //     $table, 
-    //     implode(', ', array_keys($parameters)),
-    //     implode(', :', array_keys($parameters)),
-    //     );
-
-    //     try {
-    //         $stmt = $this->pdo->prepare($sql);
-    //         $stmt->execute($parameters);
-
-    //         return $stmt->fetchAll(PDO::FETCH_CLASS);
-
-    //     } catch (Exception $e) {
-    //         die($e->getMessage());
-    //     }
-    // }
-
-    // UPDATE `tabela_usuarios` 
-    // SET `id`='[value-1]',`nome`='[value-2]',`email`='[value-3]',`tipo`='[value-4]',`senha`='[value-5]',`foto`='[value-6]' WHERE 1
-//     public function update($table, $id, $parameters){
-//         $sql = sprintf('UPDATE %s SET %s WHERE id = %s',
-//         $table,
-//         implode(', ', array_map(function($param){
-//             return $param . ' = :' . $param;
-//         }, array_keys($parameters))),
-//         $id
-//         );
-
-//         try {
-//             $stmt = $this->pdo->prepare($sql);
-//             $stmt->execute($parameters);
-
-//             return $stmt->fetchAll(PDO::FETCH_CLASS);
-
-//         } catch (Exception $e) {
-//             die($e->getMessage());
-//         }
-//     }
-
-//     //DELETE FROM `tabela_usuarios` WHERE 0
-//     public function delete($table, $id)
-//     {
-//         $sql = sprintf('DELETE FROM %s WHERE %s',
-//         $table,
-//         'id = :id'
-//         );
-
-//         try {
-//             $stmt = $this->pdo->prepare($sql);
-//             $stmt->execute(compact('id'));
-
-//         } catch (Exception $e) {
-//             die($e->getMessage());
-//         }
-//     }
-}
+                ]);
+                
+                $user = $stmt->fetch(PDO::FETCH_OBJ);
+                return $user;
+                
+                } catch (Exception $e) {
+                    die($e->getMessage());
+                    }
+                    }
+                    
+                    public function efetuaInscricao($email, $senha)
+                    {
+                        $sql = sprintf('INSERT INTO tabela_usuarios (email, senha) VALUES (:email, :senha)');
+                        try {
+                            $stmt = $this->pdo->prepare($sql);
+                            $stmt->execute([
+                                'email' => $email,
+                                'senha' => $senha
+                                ]);
+                                } catch (Exception $e) {
+                                    throw new Exception($e->getMessage());
+                                    }
+                                    }
+                                    
+                                    // public function insert($table, $parameters){
+                                        //     $sql = sprintf('INSERT INTO %s (%s) VALUES (:%s)',
+                                        //     $table, 
+                                        //     implode(', ', array_keys($parameters)),
+                                        //     implode(', :', array_keys($parameters)),
+                                        //     );
+                                        
+                                        //     try {
+                                            //         $stmt = $this->pdo->prepare($sql);
+                                            //         $stmt->execute($parameters);
+                                            
+                                            //         return $stmt->fetchAll(PDO::FETCH_CLASS);
+                                            
+                                            //     } catch (Exception $e) {
+                                                //         die($e->getMessage());
+                                                //     }
+                                                // }
+                                                
+                                                // UPDATE `tabela_usuarios` 
+                                                // SET `id`='[value-1]',`nome`='[value-2]',`email`='[value-3]',`tipo`='[value-4]',`senha`='[value-5]',`foto`='[value-6]' WHERE 1
+                                                //     public function update($table, $id, $parameters){
+                                                    //         $sql = sprintf('UPDATE %s SET %s WHERE id = %s',
+                                                    //         $table,
+                                                    //         implode(', ', array_map(function($param){
+                                                        //             return $param . ' = :' . $param;
+                                                        //         }, array_keys($parameters))),
+                                                        //         $id
+                                                        //         );
+                                                        
+                                                        //         try {
+                                                            //             $stmt = $this->pdo->prepare($sql);
+                                                            //             $stmt->execute($parameters);
+                                                            
+                                                            //             return $stmt->fetchAll(PDO::FETCH_CLASS);
+                                                            
+                                                            //         } catch (Exception $e) {
+                                                                //             die($e->getMessage());
+                                                                //         }
+                                                                //     }
+                                                                
+                                                                }
