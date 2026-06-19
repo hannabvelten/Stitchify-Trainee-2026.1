@@ -21,6 +21,8 @@ class UsuariosController
         $query->where('nome', 'LIKE', "%{$busca}%")
         ->orWhere('email', 'LIKE', "%{$busca}%");
         }
+        $totalUsuarios = $query->count(); 
+        $totalPages = ceil($totalUsuarios / $perPage);
 
         $usuarios = $query->get();
         return view('admin/crudUsuarios', compact('usuarios'));
