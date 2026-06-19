@@ -30,12 +30,13 @@ class UsuariosController
         $query->where('nome', 'LIKE', "%{$busca}%")
         ->orWhere('email', 'LIKE', "%{$busca}%");
         }
-        $totalUsuarios = $query->count(); 
+        $usuariosTodos = $query->get();
+        $totalUsuarios = count($usuariosTodos);
         $totalPages = ceil($totalUsuarios / $perPage);
         $currentPage = max(1, min($currentPage, $totalPages));
 
         $usuarios = $query->get();
-        return view('admin/crudUsuarios', compact('usuarios'));
+        return view('admin/crudUsuarios', compact('usuarios', 'currentPage','totalPages'));
 
     }
     
