@@ -162,10 +162,9 @@ class PostsController
     public function landingPage(){
         $database = App::get('database');
         $posts = $database->paginate('tabela_posts', 5, 0);
-
-        return view('site/landing-page', [
-            'posts' => $posts,
-        ]);
+    
+    return view('site/landing-page', compact('posts'));
+        
     }
 
     public function postIndividual(){
