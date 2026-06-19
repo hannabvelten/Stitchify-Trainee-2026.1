@@ -22,7 +22,7 @@ class Controller
     }
     public function exibirlandingPage()
     {
-        return view('site/landingpage');
+        return view('site/landing-page');
     }
     public function efetuaLogin()
     {
