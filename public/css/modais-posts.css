@@ -172,9 +172,9 @@
 .post-imagem{ width:100%; height:150px; border:2px var(--cinza) dashed; border-radius:30px; overflow:hidden; position:relative }
 .post-imagem img{ position:absolute; top:0; left:0; width:100%; height:150px; object-fit:cover; border-radius:28px }
 
-/* ============ MODAL EDITAR ============ */
+/* === Modal Editar === */
 .post-modalEditar {
-    width: 550px;
+    width: 520px;
     display: none;
     flex-direction: column;
     border-radius: 25px;
@@ -186,7 +186,7 @@
     left: 50%;
     transition: 0.3s ease;
     transform: translate(-50%, -50%);
-    max-height: 90vh;
+    max-height: 95vh;
     overflow-y: auto;
     z-index: 20;
 }
@@ -195,10 +195,11 @@
     display: flex;
     flex-direction: row;
     background-color: var(--bege);
-    padding: 15px;
+    padding: 0.4rem 1.5rem;
     gap: 10px;
     align-items: center;
     border-radius: 25px 25px 0px 0px;
+    
 }
 
 .post-modalEditar input,
@@ -216,7 +217,8 @@
 }
 
 .post-modalEditar textarea {
-    min-height: 120px;
+    height: 5.5rem;
+    min-height: 5.5rem;
     resize: none;
 }
 
@@ -261,7 +263,7 @@
 
 .post-imagemEditar {
     width: 100%;
-    height: 180px;
+    height: 11rem;
     object-fit: cover;
     border-radius: 25px;
     filter: brightness(40%);
@@ -306,19 +308,53 @@
 }
 
 .post-input-data {
+    
     background-color: #FBF6EF;
-    padding: 12px;
-    width: 50%;
+    padding: 0.4rem 1rem;
+    width: 11rem;
+    height: 2.5rem;
+
     border: 2px solid var(--cinza);
     border-radius: 20px;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     font-family: "Noah", sans-serif;
+    font-size: 1rem;
     color: #1F0008;
 }
 
-/* ============ MODAL EXCLUIR ============ */
+.post-modalEditar .post-modalActions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    margin-top: 0.5rem;
+}
+
+.post-modalEditar .post-btnCancel,
+.post-modalEditar .post-btnCreate {
+    width: 8rem;
+    height: 2.2rem;
+    padding: 0.4rem 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: "Noah", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+
+/* ==== Modal Excluir ==== */
 .post-modalExcluir {
     width: 550px;
     display: none;
@@ -347,8 +383,10 @@
     font-family: "Baloo", sans-serif;
     color: #1F0008;
     font-size: 29px;
-    width: 80%;
-    line-height: 45px;
+    width: 100%;
+    line-height: 34px;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
 }
 
 .post-imagemExcluir {
@@ -382,31 +420,66 @@
 }
 
 .post-alertaExcluir {
+    width: 100%;
+    min-height: 5rem;
+    padding: 1rem 1.5rem;
+
     display: flex;
-    flex-direction: column;
-    gap: 8px;
-    padding: 12px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+
+    text-align: center;
     background-color: #FBF6EF;
     border-radius: 15px;
 }
 
 .post-alertaExcluir i {
-    font-size: 24px;
+    font-size: 2rem;
     color: #F42E31;
 }
 
 .post-alertaExcluir p {
     font-family: "Noah", sans-serif;
     color: #1F0008;
-    font-size: 14px;
+    font-size: 1.1rem;
+    margin: 0;
 }
 
 .post-modalExcluir .post-modalContent {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    padding: 10px;
-    margin: 20px;
+    padding: 0.5rem 1rem 1rem 1rem;
+    margin: 0.8rem 1.25rem 1.25rem 1.25rem;
+
+}
+
+.post-modalExcluir .post-modalActions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+    margin-top: 0.8rem;
+}
+
+.post-modalExcluir .post-btnCancel,
+.post-modalExcluir .post-btnDelete {
+    width: 8rem;
+    height: 2.2rem;
+    padding: 0.4rem 1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "Noah", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+
+    border-radius: 2rem;
+    cursor: pointer;
 }
 
 /* Scrollbar styling */
@@ -431,7 +504,7 @@
     background-color: #1F0008;
 }
 
-/* ===== CORREÇÃO DOS CAMPOS DO MODAL CRIAR ===== */
+/* === Correção do Modal Criar === */
 
 .post-modalCriar .post-formContent{
     display: flex;
@@ -499,6 +572,39 @@
 .post-modalCriar .post-descricao textarea:focus{
     border-color: var(--vinho);
     background-color: var(--branco);
+}
+
+/* Corrige texto grande no Modal Visualizar */
+.post-modalVisualizar .input-descricao,
+.post-modalVisualizar .input-descricao p{
+    width: 100%;
+    max-width: 100%;
+
+    white-space: normal;
+    word-break: break-word;
+    overflow-wrap: break-word;
+
+    overflow: hidden;
+}
+
+.post-modalVisualizar .input-descricao{
+    min-height: 6rem;
+    max-height: 10rem;
+    overflow-y: auto;
+}
+
+.post-modalVisualizar .input-titulo,
+.post-modalVisualizar .input-titulo p,
+.post-modalVisualizar .input-categoria,
+.post-modalVisualizar .input-autor,
+.post-modalVisualizar .input-data,
+.post-modalVisualizar .input-data p{
+    width: 100%;
+    max-width: 100%;
+
+    white-space: normal;
+    word-break: break-word;
+    overflow-wrap: break-word;
 }
 
 /* pequenas responsividades */
