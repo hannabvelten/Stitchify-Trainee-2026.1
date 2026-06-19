@@ -28,7 +28,6 @@
 
         <main class="conteudo">
             <!-- Sombreado para quando abrir os modais -->
-            <div class="filtro" id="filtro"></div>
             <header class="topbar">
 
                 <div class="titulo-area">
@@ -203,7 +202,7 @@
                             </ul>
                         </div>
                     <?php endif; ?>
-                    
+
                 </div>
 
             </section>
@@ -382,8 +381,6 @@
 
                     <textarea name="descricao"><?= $post->descricao?></textarea>
 
-                    <!-- <textarea name="descricao">Um porta-copo de crochê artesanal feito com carinho, unindo beleza, praticidade e um toque acolhedor para qualquer ambiente. Produzido com fios de qualidade e pontos delicados, ele protege superfícies contra manchas e calor, enquanto adiciona charme e personalidade à decoração. Perfeito para quem valoriza peças feitas à mão, esse acessório combina funcionalidade com o encanto único do crochê, trazendo um detalhe especial para sua mesa ou cantinho do café.</textarea> -->
-
                 </div>
 
                 <!-- Categorias -->
@@ -436,9 +433,9 @@
         </form>
 
         <!-- Modal Excluir Post -->
-        <form class="modalVisualizar" id="modalExcluir-<?= $post->id_post ?>" action="/tabelapost/delete" method="POST">
+        <form class="post-modalExcluir" id="modalExcluir-<?= $post->id_post ?>" action="/tabelapost/delete" method="POST">
 
-            <div class="header">
+            <div class="post-modal-header">
 
                 <img src="../../../public/assets/Novelo_cortado.png" alt="Logo">
 
@@ -446,12 +443,12 @@
 
             </div>
 
-            <div class="modalContent">
+            <div class="post-modalContent">
 
                 <input type="hidden" name="id_post" value="<?= $post->id_post ?>">
 
                 <!-- Texto -->
-                <div class="textoExcluir">
+                <div class="post-textoExcluir">
 
                     <h2>
                         Tem certeza que deseja
@@ -461,14 +458,14 @@
                 </div>
 
                 <!-- Imagem -->
-                <img src="../../../public/assets/posts/<?= $post->imagem ?>" alt="Post" class="imagemExcluir">
+                <img src="../../../public/assets/posts/<?= $post->imagem ?>" alt="Post" class="post-imagemExcluir">
 
                 <!-- Titulo -->
-                <div class="tituloExcluir">
+                <div class="post-tituloExcluir">
 
                     <label>Título do Post :</label>
 
-                    <div class="inputExcluir">
+                    <div class="post-inputExcluir">
 
                         <?= $post->titulo?>
 
@@ -477,7 +474,7 @@
                 </div>
 
                 <!-- Alerta -->
-                <div class="alertaExcluir">
+                <div class="post-alertaExcluir">
 
                     <i class="bi bi-exclamation-triangle"></i>
 
@@ -486,15 +483,15 @@
                 </div>
 
                 <!-- Botoes -->
-                <div class="modalActions">
+                <div class="post-modalActions">
 
-                    <button type="button" class="btnCancel" onclick="fecharModal('modalExcluir-<?= $post->id_post ?>')">
+                    <button type="button" class="post-btnCancel" onclick="fecharModal('modalExcluir-<?= $post->id_post ?>')">
 
                         Cancelar
 
                     </button>
 
-                    <button type="submit" class="btnDelete">
+                    <button type="submit" class="post-btnDelete">
 
                         Excluir
 

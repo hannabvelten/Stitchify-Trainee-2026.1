@@ -25,6 +25,7 @@ $router->post('tabelapost/delete', 'PostsController@destroy');
 $router->get('landing-page', 'PostsController@landingPage');
 $router->get('Post-individual', 'PostsController@postIndividual');
 $router->get('lista-de-posts', 'PostsController@posts');
+$router->get('perfil-usuario', 'PostsController@perfilUsuario');
 
 $router->get('crudUsuarios', 'UsuariosController@index');
 
