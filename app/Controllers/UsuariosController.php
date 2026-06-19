@@ -14,29 +14,24 @@ class UsuariosController
 
     public function index()
     {
-        if (!isset($_SESSION['id']) || $_SESSION['tipo'] !== 'admin') {
-            header('Location: /login');
-            exit;
-        }
+       // if (!isset($_SESSION['id']) || $_SESSION['tipo'] !== 'admin') {
+        //    header('Location: /login');
+        //    exit;
+        //}
 
-        $usuarios = App::get('database')->selectAll('tabela_usuarios');
+    $busca = $_GET['busca'] ?? '';
+    $currentPage = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+    $perPage = 5;
+    $offset = ($currentPage - 1) * $perPage;
 
-        $busca = $_GET['busca'] ??'';
-        $currentPage = isset($_GET['page']) ? (int)$_GET['page'] : 1;
-        $perPage = 5;
-        $query = App::get('database')->table('tabela_usuarios');
+    $totalUsuarios = App::get('database')->countUsuarios($busca);
 
-        if (!empty($busca)) {
-        $query->where('nome', 'LIKE', "%{$busca}%")
-        ->orWhere('email', 'LIKE', "%{$busca}%");
-        }
-        $usuariosTodos = $query->get();
-        $totalUsuarios = count($usuariosTodos);
-        $totalPages = ceil($totalUsuarios / $perPage);
-        $currentPage = max(1, min($currentPage, $totalPages));
+    $totalPages = ceil($totalUsuarios / $perPage);
+    $currentPage = max(1, min($currentPage, $totalPages));
 
-        $usuarios = $query->get();
-        return view('admin/crudUsuarios', compact('usuarios', 'currentPage','totalPages'));
+    $usuarios = App::get('database')->paginateUsuarios($perPage, $offset, $busca);
+
+    return view('admin/crudUsuarios', compact('usuarios', 'currentPage', 'totalPages'));
 
     }
     
