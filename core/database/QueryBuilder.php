@@ -352,27 +352,44 @@ class QueryBuilder
                                     }
                                     }
                                     
-  public function paginateUsuarios($limit, $offset, $busca = '') {
-    $params = [];
-    $where = '';
+    public function paginateUsuarios($limit, $offset, $busca = '') {
+        $params = [];
+        $where = '';
 
-    if (!empty($busca)) {
-        $where = " WHERE nome LIKE :busca OR email LIKE :busca2";
-        $params['busca'] = "%{$busca}%";
-        $params['busca2'] = "%{$busca}%";
+        if (!empty($busca)) {
+            $where = " WHERE nome LIKE :busca OR email LIKE :busca2";
+            $params['busca'] = "%{$busca}%";
+            $params['busca2'] = "%{$busca}%";
+        }
+
+        $sql = "SELECT * FROM tabela_usuarios {$where} LIMIT {$limit} OFFSET {$offset}";
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute($params);
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
     }
+    public function countUsuarios($busca = '')
+    {
+        $params = [];
+        $where = '';
 
-    $sql = "SELECT * FROM tabela_usuarios {$where} LIMIT {$limit} OFFSET {$offset}";
+        if (!empty($busca)) {
+            $where = " WHERE nome LIKE :busca OR email LIKE :busca2";
+            $params['busca'] = "%{$busca}%";
+            $params['busca2'] = "%{$busca}%";
+        }
 
-    try {
+        $sql = "SELECT COUNT(*) AS total FROM tabela_usuarios {$where}";
         $stmt = $this->pdo->prepare($sql);
         $stmt->execute($params);
-        return $stmt->fetchAll(PDO::FETCH_CLASS);
-    } catch (Exception $e) {
-        die($e->getMessage());
+
+        return $stmt->fetch(PDO::FETCH_ASSOC)['total'];
     }
-}
-                                // public function insert($table, $parameters){
+// public function insert($table, $parameters){
                                         //     $sql = sprintf('INSERT INTO %s (%s) VALUES (:%s)',
                                         //     $table, 
                                         //     implode(', ', array_keys($parameters)),
