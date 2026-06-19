@@ -29,7 +29,6 @@
 
         <main class="conteudo">
             <!-- Sombreado para quando abrir os modais -->
-            <div class="filtro" id="filtro"></div>
             <header class="topbar">
 
                 <div class="titulo-area">
@@ -161,200 +160,6 @@
 
                         </tbody>
                     </table>
-                    <!-- <div class="tabela-posts">
-
-                        <div class="cabecalho-tabela">
-
-                            <span>ID</span>
-                            <span>Título</span>
-                            <span>Autor</span>
-                            <span>Categoria</span>
-                            <span>Data</span>
-                            <span>Ações</span>
-
-                        </div>
-
-
-
-                        <div class="linha-post">
-
-                            <span>0123456789</span>
-
-                            <div class="info-post">
-
-                                <img src="../../../public/assets/portacopo.jpg" alt="Post">
-
-                                <p>Porta Copo</p>
-
-                            </div>
-
-                            <div class="info-autor">
-
-                                <img src="../../../public/assets/fotousuario.jpg" alt="Autor">
-
-                                <p>Vasco da Gama</p>
-
-                            </div>
-
-                            <div class="tag">
-                                Post
-                            </div>
-
-                            <span>25/04/2026</span>
-
-                            <div class="acoes">
-
-                                <button onclick="abriModal('modalVisualizar')">
-                                    <i class="bi bi-eye"></i>
-                                </button>
-
-                                <button onclick="abriModal('modalEditar')">
-                                    <i class="bi bi-pencil"></i>
-                                </button>
-
-                                <button onclick="abriModal('modalExcluir')">
-                                    <i class="bi bi-trash"></i>
-                                </button>
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="linha-post">
-
-                            <span>8473628190</span>
-
-                            <div class="info-post">
-
-                                <img src="../../../public/assets/dory.jpg" alt="Post">
-
-                                <p>Dory</p>
-
-                            </div>
-
-                            <div class="info-autor">
-
-                                <img src="../../../public/assets/fotousuario.jpg" alt="Autor">
-
-                                <p>Hadassa</p>
-
-                            </div>
-
-                            <div class="tag">
-                                Tutorial
-                            </div>
-
-                            <span>02/05/2026</span>
-
-                            <div class="acoes">
-
-                                <button>
-                                    <i class="bi bi-eye"></i>
-                                </button>
-
-                                <button>
-                                    <i class="bi bi-pencil"></i>
-                                </button>
-
-                                <button>
-                                    <i class="bi bi-trash"></i>
-                                </button>
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="linha-post">
-
-                            <span>9182736455</span>
-
-                            <div class="info-post">
-
-                                <img src="../../../public/assets/toucafrango.jpg" alt="Post">
-
-                                <p>Touca de Frango</p>
-
-                            </div>
-
-                            <div class="info-autor">
-
-                                <img src="../../../public/assets/fotousuario.jpg" alt="Autor">
-
-                                <p>Maria Luiza</p>
-
-                            </div>
-
-                            <div class="tag">
-                                Dicas
-                            </div>
-
-                            <span>10/05/2026</span>
-
-                            <div class="acoes">
-
-                                <button>
-                                    <i class="bi bi-eye"></i>
-                                </button>
-
-                                <button>
-                                    <i class="bi bi-pencil"></i>
-                                </button>
-
-                                <button>
-                                    <i class="bi bi-trash"></i>
-                                </button>
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="linha-post">
-
-                            <span>6655443322</span>
-
-                            <div class="info-post">
-
-                                <img src="../../../public/assets/mascaracroche.jpg" alt="Post">
-
-                                <p>Mascara com Rosa</p>
-
-                            </div>
-
-                            <div class="info-autor">
-
-                                <img src="../../../public/assets/fotousuario.jpg" alt="Autor">
-
-                                <p>Murilo</p>
-
-                            </div>
-
-                            <div class="tag">
-                                Materiais
-                            </div>
-
-                            <span>15/05/2026</span>
-
-                            <div class="acoes">
-
-                                <button>
-                                    <i class="bi bi-eye"></i>
-                                </button>
-
-                                <button>
-                                    <i class="bi bi-pencil"></i>
-                                </button>
-
-                                <button>
-                                    <i class="bi bi-trash"></i>
-                                </button>
-
-                            </div>
-
-                        </div>
-                    </div> -->
 
                     <?php if($totalPages > 1):?>
                         <div class="paginacao-container">
@@ -398,29 +203,7 @@
                             </ul>
                         </div>
                     <?php endif; ?>
-                    <!-- <div class="paginacao">
 
-                        <button>
-                            <i class="bi bi-chevron-left"></i>
-                        </button>
-
-                        <button class="ativo">1</button>
-
-                        <button>2</button>
-
-                        <button>3</button>
-
-                        <span>...</span>
-
-                        <button>6</button>
-
-                        <button>
-                            <i class="bi bi-chevron-right"></i>
-                        </button>
-
-                    </div> -->
-
-                    
                 </div>
 
             </section>
@@ -599,8 +382,6 @@
 
                     <textarea name="descricao"><?= $post->descricao?></textarea>
 
-                    <!-- <textarea name="descricao">Um porta-copo de crochê artesanal feito com carinho, unindo beleza, praticidade e um toque acolhedor para qualquer ambiente. Produzido com fios de qualidade e pontos delicados, ele protege superfícies contra manchas e calor, enquanto adiciona charme e personalidade à decoração. Perfeito para quem valoriza peças feitas à mão, esse acessório combina funcionalidade com o encanto único do crochê, trazendo um detalhe especial para sua mesa ou cantinho do café.</textarea> -->
-
                 </div>
 
                 <!-- Categorias -->
@@ -653,9 +434,9 @@
         </form>
 
         <!-- Modal Excluir Post -->
-        <form class="modalVisualizar" id="modalExcluir-<?= $post->id_post ?>" action="/tabelapost/delete" method="POST">
+        <form class="post-modalExcluir" id="modalExcluir-<?= $post->id_post ?>" action="/tabelapost/delete" method="POST">
 
-            <div class="header">
+            <div class="post-modal-header">
 
                 <img src="../../../public/assets/Novelo_cortado.png" alt="Logo">
 
@@ -663,12 +444,12 @@
 
             </div>
 
-            <div class="modalContent">
+            <div class="post-modalContent">
 
                 <input type="hidden" name="id_post" value="<?= $post->id_post ?>">
 
                 <!-- Texto -->
-                <div class="textoExcluir">
+                <div class="post-textoExcluir">
 
                     <h2>
                         Tem certeza que deseja
@@ -678,14 +459,14 @@
                 </div>
 
                 <!-- Imagem -->
-                <img src="../../../public/assets/posts/<?= $post->imagem ?>" alt="Post" class="imagemExcluir">
+                <img src="../../../public/assets/posts/<?= $post->imagem ?>" alt="Post" class="post-imagemExcluir">
 
                 <!-- Titulo -->
-                <div class="tituloExcluir">
+                <div class="post-tituloExcluir">
 
                     <label>Título do Post :</label>
 
-                    <div class="inputExcluir">
+                    <div class="post-inputExcluir">
 
                         <?= $post->titulo?>
 
@@ -694,7 +475,7 @@
                 </div>
 
                 <!-- Alerta -->
-                <div class="alertaExcluir">
+                <div class="post-alertaExcluir">
 
                     <i class="bi bi-exclamation-triangle"></i>
 
@@ -703,15 +484,15 @@
                 </div>
 
                 <!-- Botoes -->
-                <div class="modalActions">
+                <div class="post-modalActions">
 
-                    <button type="button" class="btnCancel" onclick="fecharModal('modalExcluir-<?= $post->id_post ?>')">
+                    <button type="button" class="post-btnCancel" onclick="fecharModal('modalExcluir-<?= $post->id_post ?>')">
 
                         Cancelar
 
                     </button>
 
-                    <button type="submit" class="btnDelete">
+                    <button type="submit" class="post-btnDelete">
 
                         Excluir
 
