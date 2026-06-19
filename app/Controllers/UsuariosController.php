@@ -23,6 +23,7 @@ class UsuariosController
         }
         $totalUsuarios = $query->count(); 
         $totalPages = ceil($totalUsuarios / $perPage);
+        $currentPage = max(1, min($currentPage, $totalPages));
 
         $usuarios = $query->get();
         return view('admin/crudUsuarios', compact('usuarios'));
