@@ -70,9 +70,12 @@ class UsuariosController
 
         $id = $_POST['id'];
 
-        App::get('database')->update('tabela_usuarios', $id, $parameters);
+        App::get('database')->update('tabela_usuarios', 'id', $id, $parameters);
 
-        header('Location: /crudUsuarios');
+        $redirect = $_POST['redirect'] ?? '/crudUsuarios';
+        
+        header("Location: {$redirect}");
+        exit;
     }
 
     public function delete()

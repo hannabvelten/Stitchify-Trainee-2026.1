@@ -27,8 +27,8 @@ function fecharModal(idModal){
 // Carrossel de posts
 
 const sliderAutor = document.querySelector('.slider-conteudo-autor');
-const leftArrowAutor = document.getElementById("seta-esquerda-autor");
-const rightArrowAutor = document.getElementById("seta-direita-autor");
+const leftArrowAutor = document.getElementById("seta-esquerda");
+const rightArrowAutor = document.getElementById("seta-direita");
 
 if (sliderAutor) {
     let currentPageAutor = 0;

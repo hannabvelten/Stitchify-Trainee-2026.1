@@ -33,7 +33,7 @@ class Controller
         if( $user != false){
             session_start();
             $_SESSION['id'] = $user->id;
-            header('Location: /landingpage');
+            header('Location: /landing-page');
         }
         else{
             session_start();

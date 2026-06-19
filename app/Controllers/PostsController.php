@@ -67,13 +67,15 @@ class PostsController
             'titulo' => $_POST['titulo'],
             'descricao' => $_POST['descricao'],
             'imagem' => $nomeArquivo,
-            'autor' => 1, //Teste - $_SESSION['id_usuario'],
+            'autor' => $_SESSION['id'],
             'categoria' => $_POST['categoria'],
         ];
 
         App::get('database') -> insert('tabela_posts', $parameters);
         
-        header('Location: /tabelapost');
+        $redirect = $_POST['redirect'] ?? '/tabelapost';
+        header("Location: {$redirect}");
+        exit;
     }
 
     public function update()
@@ -81,9 +83,11 @@ class PostsController
         $database = App::get('database');
 
         $id = isset($_POST['id_post']) ? (int)$_POST['id_post'] : null;
-
+        
+        $redirect = $_POST['redirect'] ?? '/tabelapost';
+        
         if (!$id) {
-            header('Location: /tabelapost');
+            header("Location: {$redirect}");
             exit;
         }
 
@@ -114,7 +118,8 @@ class PostsController
 
         $database->update('tabela_posts', 'id_post', $id, $parameters);
 
-        header('Location: /tabelapost');
+        header("Location: {$redirect}");
+        exit;
     }
 
     public function destroy()
@@ -128,8 +133,10 @@ class PostsController
             $id = (int)$_GET['id_post'];
         }
 
+        $redirect = $_POST['redirect'] ?? '/tabelapost';
+        
         if (!$id) {
-            header('Location: /tabelapost');
+            header("Location: {$redirect}");
             exit;
         }
 
@@ -146,7 +153,8 @@ class PostsController
         // remover registro do banco
         $database->delete('tabela_posts', 'id_post', $id);
 
-        header('Location: /tabelapost');
+        header("Location: {$redirect}");
+        exit;
     }
 
 
@@ -209,5 +217,32 @@ class PostsController
         ]);
     }
 
+
+    public function perfilUsuario()
+    {
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
+
+        if (!isset($_SESSION['id'])) {
+            header('Location: /login');
+            exit;
+        }
+
+        $database = App::get('database');
+
+        $usuario = $database->findById('tabela_usuarios', 'id', $_SESSION['id']);
+        $usuario = (object) $usuario;
+
+        $posts = $database->getPostsByAutor($_SESSION['id']);
+        $posts = array_map(function($post) {
+            return (object) $post;
+        }, $posts);
+
+        return view('site/perfil-usuario', [
+            'usuario' => $usuario,
+            'posts' => $posts
+        ]);
+    }
 
 }

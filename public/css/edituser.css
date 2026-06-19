@@ -24,6 +24,10 @@
     --font-noah: 'Noah', sans-serif;
 }
 
+.hide {
+    display: none !important;
+}
+
 .modal-editar.hide {
     display: none;
 }

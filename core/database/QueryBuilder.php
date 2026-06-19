@@ -208,11 +208,18 @@ class QueryBuilder
     //         }
     //     }
 
-    public function delete($table, $id)
+    public function delete($table, $columnOrId, $id = null)
     {
-        $sql = sprintf('DELETE FROM %s WHERE %s',
-        $table,
-        'id = :id',
+        if ($id === null) {
+            $column = 'id';
+            $id = $columnOrId;
+        } else {
+            $column = $columnOrId;
+        }
+
+        $sql = sprintf('DELETE FROM %s WHERE %s = :id',
+            $table,
+            $column
         );
 
         try {
