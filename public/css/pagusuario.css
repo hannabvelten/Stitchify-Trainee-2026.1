@@ -28,17 +28,14 @@ main {
     display: flex;
 }
 
-.sidebar {
-    width: 20%;
-    background-color: #FAD2E1;
-}
+
 
 .bsidebar {
     display: none;
 }
 
 .paginausers {
-    width: 80%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 20px;

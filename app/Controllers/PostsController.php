@@ -14,10 +14,10 @@ class PostsController
     public function index()
     {
 
-        if (!isset($_SESSION['id']) || $_SESSION['tipo'] !== 'admin') {
-            header('Location: /login');
-            exit;
-        }
+        //if (!isset($_SESSION['id']) || $_SESSION['tipo'] !== 'admin') {
+        //    header('Location: /login');
+        //    exit;
+        //}
 
         $database = App::get('database');
         
