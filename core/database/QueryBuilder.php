@@ -338,14 +338,17 @@ class QueryBuilder
                     }
                     }
                     
-                    public function efetuaInscricao($email, $senha)
+                    public function efetuaInscricao($nome, $email, $senha)
                     {
-                        $sql = sprintf('INSERT INTO tabela_usuarios (email, senha) VALUES (:email, :senha)');
+                        $sql = sprintf('INSERT INTO tabela_usuarios (nome, email, senha, tipo, foto) VALUES (:nome, :email, :senha, :tipo, :foto)');
                         try {
                             $stmt = $this->pdo->prepare($sql);
                             $stmt->execute([
+                                'nome' => $nome,
                                 'email' => $email,
-                                'senha' => $senha
+                                'senha' => $senha,
+                                'tipo' => 'usuario',
+                                'foto' => ''
                                 ]);
                                 } catch (Exception $e) {
                                     throw new Exception($e->getMessage());

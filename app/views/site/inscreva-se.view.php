@@ -66,8 +66,8 @@
                 ?>
             </p>
         </div>
+            <input type="text" name="nome" placeholder="Nome completo">
             <input type="email" name="email" placeholder="Email">
-
             <input type="password" name="senha" placeholder="Senha">
             <input type="password" name="confirmarSenha" placeholder="Confirmar senha">
 
