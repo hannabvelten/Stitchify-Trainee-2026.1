@@ -105,13 +105,12 @@
             </tbody>
           </table>
           <div class="paginacao">
-            <button class="voltar"><</button>
-            <button class="pag1">1</button>
-            <button class="pag2">2</button>
-            <button class="pag3">3</button>
-            <button>...</button>
-            <button class="pag 5">5</button>
-            <button class="proximo">></button>
+            <button class="voltar" onclick="window.location='?page=<?= max(1, $currentPage - 1) ?>'" <?= $currentPage <= 1 ? 'disabled' : '' ?>><</button>
+                <?php for($i = 1; $i <= $totalPages; $i++): ?>
+                <button class="<?= $currentPage == $i ? 'active' : '' ?>"
+                onclick="window.location='?page=<?= $i ?>'"><?= $i ?></button>
+                <?php endfor; ?>
+            <button class="proximo"  onclick="window.location='?page=<?= min($totalPages, $currentPage + 1) ?>'" <?= $currentPage >= $totalPages ? 'disabled' : '' ?>>></button>
           </div>
         </div>
       </div>
