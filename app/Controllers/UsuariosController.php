@@ -13,6 +13,8 @@ class UsuariosController
         $usuarios = App::get('database')->selectAll('tabela_usuarios');
 
         $busca = $_GET['busca'] ??'';
+        $currentPage = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+        $perPage = 5;
         $query = App::get('database')->table('tabela_usuarios');
 
         if (!empty($busca)) {
