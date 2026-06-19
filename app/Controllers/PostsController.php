@@ -14,6 +14,11 @@ class PostsController
     public function index()
     {
 
+        if (!isset($_SESSION['id']) || $_SESSION['tipo'] !== 'admin') {
+            header('Location: /login');
+            exit;
+        }
+
         $database = App::get('database');
         
         $limit = 6;
@@ -48,6 +53,11 @@ class PostsController
 
     public function store()
     {
+
+        if (!isset($_SESSION['id']) || $_SESSION['tipo'] !== 'admin') {
+            header('Location: /login');
+            exit;
+        }
         // Como estamos salvando imagens precisamos fazer essa parte
         // Basicamente, eu criei uma pasta dentro de assets(posts) que vai ter
         // as imagens dos posts, e vamos salvar apenas os nomes delas no BD
@@ -80,6 +90,10 @@ class PostsController
 
     public function update()
     {
+        if (!isset($_SESSION['id']) || $_SESSION['tipo'] !== 'admin') {
+            header('Location: /login');
+            exit;
+        }
         $database = App::get('database');
 
         $id = isset($_POST['id_post']) ? (int)$_POST['id_post'] : null;
@@ -124,6 +138,11 @@ class PostsController
 
     public function destroy()
     {
+        if (!isset($_SESSION['id']) || $_SESSION['tipo'] !== 'admin') {
+            header('Location: /login');
+            exit;
+        }
+
         $database = App::get('database');
 
         $id = null;
@@ -219,9 +238,7 @@ class PostsController
 
     public function perfilUsuario()
     {
-        if (session_status() === PHP_SESSION_NONE) {
-            session_start();
-        }
+        
 
         if (!isset($_SESSION['id'])) {
             header('Location: /login');
