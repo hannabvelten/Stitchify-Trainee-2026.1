@@ -53,6 +53,7 @@ class Controller
 
     public function efetuaInscricao()
     {
+        $nome = $_POST['nome'];
         $email = $_POST['email'];
         $senha = $_POST['senha'];
         $confirmarSenha = $_POST['confirmarSenha'];
@@ -74,7 +75,7 @@ class Controller
         }
 
         try{
-            App::get('database')->efetuaInscricao($email, $senha);
+            App::get('database')->efetuaInscricao($email, $nome, $senha);
             header('Location: /login');
         }
         catch(Exception $e){
