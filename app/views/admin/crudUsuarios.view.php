@@ -13,7 +13,7 @@
 
   <body>
     <main>
-      <div class="sidebar"></div>
+      <?php require("app/views/admin/sidebar.php")?>
       <div class="paginausers">
         <div class="topo">
           <div class="usuarios">

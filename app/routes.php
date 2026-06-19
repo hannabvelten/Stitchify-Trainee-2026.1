@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 use App\Controllers\ExampleController;
+use App\Controllers\DashboardController;
 use App\Controllers\PostsController;
 use App\Controllers\UsuariosController;
 use App\Core\Router;
@@ -10,8 +11,12 @@ $router->get('login', 'Controller@exibirLogin');
 $router->get('inscreva-se', 'Controller@exibirInscrevaSe');
 $router->get('landing-page', 'Controller@exibirlandingPage');
 $router->post('login', 'Controller@efetuaLogin');
+$router->post('logout', 'Controller@efetuaLogout');
 $router->post('inscreva-se', 'Controller@efetuaInscricao');
 
+
+// Dashboard
+$router->get('dashboard', 'DashboardController@index');
 
 $router->get('', 'PostsController@index');
 

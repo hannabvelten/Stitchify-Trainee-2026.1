@@ -25,26 +25,36 @@
 
         <div class="paginas">
             <div class="link-paginas">
-                <div class="link">
-                    <i class="bi bi-bar-chart-fill"></i>
-                    <p>Dashboard</p>
-                </div>
-                <div class="link">
-                    <i class="bi bi-file-richtext-fill"></i>
-                    <p>Posts</p>
-                </div>
-                <div class="link">
-                    <i class="bi bi-people-fill"></i>
-                    <p>Usuários</p>
-                </div>
+                <a href="/dashboard">
+                    <div class="link">
+                        <i class="bi bi-bar-chart-fill"></i>
+                        <p>Dashboard</p>
+                    </div>
+                </a>
+                <a href="/tabelapost">
+                    <div class="link">
+                        <i class="bi bi-file-richtext-fill"></i>
+                        <p>Posts</p>
+                    </div>
+                </a>
+                <a href="/crudUsuarios">
+                    <div class="link">
+                        <i class="bi bi-people-fill"></i>
+                        <p>Usuários</p>
+                    </div>
+                </a>
+                    
             </div>
                 
 
             <div class="logout">
-                <div class="link">
-                    <i class="bi bi-box-arrow-right"></i>
-                    <p>Logout</p>
-                </div>
+                <a href="/logout">
+                    <div class="link">
+                        <i class="bi bi-box-arrow-right"></i>
+                        <p>Logout</p>
+                    </div>
+                </a>
+                    
             </div>
                 
 

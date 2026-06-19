@@ -33,6 +33,7 @@ class Controller
         if( $user != false){
             session_start();
             $_SESSION['id'] = $user->id;
+            $_SESSION['tipo'] = $user->tipo;
             header('Location: /landing-page');
         }
         else{
@@ -42,6 +43,14 @@ class Controller
         }
 
     }
+
+    public function efetuaLogout()
+    {
+        session_start();
+        session_destroy();
+        header('Location: /login');
+    }
+
     public function efetuaInscricao()
     {
         $email = $_POST['email'];

@@ -24,8 +24,7 @@
 
     <div class="layout">
 
-        <aside class="sidebar">
-        </aside>
+        <?php require("app/views/admin/sidebar.php")?>
 
         <main class="conteudo">
             <!-- Sombreado para quando abrir os modais -->

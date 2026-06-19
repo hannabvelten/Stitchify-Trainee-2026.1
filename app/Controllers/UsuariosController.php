@@ -5,11 +5,20 @@ namespace App\Controllers;
 use App\Core\App;
 use Exception;
 
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
 class UsuariosController
 {
 
     public function index()
     {
+        if (!isset($_SESSION['id']) || $_SESSION['tipo'] !== 'admin') {
+            header('Location: /login');
+            exit;
+        }
+
         $usuarios = App::get('database')->selectAll('tabela_usuarios');
 
         $busca = $_GET['busca'] ??'';
@@ -32,9 +41,14 @@ class UsuariosController
     
     public function store()
     {   
+        if (!isset($_SESSION['id']) || $_SESSION['tipo'] !== 'admin') {
+            header('Location: /login');
+            exit;
+        }
+
         $foto = 'default-avatar.png';
     
-    if (isset($_FILES['foto']) && $_FILES['foto']['error'] === UPLOAD_ERR_OK) {
+    if (isset($_FILES['foto']) || $_FILES['foto']['error'] === UPLOAD_ERR_OK) {
         $nomeOriginal = $_FILES['foto']['name'];
         $foto = time() . '_' . $nomeOriginal;
         $diretorioDestino = __DIR__ . '/../../public/uploads/' . $foto;
@@ -56,6 +70,11 @@ class UsuariosController
 
     public function edit()
     {
+        if (!isset($_SESSION['id']) || $_SESSION['tipo'] !== 'admin') {
+            header('Location: /login');
+            exit;
+        }
+
         $parameters = [
             'nome' => $_POST['nome'],
             'email' => $_POST['email'],
@@ -64,7 +83,7 @@ class UsuariosController
             // 'foto'  => $foto
         ];
 
-        if (isset($_FILES['foto']) && $_FILES['foto']['error'] === UPLOAD_ERR_OK) {
+        if (isset($_FILES['foto']) || $_FILES['foto']['error'] === UPLOAD_ERR_OK) {
             $nomeOriginal = $_FILES['foto']['name'];
             $foto = time() . '_' . $nomeOriginal;
             $diretorioDestino = __DIR__ . '/../../public/uploads/' . $foto;
@@ -85,6 +104,11 @@ class UsuariosController
 
     public function delete()
     {
+        if (!isset($_SESSION['id']) || $_SESSION['tipo'] !== 'admin') {
+            header('Location: /login');
+            exit;
+        }
+
         $id = $_POST['id'];
 
         App::get('database')->delete('tabela_usuarios', $id);
