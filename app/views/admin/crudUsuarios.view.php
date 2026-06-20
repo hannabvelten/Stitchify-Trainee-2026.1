@@ -131,6 +131,12 @@
           <div class="inputs-modal">
             <p>Nome Completo</p>
             <input type="text" name="nome" placeholder="Nome Completo" />
+            <p>Tipo de Usuário</p>
+            <select name="tipo" required>
+              <option value="">Selecionar usuário</option>
+              <option value="admin">Admin</option>
+              <option value="usuario">Usuário</option>
+            </select>
             <p>Email</p>
             <input type="text" name="email" placeholder="Email" />
             <p>Senha</p>
