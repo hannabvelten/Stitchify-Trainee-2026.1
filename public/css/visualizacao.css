@@ -70,7 +70,9 @@
     height: 30px;
     
 }
-
+.emailm{
+    text-align: left;
+}
 .identificacao{
     display: flex;
     flex-direction: row;

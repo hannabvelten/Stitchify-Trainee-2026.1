@@ -212,12 +212,11 @@
           <div class="container">
             <div class="identificacao">
               <div class="imagem">
-            <?php if (!empty($usuario->foto) && $usuario->foto !== 'PersonCircle.svg'): ?>
-  <img src="/uploads/<?= htmlspecialchars($usuario->foto) ?>" 
-       alt="Foto de <?= htmlspecialchars($usuario->nome) ?>" 
-       class="foto-tabela-user-modal" />
+             <?php if (!empty($usuario->foto)): ?>
+                  <img src="../../../public/uploads/<?= htmlspecialchars($usuario->foto) ?>" alt="Foto de <?= htmlspecialchars($usuario->nome) ?>"         
+                    class="foto-tabela-user-modal" />
                   <?php else: ?>
-                  <img src="/assets/PersonCircle.svg" alt="Sem foto"  />
+                  <img src="../../../public/assets/PersonCircle.svg" alt="Sem foto" class="foto-tabela-user-modal" />
                   <?php endif; ?>
               </div>
               <div class="conteudov">
@@ -228,7 +227,7 @@
             <div class="conteudov">
               <table class="tconteudo">
                 <tr>
-                  <td>Email</td>
+                  <td  class="emailm">Email</td>
                   <td><?= htmlspecialchars($usuario->email) ?></td>
                 </tr>
                 <tr>
