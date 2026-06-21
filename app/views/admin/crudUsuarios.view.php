@@ -133,9 +133,9 @@
             <input type="text" name="nome" placeholder="Nome Completo" />
             <p>Tipo de Usuário</p>
             <select name="tipo" required>
-              <option value="">Selecionar usuário</option>
-              <option value="admin">Admin</option>
-              <option value="usuario">Usuário</option>
+              <option value="" class="seleciona" >Selecionar usuário</option>
+              <option value="admin" class="typeadmin">Admin</option>
+              <option value="usuario" class="typeuser">Usuário</option>
             </select>
             <p>Email</p>
             <input type="text" name="email" placeholder="Email" />
