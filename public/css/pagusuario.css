@@ -38,7 +38,6 @@ main {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 20px;
     background-color: #FEF3E2;
     background-color: #FEF3E2;
     min-height: 100vh;
@@ -50,11 +49,12 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 1rem;
+    padding: 0.5rem 2rem;
     border-radius: 0 0 1.8rem 1.8rem;
     box-shadow: 0 0.2rem 0.5rem rgba(0,0,0,0.15);
 }
 .usuarios h1{
+    font-size: 2rem;
     font-size: 2rem;
 }
 .box-perfiladm {
@@ -67,30 +67,53 @@ main {
 .admin {
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 1rem;
     align-items: center;
 }
+
+.avatar{
+    width: 3rem;
+    height: 3rem;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+}
+
+.foto-perfil{
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
 .textoadmin{
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 7px 7px 7px 13px;
-    border-radius: 20px;
+    padding: 0.6rem 1rem;
+    border-radius: 2rem;
     color: white;
     background-color: #770523;
 }
 .textoadmin p{
     font-family: 'Noah-Regular';
+    font-size: 15px;
 }
 
 .usuarios {
     display: flex;
     flex-direction: row;
     align-items: center;
-    font-family: 'Baloo';
+    font-family: 'Baloo', sans-serif;
+    font-weight: bold;
     gap: 10px;
     font-size: 39px;
     color: #770523;
+}
+
+.secao-tabela{
+    padding: 1.2rem 1.8rem;
 }
 
 .box-criauser {
@@ -100,8 +123,6 @@ main {
     align-items: center;
     color: #770523;
     position: relative;
-    padding: 0 15px;
-    padding: 0 15px;
 }
 
 .box-criauser img {
@@ -110,17 +131,51 @@ main {
 
 .box-criauser button {
     font-family: 'Noah-Regular';
-    width: 160px;
-    height: 40px;
+    background-color: white;
     border: none;
-    border-radius: 20px;
-    border-radius: 20px;
-    background-color: #770523;
-    color: white;
-    font-size: 16px;
+    padding: 0.6rem 1rem;
+    border-radius: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #770523;
+    cursor: pointer;
+    box-shadow: 0 0.2rem 0.4rem rgba(0,0,0,0.15);
+    font-size: 14px;
+    transition: 0.2s;
 }
 
-.busca-user {
+.box-criauser button:hover{
+    transform: scale(1.05);
+
+    background-color: #FAD2E1;
+}
+
+.caixa-pesquisa{
+    background-color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0.7rem 1rem;
+
+    border-radius: 2rem;
+
+    width: 18rem;
+}
+
+.caixa-pesquisa input{
+    border: none;
+
+    outline: none;
+
+    flex: 1;
+
+    font-family: 'Noah';
+}
+
+/* .busca-user {
     width: 500px;
     height: 35px;
     font-family: 'Noah-Regular';
@@ -135,33 +190,25 @@ main {
     font-family: 'Noah-Regular';
     color: #67635E;
     font-size: 14px;
-}
-.lupa {
-    position: absolute;
-    left: 25px;
-    left: 25px;
-}
+} */
+
 .box-users {
     display: flex;
     flex-direction: column;
     gap: 15px;
     border-radius: 30px;
-    border-radius: 30px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-right: 10px;
-    padding-top: 15px;
-    margin: 15px;
-    margin: 15px;
+    border-spacing: 0.7rem 0.7rem;
+    margin-top: 1.2rem;
+    padding:1rem;
     background-color: #C1CA8B;
     flex: 1;
+    box-shadow: 0 0.3rem 0.8rem rgba(0,0,0,0.15);
 }
 
 .cabecalho {
     width: 100%;
     font-weight: 100;
     overflow: hidden;
-    background-color: #C1CA8B;
     border-collapse: separate;
     border-spacing: 0 10px;
     margin-bottom: 1rem;
@@ -174,8 +221,9 @@ td {
 }
 td{
     font-family: 'Noah-Regular';
-    text-align: left0,;
     text-align: center;
+    padding: 0.7rem;
+    background-color: #FEF3E2;
 
 }
 th {
@@ -184,11 +232,12 @@ th {
 }
 
 thead th {
-    background-color: #C1CA8B;
-    background-color: #C1CA8B;
     color: #770523;
     text-align: center;
     font-size: 22px;
+    font-size: 24px;
+    font-family: 'Baloo';
+    padding: 0rem;
 }
 thead tr th:first-child,
 tbody tr td:first-child {
@@ -203,7 +252,7 @@ tbody tr td:last-child {
 
 .nomec {
     display: flex;
-     flex-direction: row;
+    flex-direction: row;
     align-items: center;
     gap: 10px;
     padding-left: 7rem;
@@ -235,16 +284,38 @@ th.email {
 .emailc {
     text-align: left;
 }
+
+.acoesc {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.acoesc {
+    display: flex;
+    gap: 0.5rem;
+}
 .acoesc button {
+    width: 2.5rem;
+    height: 2.5rem;
     border: none;
-    border-radius: 5px;
+    border-radius: 0.8rem;
     padding: 10px;
     background-color: white;
+    color: #770523;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.30);
+    cursor: pointer;
+    transition: 0.2s;
 }
+
+.acoesc button:hover{
+    transform: scale(1.05);
+
+    background-color: #FAD2E1;
+}
+
 .emaic {
     display: flex;
-     flex-direction: row;
+    flex-direction: row;
     align-items: center;
     justify-content: flex-start;
 }

@@ -102,6 +102,9 @@
     gap: 0px;
     padding: 15px 15px;
 }
+.paginas a{
+    text-decoration: none;
+}
 
 .link-paginas {
     display: flex;

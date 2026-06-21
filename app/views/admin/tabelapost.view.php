@@ -52,6 +52,23 @@ $sufixoFiltros = $queryFiltros !== '' ? '&' . $queryFiltros : '';
 
                 </div>
 
+                <div class="perfil">
+
+                    
+                    <div class="avatar">
+
+                        <img src="../../../public/assets/fotousuario.jpg" alt="Foto do usuário" class="foto-perfil">
+
+                    </div>
+
+                    <button class="botao-admin">
+
+                        Admin
+
+                    </button>
+
+                </div>
+
             </header>
 
 
@@ -159,19 +176,19 @@ $sufixoFiltros = $queryFiltros !== '' ? '&' . $queryFiltros : '';
                                     <a href="?page=<?= max(1, $currentPage - 1) ?><?= $sufixoFiltros ?>" class="<?= $currentPage <= 1 ? 'disabled' : ''?>"><i class="bi bi-chevron-left"></i></a>
                                 </li>
 
-                                <?php
-                                    $start = max(2, $currentPage - 1);
-                                    $end = min($totalPages-1, $currentPage+1);
+                            <?php
+                                $start = max(2, $currentPage - 1);
+                                $end = min($totalPages-1, $currentPage+1);
                                 
-                                ?>
+                            ?>
 
                                 <li>
                                     <a href="?page=1<?= $sufixoFiltros ?>" class="<?= $currentPage == 1 ? 'active' : ''?>">1</a>
                                 </li> 
                                 
-                                <?php if ($start > 2):?>
-                                    <li><span class="dots">...</span>></li>
-                                <?php endif; ?>
+                            <?php if ($start > 2):?>
+                                <li><span class="dots">...</span>></li>
+                            <?php endif; ?>
 
                                 <?php for($i= $start; $i <=$end; $i++):?>
                                     <li>
@@ -179,9 +196,9 @@ $sufixoFiltros = $queryFiltros !== '' ? '&' . $queryFiltros : '';
                                     </li> 
                                 <?php endfor; ?>
 
-                                <?php if ($end < $totalPages - 1):?>
-                                    <li><span class="dots">...</span>></li>
-                                <?php endif; ?>
+                            <?php if ($end < $totalPages - 1):?>
+                                <li><span class="dots">...</span>></li>
+                            <?php endif; ?>
 
                                 <li>
                                     <a href="?page=<?= $totalPages?><?= $sufixoFiltros ?>" class="<?= $currentPage == $totalPages ? 'active' : ''?>"><?= $totalPages?></a>
@@ -191,12 +208,9 @@ $sufixoFiltros = $queryFiltros !== '' ? '&' . $queryFiltros : '';
                                     <a href="?page=<?= min($totalPages, $currentPage + 1) ?><?= $sufixoFiltros ?>" class="<?= $currentPage >= $totalPages ? 'disabled' : ''?>"><i class="bi bi-chevron-right"></i></a>
                                 </li>
 
-                            </ul>
-                        </div>
-                    <?php endif; ?>
-
-                </div>
-
+                        </ul>
+                    </div>
+                <?php endif; ?>
             </section>
 
         </main>
