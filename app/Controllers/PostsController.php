@@ -275,7 +275,7 @@ class PostsController
         $isAdmin = ($usuario->tipo === 'admin'); 
         return view('site/perfil-usuario', [
             'usuario' => $usuario,
-            'posts' => $posts
+            'posts' => $posts,
             'isAdmin' => $isAdmin
         ]);
     }
