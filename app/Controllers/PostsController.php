@@ -258,10 +258,10 @@ class PostsController
     {
         
 
-        if (!isset($_SESSION['id'])) {
-            header('Location: /login');
-            exit;
-        }
+        //if (!isset($_SESSION['id'])) {
+        //    header('Location: /login');
+        //   exit;
+        //}
 
         $database = App::get('database');
 
@@ -272,10 +272,11 @@ class PostsController
         $posts = array_map(function($post) {
             return (object) $post;
         }, $posts);
-
+        $isAdmin = ($usuario->tipo === 'admin'); 
         return view('site/perfil-usuario', [
             'usuario' => $usuario,
             'posts' => $posts
+            'isAdmin' => $isAdmin
         ]);
     }
 
