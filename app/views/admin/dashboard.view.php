@@ -28,7 +28,8 @@
                  />
                   <?php else: ?>
                   <img src="../../../public/assets/PersonCircle.svg" alt="Sem foto"  />
-                  <?php endif; ?>                </div>
+                  <?php endif; ?>                
+                </div>
                 <div class="caixa-admin">
                         <h4><?= $admin->nome?></h4>
                         <p>Administrador</p>

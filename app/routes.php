@@ -11,7 +11,7 @@ $router->get('login', 'Controller@exibirLogin');
 $router->get('inscreva-se', 'Controller@exibirInscrevaSe');
 $router->get('landing-page', 'Controller@exibirlandingPage');
 $router->post('login', 'Controller@efetuaLogin');
-$router->get('logout', 'Controller@efetuaLogout');
+$router->post('logout', 'Controller@efetuaLogout');
 $router->post('inscreva-se', 'Controller@efetuaInscricao');
 
 
