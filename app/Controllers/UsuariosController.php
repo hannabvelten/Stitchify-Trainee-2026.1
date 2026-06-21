@@ -23,7 +23,7 @@ class UsuariosController
     $currentPage = isset($_GET['page']) ? (int)$_GET['page'] : 1;
     $perPage = 5;
     $offset = ($currentPage - 1) * $perPage;
-
+    $sufixoFiltros = $busca ? '&busca=' . urlencode($busca) : '';
     $totalUsuarios = App::get('database')->countUsuarios($busca);
 
     $totalPages = ceil($totalUsuarios / $perPage);
@@ -31,7 +31,7 @@ class UsuariosController
 
     $usuarios = App::get('database')->paginateUsuarios($perPage, $offset, $busca);
 
-    return view('admin/crudUsuarios', compact('usuarios', 'currentPage', 'totalPages'));
+    return view('admin/crudUsuarios', compact('usuarios', 'currentPage', 'totalPages','sufixoFiltros'));
 
     }
     
