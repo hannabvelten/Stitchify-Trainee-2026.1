@@ -78,7 +78,7 @@ class Controller
         }
 
         try{
-            $foto = 'default-avatar.png';
+            $foto = 'default-avatar.svg';
             App::get('database')->efetuaInscricao($nome, $email, $senha, $foto);
             header('Location: /login');
         }
