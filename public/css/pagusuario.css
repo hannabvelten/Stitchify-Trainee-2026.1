@@ -164,11 +164,12 @@ main {
     background-color: #C1CA8B;
     border-collapse: separate;
     border-spacing: 0 10px;
+    margin-bottom: 1rem;
 }
 
-th,
+
 td {
-    padding: 1.2rem;
+    padding: 0.7rem;
     background-color: #FEF3E2;
 }
 td{
@@ -180,7 +181,6 @@ td{
 th {
     text-align: center;
      font-family: 'Baloo';
-     font-size: 23px;
 }
 
 thead th {
@@ -188,7 +188,7 @@ thead th {
     background-color: #C1CA8B;
     color: #770523;
     text-align: center;
-    font-size: 30px;
+    font-size: 22px;
 }
 thead tr th:first-child,
 tbody tr td:first-child {

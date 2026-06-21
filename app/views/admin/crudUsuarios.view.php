@@ -57,7 +57,7 @@
                 <th class="email">Email</th>
                 <th class="tipo">Tipo</th>
                 <th class="iduser">Id do Usuário</th>
-                <th>Ações</th>
+                <th class="acoesu">Ações</th>
               </tr>
             </thead>
             <tbody>
@@ -104,7 +104,9 @@
              <?php endforeach ?>
             </tbody>
           </table>
-          <div class="paginacao">
+         
+        </div>
+         <div class="paginacao">
             <button class="voltar" onclick="window.location='?page=<?= max(1, $currentPage - 1) ?>'" <?= $currentPage <= 1 ? 'disabled' : '' ?>><</button>
                 <?php for($i = 1; $i <= $totalPages; $i++): ?>
                 <button class="<?= $currentPage == $i ? 'active' : '' ?>"
@@ -112,7 +114,6 @@
                 <?php endfor; ?>
             <button class="proximo"  onclick="window.location='?page=<?= min($totalPages, $currentPage + 1) ?>'" <?= $currentPage >= $totalPages ? 'disabled' : '' ?>>></button>
           </div>
-        </div>
       </div>
 
       <div class="modal-criaruser hide">
