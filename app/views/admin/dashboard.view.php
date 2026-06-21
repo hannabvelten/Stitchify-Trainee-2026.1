@@ -23,8 +23,12 @@
 
             <div class="admin-profile">
                 <div class="profile-icon">
-                    <img src="../../../public/uploads/<?= $admin->foto?>" alt="">
-                </div>
+                    <?php if (!empty($usuario->foto)): ?>
+                  <img src="../../../public/uploads/<?= htmlspecialchars($usuario->foto) ?>" alt="Foto de <?= htmlspecialchars($usuario->nome) ?>"         
+                 />
+                  <?php else: ?>
+                  <img src="../../../public/assets/PersonCircle.svg" alt="Sem foto"  />
+                  <?php endif; ?>                </div>
                 <div class="caixa-admin">
                         <h4><?= $admin->nome?></h4>
                         <p>Administrador</p>
