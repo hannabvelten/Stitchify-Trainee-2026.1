@@ -85,6 +85,13 @@
                         Editar Perfil
 
                     </button>
+                   <?php if ($isAdmin): ?>
+                    <button class="btn-dashboard" onclick="window.location.href='/admin/dashboard'">
+                     Ir para Dashboard
+                     </button>
+                    <?php endif; ?>
+
+
 
                 </div>
 

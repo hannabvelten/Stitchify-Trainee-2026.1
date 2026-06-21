@@ -38,3 +38,4 @@ $router->get('crudUsuarios', 'UsuariosController@index');
 $router->post('crudUsuarios/create', 'UsuariosController@store');
 $router->post('crudUsuarios/edit', 'UsuariosController@edit');
 $router->post('crudUsuarios/delete', 'UsuariosController@delete');
+$router->get('admin/dashboard', 'DashboardController@index');
