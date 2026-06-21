@@ -52,11 +52,11 @@
 
                     <div class="dados-usuario">
 
-                        <img
-                            src="../../../public/uploads/<?= $usuario->foto ?>"
-                            alt="Foto de Perfil"
-                            class="foto-perfil"
-                        >
+                        <?php if (!empty($usuario->foto)): ?>
+                  <img src="../../../public/uploads/<?= htmlspecialchars($usuario->foto) ?>" alt="Foto de <?= htmlspecialchars($usuario->nome) ?>" class="foto-tabela-user-modal" />
+                  <?php else: ?>
+                  <img src="../../../public/assets/PersonCircle.svg" alt="Sem foto"  />
+                  <?php endif; ?>
 
                         <div class="informacoes-usuario">
 
