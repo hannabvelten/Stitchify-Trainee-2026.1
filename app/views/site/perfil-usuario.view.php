@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stitchify - Meu Perfil</title>
-
+    <link rel="icon" type="image/png" href="../../../public/assets/Novelo_logo_3.png">
     <link rel="stylesheet" href="../../../public/css/perfil-usuario.css">
     <link rel="stylesheet" href="../../../public/css/modais.css">
     <link rel="stylesheet" href="../../../public/css/modais-posts.css">

@@ -21,7 +21,7 @@ $sufixoFiltros = $queryFiltros !== '' ? '&' . $queryFiltros : '';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Tabela de Posts</title>
-
+    <link rel="icon" type="image/png" href="../../../public/assets/Novelo_logo_3.png">
     <link rel="stylesheet" href="../../../public/css/tabelapost.css">
     <link rel="stylesheet" href="../../../public/css/modais.css">
     <link rel="stylesheet" href="../../../public/css/modais-posts.css">
