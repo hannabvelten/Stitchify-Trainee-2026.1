@@ -68,6 +68,8 @@
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     pointer-events: auto;
     max-height: 90vh;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .topo-edit {
@@ -155,7 +157,8 @@
 
 .edit-foto .foto-container {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
+    align-items: center;
     width: 100%;
 }
 
@@ -173,6 +176,8 @@
     align-items: center;
     gap: 16px;
     align-self: stretch;
+    flex-shrink: 0;
+    padding-bottom: 20px;
 }
 
 .cancel, .confirm {
@@ -275,6 +280,17 @@
         flex: 0 1 auto;
         width: 190px;
     }
+}
+
+.edit-foto .nova-foto {
+    width: 12rem;
+    height: 12rem;
+    max-width: 12rem;
+    max-height: 12rem;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 /* RESPONSIVIDADE MOBILE */
