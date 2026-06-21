@@ -10,20 +10,23 @@
     src: url(../fontes/noah-bold.otf);
 }
 
-@font-face{
+@font-face {
     font-family: 'Baloo';
     src: url('../assets/fonts/Baloo-Regular.ttf');
 }
 
 * {
-    margin: 0; 
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-html, body{
+
+html,
+body {
     overflow-x: hidden;
     width: 100%;
 }
+
 main {
     display: flex;
 }
@@ -38,6 +41,7 @@ main {
     width: 100%;
     display: flex;
     flex-direction: column;
+    gap: 20px;
     background-color: #FEF3E2;
     background-color: #FEF3E2;
     min-height: 100vh;
@@ -51,23 +55,24 @@ main {
     align-items: center;
     padding: 0.5rem 2rem;
     border-radius: 0 0 1.8rem 1.8rem;
-    box-shadow: 0 0.2rem 0.5rem rgba(0,0,0,0.15);
+    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.15);
 }
-.usuarios h1{
-    font-size: 2rem;
+
+.usuarios h1 {
     font-size: 2rem;
 }
+
 .box-perfiladm {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 10px;
+    gap: 1rem;
 }
 
 .admin {
     display: flex;
     flex-direction: row;
-    gap: 1rem;
+    gap: 10px;
     align-items: center;
 }
 
@@ -87,7 +92,7 @@ main {
     object-fit: cover;
 }
 
-.textoadmin{
+.textoadmin {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -96,7 +101,8 @@ main {
     color: white;
     background-color: #770523;
 }
-.textoadmin p{
+
+.textoadmin p {
     font-family: 'Noah-Regular';
     font-size: 15px;
 }
@@ -105,8 +111,7 @@ main {
     display: flex;
     flex-direction: row;
     align-items: center;
-    font-family: 'Baloo', sans-serif;
-    font-weight: bold;
+    font-family: 'Baloo';
     gap: 10px;
     font-size: 39px;
     color: #770523;
@@ -169,7 +174,6 @@ main {
     border: none;
 
     outline: none;
-
     flex: 1;
 
     font-family: 'Noah';
@@ -186,11 +190,13 @@ main {
     border: none;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.30);
 }
-.busca::placeholder{
+
+.busca::placeholder {
     font-family: 'Noah-Regular';
     color: #67635E;
     font-size: 14px;
 } */
+
 
 .box-users {
     display: flex;
@@ -199,6 +205,7 @@ main {
     border-radius: 30px;
     border-spacing: 0.7rem 0.7rem;
     margin-top: 1.2rem;
+    margin-bottom: 15px;
     padding:1rem;
     background-color: #C1CA8B;
     flex: 1;
@@ -209,6 +216,7 @@ main {
     width: 100%;
     font-weight: 100;
     overflow: hidden;
+    background-color: #C1CA8B;
     border-collapse: separate;
     border-spacing: 0 10px;
     margin-bottom: 1rem;
@@ -219,31 +227,33 @@ td {
     padding: 0.7rem;
     background-color: #FEF3E2;
 }
-td{
+
+td {
     font-family: 'Noah-Regular';
+    text-align: left0, ;
     text-align: center;
-    padding: 0.7rem;
-    background-color: #FEF3E2;
 
 }
+
 th {
     text-align: center;
-     font-family: 'Baloo';
+    font-family: 'Baloo';
 }
 
 thead th {
+    background-color: #C1CA8B;
+    background-color: #C1CA8B;
     color: #770523;
     text-align: center;
     font-size: 22px;
-    font-size: 24px;
-    font-family: 'Baloo';
-    padding: 0rem;
 }
+
 thead tr th:first-child,
 tbody tr td:first-child {
     border-top-left-radius: 1.5rem;
     border-bottom-left-radius: 1.5rem;
 }
+
 thead tr th:last-child,
 tbody tr td:last-child {
     border-top-right-radius: 1.5rem;
@@ -257,46 +267,33 @@ tbody tr td:last-child {
     gap: 10px;
     padding-left: 7rem;
 }
-.iconuser{
+
+.iconuser {
     width: 45px;
     height: 45px;
 }
+
 .nomec img {
     width: 33px;
     height: 37px;
 }
-.iduser p{
+
+.iduser p {
     font-family: 'Noah-Regular';
 }
+
 .tipoc span {
     padding: 5px 7px;
     border-radius: 10px;
 
 }
 
-th.email {
-    text-align: left;
-    padding-left: 1rem;
-}th.user {
-    text-align: left;
-    padding-left: 7rem;
-}
 .emailc {
     text-align: left;
+    padding-left: 6.5rem;
 }
 
-.acoesc {
-    display: flex;
-    gap: 0.5rem;
-}
-
-.acoesc {
-    display: flex;
-    gap: 0.5rem;
-}
 .acoesc button {
-    width: 2.5rem;
-    height: 2.5rem;
     border: none;
     border-radius: 0.8rem;
     padding: 10px;
@@ -319,7 +316,10 @@ th.email {
     align-items: center;
     justify-content: flex-start;
 }
-.btn-visualizar img, .editar img, .deletar img{
+
+.btn-visualizar img,
+.editar img,
+.deletar img {
     display: flex;
     align-items: center;
     width: 15px;
@@ -336,7 +336,7 @@ th.email {
 
 }
 
-.usuario{
+.usuario {
     border-radius: 20px;
     background-color: #FAD2E1;
     background-color: #FAD2E1;
@@ -347,41 +347,68 @@ th.email {
 
 }
 
+.paginacao-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
 .paginacao {
     justify-content: center;
     display: flex;
     align-items: center;
-    gap: 10px;
-    padding-bottom: 20px;
-
+    gap: 0.6rem;
+    list-style: none;
+    padding: 0;
+    flex-shrink: 0;
+    font-family: 'Noah-Bold', sans-serif;
 }
 
-.paginacao button {
+.paginacao li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 2.3rem;
     height: 2.3rem;
-    border: none;
     border-radius: 0.6rem;
     background-color: white;
     color: #770523;
-    cursor: pointer;
-    transition: 0.2s;
+    text-decoration: none;
     font-weight: bold;
+    transition: 0.2s;
 }
 
-.paginacao button.active {
+.paginacao li a:hover{
+    transform: scale(1.05);
+    background-color: #FAD2E1;
+}
+
+.paginacao li a.active {
     border: none;
     background-color: #770523;
     color: white;
 }
 
+.paginacao li a.disabled {
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+.paginacao li .dots {
+    color: #770523;
+    font-weight: bold;
+}
+
 @media (max-width: 768px) {
-   
+
     main {
         flex-direction: column;
     }
-    body{
+
+    body {
         overflow-x: hidden;
     }
+
     .paginausers {
         width: 100%;
         padding: 0px;
@@ -403,21 +430,25 @@ th.email {
         padding-top: 10px;
         align-items: center;
     }
-    .usuarios h1{
+
+    .usuarios h1 {
         font-size: 30px;
     }
+
     .usuarios img {
         width: 37px;
         width: 37px;
     }
-    
-    
+
+
     .box-perfiladm {
-       display: flex;
+        display: flex;
     }
-    .textoadmin{
+
+    .textoadmin {
         font-size: 15px;
     }
+
     .box-criauser {
         display: flex;
         flex-direction: column;
@@ -445,13 +476,14 @@ th.email {
         border-radius: 10px;
 
     }
-      .box-users {
+
+    .box-users {
         overflow-x: auto;
         overflow-y: hidden;
         padding-right: 10px;
         height: auto;
     }
-   
+
     .cabecalho {
         min-width: 700px;
         border-spacing: 0 5px;
@@ -461,17 +493,20 @@ th.email {
     td {
         white-space: nowrap;
     }
-    .paginacao{
+
+    .paginacao {
         padding-left: 1rem;
     }
-    .paginacao{
+
+    .paginacao {
         padding-left: 1rem;
     }
-   .paginacao button{
-    display: flex;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    justify-content: center;
-   }
+
+    .paginacao button {
+        display: flex;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        justify-content: center;
+    }
 }

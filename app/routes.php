@@ -18,7 +18,7 @@ $router->post('inscreva-se', 'Controller@efetuaInscricao');
 // Dashboard
 $router->get('dashboard', 'DashboardController@index');
 
-$router->get('', 'PostsController@index');
+$router->get('', 'PostsController@landingPage');
 
 $router->get('tabelapost', 'PostsController@index');
 $router->post('tabelapost/create', 'PostsController@store');

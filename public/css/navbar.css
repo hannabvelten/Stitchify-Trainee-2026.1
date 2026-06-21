@@ -33,7 +33,6 @@ header.navbar {
 }
 
 .navbar-logo {
-  height: 5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -41,7 +40,7 @@ header.navbar {
 }
 
 .navbar-logo img {
-  height: 18rem;
+  height: 3rem;
   width: auto;
   display: block;
   object-fit: contain;

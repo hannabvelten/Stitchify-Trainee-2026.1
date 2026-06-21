@@ -169,66 +169,66 @@ $sufixoFiltros = $queryFiltros !== '' ? '&' . $queryFiltros : '';
                         </tbody>
                     </table>
 
-                    <?php if($totalPages > 1):?>
-                        <div class="paginacao-container">
-                            <ul class="paginacao">
-                                <li>
-                                    <a href="?page=<?= max(1, $currentPage - 1) ?><?= $sufixoFiltros ?>" class="<?= $currentPage <= 1 ? 'disabled' : ''?>"><i class="bi bi-chevron-left"></i></a>
-                                </li>
-
-                            <?php
-                                $start = max(2, $currentPage - 1);
-                                $end = min($totalPages-1, $currentPage+1);
-                                
-                            ?>
-
-                                <li>
-                                    <a href="?page=1<?= $sufixoFiltros ?>" class="<?= $currentPage == 1 ? 'active' : ''?>">1</a>
-                                </li> 
-                                
-                            <?php if ($start > 2):?>
-                                <li><span class="dots">...</span>></li>
-                            <?php endif; ?>
-
-                                <?php for($i= $start; $i <=$end; $i++):?>
-                                    <li>
-                                        <a href="?page=<?= $i ?><?= $sufixoFiltros ?>" class="<?= $currentPage == $i ? 'active' : ''?>"> <?= $i ?></a>
-                                    </li> 
-                                <?php endfor; ?>
-
-                            <?php if ($end < $totalPages - 1):?>
-                                <li><span class="dots">...</span>></li>
-                            <?php endif; ?>
-
-                                <li>
-                                    <a href="?page=<?= $totalPages?><?= $sufixoFiltros ?>" class="<?= $currentPage == $totalPages ? 'active' : ''?>"><?= $totalPages?></a>
-                                </li> 
-
-                                <li>
-                                    <a href="?page=<?= min($totalPages, $currentPage + 1) ?><?= $sufixoFiltros ?>" class="<?= $currentPage >= $totalPages ? 'disabled' : ''?>"><i class="bi bi-chevron-right"></i></a>
-                                </li>
-
-                        </ul>
-                    </div>
-                <?php endif; ?>
+                    
             </section>
+            <?php if($totalPages > 1):?>
+                <div class="paginacao-container">
+                    <ul class="paginacao">
+                        <li>
+                            <a href="?page=<?= max(1, $currentPage - 1) ?><?= $sufixoFiltros ?>" class="<?= $currentPage <= 1 ? 'disabled' : ''?>"><i class="bi bi-chevron-left"></i></a>
+                        </li>
 
+                        <?php
+                            $start = max(2, $currentPage - 1);
+                            $end = min($totalPages-1, $currentPage+1);
+                                
+                        ?>
+
+                        <li>
+                            <a href="?page=1<?= $sufixoFiltros ?>" class="<?= $currentPage == 1 ? 'active' : ''?>">1</a>
+                        </li> 
+                                
+                        <?php if ($start > 2):?>
+                            <li><span class="dots">...</span>></li>
+                        <?php endif; ?>
+
+                        <?php for($i= $start; $i <=$end; $i++):?>
+                            <li>
+                                <a href="?page=<?= $i ?><?= $sufixoFiltros ?>" class="<?= $currentPage == $i ? 'active' : ''?>"> <?= $i ?></a>
+                            </li> 
+                        <?php endfor; ?>
+
+                        <?php if ($end < $totalPages - 1):?>
+                            <li><span class="dots">...</span>></li>
+                        <?php endif; ?>
+
+                        <li>
+                            <a href="?page=<?= $totalPages?><?= $sufixoFiltros ?>" class="<?= $currentPage == $totalPages ? 'active' : ''?>"><?= $totalPages?></a>
+                        </li> 
+
+                        <li>
+                            <a href="?page=<?= min($totalPages, $currentPage + 1) ?><?= $sufixoFiltros ?>" class="<?= $currentPage >= $totalPages ? 'disabled' : ''?>"><i class="bi bi-chevron-right"></i></a>
+                        </li>
+
+                    </ul>
+                </div>
+            <?php endif; ?>
         </main>
 
     </div>
 
     <!-- Modal Criar Post -->
-    <form class="post-modalCriar" id="modalCriar" action="/tabelapost/create" method="POST" enctype="multipart/form-data">
+    <form class="modalCriar" id="modalCriar" action="/tabelapost/create" method="POST" enctype="multipart/form-data">
 
-        <div class="post-modal-header">
+        <div class="header">
             <img src="../../../public/assets/Novelo_cortado.png" alt="">
             <p>Criar Post</p>
         </div>
 
-        <div class="post-formContent">
+        <div class="formContent">
             <!-- Upload Imagem -->
             <div class="upload">
-                <label class="post-uploadImage" for="imagemPost">
+                <label class="uploadImage" for="imagemPost">
                     <i class="bi bi-cloud-arrow-up-fill"></i>
                     <p>Arraste uma nova imagem ou <b>clique para fazer upload</b></p>
                 </label>
@@ -236,26 +236,26 @@ $sufixoFiltros = $queryFiltros !== '' ? '&' . $queryFiltros : '';
             </div>
 
             <!-- Título -->
-            <div class="post-titulo">
+            <div class="titulo">
                 <label>Título do Post*</label>
                 <input type="text" name="titulo" placeholder="Digite o título do post" required>
             </div>
 
             <!-- Descrição -->
-            <div class="post-descricao">
+            <div class="descricao">
                 <label>Descrição*</label>
                 <textarea type="text" name="descricao" placeholder="Digite a descrição" required></textarea>
             </div>
 
             <!-- Categorias -->
-            <div class="post-categoria">
+            <div class="categoria">
                 <label>Categoria(s)*</label>
                 <input type="text" name="categoria" placeholder="Adicione categorias (ex: tutoriais, roupas e etc)">
             </div>
 
-            <div class="post-modalActions">
-                <button class="post-btnCancel" type="button" onclick="fecharModal('modalCriar')">Cancelar</button>
-                <button class="post-btnCreate" type="submit">Criar</button>
+            <div class="modalActions">
+                <button class="btnCancel" type="button" onclick="fecharModal('modalCriar')">Cancelar</button>
+                <button class="btnCreate" type="submit">Criar</button>
             </div>
         </div>
 
@@ -263,15 +263,15 @@ $sufixoFiltros = $queryFiltros !== '' ? '&' . $queryFiltros : '';
     
     <?php foreach($posts as $post): ?>
         <!-- Modal Visualizar Post -->
-        <div class="post-modalVisualizar" id="modalVisualizar-<?= $post->id_post ?>">
-            <div class="post-modal-header">
+        <div class="modalVisualizar" id="modalVisualizar-<?= $post->id_post ?>">
+            <div class="header">
                 <img src="../../../public/assets/Novelo_cortado.png" alt="">
                 <p>Visualizar Post</p>
             </div>
 
-            <div class="post-modalContent">
+            <div class="modalContent">
                 <!-- Imagem Post -->
-                <div class="post-imagem">
+                <div class="imagem">
                     <img src="../../../public/assets/posts/<?= $post->imagem ?>" alt="Imagem Post">
                 </div>
 

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lista de usuários</title>
+    <title>Tabela de Usuários</title>
     <link rel="stylesheet" href="../../../public/css/pagusuario.css" />
     <link rel="stylesheet" href="../../../public/css/criauser.css" />
     <link rel="stylesheet" href="../../../public/css/visualizacao.css" />
@@ -45,14 +45,15 @@
             </button>
 
             <form class="caixa-pesquisa" action="/crudUsuarios" method="GET">
-            <input
-              type="text"
-              placeholder="Busca por nome ou email"
-              class="busca-user" name="busca"
-            />
-            <i class="bi bi-search"></i>
+              <input
+                type="text"
+                placeholder="Busca por nome ou email"
+                class="busca-user" name="busca"
+              />
+              <i class="bi bi-search"></i>
             </form>
           </div>
+
           <div class="box-users">
             <table class="cabecalho">
               <thead>
@@ -61,7 +62,7 @@
                   <th class="email">Email</th>
                   <th class="tipo">Tipo</th>
                   <th class="iduser">ID</th>
-                  <th>Ações</th>
+                  <th class="acoesu">Ações</th>
                 </tr>
               </thead>
               <tbody>
@@ -99,15 +100,49 @@
               <?php endforeach ?>
               </tbody>
             </table>
-            <div class="paginacao">
-              <button class="voltar" onclick="window.location='?page=<?= max(1, $currentPage - 1) ?>'" <?= $currentPage <= 1 ? 'disabled' : '' ?>><</button>
-                  <?php for($i = 1; $i <= $totalPages; $i++): ?>
-                  <button class="<?= $currentPage == $i ? 'active' : '' ?>"
-                  onclick="window.location='?page=<?= $i ?>'"><?= $i ?></button>
-                  <?php endfor; ?>
-              <button class="proximo"  onclick="window.location='?page=<?= min($totalPages, $currentPage + 1) ?>'" <?= $currentPage >= $totalPages ? 'disabled' : '' ?>>></button>
-            </div>
           </div>
+          <?php if($totalPages > 1):?>
+            <div class="paginacao-container">
+              <ul class="paginacao">
+                  <li>
+                    <a href="?page=<?= max(1, $currentPage - 1) ?><?= $sufixoFiltros ?>" class="<?= $currentPage <= 1 ? 'disabled' : ''?>"><i class="bi bi-chevron-left"></i></a>
+                  </li>
+
+                <?php
+                  $start = max(2, $currentPage - 1);
+                  $end = min($totalPages-1, $currentPage+1);
+                                  
+                ?>
+
+                  <li>
+                    <a href="?page=1<?= $sufixoFiltros ?>" class="<?= $currentPage == 1 ? 'active' : ''?>">1</a>
+                  </li> 
+                                
+                <?php if ($start > 2):?>
+                  <li><span class="dots">...</span>></li>
+                <?php endif; ?>
+
+                <?php for($i= $start; $i <=$end; $i++):?>
+                  <li>
+                    <a href="?page=<?= $i ?><?= $sufixoFiltros ?>" class="<?= $currentPage == $i ? 'active' : ''?>"> <?= $i ?></a>
+                  </li> 
+                <?php endfor; ?>
+
+                <?php if ($end < $totalPages - 1):?>
+                  <li><span class="dots">...</span>></li>
+                <?php endif; ?>
+
+                  <li>
+                    <a href="?page=<?= $totalPages?><?= $sufixoFiltros ?>" class="<?= $currentPage == $totalPages ? 'active' : ''?>"><?= $totalPages?></a>
+                  </li> 
+
+                  <li>
+                    <a href="?page=<?= min($totalPages, $currentPage + 1) ?><?= $sufixoFiltros ?>" class="<?= $currentPage >= $totalPages ? 'disabled' : ''?>"><i class="bi bi-chevron-right"></i></a>
+                  </li>
+
+              </ul>
+            </div>
+          <?php endif; ?>
         </div>
       </div>
 
