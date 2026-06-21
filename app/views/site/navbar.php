@@ -43,7 +43,7 @@ if (session_status() === PHP_SESSION_NONE) {
                 <span>Meu Perfil</span>
             </a>
 
-            <form action="/logout" method="POST" class="form-sair">
+            <form action="/logout" method="GET" class="form-sair">
                 <button type="submit" class="botao-sair">
                     <span class="link-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
@@ -61,7 +61,7 @@ if (session_status() === PHP_SESSION_NONE) {
 
     <header class="navbar">
         <div class="navbar-logo">
-            <img src="../../../public/assets/logo_1.png" alt="Logo Stitchify">
+            <img src="../../../public/assets/logo-stitchify.png" alt="Logo Stitchify">
         </div>
 
         <nav class="navbar-links">
