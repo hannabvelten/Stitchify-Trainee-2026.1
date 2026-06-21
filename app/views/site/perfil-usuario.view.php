@@ -66,13 +66,7 @@
 
                             </div>
 
-                            <div class="localizacao-usuario">
-
-                                <i class="bi bi-geo-alt"></i>
-
-                                <span>Cabo Frio, Brasil</span>
-
-                            </div>
+        
 
                         </div>
 
@@ -86,7 +80,7 @@
 
                     </button>
                    <?php if ($isAdmin): ?>
-                    <button class="btn-dashboard" onclick="window.location.href='/admin/dashboard'">
+                    <button class="btn-dashboardd" onclick="window.location.href='/admin/dashboard'">
                      Ir para Dashboard
                      </button>
                     <?php endif; ?>
