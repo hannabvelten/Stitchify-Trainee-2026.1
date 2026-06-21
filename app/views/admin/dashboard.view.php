@@ -20,6 +20,21 @@
                     <h3>Total de publicações: <?= $totalPublicacoes ?></h3>
                 </div>
             </div>
+
+            <div class="admin-profile">
+                <div class="profile-icon">
+                    <?php if (!empty($usuario->foto)): ?>
+                  <img src="../../../public/uploads/<?= htmlspecialchars($usuario->foto) ?>" alt="Foto de <?= htmlspecialchars($usuario->nome) ?>"         
+                 />
+                  <?php else: ?>
+                  <img src="../../../public/assets/PersonCircle.svg" alt="Sem foto"  />
+                  <?php endif; ?>                
+                </div>
+                <div class="caixa-admin">
+                        <h4><?= $admin->nome?></h4>
+                        <p>Administrador</p>
+                </div>
+            </div>
             <div class="admin-card">
                 <div class="admin-profile">
                     
