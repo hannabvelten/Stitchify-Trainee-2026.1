@@ -75,7 +75,7 @@ class Controller
         }
 
         try{
-            App::get('database')->efetuaInscricao($email, $nome, $senha);
+            App::get('database')->efetuaInscricao($nome, $email, $senha);
             header('Location: /login');
         }
         catch(Exception $e){
