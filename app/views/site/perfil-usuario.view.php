@@ -211,11 +211,11 @@
     </div>
 
     <!-- Modal Criar Post -->
-    <form class="post-modalCriar" id="modalCriar" action="/tabelapost/create" method="POST" enctype="multipart/form-data">
+    <form class="modalCriar" id="modalCriar" action="/tabelapost/create" method="POST" enctype="multipart/form-data">
 
         <input type="hidden" name="redirect" value="/perfil-usuario">
 
-        <div class="post-modal-header">
+        <div class="header">
 
             <img src="../../../public/assets/Novelo_cortado.png" alt="Logo">
 
@@ -223,12 +223,12 @@
 
         </div>
 
-        <div class="post-formContent">
+        <div class="formContent">
 
             <!-- Upload Imagem -->
             <div class="upload">
 
-                <label class="post-uploadImage" for="imagemPost">
+                <label class="uploadImage" for="imagemPost">
 
                     <i class="bi bi-cloud-arrow-up-fill"></i>
 
@@ -243,7 +243,7 @@
             </div>
 
             <!-- Título -->
-            <div class="post-titulo">
+            <div class="titulo">
 
                 <label>Título do Post*</label>
 
@@ -252,7 +252,7 @@
             </div>
 
             <!-- Descrição -->
-            <div class="post-descricao">
+            <div class="descricao">
 
                 <label>Descrição*</label>
 
@@ -261,7 +261,7 @@
             </div>
 
             <!-- Categorias -->
-            <div class="post-categoria">
+            <div class="categoria">
 
                 <label>Categoria(s)*</label>
 
@@ -269,13 +269,13 @@
 
             </div>
 
-            <div class="post-modalActions">
+            <div class="modalActions">
 
-                <button class="post-btnCancel" type="button" onclick="fecharModal('modalCriar')">
+                <button class="btnCancel" type="button" onclick="fecharModal('modalCriar')">
                     Cancelar
                 </button>
 
-                <button class="post-btnCreate" type="submit">
+                <button class="btnCreate" type="submit">
                     Criar
                 </button>
 
@@ -290,9 +290,9 @@
         <?php foreach($posts as $post): ?>
 
             <!-- Modal Visualizar Post -->
-            <div class="post-modalVisualizar" id="modalVisualizar-<?= $post->id_post ?>">
+            <div class="modalVisualizar" id="modalVisualizar-<?= $post->id_post ?>">
 
-                <div class="post-modal-header">
+                <div class="header">
 
                     <img src="../../../public/assets/Novelo_cortado.png" alt="Logo">
 
@@ -300,10 +300,10 @@
 
                 </div>
 
-                <div class="post-modalContent">
+                <div class="modalContent">
 
                     <!-- Imagem Post -->
-                    <div class="post-imagem">
+                    <div class="imagem">
 
                         <img src="../../../public/assets/posts/<?= $post->imagem ?>" alt="Imagem Post">
 
