@@ -72,51 +72,7 @@ body{
     font-size: 1.5rem;
 }
 
-.perfil{
-    display: flex;
 
-    align-items: center;
-
-    gap: 1rem;
-}
-
-.avatar{
-    width: 3rem;
-    height: 3rem;
-
-    border-radius: 50%;
-
-    overflow: hidden;
-}
-
-.foto-perfil{
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-}
-
-.botao-admin{
-    background-color: #770523;
-
-    color: white;
-
-    border: none;
-
-    border-radius: 2rem;
-
-    padding: 0.6rem 1rem;
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 0.5rem;
-
-    cursor: pointer;
-
-    font-family: 'Noah';
-}
 
 .secao-tabela{
     padding: 1.2rem 1.8rem;
@@ -204,12 +160,12 @@ body{
     display: grid;
     
     grid-template-columns:
-        5rem
+        6.5rem
+        10rem
+        22rem
         13rem
-        18rem
-        12rem
-        11rem
-        11rem;
+        9rem
+        13rem;
 
     align-items: center;
     justify-items: center;
@@ -222,12 +178,12 @@ body{
 .linha-post{
     display: grid;
     grid-template-columns:
-        3rem
-        15rem
+        5rem
+        17rem
         10rem
         20rem
         1rem
-        19rem;
+        14rem;
     
     align-items: center;
     justify-items: center;
@@ -239,35 +195,51 @@ body{
 }
 
 .info-post{
-    display: flex;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 3rem 1fr;
     align-items: center;
     gap: 0.8rem;
+    justify-items: start;
 }
 
 .info-post img{
-    width: 2.4rem;
-    height: 2.4rem;
-
+    width: 2.6rem;
+    height: 2.6rem;
     border-radius: 0.6rem;
-
     object-fit: cover;
+    flex-shrink: 0;
+}
+
+.info-post p {
+    max-width: 11rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .info-autor{
     display: flex;
-
     align-items: center;
-
     gap: 0.8rem;
+    width: 100%;
+    overflow: hidden;
 }
 
 .info-autor img{
     width: 2.5rem;
     height: 2.5rem;
-
     border-radius: 50%;
-
     object-fit: cover;
+}
+
+.info-autor p,
+.info-autor span {
+    display: block;
+    max-width: 8rem; /* ajuste se quiser mais espaço */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .tag{
@@ -284,8 +256,10 @@ body{
 
 .acoes{
     display: flex;
-
+    justify-content: flex-end;
+    align-items: center;
     gap: 0.5rem;
+    width: 100%;
 }
 
 .acoes button{
@@ -362,34 +336,107 @@ body{
     font-weight: bold;
 }
 
-/* .paginacao button{
-    width: 2.3rem;
-    height: 2.3rem;
 
-    border: none;
+/* ================= FILTROS DA TABELA DE POSTS ================= */
 
-    border-radius: 0.6rem;
+.filtros-posts {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
 
+.filtros-posts .botoes-esquerda {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+}
+
+.botao-adicionar {
     background-color: white;
-
+    border: none;
+    padding: 0.5rem 0.8rem;
+    border-radius: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
     color: #770523;
-
     cursor: pointer;
-
-    transition: 0.2s;
-
-    font-weight: bold;
+    box-shadow: 0 0.2rem 0.4rem rgba(0,0,0,0.15);
+    font-family: 'Noah';
+    font-size: 0.95rem;
 }
 
-.paginacao .ativo{
-    background-color: #770523;
-
-    color: white;
+.campo-filtro {
+    background-color: white;
+    border: none;
+    outline: none;
+    padding: 0.6rem 0.8rem;
+    border-radius: 0.8rem;
+    width: 10rem;
+    height: 2.5rem;
+    box-shadow: 0 0.2rem 0.4rem rgba(0,0,0,0.15);
+    font-family: 'Noah';
+    color: #1F0008;
+    font-size: 0.95rem;
 }
 
-.paginacao button:hover{
-    transform: scale(1.05);
-} */
+.campo-filtro[type="date"] {
+    cursor: pointer;
+}
+
+.campo-busca {
+    background-color: white;
+    border: none;
+    outline: none;
+    padding: 0.6rem 0.8rem;
+    border-radius: 2rem;
+    width: 14rem;
+    height: 2.5rem;
+    box-shadow: 0 0.2rem 0.4rem rgba(0,0,0,0.15);
+    font-family: 'Noah';
+    color: #1F0008;
+    font-size: 0.95rem;
+}
+
+.botao-buscar {
+    width: 2.5rem;
+    height: 2.5rem;
+    border: none;
+    border-radius: 0.8rem;
+    background-color: white;
+    color: #770523;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0.2rem 0.4rem rgba(0,0,0,0.15);
+    font-size: 0.95rem;
+}
+
+.botao-limpar {
+    background-color: white;
+    color: #770523;
+    text-decoration: none;
+    padding: 0.6rem 0.8rem;
+    border-radius: 0.8rem;
+    font-family: 'Noah';
+    box-shadow: 0 0.2rem 0.4rem rgba(0,0,0,0.15);
+    white-space: nowrap;
+    font-size: 0.95rem;
+}
+
+.botao-adicionar:hover,
+.botao-buscar:hover,
+.botao-limpar:hover {
+    transform: scale(1.03);
+    background-color: #FAD2E1;
+}
+
+
 
 /* ================= RESPONSIVIDADE ================= */
 

@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 
+<?php
+$filtrosPaginacao = array_filter([
+    'busca' => $busca ?? '',
+    'categoria' => $categoria ?? '',
+    'data_inicio' => $dataInicio ?? '',
+    'data_fim' => $dataFim ?? '',
+], function ($valor) {
+    return $valor !== '' && $valor !== null;
+});
+
+$queryFiltros = http_build_query($filtrosPaginacao);
+$sufixoFiltros = $queryFiltros !== '' ? '&' . $queryFiltros : '';
+?>
+
 <head>
 
     <meta charset="UTF-8">
@@ -38,25 +52,6 @@
 
                 </div>
 
-                <div class="perfil">
-
-                    
-                    <div class="avatar">
-
-                        <img src="../../../public/assets/fotousuario.jpg" alt="Foto do usuário" class="foto-perfil">
-
-                    </div>
-
-                    <button class="botao-admin">
-
-                        Admin
-
-                        <i class="bi bi-caret-down-fill"></i>
-
-                    </button>
-
-                </div>
-
             </header>
 
 
@@ -64,9 +59,9 @@
 
                 <div class="acoes-tabela">
 
-                    <div class="botoes-esquerda">
+                    <form class="filtros-posts" action="/tabelapost" method="GET">
 
-                        <button onclick="abriModal('modalCriar')">
+                        <button type="button" class="botao-adicionar" onclick="abriModal('modalCriar')">
 
                             <i class="bi bi-plus-square"></i>
 
@@ -74,29 +69,27 @@
 
                         </button>
 
-                        <button>
+                        <input class="campo-filtro" type="date" name="data_inicio" value="<?= htmlspecialchars($dataInicio ?? '') ?>" placeholder="Data inicial">
 
-                            <i class="bi bi-calendar-event"></i>
+                        <input class="campo-filtro" type="date" name="data_fim" value="<?= htmlspecialchars($dataFim ?? '') ?>" placeholder="Data final">
 
-                            Datas
+                        <input class="campo-filtro" type="text" name="categoria" list="listaCategorias" value="<?= htmlspecialchars($categoria ?? '') ?>" placeholder="Categoria">
 
+                        <datalist id="listaCategorias">
+                            <?php foreach ($categorias as $categoriaItem): ?>
+                                <?php if (!empty($categoriaItem->categoria)): ?>
+                                    <option value="<?= htmlspecialchars($categoriaItem->categoria) ?>"></option>
+                                <?php endif; ?>
+                            <?php endforeach; ?>
+                        </datalist>
+
+                        <input class="campo-filtro campo-busca" type="text" name="busca" value="<?= htmlspecialchars($busca ?? '') ?>" placeholder="Buscar posts">
+
+                        <button class="botao-buscar" type="submit" aria-label="Buscar">
+                            <i class="bi bi-search"></i>
                         </button>
 
-                        <button>
-
-                            <i class="bi bi-funnel"></i>
-
-                            Categorias
-
-                        </button>
-
-                    </div>
-                
-                    <form class="caixa-pesquisa" action="/tabelapost" method="GET">
-
-                        <input type="text" placeholder="Buscar posts" name="busca">
-
-                        <i class="bi bi-search"></i>
+                        <a class="botao-limpar" href="/tabelapost">Limpar filtros</a>
 
                     </form>
 
@@ -163,7 +156,7 @@
                         <div class="paginacao-container">
                             <ul class="paginacao">
                                 <li>
-                                    <a href="?page=<?= max(1, $currentPage - 1) ?>" class="<?= $currentPage <= 1 ? 'disabled' : ''?>"><i class="bi bi-chevron-left"></i></a>
+                                    <a href="?page=<?= max(1, $currentPage - 1) ?><?= $sufixoFiltros ?>" class="<?= $currentPage <= 1 ? 'disabled' : ''?>"><i class="bi bi-chevron-left"></i></a>
                                 </li>
 
                                 <?php
@@ -173,7 +166,7 @@
                                 ?>
 
                                 <li>
-                                    <a href="?page=1" class="<?= $currentPage == 1 ? 'active' : ''?>">1</a>
+                                    <a href="?page=1<?= $sufixoFiltros ?>" class="<?= $currentPage == 1 ? 'active' : ''?>">1</a>
                                 </li> 
                                 
                                 <?php if ($start > 2):?>
@@ -182,7 +175,7 @@
 
                                 <?php for($i= $start; $i <=$end; $i++):?>
                                     <li>
-                                        <a href="?page=<?= $i ?>" class="<?= $currentPage == $i ? 'active' : ''?>"> <?= $i ?></a>
+                                        <a href="?page=<?= $i ?><?= $sufixoFiltros ?>" class="<?= $currentPage == $i ? 'active' : ''?>"> <?= $i ?></a>
                                     </li> 
                                 <?php endfor; ?>
 
@@ -191,11 +184,11 @@
                                 <?php endif; ?>
 
                                 <li>
-                                    <a href="?page=<?= $totalPages?>" class="<?= $currentPage == $totalPages ? 'active' : ''?>"><?= $totalPages?></a>
+                                    <a href="?page=<?= $totalPages?><?= $sufixoFiltros ?>" class="<?= $currentPage == $totalPages ? 'active' : ''?>"><?= $totalPages?></a>
                                 </li> 
 
                                 <li>
-                                    <a href="?page=<?= min($totalPages, $currentPage + 1) ?>" class="<?= $currentPage >= $totalPages ? 'disabled' : ''?>"><i class="bi bi-chevron-right"></i></a>
+                                    <a href="?page=<?= min($totalPages, $currentPage + 1) ?><?= $sufixoFiltros ?>" class="<?= $currentPage >= $totalPages ? 'disabled' : ''?>"><i class="bi bi-chevron-right"></i></a>
                                 </li>
 
                             </ul>

@@ -29,13 +29,26 @@ class PostsController
             $currentPage = 1;
         }
 
+        $busca = trim($_GET['busca'] ?? '');
+        $categoria = trim($_GET['categoria'] ?? '');
+        $dataInicio = trim($_GET['data_inicio'] ?? '');
+        $dataFim = trim($_GET['data_fim'] ?? '');
+
+        $filtros = [
+            'busca' => $busca,
+            'categoria' => $categoria,
+            'data_inicio' => $dataInicio,
+            'data_fim' => $dataFim,
+        ];
+
+        $totalPosts = $database->countPostsFiltrados($filtros);
+        $totalPages = (int) ceil($totalPosts / $limit);
+        $currentPage = min($currentPage, max(1, $totalPages));
+
         $offset = ($currentPage - 1) * $limit;
-        $busca = $_GET['busca'] ?? '';
 
-        $totalPosts = $database->countAll('tabela_posts');
-        $totalPages = ceil($totalPosts/$limit);
-
-        $posts = $database->paginate('tabela_posts', $limit, $offset, $busca);
+        $posts = $database->paginatePostsFiltrados($limit, $offset, $filtros);
+        $categorias = $database->getCategoriasPosts();
         
 
         // $posts = App::get('database') -> selectAllPosts();
@@ -46,7 +59,12 @@ class PostsController
         return view('admin/tabelapost', [
             'posts' => $posts,
             'currentPage' => $currentPage,
-            'totalPages' => $totalPages
+            'totalPages' => $totalPages,
+            'categorias' => $categorias,
+            'busca' => $busca,
+            'categoria' => $categoria,
+            'dataInicio' => $dataInicio,
+            'dataFim' => $dataFim,
 
         ]);
     }
