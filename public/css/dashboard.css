@@ -73,6 +73,13 @@ h3 {
     color: #333;
 }
 
+.admin-card{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+}
+
 .admin-profile {
     background-color: var(--bege);
     padding: 8px 18px;
@@ -83,6 +90,28 @@ h3 {
     gap: 12px;
     width: auto;
     min-width: fit-content;
+}
+
+
+.admin-home a{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--bege);
+    padding: 16px 18px;
+    border-radius: 40px;
+    align-items: center;
+    gap: 12px;
+    width: auto;
+    min-width: fit-content;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    transition: 0.2s;
+}
+
+.admin-home a:hover{
+    background-color: var(--rosa-claro);
+    color: var(--rosa-escuro);
 }
 
 .caixa-admin {
