@@ -33,6 +33,10 @@
                 <h1 class="titulo-perfil">
                     Meu Perfil
                 </h1>
+                <a href="/">
+                    <img src="../../../public/assets/logo-stitchify.png" alt="">
+                </a>
+                    
 
             </section>
 
