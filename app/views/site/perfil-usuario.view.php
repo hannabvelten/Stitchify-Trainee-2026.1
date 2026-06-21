@@ -51,9 +51,9 @@
                 <div class="card-perfil">
 
                     <div class="dados-usuario">
-  <?php if (!empty($usuario->foto)): ?>
+                    <?php if (!empty($usuario->foto)): ?>
                   <img src="../../../public/uploads/<?= htmlspecialchars($usuario->foto) ?>" alt="Foto de <?= htmlspecialchars($usuario->nome) ?>"         
-class="foto-perfil" />
+                    class="foto-perfil" />
                   <?php else: ?>
                   <img src="../../../public/assets/PersonCircle.svg" alt="Sem foto" class="foto-perfil" />
                   <?php endif; ?>
