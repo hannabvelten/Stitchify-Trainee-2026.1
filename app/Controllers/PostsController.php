@@ -49,7 +49,7 @@ class PostsController
 
         $posts = $database->paginatePostsFiltrados($limit, $offset, $filtros);
         $categorias = $database->getCategoriasPosts();
-        
+        $usuarioLogado = $database->findById('tabela_usuarios', 'id', $_SESSION['id']);
 
         // $posts = App::get('database') -> selectAllPosts();
 
@@ -65,7 +65,7 @@ class PostsController
             'categoria' => $categoria,
             'dataInicio' => $dataInicio,
             'dataFim' => $dataFim,
-
+            'usuarioLogado' => $usuarioLogado,
         ]);
     }
 

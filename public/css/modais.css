@@ -371,7 +371,7 @@
     position: fixed;
     display: none;
     align-self: center;
-    z-index: 10;
+    z-index: 19;
     transition: 0.3s ease;
 }
 
@@ -723,6 +723,10 @@
         border-radius: 15px;
     }
 
+    .modalCriar .formContent{
+        gap: 5px;
+    }
+
     .header {
         padding: 10px;
     }
@@ -752,9 +756,13 @@
     }
 
     .btnCancel,
-    .btnCreate,
-    .btnClose {
+    .btnCreate{
         width: 35%;         
+        padding: 8px 5px;
+        font-size: 14px;
+    }
+
+    .btnClose {        
         padding: 8px 5px;
         font-size: 14px;
     }

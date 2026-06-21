@@ -57,14 +57,12 @@ $sufixoFiltros = $queryFiltros !== '' ? '&' . $queryFiltros : '';
                     
                     <div class="avatar">
 
-                        <img src="../../../public/assets/fotousuario.jpg" alt="Foto do usuário" class="foto-perfil">
+                        <img src="../../../public/assets/uploads/<?= htmlspecialchars($usuarioLogado['foto']) ?>" alt="Foto do usuário" class="foto-perfil">
 
                     </div>
 
                     <button class="botao-admin">
-
-                        Admin
-
+                        <?= htmlspecialchars($usuarioLogado['nome']) ?>
                     </button>
 
                 </div>
