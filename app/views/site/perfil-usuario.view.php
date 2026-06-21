@@ -55,7 +55,7 @@
                   <img src="../../../public/uploads/<?= htmlspecialchars($usuario->foto) ?>" alt="Foto de <?= htmlspecialchars($usuario->nome) ?>"         
 class="foto-perfil" />
                   <?php else: ?>
-                  <img src="../../../public/assets/PersonCircle.svg" alt="Sem foto"  />
+                  <img src="../../../public/assets/PersonCircle.svg" alt="Sem foto" class="foto-perfil" />
                   <?php endif; ?>
 
                         <div class="informacoes-usuario">
