@@ -11,7 +11,7 @@ if (session_status() === PHP_SESSION_NONE) {
 
     <header class="navbar">
         <div class="navbar-logo">
-            <img src="../../../public/assets/logo_1.png" alt="Logo Stitchify">
+            <img src="../../../public/assets/logo-stitchify.png" alt="Logo Stitchify">
         </div>
 
         <nav class="navbar-links">

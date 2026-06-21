@@ -206,6 +206,7 @@ body{
     border-radius: 2.5rem;
     padding: 1rem;
     box-shadow: 0 0.3rem 0.8rem rgba(0,0,0,0.15);
+    width: 100%;
 }
 
 .cabecalho-tabela tr{
@@ -221,6 +222,7 @@ body{
 
     align-items: center;
     justify-items: center;
+    justify-content: center;
     padding: 0rem;
     color: #770523;
     font-family: 'Baloo';
@@ -239,6 +241,7 @@ body{
     
     align-items: center;
     justify-items: center;
+    justify-content: center;
     gap: 0.7rem;
     background-color: #FEF3E2;
     padding: 0.7rem;
