@@ -109,7 +109,7 @@
                             <tr>
                                 <th>ID</th>
                                 <th>Título</th>
-                                <th>Autor</th>
+                                <th class="autor">Autor</th>
                                 <th>Categoria</th>
                                 <th>Data</th>
                                 <th>Ações</th>
