@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="../../../public/css/visualizacao.css" />
     <link rel="stylesheet" href="../../../public/css/edituser.css" />
     <link rel="stylesheet" href="../../../public/css/deleteuser.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
   </head>
 
   <body>
@@ -22,95 +24,89 @@
           </div>
           <div class="box-perfiladm">
             <div class="admin">
-              <img
-                src="../../../public/assets/PersonCircle.svg"
-                alt="iconeperfil"
+              <div class="avatar">
+                <img src="../../../public/assets/fotousuario.jpg" alt="iconeperfil" class="foto-perfil"/>
+              </div>
                 
-              />
               <div class="textoadmin">
                 <p>Admin</p>
-                <img
-              src="../../../public/assets/Down Arrow.svg"
-              alt="iconemaisadmin"/>
               </div>
               
             </div>
             
           </div>
         </div>
-        <div class="box-criauser">
-          <img src="../../../public/assets/lupa.svg" alt="lupa" class="lupa" />
-          <form action="/crudUsuarios" method="GET">
-          <input
-            type="text"
-            placeholder="Busca por nome ou email"
-            class="busca-user" name="busca"
-          />
-          </form>
-          <button class="criar-usuario">+ Criar Usuário</button>
-        </div>
-        <div class="box-users">
-          <table class="cabecalho">
-            <thead>
-              <tr>
-                <th class="user">Usuário</th>
-                <th class="email">Email</th>
-                <th class="tipo">Tipo</th>
-                <th class="iduser">Id do Usuário</th>
-                <th>Ações</th>
-              </tr>
-            </thead>
-            <tbody>
-              <?php foreach($usuarios as $usuario): ?>
-              <tr>
-                <td class="nomec">
-                  <?php if (!empty($usuario->foto)): ?>
-                  <img src="../../../public/uploads/<?= htmlspecialchars($usuario->foto) ?>" alt="Foto de <?= htmlspecialchars($usuario->nome) ?>" class="foto-tabela-user" />
-                  <?php else: ?>
-                  <img src="../../../public/assets/PersonCircle.svg" alt="Sem foto"  />
-                  <?php endif; ?><?= htmlspecialchars($usuario->nome)?>
-                </td>
-                <td class="emailc"><?= htmlspecialchars($usuario->email)?></td>
-                <td class="tipoc">
-                  <span class="adm"> <?= htmlspecialchars($usuario->tipo)?></span>
-                </td>
-                <td class="iduser">
-                  <p><?= htmlspecialchars($usuario->id)?></p>
-                </td>
-                <td class="acoesc">
-                  <button class="btn-visualizar" data-id="<?= htmlspecialchars($usuario->id) ?>">
-                    <img
-                      src="../../../public/assets/icones-acoes/Eye.svg"
-                      alt="visualizar"
-                    />
-                  </button>
-                  <button class="editar" 
-                      data-id="<?= htmlspecialchars($usuario->id) ?>"
-                      data-nome="<?= htmlspecialchars($usuario->nome) ?>"
-                      data-email="<?= htmlspecialchars($usuario->email) ?>">
-                    <img
-                      src="../../../public/assets/icones-acoes/Pencil.svg"
-                      alt="editar"
-                    />
-                  </button>
-                  <button class="deletar" data-id="<?= htmlspecialchars($usuario->id) ?>">
-                    <img
-                      src="../../../public/assets/icones-acoes/Trash.svg"
-                      alt="deletar"
-                    />
-                  </button>
-                </td>
-              </tr>
-             <?php endforeach ?>
-            </tbody>
-          </table>
-          <div class="paginacao">
-            <button class="voltar" onclick="window.location='?page=<?= max(1, $currentPage - 1) ?>'" <?= $currentPage <= 1 ? 'disabled' : '' ?>><</button>
-                <?php for($i = 1; $i <= $totalPages; $i++): ?>
-                <button class="<?= $currentPage == $i ? 'active' : '' ?>"
-                onclick="window.location='?page=<?= $i ?>'"><?= $i ?></button>
-                <?php endfor; ?>
-            <button class="proximo"  onclick="window.location='?page=<?= min($totalPages, $currentPage + 1) ?>'" <?= $currentPage >= $totalPages ? 'disabled' : '' ?>>></button>
+        <div class="secao-tabela">
+          <div class="box-criauser">
+
+            <button class="criar-usuario">
+              <i class="bi bi-plus-square"></i>
+              Criar Usuário
+            </button>
+
+            <form class="caixa-pesquisa" action="/crudUsuarios" method="GET">
+            <input
+              type="text"
+              placeholder="Busca por nome ou email"
+              class="busca-user" name="busca"
+            />
+            <i class="bi bi-search"></i>
+            </form>
+          </div>
+          <div class="box-users">
+            <table class="cabecalho">
+              <thead>
+                <tr>
+                  <th class="user">Usuário</th>
+                  <th class="email">Email</th>
+                  <th class="tipo">Tipo</th>
+                  <th class="iduser">ID</th>
+                  <th>Ações</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php foreach($usuarios as $usuario): ?>
+                <tr>
+                  <td class="nomec">
+                    <?php if (!empty($usuario->foto)): ?>
+                    <img src="../../../public/uploads/<?= htmlspecialchars($usuario->foto) ?>" alt="Foto de <?= htmlspecialchars($usuario->nome) ?>" class="foto-tabela-user" />
+                    <?php else: ?>
+                    <img src="../../../public/assets/PersonCircle.svg" alt="Sem foto"  />
+                    <?php endif; ?><?= htmlspecialchars($usuario->nome)?>
+                  </td>
+                  <td class="emailc"><?= htmlspecialchars($usuario->email)?></td>
+                  <td class="tipoc">
+                    <span class="adm"> <?= htmlspecialchars($usuario->tipo)?></span>
+                  </td>
+                  <td class="iduser">
+                    <p><?= htmlspecialchars($usuario->id)?></p>
+                  </td>
+                  <td class="acoesc">
+                    <button class="btn-visualizar" data-id="<?= htmlspecialchars($usuario->id) ?>">
+                      <i class="bi bi-eye"></i>
+                    </button>
+                    <button class="editar" 
+                        data-id="<?= htmlspecialchars($usuario->id) ?>"
+                        data-nome="<?= htmlspecialchars($usuario->nome) ?>"
+                        data-email="<?= htmlspecialchars($usuario->email) ?>">
+                      <i class="bi bi-pencil"></i>
+                    </button>
+                    <button class="deletar" data-id="<?= htmlspecialchars($usuario->id) ?>">
+                      <i class="bi bi-trash"></i>
+                    </button>
+                  </td>
+                </tr>
+              <?php endforeach ?>
+              </tbody>
+            </table>
+            <div class="paginacao">
+              <button class="voltar" onclick="window.location='?page=<?= max(1, $currentPage - 1) ?>'" <?= $currentPage <= 1 ? 'disabled' : '' ?>><</button>
+                  <?php for($i = 1; $i <= $totalPages; $i++): ?>
+                  <button class="<?= $currentPage == $i ? 'active' : '' ?>"
+                  onclick="window.location='?page=<?= $i ?>'"><?= $i ?></button>
+                  <?php endfor; ?>
+              <button class="proximo"  onclick="window.location='?page=<?= min($totalPages, $currentPage + 1) ?>'" <?= $currentPage >= $totalPages ? 'disabled' : '' ?>>></button>
+            </div>
           </div>
         </div>
       </div>

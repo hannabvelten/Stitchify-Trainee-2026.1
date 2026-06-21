@@ -111,11 +111,8 @@ body{
 
     align-items: center;
 
-    gap: 0.5rem;
-
-    cursor: pointer;
-
     font-family: 'Noah';
+    font-size: 15px;
 }
 
 .secao-tabela{
@@ -159,6 +156,13 @@ body{
     cursor: pointer;
 
     box-shadow: 0 0.2rem 0.4rem rgba(0,0,0,0.15);
+    transition: 0.2s;
+}
+
+.botoes-esquerda button:hover{
+    transform: scale(1.05);
+
+    background-color: #FAD2E1;
 }
 
 .caixa-pesquisa{
@@ -183,6 +187,10 @@ body{
     flex: 1;
 
     font-family: 'Noah';
+}
+
+.caixa-pesquisa i{
+    color: #770523;
 }
 
 .tabelaResponsiva{
