@@ -89,13 +89,14 @@ header.navbar{
   background: transparent;
   color: #770523;
   font-family: var(--font-secondary);
-  font-weight: 700;
+  font-weight: 900;
   font-size: 1.5rem;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
   cursor: pointer;
   padding: 0;
+  font-family: 'Baloo';
 }
 
 .botao-sair:hover {
@@ -116,11 +117,11 @@ header.navbar{
 @media (max-width: 768px){
     
     :root{
-        --logo-size: 18rem;
-        --texto-menu: 1.35rem;
+        --logo-size: 2rem;
+        --texto-menu: 1rem;
         --icone-menu: 1.4rem;
         --foto-perfil: 2.5rem;
-        --espaco-links: 1.5rem;
+        --espaco-links: 1rem;
         --altura-navbar: 5rem;
         --distancia-icone-texto: 0.5rem;
 
@@ -132,7 +133,7 @@ header.navbar{
     }
 
     .navbar-logo {
-        margin-left: -2.5rem; 
+        margin-left: 0rem; 
     }
 
     .navbar-logo img{
@@ -158,5 +159,9 @@ header.navbar{
     .foto-perfil{
         width: var(--foto-perfil);
         height: var(--foto-perfil);
+    }
+
+    .botao-sair{
+        font-size: var(--texto-menu);
     }
 }
