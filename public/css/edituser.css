@@ -200,7 +200,14 @@
     border: 2px solid var(--verde-claro);
     background: var(--branco);
     color: var(--vinho);
+    transition: 0.3s;
 }
+
+.cancel:hover{
+    background-color: var(--verde-claro);
+    cursor: pointer;
+}
+
 
 .confirm {
     flex: 2;
@@ -208,6 +215,12 @@
     border: 2px solid var(--verde-claro);
     background: var(--verde-claro);
     color: var(--vinho);
+    transition: 0.3s;
+}
+
+.confirm:hover{
+    background-color: var(--branco);
+    cursor: pointer;
 }
 
 /* RESPONSIVIDADE TABLET */
