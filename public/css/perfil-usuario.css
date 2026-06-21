@@ -91,26 +91,27 @@ body{
 }
 
 .card-perfil{
-
     display: flex;
     height: 18.75rem;
-    padding: 0 5.7rem;
+    padding: 0 4rem;
     align-items: center;
-    gap: 22.5rem;
+    gap: 2rem;
     flex-shrink: 0;
     align-self: stretch;
     border-radius: 0 0 11.25rem 0;
     background: #770523;
     box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.30);
+    overflow: hidden;
+    
 }
 
 .dados-usuario{
-
     display: flex;
     padding: 0.625rem 0;
-    align-items: flex-start;
-    gap: 0.625rem;
-    padding-left: -8rem;
+    align-items: center;
+    gap: 2rem;
+    min-width: 0;
+    flex: 1;
 }
 
 .foto-perfil{
@@ -131,30 +132,36 @@ body{
     justify-content: space-between;
     align-items: flex-start;
     align-self: stretch;
+    min-width: 0;
+    overflow: hidden;
+    flex: 1;
 }
 
 .nome-email{
 
-    display: flex;
-    height: 6.25rem;
-    padding: 0 1.25rem;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 0rem;
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
 }
 
 .nome-email h2{
-
     font-family: 'Baloo';
     font-size: 2.8rem;
     color: #FFFFFF;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .nome-email p{
 
     color: #FFFFFF;
     font-size: 1.75rem;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .localizacao-usuario{
@@ -170,7 +177,7 @@ body{
     flex-direction: row;
     align-items: center;
     gap: 0.5rem;
-    padding-left: 1.25rem;
+    padding-left: 0em;
     color: #FFFFFF;
     font-size: 2.5rem;
 }
@@ -178,28 +185,27 @@ body{
 .botao-editar{
 
     display: flex;
-    height: 4rem;
-    padding: 1.5rem;
+    width: 13rem;
+    height: 4.2rem;
+    padding: 0 1rem;
     align-items: center;
+    justify-content: center;
     gap: 0.625rem;
     border-radius: 0.9375rem;
-    border: 2px solid #770523;
+    border: 2px  #770523;
     background: #FFF;
     box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.60);
     color: #770523;
     font-family: 'Noah';
-    font-size: 1.625rem;
+    font-size: 1.4rem;
     font-weight: 700;
     white-space: nowrap;
     cursor: pointer;
-}
+    
 
-.botao-editar{
+    margin-left: auto;
+    margin-right: 5rem;
 
-    font-size: 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .secao-posts{
