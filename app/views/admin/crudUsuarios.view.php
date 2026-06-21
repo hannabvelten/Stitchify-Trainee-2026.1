@@ -27,7 +27,14 @@
           <div class="box-perfiladm">
             <div class="admin">
               <div class="avatar">
-                <img src="../../../public/uploads/<?= htmlspecialchars($usuarioLogado['foto']) ?>" alt="iconeperfil" class="foto-perfil"/>
+
+                <?php if (!empty($usuarioLogado['foto'])): ?>
+                  <img src="../../../public/uploads/<?= htmlspecialchars($usuarioLogado['foto']) ?>" alt="Foto de <?= htmlspecialchars($usuarioLogado['nome']) ?>"/>
+                  <?php else: ?>
+                  <img src="../../../public/assets/PersonCircle.svg" alt="Sem foto"  />
+                <?php endif; ?>
+
+
               </div>
                 
               <div class="textoadmin">
