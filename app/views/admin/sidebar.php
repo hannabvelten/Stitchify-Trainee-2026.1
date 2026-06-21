@@ -19,8 +19,11 @@
         </div>
 
         <div class="logo">
-            <img src="../../../public/assets/logo.png" alt="" class="stitchify">
-            <img src="../../../public/assets/Novelo_logo_3.png" alt="" class="novelo">
+            <a href="/">
+                <img src="../../../public/assets/logo.png" alt="" class="stitchify">
+                <img src="../../../public/assets/Novelo_logo_3.png" alt="" class="novelo">
+            </a>
+                
         </div>
 
         <div class="paginas">
