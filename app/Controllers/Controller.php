@@ -31,7 +31,6 @@ class Controller
         $user = App::get('database')->verificaLogin($email, $senha);
 
         if( $user != false){
-            session_start();
             $_SESSION['id'] = $user->id;
             $_SESSION['tipo'] = $user->tipo;
             header('Location: /landing-page');

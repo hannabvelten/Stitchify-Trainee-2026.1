@@ -14,10 +14,10 @@ class UsuariosController
 
     public function index()
     {
-       // if (!isset($_SESSION['id']) || $_SESSION['tipo'] !== 'admin') {
-        //    header('Location: /login');
-        //    exit;
-        //}
+        if (!isset($_SESSION['id']) || $_SESSION['tipo'] !== 'admin') {
+           header('Location: /login');
+           exit;
+        }
 
     $busca = $_GET['busca'] ?? '';
     $currentPage = isset($_GET['page']) ? (int)$_GET['page'] : 1;

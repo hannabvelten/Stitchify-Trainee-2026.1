@@ -14,10 +14,10 @@ class PostsController
     public function index()
     {
 
-        //if (!isset($_SESSION['id']) || $_SESSION['tipo'] !== 'admin') {
-        //    header('Location: /login');
-        //    exit;
-        //}
+        if (!isset($_SESSION['id'])) {
+            header('Location: /login');
+            exit;
+        }
 
         $database = App::get('database');
         
@@ -72,7 +72,7 @@ class PostsController
     public function store()
     {
 
-        if (!isset($_SESSION['id']) || $_SESSION['tipo'] !== 'admin') {
+        if (!isset($_SESSION['id'])) {
             header('Location: /login');
             exit;
         }
@@ -108,7 +108,7 @@ class PostsController
 
     public function update()
     {
-        if (!isset($_SESSION['id']) || $_SESSION['tipo'] !== 'admin') {
+        if (!isset($_SESSION['id'])) {
             header('Location: /login');
             exit;
         }
@@ -156,7 +156,7 @@ class PostsController
 
     public function destroy()
     {
-        if (!isset($_SESSION['id']) || $_SESSION['tipo'] !== 'admin') {
+        if (!isset($_SESSION['id'])) {
             header('Location: /login');
             exit;
         }
@@ -258,10 +258,10 @@ class PostsController
     {
         
 
-        //if (!isset($_SESSION['id'])) {
-        //    header('Location: /login');
-        //   exit;
-        //}
+        if (!isset($_SESSION['id'])) {
+            header('Location: /login');
+           exit;
+        }
 
         $database = App::get('database');
 
