@@ -24,7 +24,7 @@ footer {
 
 .conteudo-footer {
     display: flex;
-    flex-direction: column;
+    flex-direction: row !important;
     align-items: flex-start;
     justify-content: end;
     gap: 30px;
@@ -63,9 +63,21 @@ footer {
     height: 30px;
 }
 
-#sobre-nos {
+/* #sobre-nos {
     order: 1;
 
+} */
+
+.logo-sobre{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    order: 3;
+}
+
+.logo-sobre a img{
+    width: 3rem;
+    height: auto;
 }
 
 #sobre-nos a {
