@@ -29,6 +29,7 @@
     max-height: 90vh;
     display: flex;
     flex-direction: column;
+    overflow-y:auto;
 
 }
  .topo-modal{
@@ -75,14 +76,35 @@
 
 .inputs-modal input{
     width: 100%;
-    padding: 1rem;
+     padding: 0.7rem;
     border: 2px solid #D0D996;
     border-radius: 20px;
     
 }
+select {
+     width: 100%;
+     padding: 0.7rem;
+    border: 2px solid #D0D996;
+    border-radius: 20px;
+    padding-left: 1rem;
+}
+select option.seleciona{
+     color: #333;
+    font-size: 10px;
+    padding-left: 0.5rem;
+}
+select option.typeadmin{
+     color: #333;
+    font-size: 10px;
+    padding-left: 0.5rem;
+}
+select option.typeuser{
+     color: #333;
+    font-size: 10px;
+    padding-left: 0.5rem;
+}
 .inputs-modal::placeholder{
     font-family: 'Noah-regular';
-    color: #333;
     font-size: 10px;
     padding-left: 0.5rem;
 }

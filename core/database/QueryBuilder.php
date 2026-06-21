@@ -150,6 +150,113 @@ class QueryBuilder
         }
     }
 
+    private function montarFiltrosPosts($filtros, &$params)
+    {
+        $condicoes = [];
+        $params = [];
+
+        $busca = trim($filtros['busca'] ?? '');
+        if ($busca !== '') {
+            $condicoes[] = '(tabela_posts.titulo LIKE :busca OR tabela_posts.descricao LIKE :busca OR tabela_posts.categoria LIKE :busca OR tabela_usuarios.nome LIKE :busca)';
+            $params['busca'] = "%{$busca}%";
+        }
+
+        $categoria = trim($filtros['categoria'] ?? '');
+        if ($categoria !== '') {
+            $condicoes[] = 'tabela_posts.categoria LIKE :categoria';
+            $params['categoria'] = "%{$categoria}%";
+        }
+
+        $dataInicio = trim($filtros['data_inicio'] ?? '');
+        if ($dataInicio !== '') {
+            $condicoes[] = 'DATE(tabela_posts.data) >= :data_inicio';
+            $params['data_inicio'] = $dataInicio;
+        }
+
+        $dataFim = trim($filtros['data_fim'] ?? '');
+        if ($dataFim !== '') {
+            $condicoes[] = 'DATE(tabela_posts.data) <= :data_fim';
+            $params['data_fim'] = $dataFim;
+        }
+
+        if (empty($condicoes)) {
+            return '';
+        }
+
+        return ' WHERE ' . implode(' AND ', $condicoes);
+    }
+
+    public function countPostsFiltrados($filtros)
+    {
+        $params = [];
+        $where = $this->montarFiltrosPosts($filtros, $params);
+
+        $sql = "SELECT COUNT(*) AS total
+                FROM tabela_posts
+                INNER JOIN tabela_usuarios ON tabela_posts.autor = tabela_usuarios.id
+                {$where}";
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute($params);
+
+            $resultado = $stmt->fetch(PDO::FETCH_ASSOC);
+            return (int) ($resultado['total'] ?? 0);
+
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+    public function paginatePostsFiltrados($limit, $offset, $filtros)
+    {
+        $params = [];
+        $where = $this->montarFiltrosPosts($filtros, $params);
+
+        $sql = "SELECT 
+                tabela_posts.*, 
+                tabela_usuarios.nome AS nome_autor, 
+                tabela_usuarios.foto AS foto_autor
+            FROM tabela_posts
+            INNER JOIN tabela_usuarios ON tabela_posts.autor = tabela_usuarios.id
+            {$where}
+            LIMIT :limit OFFSET :offset";
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+
+            foreach ($params as $nomeParametro => $valorParametro) {
+                $stmt->bindValue(':'.$nomeParametro, $valorParametro);
+            }
+
+            $stmt->bindValue(':limit', (int) $limit, PDO::PARAM_INT);
+            $stmt->bindValue(':offset', (int) $offset, PDO::PARAM_INT);
+            $stmt->execute();
+
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+    public function getCategoriasPosts()
+    {
+        $sql = "SELECT DISTINCT categoria
+                FROM tabela_posts
+                ORDER BY categoria ASC";
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
     public function findById($table, $idColumn, $id)
     {
         $sql = "SELECT * FROM {$table} WHERE {$idColumn} = :id LIMIT 1";

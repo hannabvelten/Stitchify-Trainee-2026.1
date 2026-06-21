@@ -55,6 +55,7 @@ main {
 }
 .usuarios h1{
     font-size: 2rem;
+    font-size: 2rem;
 }
 .box-perfiladm {
     display: flex;
@@ -210,8 +211,14 @@ main {
     overflow: hidden;
     border-collapse: separate;
     border-spacing: 0 10px;
+    margin-bottom: 1rem;
 }
 
+
+td {
+    padding: 0.7rem;
+    background-color: #FEF3E2;
+}
 td{
     font-family: 'Noah-Regular';
     text-align: center;
@@ -219,10 +226,15 @@ td{
     background-color: #FEF3E2;
 
 }
+th {
+    text-align: center;
+     font-family: 'Baloo';
+}
 
 thead th {
     color: #770523;
     text-align: center;
+    font-size: 22px;
     font-size: 24px;
     font-family: 'Baloo';
     padding: 0rem;
@@ -261,9 +273,21 @@ tbody tr td:last-child {
     border-radius: 10px;
 
 }
+
+th.email {
+    text-align: left;
+    padding-left: 1rem;
+}th.user {
+    text-align: left;
+    padding-left: 7rem;
+}
 .emailc {
     text-align: left;
-    padding-left: 6.5rem;
+}
+
+.acoesc {
+    display: flex;
+    gap: 0.5rem;
 }
 
 .acoesc {
