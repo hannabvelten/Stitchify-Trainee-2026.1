@@ -25,11 +25,11 @@
           <div class="box-perfiladm">
             <div class="admin">
               <div class="avatar">
-                <img src="../../../public/assets/fotousuario.jpg" alt="iconeperfil" class="foto-perfil"/>
+                <img src="../../../public/uploads/<?= htmlspecialchars($usuarioLogado['foto']) ?>" alt="iconeperfil" class="foto-perfil"/>
               </div>
                 
               <div class="textoadmin">
-                <p>Admin</p>
+                <p><?= htmlspecialchars($usuarioLogado['nome']) ?></p>
               </div>
               
             </div>

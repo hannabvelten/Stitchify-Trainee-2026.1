@@ -423,7 +423,9 @@ tbody tr td:last-child {
         gap: 0.5rem;
     }
 
-
+    .caixa-pesquisa{
+        padding: 0rem 1rem;
+    }
 
     .usuarios {
         display: flex;
@@ -471,10 +473,8 @@ tbody tr td:last-child {
     }
 
     .box-criauser button {
-        width: 95%;
-        height: 45px;
         border-radius: 10px;
-
+        padding: 0.6rem 5.5rem;
     }
 
     .box-users {
@@ -496,17 +496,7 @@ tbody tr td:last-child {
 
     .paginacao {
         padding-left: 1rem;
+        padding-bottom: 10px;
     }
 
-    .paginacao {
-        padding-left: 1rem;
-    }
-
-    .paginacao button {
-        display: flex;
-        align-items: center;
-        width: 40px;
-        height: 40px;
-        justify-content: center;
-    }
 }

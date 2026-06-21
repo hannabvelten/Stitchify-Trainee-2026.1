@@ -30,8 +30,9 @@ class UsuariosController
     $currentPage = max(1, min($currentPage, $totalPages));
 
     $usuarios = App::get('database')->paginateUsuarios($perPage, $offset, $busca);
+    $usuarioLogado = App::get('database')->findById('tabela_usuarios', 'id', $_SESSION['id']);
 
-    return view('admin/crudUsuarios', compact('usuarios', 'currentPage', 'totalPages','sufixoFiltros'));
+    return view('admin/crudUsuarios', compact('usuarios', 'currentPage', 'totalPages','sufixoFiltros', 'usuarioLogado'));
 
     }
     
