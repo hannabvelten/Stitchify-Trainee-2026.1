@@ -129,7 +129,6 @@
                                         <p><?= $post->titulo ?></p>
                                     </td>
                                     <td class="info-autor"> <!--Arrumar por conta da chave estrangeira-->
-                                        <img src="../../../public/assets/usuarios/<?= $post->foto_autor?>" alt="Autor" name="autor">
                                         <p><?= $post->nome_autor?></p>
                                     </td>
                                     <td class="tag" name="categoria">
