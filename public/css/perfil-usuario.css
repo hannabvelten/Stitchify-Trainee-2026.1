@@ -30,7 +30,19 @@ body{
     font-family: 'Noah', sans-serif;
     background-color: #FEF3E2;
 }
-
+.btn-dashboard{
+     width: 13rem;
+    height: 4.2rem;
+    padding: 0 1rem;
+    border-radius: 0.9375rem;
+    border: 2px  #770523;
+    background: #FFF;
+    box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.60);
+    color: #770523;
+    font-family: 'Noah';
+    font-size: 1.4rem;
+    font-weight: 700;
+}
 .container{
 
     width: 100%;
