@@ -445,7 +445,7 @@ class QueryBuilder
                     }
                     }
                     
-                    public function efetuaInscricao($nome, $email, $senha)
+                    public function efetuaInscricao($nome, $email, $senha, $foto)
                     {
                         $sql = sprintf('INSERT INTO tabela_usuarios (nome, email, senha, tipo, foto) VALUES (:nome, :email, :senha, :tipo, :foto)');
                         try {
@@ -455,7 +455,7 @@ class QueryBuilder
                                 'email' => $email,
                                 'senha' => $senha,
                                 'tipo' => 'usuario',
-                                'foto' => ''
+                                'foto' => $foto
                                 ]);
                                 } catch (Exception $e) {
                                     throw new Exception($e->getMessage());

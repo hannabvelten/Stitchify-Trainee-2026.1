@@ -31,12 +31,17 @@ class Controller
         $user = App::get('database')->verificaLogin($email, $senha);
 
         if( $user != false){
+             if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
             $_SESSION['id'] = $user->id;
             $_SESSION['tipo'] = $user->tipo;
             header('Location: /landing-page');
         }
         else{
+             if (session_status() === PHP_SESSION_NONE) {
             session_start();
+        }
             $_SESSION['mensagem-erro'] = "Usuario e/ou senha incorretos";
             header('Location: /login');
         }
@@ -74,7 +79,8 @@ class Controller
         }
 
         try{
-            App::get('database')->efetuaInscricao($nome, $email, $senha);
+            $foto = 'default-avatar.png';
+            App::get('database')->efetuaInscricao($nome, $email, $senha, $foto);
             header('Location: /login');
         }
         catch(Exception $e){

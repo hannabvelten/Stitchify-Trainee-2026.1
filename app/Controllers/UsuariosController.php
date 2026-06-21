@@ -44,7 +44,7 @@ class UsuariosController
 
         $foto = 'default-avatar.png';
     
-    if (isset($_FILES['foto']) || $_FILES['foto']['error'] === UPLOAD_ERR_OK) {
+    if (isset($_FILES['foto']) && $_FILES['foto']['error'] === UPLOAD_ERR_OK) {
         $nomeOriginal = $_FILES['foto']['name'];
         $foto = time() . '_' . $nomeOriginal;
         $diretorioDestino = __DIR__ . '/../../public/uploads/' . $foto;
@@ -79,7 +79,7 @@ class UsuariosController
             // 'foto'  => $foto
         ];
 
-        if (isset($_FILES['foto']) || $_FILES['foto']['error'] === UPLOAD_ERR_OK) {
+        if (isset($_FILES['foto']) && $_FILES['foto']['error'] === UPLOAD_ERR_OK) {
             $nomeOriginal = $_FILES['foto']['name'];
             $foto = time() . '_' . $nomeOriginal;
             $diretorioDestino = __DIR__ . '/../../public/uploads/' . $foto;

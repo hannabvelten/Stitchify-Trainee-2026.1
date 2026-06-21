@@ -37,7 +37,7 @@
             <?php
                 if(isset($_SESSION['mensagem-erro']))
                 echo $_SESSION['mensagem-erro'];
-                session_unset();
+                unset($_SESSION['mensagem-erro']);
                 ?>
             </p>
         </div>

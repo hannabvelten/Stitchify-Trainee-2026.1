@@ -177,10 +177,12 @@
           <div class="container">
             <div class="identificacao">
               <div class="imagem">
-                <?php if (!empty($usuario->foto)): ?>
-                  <img src="../../../public/uploads/<?= htmlspecialchars($usuario->foto) ?>" alt="Foto de <?= htmlspecialchars($usuario->nome) ?>" class="foto-tabela-user-modal" />
+            <?php if (!empty($usuario->foto) && $usuario->foto !== 'PersonCircle.svg'): ?>
+  <img src="/uploads/<?= htmlspecialchars($usuario->foto) ?>" 
+       alt="Foto de <?= htmlspecialchars($usuario->nome) ?>" 
+       class="foto-tabela-user-modal" />
                   <?php else: ?>
-                  <img src="../../../public/assets/PersonCircle.svg" alt="Sem foto"  />
+                  <img src="/assets/PersonCircle.svg" alt="Sem foto"  />
                   <?php endif; ?>
               </div>
               <div class="conteudov">
