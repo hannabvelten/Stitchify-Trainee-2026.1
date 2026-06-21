@@ -282,16 +282,6 @@
     }
 }
 
-.edit-foto .nova-foto {
-    width: 12rem;
-    height: 12rem;
-    max-width: 12rem;
-    max-height: 12rem;
-    margin: 0 auto;
-    overflow: hidden;
-    border-radius: 50%;
-    object-fit: cover;
-}
 
 /* RESPONSIVIDADE MOBILE */
 @media screen and (max-width: 480px) {
