@@ -16,30 +16,19 @@
     </div>
     <main>
         <div class="barra-de-pesquisa">
-            <div class="busca">
-                <h2>Buscar</h2>
+            <form class="busca" action="/lista-de-posts" method="GET">
+                <input type="text" name="busca" placeholder="Buscar" class="input-busca">
                 <div class="search-filter">
-                    <span class="link-search">
+                    <button type="submit" class="link-search">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                             class="lucide lucide-search-icon lucide-search">
                             <path d="m21 21-4.34-4.34" />
                             <circle cx="11" cy="11" r="8" />
                         </svg>
-                    </span>
-                    <div class="filter">
-                        <span class="link-filter">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="lucide lucide-list-filter-icon lucide-list-filter">
-                                <path d="M2 5h20" />
-                                <path d="M6 12h12" />
-                                <path d="M9 19h6" />
-                            </svg>
-                        </span>
-                    </div>
+                    </button>
                 </div>
-            </div>
+            </form>
         </div>
         <div class="titulo">
             <h1>Nossos Posts</h1>

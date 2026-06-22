@@ -241,15 +241,25 @@ class PostsController
 
         $offset = ($currentPage - 1) * $limit;
 
-        $totalPosts = $database->countAll('tabela_posts');
-        $totalPages = ceil($totalPosts/$limit);
+        $palavraBuscada = isset($_GET['busca']) ? trim($_GET['busca']) : '';
+        $categoriaBuscada = isset($_GET['categoria']) ? trim($_GET['categoria']) : '';
 
-        $posts = $database->paginate('tabela_posts', $limit, $offset);
+        if ($palavraBuscada !== '') {
+            $filtros = ['busca' => $palavraBuscada];
+            $totalPosts = $database->countPostsFiltrados($filtros);
+            $posts = $database->paginatePostsFiltrados($limit, $offset, $filtros);
+        } else {
+            $totalPosts = $database->countAll('tabela_posts');
+            $posts = $database->paginate('tabela_posts', $limit, $offset);
+        }
+
+        $totalPages = ceil($totalPosts/$limit);
 
         return view('site/lista-de-posts', [
             'posts' => $posts,
             'currentPage' => $currentPage,
             'totalPages' => $totalPages,
+            'busca' => $palavraBuscada
         ]);
     }
 

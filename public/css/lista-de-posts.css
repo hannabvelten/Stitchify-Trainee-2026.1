@@ -36,7 +36,6 @@ main {
     align-items: center;
     min-height: 100vh;
     padding-bottom: 80px;
-    /* background: linear-gradient(180deg, #FAD2E1 48%, #BA6E85 73%, #770523 100%); */
 }
 
 .barra-de-pesquisa {
@@ -59,18 +58,29 @@ main {
     background: var(--bege);
 }
 
-.busca h2 {
+.input-busca {
+    height: 100%;
+}
+
+.input-busca::placeholder {
     color: var(--vinho);
     font-family: var(--font-baloo);
-    font-size: 36px;
+    font-size: 32px;
     font-weight: 400;
-    opacity: 0.5;
+    width: 100%;
 }
 
 .search-filter {
     display: flex;
     gap: 20px;
     align-items: center;
+}
+
+.link-search, .input-busca {
+    background: none;
+    border: none;
+    padding: 0;
+    display: flex;
 }
 
 .search-filter svg {
@@ -231,7 +241,6 @@ main {
 
     .barra-de-pesquisa {
         padding: 50px 40px;
-        /* padding-bottom: 30px; */
     }
     
     .titulo {
@@ -265,8 +274,8 @@ main {
         padding-bottom: 40px;
     }
 
-    .busca h2 {
-        font-size: 32px;
+    .busca .input-busca::placeholder {
+        font-size: 25px;
     }
     
     .titulo {

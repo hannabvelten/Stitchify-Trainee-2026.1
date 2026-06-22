@@ -76,8 +76,6 @@ class UsuariosController
             'nome' => $_POST['nome'],
             'email' => $_POST['email'],
             'senha'  => $_POST['senha'],
-
-            // 'foto'  => $foto
         ];
 
         if (isset($_FILES['foto']) && $_FILES['foto']['error'] === UPLOAD_ERR_OK) {
